@@ -1,0 +1,5 @@
+export const lightblue = "#343a45"
+export const darkblue = "#21252c"
+export const darkerblue = "#181b21"
+export const bluegray = "#d3d3d5"
+export const grayborder = "#b2b2b4"
