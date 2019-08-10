@@ -1,51 +1,30 @@
 import React from 'react'
-import {MenuStyle, Img} from "./style";
-import NavigationButton from "./NavigationButton";
+
 import logo from "../../../../assets/logo-white.png"
 
-interface NavigationMenuProps {
+import {MenuStyle, Img} from "./style";
+import NavigationButton from "./NavigationButton";
+import { routes } from '../../../../routes';
+import { withRouter, RouteComponentProps } from 'react-router';
+
+interface NavigationMenuProps extends RouteComponentProps {
 
 }
 
-export interface NavigationRoute {
-  text: string
-  path: string
-}
+function NavigationMenu({history}: NavigationMenuProps) {
 
-const routes: NavigationRoute[] = [
-  {
-    text: 'Hjem',
-    path: '/home',
-  },
-  {
-    text: 'Info',
-    path: '/info',
-  },
-  {
-    text: 'Program',
-    path: '/program',
-  },
-  {
-    text: 'For bedrifter',
-    path: '/for-companies',
-  },
-  {
-    text: 'Kontakt oss',
-    path: '/contact-us',
-  },
-]
+  const navigateToHome = () => history.push("/")
 
-function NavigationMenu(props: NavigationMenuProps) {
   return (
     <MenuStyle>
-      <Img src={logo} />
+      <Img src={logo} onClick={navigateToHome}/>
       {
-        routes.map((route, i) => (
-          <NavigationButton key={i} route={route} />
+        routes.map((route) => (
+          <NavigationButton key={route.path} route={route} />
         ))
       }
     </MenuStyle>
   )
 }
 
-export default NavigationMenu
+export default withRouter(NavigationMenu)

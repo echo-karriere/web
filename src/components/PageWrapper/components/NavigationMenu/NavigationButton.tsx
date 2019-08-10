@@ -1,18 +1,22 @@
 import React from 'react'
-import {ButtonStyle} from "./style";
-import {NavigationRoute} from "./NavigationMenu";
+import { RouteComponentProps, withRouter } from 'react-router';
 
-interface NavigationButtonProps {
+import {ButtonStyle} from "./style";
+import { NavigationRoute } from '../../../../routes';
+
+interface NavigationButtonProps extends RouteComponentProps {
   route: NavigationRoute
 }
 
-const NavigationButton: React.FC<NavigationButtonProps> = ({route}) => {
+const NavigationButton: React.FC<NavigationButtonProps> = ({route, history}) => {
+
+  const navBtnClick = () => history.push(route.path)
 
   return (
-    <ButtonStyle>
-      <a href={route.path}>{route.text}</a>
+    <ButtonStyle onClick={navBtnClick}>
+      {route.text}
     </ButtonStyle>
   )
 }
 
-export default NavigationButton
+export default withRouter(NavigationButton)

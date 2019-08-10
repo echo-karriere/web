@@ -15,11 +15,15 @@ export const Content = styled.div`
   flex-direction: column;
   background: white;
   min-height: calc(100% - 7rem); // Total banner height
+
+  > div {
+    flex: 1;
+  }
 `
 
 export const Footer = styled.div`
   text-align: center;
   color: white;
   background: ${darkblue};
-  padding: 1rem 1rem 4rem 1rem;
+  padding: 2rem;
 `

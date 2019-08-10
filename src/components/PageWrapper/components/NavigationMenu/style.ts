@@ -9,6 +9,7 @@ export const MenuStyle = styled.div`
 export const Img = styled.img`
   height: 4rem;
   margin: .5rem 5rem .5rem 0;
+  cursor: pointer;
 `
 
 export const ButtonStyle = styled.div`
@@ -16,16 +17,8 @@ export const ButtonStyle = styled.div`
   align-items: center;
   cursor: pointer;
   padding: 1rem;
-  
-  a {
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 1.15rem;
-    color: white;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
+
+  font-weight: bold;
+  font-size: 1.15rem;
+  color: white;
 `
