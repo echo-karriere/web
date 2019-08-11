@@ -1,0 +1,19 @@
+{
+    "name": "echo karriere",
+    "short_name": "echo karriere",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#21252c",
+    "background_color": "#21252c",
+    "display": "standalone"
+}
