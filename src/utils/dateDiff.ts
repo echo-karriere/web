@@ -12,9 +12,9 @@ export default function calcDateDiff(targetDate: Date): DaysDateDiff {
     const year = Math.floor(diff / 31104000000);
     let month = Math.floor((diff / 2592000000) % 12);
     let days = Math.floor((diff / 86400000) % 30);
-    let hours = Math.floor((diff / 3600000) % 24);
-    let minutes = Math.floor((diff / 60000) % 60);
-    let seconds = Math.floor((diff / 1000) % 60);
+    const hours = Math.floor((diff / 3600000) % 24);
+    const minutes = Math.floor((diff / 60000) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
 
     month += year * 12;
     days += month * 30;
