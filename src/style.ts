@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { darkblue } from "./constants/colors";
+import c from "./constants/colors";
 
 const GlobalStyle = createGlobalStyle`
   html, body, #root {
@@ -7,7 +7,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background: #343a40;
+    background: ${c.bootstrapGray};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: bold;

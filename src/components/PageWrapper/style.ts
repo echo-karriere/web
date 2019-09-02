@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Container from "react-bootstrap/Container";
+import c from "../../constants/colors";
 
 export const Wrapper = styled(Container)`
   height: 100%;
@@ -20,6 +21,6 @@ export const Content = styled.div`
 export const Footer = styled.div`
   text-align: center;
   color: white;
-  background: #343a40;
+  background: ${c.bootstrapGray};
   padding: 2rem;
 `;
