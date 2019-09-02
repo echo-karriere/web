@@ -3,9 +3,9 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import { routes } from "../../../../routes";
+import { routes } from "../../routes";
 
-import logo from "../../../../assets/logo-white.png";
+import logo from "../../assets/logo-white.png";
 
 const Wrapper = styled.div`
   display: flex;
@@ -28,7 +28,7 @@ const NavBar: React.FC = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
             {routes.map(nav => (
-              <Nav.Link as={Link} href={nav.path} to={nav.path}>
+              <Nav.Link as={Link} key={nav.text} href={nav.path} to={nav.path}>
                 {nav.text}
               </Nav.Link>
             ))}

@@ -4,8 +4,8 @@ import { withRouter, RouteComponentProps, Switch, Route } from "react-router";
 
 import { routes } from "../../routes";
 import { NoMatch } from "../../pages/no-match";
-import { NavBar } from "./components/Navbar";
-import { BackgroundParticles } from "./components/Particles";
+import { NavBar } from "../Navbar";
+import { BackgroundParticles } from "../Particles";
 
 interface PageWrapperProps extends RouteComponentProps {}
 
