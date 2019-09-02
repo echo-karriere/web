@@ -7,7 +7,7 @@ export const Wrapper = styled(Container)`
 `;
 
 export const Content = styled.div`
-  border-radius: 20px;
+  border-radius: 0.25rem;
   flex: 1;
   display: flex;
   flex-direction: column;

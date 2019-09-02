@@ -3,7 +3,7 @@ import Container from "react-bootstrap/Container";
 import bergenAtNight from "../../../../assets/bergen-at-night.jpg";
 
 export const Wrapper = styled(Container)`
-  border-radius: 20px;
+  border-radius: 0.25rem;
   background-size: cover;
   background-position: center;
   background-image: url(${bergenAtNight});
