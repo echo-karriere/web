@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import Container from "react-bootstrap/Container";
-import { darkblue } from "../../constants/colors";
 
 export const Wrapper = styled(Container)`
   height: 100%;
