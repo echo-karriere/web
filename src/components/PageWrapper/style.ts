@@ -12,7 +12,8 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   background: white;
-  min-height: calc(100% - 7rem); // Total banner height
+  height: 100%;
+  max-height: 900px;
 
   > div {
     flex: 1;
