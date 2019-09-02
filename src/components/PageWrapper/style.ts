@@ -1,13 +1,10 @@
-import styled from 'styled-components'
+import styled from "styled-components";
+import Container from "react-bootstrap/Container";
 import { darkblue } from "../../constants/colors";
 
-export const Wrapper = styled.div`
-  width: 100%;
+export const Wrapper = styled(Container)`
   height: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-`
+`;
 
 export const Content = styled.div`
   flex: 1;
@@ -19,11 +16,11 @@ export const Content = styled.div`
   > div {
     flex: 1;
   }
-`
+`;
 
 export const Footer = styled.div`
   text-align: center;
   color: white;
-  background: ${darkblue};
+  background: #343a40;
   padding: 2rem;
-`
+`;
