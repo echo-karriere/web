@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { darkblue, darkerblue, lightblue } from "../../../../constants/colors";
 
 export const MenuStyle = styled.div`
   align-self: center;

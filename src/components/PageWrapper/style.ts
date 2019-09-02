@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { darkerblue, bluegray, grayborder, darkblue } from "../../constants/colors";
+import { darkblue } from "../../constants/colors";
 
 export const Wrapper = styled.div`
   width: 100%;

@@ -9,9 +9,7 @@ import { NoMatch } from '../../pages/no-match';
 interface PageWrapperProps extends RouteComponentProps {}
 
 function PageWrapper(props: PageWrapperProps) {
-
-  console.log(props.location)
-
+  
   return (
     <Wrapper>
       <NavigationMenu/>
