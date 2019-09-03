@@ -1,15 +1,10 @@
-import React from 'react'
+import React from "react";
+import { ContentWrapper } from "../../components/ContentWrapper";
 
-interface ProgramProps {
-
-}
+interface ProgramProps {}
 
 const Program: React.FC<ProgramProps> = () => {
-    return (
-        <div>
-            Kommer snart!
-        </div>
-    )
-}
+  return <ContentWrapper>Kommer snart!</ContentWrapper>;
+};
 
-export default Program
+export default Program;

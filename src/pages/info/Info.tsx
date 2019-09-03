@@ -1,15 +1,10 @@
-import React from 'react'
+import React from "react";
+import { ContentWrapper } from "../../components/ContentWrapper";
 
-interface InfoProps {
-
-}
+interface InfoProps {}
 
 const Info: React.FC<InfoProps> = () => {
-    return (
-        <div>
-            Kommer snart!
-        </div>
-    )
-}
+  return <ContentWrapper>Kommer snart!</ContentWrapper>;
+};
 
-export default Info
+export default Info;
