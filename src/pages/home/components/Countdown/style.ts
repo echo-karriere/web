@@ -9,6 +9,7 @@ export const Wrapper = styled(Container)`
   background-image: url(${bergenAtNight});
   width: 100%;
   height: 100%;
+  min-height: 900px;
   color: white;
   display: flex;
   flex-direction: column;

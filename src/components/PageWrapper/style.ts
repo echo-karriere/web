@@ -12,8 +12,7 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   background: white;
-  height: 100%;
-  max-height: 900px;
+  min-height: 900px;
 
   > div {
     flex: 1;
