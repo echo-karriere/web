@@ -29,7 +29,7 @@ const companies: CompanyInterface[] = [
     logo: ""
   },
   {
-    name: "Accenture Bergen",
+    name: "Accenture",
     logo: ""
   },
   {
@@ -93,7 +93,7 @@ const companies: CompanyInterface[] = [
     logo: "/logos/SopraSteria.png"
   },
   {
-    name: "IslandGarden AS",
+    name: "IslandGarden",
     logo: ""
   },
   {
