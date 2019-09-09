@@ -1,5 +1,10 @@
-export const lightblue = "#343a45"
-export const darkblue = "#21252c"
-export const darkerblue = "#181b21"
-export const bluegray = "#d3d3d5"
-export const grayborder = "#b2b2b4"
+const colors = {
+  lightBlue: "#343a45",
+  darkBlue: "#21252c",
+  darkerBlue: "#181b21",
+  blueGray: "#d3d3d5",
+  grayBorder: "#b2b2b4",
+  bootstrapGray: "#343a40"
+};
+
+export default colors;

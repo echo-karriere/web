@@ -1,15 +1,10 @@
-import React from 'react'
+import React from "react";
+import { ContentWrapper } from "../../components/ContentWrapper";
 
-interface ForCompaniesProps {
-
-}
+interface ForCompaniesProps {}
 
 const ForCompanies: React.FC<ForCompaniesProps> = () => {
-    return (
-        <div>
-            Kommer snart!
-        </div>
-    )
-}
+  return <ContentWrapper>Kommer snart!</ContentWrapper>;
+};
 
-export default ForCompanies
+export default ForCompanies;
