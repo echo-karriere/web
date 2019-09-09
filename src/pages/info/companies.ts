@@ -18,7 +18,7 @@ const companies: CompanyInterface[] = [
   },
   {
     name: "Kantega",
-    logo: ""
+    logo: "/logos/Kantega.png"
   },
   {
     name: "Miles",
@@ -78,7 +78,7 @@ const companies: CompanyInterface[] = [
   },
   {
     name: "Visma",
-    logo: ""
+    logo: "/logos/Visma.png"
   },
   {
     name: "Tripletex",
@@ -86,11 +86,11 @@ const companies: CompanyInterface[] = [
   },
   {
     name: "Sbanken",
-    logo: ""
+    logo: "/logos/Sbanken.png"
   },
   {
     name: "Sopra Steria",
-    logo: ""
+    logo: "/logos/SopraSteria.png"
   },
   {
     name: "IslandGarden AS",
@@ -114,7 +114,7 @@ const companies: CompanyInterface[] = [
   },
   {
     name: "Digitroll",
-    logo: ""
+    logo: "/logos/Digitroll.png"
   }
 ];
 
