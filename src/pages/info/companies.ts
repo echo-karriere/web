@@ -25,8 +25,8 @@ const companies: CompanyInterface[] = [
     logo: ""
   },
   {
-    name: "NetCompany",
-    logo: ""
+    name: "Netcompany",
+    logo: "/logos/Netcompany.png"
   },
   {
     name: "Accenture",
@@ -98,7 +98,7 @@ const companies: CompanyInterface[] = [
   },
   {
     name: "Stacc",
-    logo: ""
+    logo: "/logos/Stacc.png"
   },
   {
     name: "TV2",
