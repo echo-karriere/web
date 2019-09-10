@@ -5,6 +5,7 @@ import { withRouter, RouteComponentProps, Switch, Route } from "react-router";
 import { routes } from "../../routes";
 import { NoMatch } from "../../pages/no-match";
 import { NavBar } from "../Navbar";
+import { Link } from "../Link";
 
 interface PageWrapperProps extends RouteComponentProps {}
 
@@ -26,7 +27,17 @@ function PageWrapper(props: PageWrapperProps) {
             <Route component={NoMatch} />
           </Switch>
         </Content>
-        <Footer>echo - Fagutvalget for informatikk</Footer>
+        <Footer>
+          <Link
+            isWhite={true}
+            underlineOnHover={true}
+            href="https://echo.uib.no/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            echo - Fagutvalget for informatikk
+          </Link>
+        </Footer>
       </Wrapper>
     </>
   );

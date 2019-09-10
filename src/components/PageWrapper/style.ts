@@ -12,12 +12,16 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   background: white;
-  height: 100%;
-  max-height: 900px;
+  min-height: 900px;
 
   > div {
     flex: 1;
   }
+`;
+
+export const PageTitle = styled.h2`
+  text-align: center;
+  font-size: 1.375rem;
 `;
 
 export const Footer = styled.div`

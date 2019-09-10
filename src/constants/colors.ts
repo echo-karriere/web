@@ -4,7 +4,8 @@ const colors = {
   darkerBlue: "#181b21",
   blueGray: "#d3d3d5",
   grayBorder: "#b2b2b4",
-  bootstrapGray: "#343a40"
+  bootstrapGray: "#343a40",
+  echoLogoDarkBlue: "#007f93"
 };
 
 export default colors;
