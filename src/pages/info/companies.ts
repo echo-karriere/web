@@ -102,7 +102,7 @@ const companies: CompanyInterface[] = [
   },
   {
     name: "TV2",
-    logo: ""
+    logo: "/logos/TV2.png"
   },
   {
     name: "Netlight",
