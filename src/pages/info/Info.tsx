@@ -2,7 +2,8 @@ import React from "react";
 import shuffle from "lodash/shuffle";
 import comps from "./companies";
 import { ContentWrapper } from "../../components/ContentWrapper";
-import { Company, CompanyWrapper, Thanks, CompanyImage } from "./style";
+import { Company, CompanyWrapper, CompanyImage } from "./style";
+import { PageTitle } from "../../components/PageWrapper/style";
 
 interface InfoProps {}
 
@@ -15,7 +16,7 @@ const Info: React.FC<InfoProps> = () => {
   ));
   return (
     <ContentWrapper>
-      <Thanks>Her er bedriftene som kommer:</Thanks>
+      <PageTitle>Bedrifter høst 2019</PageTitle>
       <CompanyWrapper>{companyList}</CompanyWrapper>
     </ContentWrapper>
   );

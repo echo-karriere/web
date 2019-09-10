@@ -1,13 +1,15 @@
 import React from "react";
 import { ContentWrapper } from "../../components/ContentWrapper";
+import { Link } from "../../components/Link";
+import { PageTitle } from "../../components/PageWrapper/style";
 
 interface ForCompaniesProps {}
 
 const ForCompanies: React.FC<ForCompaniesProps> = () => {
   return (
     <ContentWrapper>
-      <h1>Nyttig information</h1>
-      <h2>Timeplan</h2>
+      <PageTitle>For bedrifter</PageTitle>
+      <h5>Timeplan</h5>
       <ul>
         <li>
           10:15 - 13:00 - Rigging av lokaler. Vi er til stede for å hjelpe til
@@ -17,14 +19,14 @@ const ForCompanies: React.FC<ForCompaniesProps> = () => {
         <li>14:15 - 18:00 - Standområdet er åpent</li>
         <li>18:00 - 20:00 - Nedrigging av lokalet</li>
       </ul>
-      <h2>Praktisk informasjon</h2>
+      <h5>Praktisk informasjon</h5>
       <p>
         Dere har et område på 4m^2 å bruke. Lokalet kommer til å være fullt, så
         det er ikke mulig å bruke mer plass enn det. Vi skaffer et bord og én
         strømpadde for dere. Det vil også bli enkel matservering i form av
         boller.
       </p>
-      <h2>Kom dere frem</h2>
+      <h5>Kom dere frem</h5>
       <p>
         Adressen for arrangementet er: <br />
         Høyteknologisenteret <br />
@@ -32,8 +34,14 @@ const ForCompanies: React.FC<ForCompaniesProps> = () => {
         5008 Bergen
       </p>
       <p>
-        Se også universitetets egne guide for å finne frem{" "}
-        <a href="https://www.uib.no/ii/54321/finn-fram-til-oss">her.</a>
+        Se også universitetets egen guide for å finne frem{" "}
+        <Link
+          href="https://www.uib.no/ii/54321/finn-fram-til-oss"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          ved å klikke her.
+        </Link>
       </p>
     </ContentWrapper>
   );

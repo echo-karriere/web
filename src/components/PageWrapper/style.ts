@@ -19,6 +19,11 @@ export const Content = styled.div`
   }
 `;
 
+export const PageTitle = styled.h2`
+  text-align: center;
+  font-size: 1.375rem;
+`;
+
 export const Footer = styled.div`
   text-align: center;
   color: white;

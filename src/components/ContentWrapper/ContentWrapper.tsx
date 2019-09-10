@@ -4,7 +4,7 @@ const ContentWrapper = styled.div`
   padding: 1rem;
 
   @media screen and (min-width: 768px) {
-    padding: 1rem 5rem;
+    padding: 2rem;
   }
 `;
 

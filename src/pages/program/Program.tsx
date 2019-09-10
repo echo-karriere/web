@@ -1,16 +1,38 @@
 import React from "react";
+import styled from "styled-components";
 import { ContentWrapper } from "../../components/ContentWrapper";
+import { PageTitle } from "../../components/PageWrapper/style";
+import colors from "../../constants/colors";
 
 interface ProgramProps {}
+
+const Timeplan = styled.div`
+  padding: 0.5rem;
+  font-size: 1.1rem;
+`;
+
+const TimeplanEntry = styled.div`
+  padding: 0.5rem;
+`;
+
+const Time = styled.div`
+  color: ${colors.echoLogoDarkBlue};
+`;
 
 const Program: React.FC<ProgramProps> = () => {
   return (
     <ContentWrapper>
-      <h1>Program</h1>
-      <h2>13:15 - 14:15</h2>
-      <p>Lynpresentasjoner i store auditorium</p>
-      <h2>14:14 - 18:00</h2>
-      <p>Stands i hovedfoajeen (oversikt kommer)</p>
+      <PageTitle>Program</PageTitle>
+      <Timeplan>
+        <TimeplanEntry>
+          <Time>13:15 - 14:15</Time>
+          Lynpresentasjoner i store auditorium
+        </TimeplanEntry>
+        <TimeplanEntry>
+          <Time>14:15 - 18:00</Time>
+          Stands i hovedfoajeen (oversikt kommer)
+        </TimeplanEntry>
+      </Timeplan>
     </ContentWrapper>
   );
 };
