@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { ContentWrapper } from "../../components/ContentWrapper";
 import { PageTitle } from "../../components/PageWrapper/style";
 import colors from "../../constants/colors";
+import { Link } from "../../components/Link";
 
 interface ProgramProps {}
 
@@ -30,7 +31,8 @@ const Program: React.FC<ProgramProps> = () => {
         </TimeplanEntry>
         <TimeplanEntry>
           <Time>14:15 - 18:00</Time>
-          Stands i hovedfoajeen (oversikt kommer)
+          Stands i hovedfoajeen (
+          <Link href="/for-companies">klikk her for oversikt</Link>)
         </TimeplanEntry>
       </Timeplan>
     </ContentWrapper>
