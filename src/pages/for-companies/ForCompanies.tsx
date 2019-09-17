@@ -12,8 +12,8 @@ const StandWrapper = styled.p`
 `;
 
 const StandMap = styled.img`
-  margin: 0 auto;
-  max-width: 600px;
+  width: 600px;
+  max-width: 100%;
 `;
 
 const ForCompanies: React.FC<ForCompaniesProps> = () => {
