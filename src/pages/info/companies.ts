@@ -82,7 +82,7 @@ const companies: CompanyInterface[] = [
   },
   {
     name: "Tripletex",
-    logo: ""
+    logo: "/logos/Tripletex.png"
   },
   {
     name: "Sbanken",
