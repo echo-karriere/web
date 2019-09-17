@@ -2,8 +2,19 @@ import React from "react";
 import { ContentWrapper } from "../../components/ContentWrapper";
 import { Link } from "../../components/Link";
 import { PageTitle } from "../../components/PageWrapper/style";
+import styled from "styled-components";
 
 interface ForCompaniesProps {}
+
+const StandWrapper = styled.p`
+  display: flex;
+  justify-content: center;
+`;
+
+const StandMap = styled.img`
+  margin: 0 auto;
+  max-width: 600px;
+`;
 
 const ForCompanies: React.FC<ForCompaniesProps> = () => {
   return (
@@ -21,11 +32,15 @@ const ForCompanies: React.FC<ForCompaniesProps> = () => {
       </ul>
       <h5>Praktisk informasjon</h5>
       <p>
-        Dere har et område på 4m^2 å bruke. Lokalet kommer til å være fullt, så
-        det er ikke mulig å bruke mer plass enn det. Vi skaffer et bord og én
-        strømpadde for dere. Det vil også bli enkel matservering i form av
-        boller.
+        Dere har et område på 2m * 2m (4m^2) å bruke. Lokalet kommer til å være
+        fullt, så det er ikke mulig å bruke mer plass enn det. Vi skaffer et
+        bord og én strømpadde for dere. Det vil også bli enkel matservering i
+        form av boller.
       </p>
+      <h5>Standkart</h5>
+      <StandWrapper>
+        <StandMap src="/misc/standkart-h19.png" alt="Standkart" />
+      </StandWrapper>
       <h5>Kom dere frem</h5>
       <p>
         Adressen for arrangementet er: <br />
