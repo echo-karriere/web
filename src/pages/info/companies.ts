@@ -5,23 +5,71 @@ export interface CompanyInterface {
 
 const companies: CompanyInterface[] = [
   {
+    name: "Accenture",
+    logo: "/logos/Accenture.png"
+  },
+  {
     name: "Bekk",
-    logo: ""
+    logo: "/logos/Bekk.png"
+  },
+  {
+    name: "Capgemini",
+    logo: "/logos/Capgemini.jpg"
   },
   {
     name: "Cognite",
-    logo: ""
+    logo: "/logos/Cognite.png"
+  },
+  {
+    name: "Computas",
+    logo: "/logos/Computas.png"
+  },
+  {
+    name: "Difi",
+    logo: "/logos/Difi.jpg"
+  },
+  {
+    name: "Digitroll",
+    logo: "/logos/Digitroll.png"
   },
   {
     name: "Equinor",
     logo: ""
   },
   {
+    name: "Gjensidige",
+    logo: "/logos/Gjensidige.png"
+  },
+  {
+    name: "Hatteland",
+    logo: ""
+  },
+  {
+    name: "Infodoc",
+    logo: ""
+  },
+  {
+    name: "IslandGarden",
+    logo: "/logos/IslandGarden.png"
+  },
+  {
     name: "Kantega",
     logo: "/logos/Kantega.png"
   },
   {
+    name: "Knowit",
+    logo: "/logos/Knowit.png"
+  },
+  {
     name: "Miles",
+    logo: "/logos/Miles.png"
+  },
+  {
+    name: "NAV",
+    logo: "/logos/NAV.png"
+  },
+  {
+    name: "NetSecurity",
     logo: ""
   },
   {
@@ -29,72 +77,28 @@ const companies: CompanyInterface[] = [
     logo: "/logos/Netcompany.png"
   },
   {
-    name: "Accenture",
-    logo: ""
-  },
-  {
-    name: "Computas",
-    logo: ""
-  },
-  {
-    name: "Gjensidige",
-    logo: ""
-  },
-  {
-    name: "NAV",
-    logo: ""
-  },
-  {
-    name: "Simula",
-    logo: ""
-  },
-  {
-    name: "Skatteetaten",
-    logo: ""
-  },
-  {
-    name: "Sparebanken vest",
-    logo: ""
-  },
-  {
-    name: "NetSecurity",
-    logo: ""
-  },
-  {
-    name: "Difi",
-    logo: ""
-  },
-  {
-    name: "Hatteland",
-    logo: ""
-  },
-  {
-    name: "Knowit",
-    logo: ""
-  },
-  {
-    name: "Capgemini",
-    logo: ""
-  },
-  {
-    name: "Visma",
-    logo: "/logos/Visma.png"
-  },
-  {
-    name: "Tripletex",
-    logo: "/logos/Tripletex.png"
+    name: "Netlight",
+    logo: "/logos/Netlight.png"
   },
   {
     name: "Sbanken",
     logo: "/logos/Sbanken.png"
   },
   {
+    name: "Simula",
+    logo: "/logos/Simula.png"
+  },
+  {
+    name: "Skatteetaten",
+    logo: "/logos/Skatteetaten.png"
+  },
+  {
     name: "Sopra Steria",
     logo: "/logos/SopraSteria.png"
   },
   {
-    name: "IslandGarden",
-    logo: ""
+    name: "Sparebanken vest",
+    logo: "/logos/SparebankenVest.png"
   },
   {
     name: "Stacc",
@@ -105,16 +109,12 @@ const companies: CompanyInterface[] = [
     logo: "/logos/TV2.png"
   },
   {
-    name: "Netlight",
-    logo: ""
+    name: "Tripletex",
+    logo: "/logos/Tripletex.png"
   },
   {
-    name: "Infodoc",
-    logo: ""
-  },
-  {
-    name: "Digitroll",
-    logo: "/logos/Digitroll.png"
+    name: "Visma",
+    logo: "/logos/Visma.png"
   }
 ];
 
