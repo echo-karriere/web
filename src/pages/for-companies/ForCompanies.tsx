@@ -6,12 +6,12 @@ import styled from "styled-components";
 
 interface ForCompaniesProps {}
 
-const StandWrapper = styled.p`
+export const StandWrapper = styled.p`
   display: flex;
   justify-content: center;
 `;
 
-const StandMap = styled.img`
+export const StandMap = styled.img`
   width: 600px;
   max-width: 100%;
 `;
