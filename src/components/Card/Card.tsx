@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Card from "react-bootstrap/Card";
-import { VolunteersInterface as VolunteerInterface } from "../../pages/about-us/Volunteers";
+import { VolunteersInterface } from "../../pages/about-us/Volunteers";
 
 const StyledCard = styled(Card)`
   text-align: center;
@@ -12,7 +12,7 @@ const StyledCardImage = styled(Card.Img)`
   margin: 0 auto;
 `;
 
-const CardWrapper: React.FC<VolunteerInterface> = ({
+const CardWrapper: React.FC<VolunteersInterface> = ({
   name,
   picture,
   about
