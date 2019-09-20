@@ -8,7 +8,8 @@ const StyledCard = styled(Card)`
 `;
 
 const StyledCardImage = styled(Card.Img)`
-  max-width: 100%;
+  max-width: 70%;
+  margin: 0 auto;
 `;
 
 const CardWrapper: React.FC<VolunteerInterface> = ({

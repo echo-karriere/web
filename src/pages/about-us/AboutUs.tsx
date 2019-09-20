@@ -16,6 +16,7 @@ const AboutUs: React.FC<AboutUsInterface> = () => {
         arrangeres for første gang 24. september 2019. Ca. 30 bedrifter fra hele
         landet kommer på besøk.
       </p>
+      <PageTitle>Om echo karriere</PageTitle>
       <h5>Lynpresentasjon</h5>
       <p>
         Under karrieredagen vil bedriftene få muligheten til å holde en
