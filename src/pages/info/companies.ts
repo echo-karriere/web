@@ -61,6 +61,11 @@ const companies: CompanyInterface[] = [
     presentationOrder: 7
   },
   {
+    name: "Institutt for informatikk",
+    logo: "",
+    presentationOrder: -1
+  },
+  {
     name: "IslandGarden",
     logo: "/logos/IslandGarden.png",
     presentationOrder: -1
@@ -86,11 +91,6 @@ const companies: CompanyInterface[] = [
     presentationOrder: 25
   },
   {
-    name: "NetSecurity",
-    logo: "",
-    presentationOrder: 17
-  },
-  {
     name: "Netcompany",
     logo: "/logos/Netcompany.png",
     presentationOrder: 28
@@ -99,6 +99,11 @@ const companies: CompanyInterface[] = [
     name: "Netlight",
     logo: "/logos/Netlight.png",
     presentationOrder: 24
+  },
+  {
+    name: "NetSecurity",
+    logo: "",
+    presentationOrder: 17
   },
   {
     name: "Sbanken",
@@ -121,7 +126,7 @@ const companies: CompanyInterface[] = [
     presentationOrder: 1
   },
   {
-    name: "Sparebanken vest",
+    name: "Sparebanken Vest",
     logo: "/logos/SparebankenVest.png",
     presentationOrder: 14
   },
@@ -138,11 +143,6 @@ const companies: CompanyInterface[] = [
   {
     name: "Tripletex",
     logo: "/logos/Tripletex.png",
-    presentationOrder: -1
-  },
-  {
-    name: "Visma",
-    logo: "/logos/Visma.png",
     presentationOrder: -1
   },
   {
