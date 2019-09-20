@@ -37,7 +37,7 @@ const Program: React.FC<ProgramProps> = () => {
   return (
     <ContentWrapper>
       <PageTitle>Program</PageTitle>
-      <Accordion>
+      <Accordion defaultActiveKey="1">
         <Card>
           <Accordion.Toggle as={Card.Header} eventKey="0">
             <TimeplanEntry>
