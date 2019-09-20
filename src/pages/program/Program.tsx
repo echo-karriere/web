@@ -5,16 +5,10 @@ import Card from "react-bootstrap/Card";
 import { ContentWrapper } from "../../components/ContentWrapper";
 import { PageTitle } from "../../components/PageWrapper/style";
 import colors from "../../constants/colors";
-import { Link } from "../../components/Link";
 import comps from "../info/companies";
 import { StandWrapper, StandMap } from "../for-companies/ForCompanies";
 
 interface ProgramProps {}
-
-const Timeplan = styled.div`
-  padding: 0.5rem;
-  font-size: 1.1rem;
-`;
 
 const TimeplanEntry = styled.div`
   padding: 0.5rem;
