@@ -7,6 +7,8 @@ import { PageTitle } from "../../components/PageWrapper/style";
 import colors from "../../constants/colors";
 import comps from "../info/companies";
 import { StandWrapper, StandMap } from "../for-companies/ForCompanies";
+import Icon from "@mdi/react";
+import { mdiChevronDown } from "@mdi/js";
 
 interface ProgramProps {}
 
@@ -43,6 +45,7 @@ const Program: React.FC<ProgramProps> = () => {
             <TimeplanEntry>
               <Time>13:15 - 14:15</Time>
               Lynpresentasjoner i store auditorium
+              <Icon path={mdiChevronDown} size="2em" />
             </TimeplanEntry>
           </Accordion.Toggle>
           <Accordion.Collapse eventKey="0">
@@ -60,6 +63,7 @@ const Program: React.FC<ProgramProps> = () => {
             <TimeplanEntry>
               <Time>14:15 - 18:00</Time>
               Stands i hovedfoajeen
+              <Icon path={mdiChevronDown} size="2em" />
             </TimeplanEntry>
           </Accordion.Toggle>
           <Accordion.Collapse eventKey="1">
