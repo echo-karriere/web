@@ -1,1 +1,1 @@
-export { default as ForCompanies } from './ForCompanies'
+export { default as ForCompanies } from "./ForCompanies";
