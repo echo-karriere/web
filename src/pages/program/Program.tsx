@@ -65,8 +65,8 @@ const Program: React.FC<ProgramProps> = () => {
           <Accordion.Toggle as={Card.Header} eventKey="1">
             <TimeplanEntry>
               <Time>14:15 - 18:00</Time>
+              Stands i hovedfoajeen
             </TimeplanEntry>
-            Stands i hovedfoajeen
           </Accordion.Toggle>
           <Accordion.Collapse eventKey="1">
             <Card.Body>
