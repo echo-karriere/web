@@ -12,6 +12,6 @@ Run it locally with `yarn start`.
 echo karriere is hosted by volunteers from _echo - Fagutvalget for informatikk_ at Department of Informatics, University of Bergen.
 
 ## License
-The code in this repository is under the [MIT](https://github.com/sondr3/web/blob/master/LICENSE)
+The code in this repository is under the [MIT](https://github.com/echo-uib/echo-karriere/blob/master/LICENSE)
 license while the content is licensed under a Creative Commons Attribution-ShareAlike 4.0
 International License. ([CC BY SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)).
