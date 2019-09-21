@@ -37,7 +37,7 @@ const AboutUs: React.FC<AboutUsInterface> = () => {
       <PageTitle>Styret</PageTitle>
       <VolunteerWrapper>
         {volunteers.map(vol => (
-          <Card {...vol} />
+          <Card {...vol} key={vol.name} />
         ))}
       </VolunteerWrapper>
       <PageTitle>Kontakt oss</PageTitle>
