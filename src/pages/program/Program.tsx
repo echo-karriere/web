@@ -21,7 +21,7 @@ const Company = styled.li`
 `;
 
 const Program: React.FC<ProgramProps> = () => {
-  const [selected, setSelected] = useState<string | undefined>("stands");
+  const [selected, setSelected] = useState<string | undefined>("presentation");
   const companies = comps
     .filter(c => c.presentationOrder !== -1)
     .sort((c1, c2) => (c1.presentationOrder > c2.presentationOrder ? 1 : -1));

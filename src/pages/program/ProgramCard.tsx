@@ -8,10 +8,18 @@ import colors from "../../constants/colors";
 
 const TimeplanEntry = styled.div`
   padding: 0.5rem;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
 `;
 
 const Time = styled.div`
   color: ${colors.echoLogoDarkBlue};
+`;
+
+const StyledIcon = styled(Icon)`
+  float: right;
+  align-self: center;
 `;
 
 interface ProgramCardInterface {
@@ -43,11 +51,13 @@ const ProgramCard: React.FC<ProgramCardInterface> = ({
         }}
       >
         <TimeplanEntry>
-          <Time>{title}</Time>
-          {description}
-          <Icon
+          <div>
+            <Time>{title}</Time>
+            <span>{description}</span>
+          </div>
+          <StyledIcon
             path={selected === eventKey ? mdiChevronDown : mdiChevronRight}
-            size="2em"
+            size="2rem"
           />
         </TimeplanEntry>
       </Accordion.Toggle>
