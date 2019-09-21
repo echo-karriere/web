@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@mdi/js": "^4.4.95",
+    "@mdi/react": "^1.2.1",
     "date-fns": "^2.1.0",
     "lodash": "^4.17.15",
     "react": "^16.8.6",
