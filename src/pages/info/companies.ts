@@ -42,7 +42,7 @@ const companies: CompanyInterface[] = [
   },
   {
     name: "Equinor",
-    logo: "",
+    logo: "/logos/Equinor.png",
     presentationOrder: 3
   },
   {
@@ -52,17 +52,17 @@ const companies: CompanyInterface[] = [
   },
   {
     name: "Hatteland",
-    logo: "",
+    logo: "/logos/Hatteland.png",
     presentationOrder: 9
   },
   {
     name: "Infodoc",
-    logo: "",
+    logo: "/logos/Infodoc.png",
     presentationOrder: 7
   },
   {
     name: "Institutt for informatikk",
-    logo: "",
+    logo: "/logos/UiB.png",
     presentationOrder: -1
   },
   {
@@ -102,7 +102,7 @@ const companies: CompanyInterface[] = [
   },
   {
     name: "NetSecurity",
-    logo: "",
+    logo: "/logos/NetSecurity.png",
     presentationOrder: 17
   },
   {
