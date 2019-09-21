@@ -12,7 +12,7 @@ const AboutUs: React.FC<AboutUsInterface> = () => {
     <ContentWrapper>
       <PageTitle>Om oss</PageTitle>
       <p>
-        echo karriere er en karrieredag for IT-studenter i Bergensområdet og
+        echo karriere er en karrieredag for IT-studenter i bergensområdet og
         arrangeres for første gang 24. september 2019. Ca. 30 bedrifter fra hele
         landet kommer på besøk.
       </p>
@@ -32,7 +32,7 @@ const AboutUs: React.FC<AboutUsInterface> = () => {
       <h5>Lynintervju</h5>
       <p>
         Bedriftene har fått mulighet til å låne et rom hvor de kan holde
-        lynpresentasjoner av studenter de ønsker å blir bedre kjent med.
+        lynintervjuer av studenter de ønsker å blir bedre kjent med.
       </p>
       <PageTitle>Styret</PageTitle>
       <VolunteerWrapper>
