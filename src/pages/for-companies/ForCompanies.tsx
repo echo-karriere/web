@@ -12,8 +12,9 @@ export const StandWrapper = styled.p`
 `;
 
 export const StandMap = styled.img`
-  width: 600px;
-  max-width: 100%;
+  width: 100%;
+  object-fit: scale-down;
+  max-height: 100vh;
 `;
 
 const ForCompanies: React.FC<ForCompaniesProps> = () => {
