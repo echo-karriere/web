@@ -21,3 +21,11 @@ export default function calcDateDiff(targetDate: Date): DaysDateDiff {
     seconds
   };
 }
+
+export const pastDate = (target: Date): boolean => {
+  return Date.now() >= target.valueOf();
+};
+
+export const itsHappening = (target: Date, finished: Date): boolean => {
+  return Date.now() >= target.valueOf() && Date.now() <= finished.valueOf();
+};
