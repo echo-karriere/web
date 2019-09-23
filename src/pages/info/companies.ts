@@ -53,7 +53,7 @@ const companies: CompanyInterface[] = [
   {
     name: "Hatteland",
     logo: "/logos/Hatteland.png",
-    presentationOrder: 9
+    presentationOrder: -1
   },
   {
     name: "Infodoc",
