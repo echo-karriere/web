@@ -83,12 +83,12 @@ function Countdown(props: CountdownProps) {
         )}
         {itsHappening(config.eventDate, config.eventDoneDate) && (
           <Col sm>
-            <InfoText>ITS HAPPENING!!!</InfoText>
+            <BigText>It's happening!</BigText>
           </Col>
         )}
         {pastDate(config.eventDoneDate) && (
           <Col sm>
-            <InfoText>Takk for i år, vi sees igjen neste gang!</InfoText>
+            <BigText>Takk for i år, vi sees igjen neste gang!</BigText>
           </Col>
         )}
       </Row>
