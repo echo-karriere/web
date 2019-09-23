@@ -3,7 +3,6 @@ import { ContentWrapper } from "../../components/ContentWrapper";
 import { Link } from "../../components/Link";
 import { PageTitle } from "../../components/PageWrapper/style";
 import styled from "styled-components";
-import { PageWrapper } from "../../components/PageWrapper";
 
 interface ForCompaniesProps {}
 
@@ -40,19 +39,16 @@ const ForCompanies: React.FC<ForCompaniesProps> = () => {
         bord og én strømpadde for dere. Det vil også bli enkel matservering i
         form av boller.
       </p>
-      <h5>Koble seg til uib-guest-nettet:</h5>
+      <h5>Hvordan koble seg til gjestenettverket:</h5>
       <p>
-        Vis trådløse nett på din enhet, og koble til nettet som heter
-        "uib-guest". Enheten vil i noen tilfelle opplyse at tilkobling krever
-        autentisering, og spørre om du vil gå til autentiseringssiden. Eller du
-        kan åpne nettleser på enheten. Du skal da få opp autentiseringssiden
-        første gang du prøver å laste en nettside. Dersom autentiseringssiden
-        ikke laster automatisk, kan du nå den ved å skrive inn{" "}
-        <Link href="https://uib-guest.privnett.uib.no">
+        For å koble dere til det trådløse gjestenettverket på UiB bruker dere
+        "uib-guest". De fleste enheter vil automatisk åpne autentiseringssiden,
+        dersom autentiseringssiden ikke laster automatisk, kan siden nåes på:{" "}
+        <a href="https://uib-guest.privnett.uib.no">
           https://uib-guest.privnett.uib.no
-        </Link>{" "}
-        i adressefeltet i din nettleser, etter at du har valgt uib-guest som
-        nettverk.{" "}
+        </a>
+        . Skriv inn ditt mobilnummer i feltet "Username/Phonenumber", la
+        "Password" stå tomt. Du vil motta en SMS med påloggningsinformasjon.
       </p>
       <h5>Kom dere frem</h5>
       <p>
