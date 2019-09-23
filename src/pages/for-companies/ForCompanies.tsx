@@ -31,17 +31,25 @@ const ForCompanies: React.FC<ForCompaniesProps> = () => {
         <li>14:15 - 18:00 - Standområdet er åpent</li>
         <li>18:00 - 20:00 - Nedrigging av lokalet</li>
       </ul>
-      <h5>Praktisk informasjon</h5>
+      <PageTitle>Praktisk informasjon</PageTitle>
+      <h5>Standområdet</h5>
       <p>
         Dere har et område på 2m * 2m (4m^2) å bruke. Lokalet kommer til å være
         fullt, så det er ikke mulig å bruke mer plass enn det. Vi skaffer et
         bord og én strømpadde for dere. Det vil også bli enkel matservering i
         form av boller.
       </p>
-      <h5>Standkart</h5>
-      <StandWrapper>
-        <StandMap src="/misc/standkart-h19.png" alt="Standkart" />
-      </StandWrapper>
+      <h5>Hvordan koble seg til gjestenettverket:</h5>
+      <p>
+        For å koble dere til det trådløse gjestenettverket på UiB bruker dere
+        "uib-guest". De fleste enheter vil automatisk åpne autentiseringssiden,
+        dersom autentiseringssiden ikke laster automatisk, kan siden nåes på:{" "}
+        <a href="https://uib-guest.privnett.uib.no">
+          https://uib-guest.privnett.uib.no
+        </a>
+        . Skriv inn ditt mobilnummer i feltet "Username/Phonenumber", la
+        "Password" stå tomt. Du vil motta en SMS med påloggningsinformasjon.
+      </p>
       <h5>Kom dere frem</h5>
       <p>
         Adressen for arrangementet er: <br />
@@ -59,6 +67,11 @@ const ForCompanies: React.FC<ForCompaniesProps> = () => {
           ved å klikke her.
         </Link>
       </p>
+
+      <PageTitle>Standkart</PageTitle>
+      <StandWrapper>
+        <StandMap src="/misc/standkart-h19.png" alt="Standkart" />
+      </StandWrapper>
     </ContentWrapper>
   );
 };
