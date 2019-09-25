@@ -20,6 +20,7 @@ export const Wrapper = styled(Container)`
 
 export const BigText = styled.div`
   font-size: 3rem;
+  -webkit-text-stroke: 0.5px black;
 `;
 
 export const InfoText = styled.div`
@@ -28,14 +29,14 @@ export const InfoText = styled.div`
 
 export const TimeToEventStyle = styled.div`
   display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
+  justify-content: space-evenly;
+  flex-direction: row;
   flex-wrap: wrap;
   height: 350px;
   width: 300px;
+  -webkit-text-stroke: 0.5px black;
 
   @media screen and (min-width: 768px) {
-    flex-direction: row;
     flex-wrap: nowrap;
     width: 500px;
   }

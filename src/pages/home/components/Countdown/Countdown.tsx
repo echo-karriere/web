@@ -11,7 +11,11 @@ import {
   TimeBlockTime
 } from "./style";
 import config from "../../../../config";
-import calcDateDiff, { DaysDateDiff } from "../../../../utils/dateDiff";
+import calcDateDiff, {
+  DaysDateDiff,
+  pastDate,
+  itsHappening
+} from "../../../../utils/dateDiff";
 
 interface TimeBlockProps {
   time: number;
@@ -28,10 +32,11 @@ function TimeBlock({ time, unit }: TimeBlockProps) {
 }
 
 interface TimeToEventProps {
-  timeToEvent: DaysDateDiff;
+  timeToEvent: DaysDateDiff | undefined;
 }
 
 function TimeToEvent({ timeToEvent }: TimeToEventProps) {
+  if (timeToEvent === undefined) return null;
   return (
     <TimeToEventStyle>
       <TimeBlock time={timeToEvent.days} unit="Dager" />
@@ -71,9 +76,19 @@ function Countdown(props: CountdownProps) {
         </Col>
       </Row>
       <Row>
-        {timeToEvent && (
+        {!pastDate(config.eventDate) && (
           <Col sm>
             <TimeToEvent timeToEvent={timeToEvent} />
+          </Col>
+        )}
+        {itsHappening(config.eventDate, config.eventDoneDate) && (
+          <Col sm>
+            <BigText>It's happening!</BigText>
+          </Col>
+        )}
+        {pastDate(config.eventDoneDate) && (
+          <Col sm>
+            <BigText>Takk for i år, vi sees igjen neste gang!</BigText>
           </Col>
         )}
       </Row>
