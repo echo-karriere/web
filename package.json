@@ -1,35 +1,26 @@
 {
   "name": "echo-karriere",
-  "version": "0.1.0",
+  "version": "2.0.0",
   "private": true,
   "dependencies": {
-    "@mdi/js": "^4.4.95",
-    "@mdi/react": "^1.2.1",
-    "date-fns": "^2.1.0",
-    "lodash": "^4.17.15",
+    "gatsby": "^2.19.19",
+    "gatsby-plugin-typescript": "^2.1.27",
     "react": "^16.8.6",
-    "react-bootstrap": "^1.0.0-beta.12",
     "react-dom": "^16.8.6",
-    "react-router-dom": "^5.0.1",
-    "react-scripts": "3.1.1",
-    "styled-components": "^4.3.2",
-    "typescript": "3.5.3"
+    "typescript": "^3.8.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "deploy": "yarn build && firebase use echo-karriere && firebase deploy"
+    "develop": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
   "browserslist": {
     "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
+      "> 1% in NO",
+      "not ie >= 8"
     ],
     "development": [
       "last 1 chrome version",
@@ -38,13 +29,9 @@
     ]
   },
   "devDependencies": {
-    "@types/jest": "24.0.18",
-    "@types/lodash": "^4.14.138",
     "@types/node": "12.7.4",
     "@types/react": "16.9.2",
     "@types/react-dom": "16.9.0",
-    "@types/react-router-dom": "^4.3.4",
-    "@types/styled-components": "^4.1.19",
     "husky": "^3.0.5",
     "lint-staged": "^9.2.5",
     "prettier": "^1.18.2"
