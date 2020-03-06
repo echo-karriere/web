@@ -27,3 +27,7 @@ build/
 
 # Firebase
 .firebase
+
+public/
+.netlify/
+.cache/

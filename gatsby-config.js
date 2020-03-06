@@ -11,6 +11,15 @@ module.exports = {
         isTSX: true,
         allExtensions: true
       }
-    }
+    },
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `./src/styles/typography`,
+        omitGoogleFont: true
+      }
+    },
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-styled-components`
   ]
 };
