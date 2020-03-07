@@ -9,7 +9,8 @@ interface Props {
 
 const Wrapper = styled.main`
   margin: 0 auto;
-  width: ${c.size.contentWidth}px;
+  max-width: ${c.size.contentWidth}px;
+  padding: 0 ${c.size.spacingUnit / 2}px;
 `;
 
 const ContentWrapper: React.FC<Props> = ({ children }) => {
