@@ -51,6 +51,12 @@ module.exports = {
         icon: "./static/icon.png"
       }
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `UA-159946110-1`
+      }
+    },
     `gatsby-plugin-robots-txt`,
     `gatsby-plugin-offline`,
     {
