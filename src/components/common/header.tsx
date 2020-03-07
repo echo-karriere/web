@@ -44,7 +44,7 @@ export default function Header() {
       <Nav>
         <NavLink to="/program">Program</NavLink>
         <NavLink to="/for-bedrifter">For bedrifter</NavLink>
-        <NavLink to="/om">Om</NavLink>
+        <NavLink to="/about">Om</NavLink>
       </Nav>
     </Head>
   );
