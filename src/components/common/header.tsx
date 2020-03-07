@@ -5,7 +5,9 @@ import styled from "styled-components";
 import c from "../../styles/constants";
 
 const Head = styled.header`
+  margin: 0 auto;
   line-height: 56px;
+  width: 70vw;
   position: relative;
 `;
 
