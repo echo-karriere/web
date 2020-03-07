@@ -65,6 +65,7 @@ module.exports = {
         createLinkInHead: true
       }
     },
+    `gatsby-plugin-catch-links`,
     `gatsby-plugin-netlify`
   ]
 };
