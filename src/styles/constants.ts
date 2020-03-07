@@ -1,6 +1,6 @@
 const constants = {
   size: {
-    contentWidth: 800,
+    contentWidth: 992,
     spacingUnit: 24,
     desktop: 992,
     tablet: 768,
