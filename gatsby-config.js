@@ -38,6 +38,27 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "echo karriere",
+        lang: "no",
+        short_name: "echo",
+        start_url: "/",
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
+        icon: "./static/icon.png"
+      }
+    },
+    `gatsby-plugin-robots-txt`,
+    `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        createLinkInHead: true
+      }
+    },
     `gatsby-plugin-netlify`
   ]
 };
