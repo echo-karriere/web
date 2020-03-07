@@ -15,8 +15,8 @@ const SEO: React.FC<Props> = ({ description: desc, title: t }) => {
 
   return (
     <Helmet
-      htmlAttributes={{ lang: "en" }}
-      title={title}
+      htmlAttributes={{ lang: "no" }}
+      title={`${title} | ${meta.title}`}
       meta={[
         {
           name: `description`,
