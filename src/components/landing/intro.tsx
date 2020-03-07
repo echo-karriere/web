@@ -49,10 +49,6 @@ const Intro: React.FC = () => {
           <h2>{data.subtitle}</h2>
         </Hello>
       </Wrapper>
-      {/* <div>
-        <h1>{data.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: data.content }} />
-      </div> */}
     </>
   );
 };
