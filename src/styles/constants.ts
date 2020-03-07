@@ -2,8 +2,9 @@ const constants = {
   size: {
     contentWidth: 800,
     spacingUnit: 24,
-    largeWidth: 800,
-    smallWidth: 600
+    desktop: 992,
+    tablet: 768,
+    mobile: 576
   },
   color: {
     brandColor: "hsl(213, 66.8%, 43.7%)",
