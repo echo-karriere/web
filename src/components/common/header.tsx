@@ -42,9 +42,9 @@ export default function Header() {
     <Head>
       <Title to="/">Hjem</Title>
       <Nav>
-        <NavLink to="#">Program</NavLink>
-        <NavLink to="#">For bedrifter</NavLink>
-        <NavLink to="#">Om</NavLink>
+        <NavLink to="/program">Program</NavLink>
+        <NavLink to="/for-bedrifter">For bedrifter</NavLink>
+        <NavLink to="/om">Om</NavLink>
       </Nav>
     </Head>
   );

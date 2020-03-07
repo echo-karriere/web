@@ -31,11 +31,12 @@ const Hello = styled.div`
 `;
 
 const Intro: React.FC = () => {
-  const { directusPage: data } = useStaticQuery(graphql`
+  const { apiLanding: data } = useStaticQuery(graphql`
     query IntroPage {
-      directusPage(page_id: { eq: "intro" }) {
+      apiLanding {
         title
-        content
+        subtitle
+        about
       }
     }
   `);
@@ -44,14 +45,14 @@ const Intro: React.FC = () => {
     <>
       <Wrapper>
         <Hello>
-          <h1>echo karriere</h1>
-          <h2>Velkommen til 2020!</h2>
+          <h1>{data.title}</h1>
+          <h2>{data.subtitle}</h2>
         </Hello>
       </Wrapper>
-      <div>
+      {/* <div>
         <h1>{data.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: data.content }} />
-      </div>
+      <div dangerouslySetInnerHTML={{ __html: data.content }} />
+      </div> */}
     </>
   );
 };

@@ -21,6 +21,7 @@ module.exports = {
       options: {
         url: process.env.API_URL,
         project: process.env.API_PROJECT,
+        typePrefix: "api",
         auth: {
           email: process.env.API_EMAIL,
           password: process.env.API_PASSWORD

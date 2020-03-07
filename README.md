@@ -11,7 +11,7 @@ Install all dependencies by running `yarn`.
 ## Running
 
 To develop run `yarn develop`. To fetch the queries from our remote API-server
-you need an API-token, ask your friendly web administrator: @sondr3.
+you need to have an API user, ask your friendly responsible developer: @sondr3.
 
 ## License
 
