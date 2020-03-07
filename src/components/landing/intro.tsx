@@ -1,4 +1,5 @@
 import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
 import styled from "styled-components";
 
 import c from "../../styles/constants";
@@ -30,13 +31,28 @@ const Hello = styled.div`
 `;
 
 const Intro: React.FC = () => {
+  const { directusPage: data } = useStaticQuery(graphql`
+    query IntroPage {
+      directusPage(page_id: { eq: "intro" }) {
+        title
+        content
+      }
+    }
+  `);
+
   return (
-    <Wrapper>
-      <Hello>
-        <h1>echo karriere</h1>
-        <h2>Velkommen til 2020!</h2>
-      </Hello>
-    </Wrapper>
+    <>
+      <Wrapper>
+        <Hello>
+          <h1>echo karriere</h1>
+          <h2>Velkommen til 2020!</h2>
+        </Hello>
+      </Wrapper>
+      <div>
+        <h1>{data.title}</h1>
+        <div dangerouslySetInnerHTML={{ __html: data.content }} />
+      </div>
+    </>
   );
 };
 

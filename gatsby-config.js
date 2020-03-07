@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`
+});
+
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.echokarriere.no",
@@ -10,6 +14,18 @@ module.exports = {
       options: {
         isTSX: true,
         allExtensions: true
+      }
+    },
+    {
+      resolve: `@directus/gatsby-source-directus`,
+      options: {
+        url: process.env.API_URL,
+        project: process.env.API_PROJECT,
+        auth: {
+          email: process.env.API_EMAIL,
+          password: process.env.API_PASSWORD
+        },
+        targetStatuses: ["published", "__NONE__"]
       }
     },
     {

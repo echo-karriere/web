@@ -27,7 +27,8 @@ const NavLink = styled(Link)`
   &:not(:last-child) {
     margin-right: ${c.size.spacingUnit}px;
   }
-  @media screen and (max-width: ${c.size.smallWidth}) {
+
+  @media screen and (max-width: ${c.size.tablet}) {
     margin-left: ${c.size.spacingUnit}px;
     padding: ${c.size.spacingUnit}px 0;
     &:not(:last-child) {

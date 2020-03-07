@@ -31,3 +31,4 @@ build/
 public/
 .netlify/
 .cache/
+.env*
