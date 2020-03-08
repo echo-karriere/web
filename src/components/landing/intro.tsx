@@ -1,40 +1,14 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import styled from "styled-components";
+
 import { Container } from "../common/container";
+import Hero from "./hero";
 
 import aboutUrl from "../../assets/about.svg";
 import hiringUrl from "../../assets/hiring.svg";
 import studentsUrl from "../../assets/students.svg";
 import { math } from "polished";
-
-const Wrapper = styled.div`
-  background: url("/images/mountains.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: ${props => props.theme.brand.color5};
-  height: 60vh;
-  margin-bottom: ${props => math(`${props.theme.size.spacing} * 4`)};
-`;
-
-const Hello = styled.div`
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: ${props => props.theme.color.textColor};
-  text-align: center;
-  width: 100vw;
-
-  @media screen and (min-width: ${props => props.theme.screen.sm}) {
-    bottom: 15%;
-  }
-
-  @media screen and (min-width: ${props => props.theme.screen.md}) {
-    bottom: 50%;
-  }
-`;
 
 const Art = styled.figure`
   margin: 0;
@@ -87,8 +61,6 @@ const Intro: React.FC = () => {
   const { apiLanding: data } = useStaticQuery(graphql`
     query IntroPage {
       apiLanding {
-        title
-        subtitle
         about
         for_companies
         for_students
@@ -98,12 +70,7 @@ const Intro: React.FC = () => {
 
   return (
     <>
-      <Wrapper>
-        <Hello>
-          <h1>{data.title}</h1>
-          <h2>{data.subtitle}</h2>
-        </Hello>
-      </Wrapper>
+      <Hero />
       <Container>
         <Grid>
           <div>

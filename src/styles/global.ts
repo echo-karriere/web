@@ -26,10 +26,6 @@ figure > img {
   display: block;
 }
 
-ul, ol {
-  margin-left: ${props => props.theme.size.spacing};
-}
-
 li {
   > ul,
   > ol {

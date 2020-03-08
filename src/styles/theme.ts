@@ -20,7 +20,9 @@ const theme = {
     color5: "#52AFBE",
     color6: "#049FB2",
     color7: "#0090A5",
-    color8: "#008195"
+    color8: "#008195",
+    color9: "#373736",
+    color10: "#383836"
   },
   color: {
     brandColor: "hsl(213, 66.8%, 43.7%)",
@@ -28,7 +30,7 @@ const theme = {
     blue: "hsl(211, 100%, 50%)",
     textColor: "hsla(0, 0%, 0%, 0.8)",
     backgroundColor: "hsl(0, 0%, 99.2%)",
-    grey: "hsl(0, 0%, 45.9%)",
+    grey: "hsl(0, 0%, 30%)",
     greyLightened: "hsl(0, 0%, 70%)"
   },
   screen: {
