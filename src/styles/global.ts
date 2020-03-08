@@ -2,6 +2,15 @@ import { createGlobalStyle } from "styled-components";
 import { math } from "polished";
 
 const GlobalStyle = createGlobalStyle`
+html, body{
+  height: 100%;
+  margin: 0;
+}
+
+#gatsby-focus-wrapper {
+  min-height: 100%;
+}
+
 table {
   margin: 0 0 20px 0;
   text-align: left;

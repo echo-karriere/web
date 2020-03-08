@@ -3,8 +3,9 @@ import { Link } from "gatsby";
 import styled from "styled-components";
 import { Container } from "./container";
 
-const Head = styled(Container)`
+const Head = styled.div`
   line-height: 56px;
+  background-color: ${props => props.theme.brand.color4};
 `;
 
 const Title = styled(Link)`
@@ -46,12 +47,14 @@ const NavLink = styled(Link)`
 export default function Header() {
   return (
     <Head>
-      <Title to="/">Hjem</Title>
-      <Nav>
-        <NavLink to="/program">Program</NavLink>
-        <NavLink to="/for-bedrifter">For bedrifter</NavLink>
-        <NavLink to="/about">Om</NavLink>
-      </Nav>
+      <Container>
+        <Title to="/">Hjem</Title>
+        <Nav>
+          <NavLink to="/program">Program</NavLink>
+          <NavLink to="/for-bedrifter">For bedrifter</NavLink>
+          <NavLink to="/about">Om</NavLink>
+        </Nav>
+      </Container>
     </Head>
   );
 }

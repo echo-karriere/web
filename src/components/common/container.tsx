@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { math } from "polished";
 
 export const Container = styled.div`
+  flex: 1;
   max-width: ${props => props.theme.size.xl};
   width: 100%;
   margin: 0 auto;

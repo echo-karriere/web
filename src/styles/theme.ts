@@ -12,6 +12,16 @@ const theme = {
     lg: "960px",
     xl: "1200px"
   },
+  brand: {
+    color1: "#FCC000",
+    color2: "#FED97A",
+    color3: "#FFEBBC",
+    color4: "#A7D0DA",
+    color5: "#52AFBE",
+    color6: "#049FB2",
+    color7: "#0090A5",
+    color8: "#008195"
+  },
   color: {
     brandColor: "hsl(213, 66.8%, 43.7%)",
     brandColorDarkened: "hsl(213, 66.8%, 38%)",

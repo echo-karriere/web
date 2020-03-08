@@ -3,11 +3,9 @@ import { graphql, useStaticQuery } from "gatsby";
 import styled from "styled-components";
 import { Container } from "../common/container";
 
-import aboutUrl, { ReactComponents as About } from "../../assets/about.svg";
-import hiringUrl, { ReactComponents as Hiring } from "../../assets/hiring.svg";
-import studentsUrl, {
-  ReactComponents as Student
-} from "../../assets/students.svg";
+import aboutUrl from "../../assets/about.svg";
+import hiringUrl from "../../assets/hiring.svg";
+import studentsUrl from "../../assets/students.svg";
 import { math } from "polished";
 
 const Wrapper = styled.div`
@@ -15,6 +13,7 @@ const Wrapper = styled.div`
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  background-color: ${props => props.theme.brand.color5};
   height: 60vh;
   margin-bottom: ${props => math(`${props.theme.size.spacing} * 4`)};
 `;
