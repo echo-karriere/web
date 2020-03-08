@@ -6,6 +6,7 @@
     "@directus/gatsby-source-directus": "^0.2.4",
     "@types/react-helmet": "^5.0.15",
     "@types/typography": "^0.16.3",
+    "@types/yup": "^0.26.32",
     "babel-plugin-styled-components": "^1.10.7",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-prettier": "^3.1.2",
@@ -32,7 +33,8 @@
     "typeface-bitter": "^0.0.71",
     "typeface-cambo": "^0.0.72",
     "typescript": "^3.8.3",
-    "typography": "^0.16.19"
+    "typography": "^0.16.19",
+    "yup": "^0.28.3"
   },
   "scripts": {
     "develop": "gatsby develop",
