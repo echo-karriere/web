@@ -2,7 +2,7 @@
 
 This is the front-end (aka website) for _echo karriere_; a career day for IT
 students in and around Bergen. It is written using a symphony of modern tools,
-most notably React, Gatsby, TailwindCSS and hosted using Netlify.
+most notably React, Gatsby, styled-components and hosted using Netlify.
 
 ## Setup
 
