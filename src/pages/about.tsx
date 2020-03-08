@@ -1,9 +1,9 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 
-import ContentWrapper from "../components/common/contentWrapper";
 import Layout from "../components/common/layout";
 import SEO from "../components/common/seo";
+import { Container } from "../components/common/container";
 
 const About: React.FC = () => {
   const { apiAbout: data } = useStaticQuery(graphql`
@@ -18,10 +18,10 @@ const About: React.FC = () => {
   return (
     <Layout>
       <SEO title={data.title} />
-      <ContentWrapper>
+      <Container>
         <h1>{data.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: data.main_content }} />
-      </ContentWrapper>
+      </Container>
     </Layout>
   );
 };

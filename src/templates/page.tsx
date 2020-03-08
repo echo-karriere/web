@@ -1,7 +1,7 @@
 import React from "react";
 import SEO from "../components/common/seo";
 import Layout from "../components/common/layout";
-import ContentWrapper from "../components/common/contentWrapper";
+import { Container } from "../components/common/container";
 
 interface PageData {
   pageContext: {
@@ -14,10 +14,10 @@ const PageTemplate = ({ pageContext: { title, content } }: PageData) => {
   return (
     <Layout>
       <SEO title={title} />
-      <ContentWrapper>
+      <Container>
         <h1>{title}</h1>
         <div dangerouslySetInnerHTML={{ __html: content }} />
-      </ContentWrapper>
+      </Container>
     </Layout>
   );
 };

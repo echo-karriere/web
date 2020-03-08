@@ -1,20 +1,20 @@
 import React from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
+import { Container } from "./container";
 
-import c from "../../styles/constants";
-
-const Head = styled.header`
-  margin: 0 auto;
+const Head = styled(Container)`
   line-height: 56px;
-  width: 70vw;
-  position: relative;
 `;
 
 const Title = styled(Link)`
-  color: ${c.color.textColor};
+  color: ${props => props.theme.color.textColor};
   font-size: 1.31951rem;
   text-transform: uppercase;
+
+  &:visited {
+    color: ${props => props.theme.color.textColor};
+  }
 `;
 
 const Nav = styled.nav`
@@ -22,15 +22,21 @@ const Nav = styled.nav`
 `;
 
 const NavLink = styled(Link)`
-  color: ${c.color.textColor};
+  color: ${props => props.theme.color.textColor};
   text-decoration: none;
+
   &:not(:last-child) {
-    margin-right: ${c.size.spacingUnit}px;
+    margin-right: ${props => props.theme.size.spacing};
   }
 
-  @media screen and (max-width: ${c.size.tablet}) {
-    margin-left: ${c.size.spacingUnit}px;
-    padding: ${c.size.spacingUnit}px 0;
+  &:visited {
+    color: ${props => props.theme.color.textColor};
+  }
+
+  @media screen and (min-width: ${props => props.theme.screen.md}) {
+    margin-left: ${props => props.theme.size.spacing};
+    padding: ${props => props.theme.size.spacing} 0;
+
     &:not(:last-child) {
       margin-right: 0;
     }

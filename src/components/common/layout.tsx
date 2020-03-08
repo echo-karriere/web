@@ -1,8 +1,10 @@
 import React from "react";
+import { ThemeProvider } from "styled-components";
 
 import Header from "./header";
 import SEO from "./seo";
 
+import theme from "../../styles/theme";
 import GlobalStyle from "../../styles/global";
 
 interface Props {
@@ -11,12 +13,14 @@ interface Props {
 
 const Layout: React.FC<Props> = ({ children }) => {
   return (
-    <React.StrictMode>
-      <GlobalStyle />
-      <SEO />
-      <Header />
-      {children}
-    </React.StrictMode>
+    <ThemeProvider theme={theme}>
+      <>
+        <GlobalStyle />
+        <SEO />
+        <Header />
+        {children}
+      </>
+    </ThemeProvider>
   );
 };
 

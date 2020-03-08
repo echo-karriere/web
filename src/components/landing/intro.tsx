@@ -2,8 +2,6 @@ import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import styled from "styled-components";
 
-import c from "../../styles/constants";
-
 const Wrapper = styled.div`
   background: url("/images/mountains.svg");
   background-size: contain;
@@ -14,19 +12,19 @@ const Wrapper = styled.div`
 
 const Hello = styled.div`
   position: absolute;
-  bottom: 50%;
+  bottom: 0;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: ${c.color.textColor};
+  color: ${props => props.theme.color.textColor};
   text-align: center;
   width: 100vw;
 
-  @media screen and (max-width: ${c.size.tablet}px) {
+  @media screen and (min-width: ${props => props.theme.screen.sm}) {
     bottom: 15%;
   }
 
-  @media screen and (max-width: ${c.size.mobile}px) {
-    bottom: 0;
+  @media screen and (min-width: ${props => props.theme.screen.md}) {
+    bottom: 50%;
   }
 `;
 
