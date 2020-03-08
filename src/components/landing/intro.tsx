@@ -3,9 +3,11 @@ import { graphql, useStaticQuery } from "gatsby";
 import styled from "styled-components";
 import { Container } from "../common/container";
 
-import about from "../../assets/about.svg";
-import hiring from "../../assets/hiring.svg";
-import students from "../../assets/students.svg";
+import aboutUrl, { ReactComponents as About } from "../../assets/about.svg";
+import hiringUrl, { ReactComponents as Hiring } from "../../assets/hiring.svg";
+import studentsUrl, {
+  ReactComponents as Student
+} from "../../assets/students.svg";
 import { math } from "polished";
 
 const Wrapper = styled.div`
@@ -69,7 +71,7 @@ const Grid = styled.div<GridType>`
     text-align: left;
 
     &:last-child {
-      margin-bottom: {props => props.theme.size.spacing};
+      margin-bottom: ${props => props.theme.size.spacing};
     }
 
     ${props =>
@@ -110,12 +112,18 @@ const Intro: React.FC = () => {
             <div dangerouslySetInnerHTML={{ __html: data.about }} />
           </div>
           <Art>
-            <img src={about} />
+            <img
+              src={aboutUrl}
+              alt="Four persons standing around with a small dog in front."
+            />
           </Art>
         </Grid>
         <Grid inverse>
           <Art>
-            <img src={hiring} />
+            <img
+              src={hiringUrl}
+              alt="Art showing a person looking at online resumes."
+            />
           </Art>
           <div>
             <h2>For bedrifter</h2>
@@ -128,7 +136,7 @@ const Intro: React.FC = () => {
             <div dangerouslySetInnerHTML={{ __html: data.for_students }} />
           </div>
           <Art>
-            <img src={students} />
+            <img src={studentsUrl} alt="A graduation cap." />
           </Art>
         </Grid>
       </Container>
