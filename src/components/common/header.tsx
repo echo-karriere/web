@@ -9,13 +9,7 @@ const Head = styled.div`
 `;
 
 const Title = styled(Link)`
-  color: ${({ theme }) => theme.color.textColor};
-  font-size: 1.31951rem;
-  text-transform: uppercase;
-
-  &:visited {
-    color: ${({ theme }) => theme.color.textColor};
-  }
+  align-self: center;
 `;
 
 const Logo = styled.img`
