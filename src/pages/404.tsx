@@ -8,7 +8,7 @@ import SEO from "../components/common/seo";
 const Wrapper = styled.main`
   width: 100vw;
   height: 100vh;
-  padding: ${props => math(`${props.theme.size.spacing} / 2`)};
+  padding: ${({ theme }) => math(`${theme.size.spacing} / 2`)};
   display: flex;
   flex-direction: column;
   align-items: center;

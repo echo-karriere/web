@@ -5,8 +5,8 @@ import { Link } from "gatsby";
 import { Container } from "./container";
 
 const Wrapper = styled.footer`
-  padding: ${props => props.theme.size.spacing} 0;
-  background-color: ${props => props.theme.brand.color4};
+  padding: ${({ theme }) => theme.size.spacing} 0;
+  background-color: ${({ theme }) => theme.brand.color4};
 `;
 
 const FlexContainer = styled(Container)`
@@ -15,7 +15,7 @@ const FlexContainer = styled(Container)`
   align-content: center;
   justify-content: space-around;
 
-  @media screen and (min-width: ${props => props.theme.screen.md}) {
+  @media screen and (min-width: ${({ theme }) => theme.screen.md}) {
     flex-direction: row;
   }
 `;
@@ -23,7 +23,7 @@ const FlexContainer = styled(Container)`
 const FlexDiv = styled.div`
   max-width: 100%;
 
-  @media screen and (min-width: ${props => props.theme.screen.md}) {
+  @media screen and (min-width: ${({ theme }) => theme.screen.md}) {
     max-width: 50%;
   }
 `;

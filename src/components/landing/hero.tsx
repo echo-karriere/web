@@ -8,14 +8,14 @@ import { Container } from "../common/container";
 import mountains from "../../assets/mountains.svg";
 
 const Wrapper = styled.div`
-  background-color: ${props => props.theme.brand.color4};
-  padding-top: ${props => props.theme.size.spacing};
+  background-color: ${({ theme }) => theme.brand.color4};
+  padding-top: ${({ theme }) => theme.size.spacing};
 `;
 
 const Hello = styled.div`
   justify-self: start;
 
-  @media screen and (min-width: ${props => props.theme.screen.md}) {
+  @media screen and (min-width: ${({ theme }) => theme.screen.md}) {
     justify-self: center;
   }
 `;
@@ -29,11 +29,11 @@ const Grid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  grid-gap: ${props => math(`${props.theme.size.spacing} * 2`)};
+  grid-gap: ${({ theme }) => math(`${theme.size.spacing} * 2`)};
 
-  @media screen and (max-width: ${props => props.theme.screen.md}) {
+  @media screen and (max-width: ${({ theme }) => theme.screen.md}) {
     grid-template-columns: 1fr;
-    grid-gap: ${props => math(`${props.theme.size.spacing} * 3`)};
+    grid-gap: ${({ theme }) => math(`${theme.size.spacing} * 3`)};
 
     > ${HeroImage} {
       order: 2;
@@ -46,16 +46,16 @@ const Title = styled.h1`
   padding-bottom: 0;
   margin-bottom: 0;
 
-  @media screen and (min-width: ${props => props.theme.screen.md}) {
+  @media screen and (min-width: ${({ theme }) => theme.screen.md}) {
     font-size: 3rem;
   }
 `;
 
 const SubTitle = styled.h2`
   font-size: 1.5rem;
-  color: ${props => props.theme.color.grey};
+  color: ${({ theme }) => theme.color.grey};
 
-  @media screen and (min-width: ${props => props.theme.screen.md}) {
+  @media screen and (min-width: ${({ theme }) => theme.screen.md}) {
     font-size: 2rem;
   }
 `;
@@ -64,7 +64,7 @@ const StyledLink = styled(Link)`
   font-size: 1.2rem;
 
   &:visited {
-    color: ${props => props.theme.color.textColor};
+    color: ${({ theme }) => theme.color.textColor};
   }
 `;
 

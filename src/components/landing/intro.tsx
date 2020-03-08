@@ -12,7 +12,7 @@ import { math } from "polished";
 
 const Art = styled.figure`
   margin: 0;
-  max-width: ${props => math(`${props.theme.screen.md} / 2`)};
+  max-width: ${({ theme }) => math(`${theme.screen.md} / 2`)};
   width: 100%;
 `;
 
@@ -23,11 +23,11 @@ type GridType = {
 const Grid = styled.div<GridType>`
   display: grid;
   grid-template-columns: 3fr 2fr;
-  grid-gap: ${props => math(`${props.theme.size.spacing} * 2`)};
+  grid-gap: ${({ theme }) => math(`${theme.size.spacing} * 2`)};
   text-align: right;
   align-items: center;
   justify-items: center;
-  margin: ${props => props.theme.size.spacing} 0;
+  margin: ${({ theme }) => theme.size.spacing} 0;
   ${props =>
     props.inverse &&
     `
@@ -39,12 +39,12 @@ const Grid = styled.div<GridType>`
     margin-bottom: 16px;
   }
 
-  @media (max-width: ${props => props.theme.screen.md}) {
+  @media (max-width: ${({ theme }) => theme.screen.md}) {
     grid-template-columns: 1fr;
     text-align: left;
 
     &:last-child {
-      margin-bottom: ${props => props.theme.size.spacing};
+      margin-bottom: ${({ theme }) => theme.size.spacing};
     }
 
     ${props =>

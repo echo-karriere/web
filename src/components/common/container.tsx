@@ -3,33 +3,33 @@ import { math } from "polished";
 
 export const Container = styled.div`
   flex: 1;
-  max-width: ${props => props.theme.size.xl};
+  max-width: ${({ theme }) => theme.size.xl};
   width: 100%;
   margin: 0 auto;
-  padding: 0 ${props => props.theme.size.spacing};
+  padding: 0 ${({ theme }) => theme.size.spacing};
 
-  @media screen and (min-width: ${props => props.theme.screen.sm}) {
-    max-width: ${props => props.theme.size.sm};
+  @media screen and (min-width: ${({ theme }) => theme.screen.sm}) {
+    max-width: ${({ theme }) => theme.size.sm};
   }
 
-  @media screen and (min-width: ${props => props.theme.screen.md}) {
-    max-width: ${props => props.theme.size.md};
+  @media screen and (min-width: ${({ theme }) => theme.screen.md}) {
+    max-width: ${({ theme }) => theme.size.md};
   }
 
-  @media screen and (min-width: ${props => props.theme.screen.lg}) {
-    max-width: ${props => props.theme.size.lg};
+  @media screen and (min-width: ${({ theme }) => theme.screen.lg}) {
+    max-width: ${({ theme }) => theme.size.lg};
   }
 
-  @media screen and (min-width: ${props => props.theme.screen.xl}) {
-    max-width: ${props => props.theme.size.xl};
+  @media screen and (min-width: ${({ theme }) => theme.screen.xl}) {
+    max-width: ${({ theme }) => theme.size.xl};
   }
 `;
 
 export const Section = styled.section`
-  padding: ${props => math(`${props.theme.size.spacing} * 5`)} 0;
+  padding: ${({ theme }) => math(`${theme.size.spacing} * 5`)} 0;
   overflow: hidden;
 
-  @media screen and (max-width: ${props => props.theme.screen.md}) {
-    padding: ${props => math(`${props.theme.size.spacing} * 4`)} 0;
+  @media screen and (max-width: ${({ theme }) => theme.screen.md}) {
+    padding: ${({ theme }) => math(`${theme.size.spacing} * 4`)} 0;
   }
 `;

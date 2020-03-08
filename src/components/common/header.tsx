@@ -5,16 +5,16 @@ import { Container } from "./container";
 
 const Head = styled.div`
   line-height: 56px;
-  background-color: ${props => props.theme.brand.color1};
+  background-color: ${({ theme }) => theme.brand.color1};
 `;
 
 const Title = styled(Link)`
-  color: ${props => props.theme.color.textColor};
+  color: ${({ theme }) => theme.color.textColor};
   font-size: 1.31951rem;
   text-transform: uppercase;
 
   &:visited {
-    color: ${props => props.theme.color.textColor};
+    color: ${({ theme }) => theme.color.textColor};
   }
 `;
 
@@ -23,20 +23,20 @@ const Nav = styled.nav`
 `;
 
 const NavLink = styled(Link)`
-  color: ${props => props.theme.color.textColor};
+  color: ${({ theme }) => theme.color.textColor};
   text-decoration: none;
 
   &:not(:last-child) {
-    margin-right: ${props => props.theme.size.spacing};
+    margin-right: ${({ theme }) => theme.size.spacing};
   }
 
   &:visited {
-    color: ${props => props.theme.color.textColor};
+    color: ${({ theme }) => theme.color.textColor};
   }
 
-  @media screen and (min-width: ${props => props.theme.screen.md}) {
-    margin-left: ${props => props.theme.size.spacing};
-    padding: ${props => props.theme.size.spacing} 0;
+  @media screen and (min-width: ${({ theme }) => theme.screen.md}) {
+    margin-left: ${({ theme }) => theme.size.spacing};
+    padding: ${({ theme }) => theme.size.spacing} 0;
 
     &:not(:last-child) {
       margin-right: 0;
