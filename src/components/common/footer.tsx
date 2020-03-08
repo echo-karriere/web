@@ -21,11 +21,16 @@ const FlexContainer = styled(Container)`
 `;
 
 const FlexDiv = styled.div`
-  max-width: 50%;
+  max-width: 100%;
+
+  @media screen and (min-width: ${props => props.theme.screen.md}) {
+    max-width: 50%;
+  }
 `;
 
 const Ul = styled.ul`
   list-style: none;
+  margin: 0;
 `;
 
 const Footer = () => {
