@@ -14,6 +14,8 @@ const Title = styled(Link)`
 
 const Logo = styled.img`
   width: 160px;
+  padding: 0;
+  margin: 0;
 `;
 
 const Nav = styled.nav`
