@@ -5,7 +5,6 @@ import { Container } from "./container";
 
 const Head = styled.div`
   line-height: 56px;
-  background-color: ${({ theme }) => theme.brand.color1};
 `;
 
 const Title = styled(Link)`
