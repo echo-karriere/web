@@ -27,3 +27,11 @@ build/
 
 # Firebase
 .firebase
+
+public/
+.netlify/
+.cache/
+.env*
+.vscode/
+.graphqlconfig
+schema.graphql
