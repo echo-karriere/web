@@ -63,9 +63,9 @@ export default function Header() {
             <Logo src="/logo.png" />
           </Title>
           <NavLinks>
-            <NavLink to="/program">Program</NavLink>
-            <NavLink to="/for-bedrifter">For bedrifter</NavLink>
-            <NavLink to="/about">Om</NavLink>
+            <NavLink to="/for-studenter/">For studenter</NavLink>
+            <NavLink to="/for-bedrifter/">For bedrifter</NavLink>
+            <NavLink to="/om/">Om</NavLink>
           </NavLinks>
         </Nav>
       </Container>
