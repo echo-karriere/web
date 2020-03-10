@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { useForm } from "react-hook-form";
+import axios from "axios";
 import * as yup from "yup";
+
+const CenteredContainer = styled.div`
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
 
 const Legend = styled.legend`
   background-color: #000;
@@ -53,6 +62,7 @@ type FormData = {
   phone: number;
   day: "none" | "day1" | "day2";
   banquet: "yes" | "no";
+  other: string;
   confirmation: boolean;
 };
 
@@ -83,7 +93,7 @@ const interestSchema = yup.object().shape({
     .required(),
   day: yup
     .mixed()
-    .oneOf(["none", "day1", "day2"])
+    .oneOf(["N/A", "17", "18"])
     .required(),
   extra: yup
     .mixed()
@@ -95,21 +105,57 @@ const interestSchema = yup.object().shape({
     .notRequired(),
   other: yup.string().notRequired(),
   confirmation: yup
-    .mixed()
-    .oneOf(["confirmation"])
+    .boolean()
+    .oneOf([true], " Du må bekrefte")
     .required()
 });
 
 export default function InterestForm() {
-  const { register, handleSubmit, errors } = useForm<FormData>({
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState(false);
+
+  const { register, errors, handleSubmit } = useForm<FormData>({
     validationSchema: interestSchema
   });
-  const onSubmit = data => console.log(data);
+  const submitForm = (data: FormData) => {
+    axios
+      .post("https://formcarry.com/s/DTkwrilmrEEd", data, {
+        headers: { Accept: "application/json" }
+      })
+      .then(res => {
+        if (res.status === 200) {
+          setSubmitted(res.status === 200);
+        } else {
+          setError(true);
+        }
+      })
+      .catch(() => {
+        setError(true);
+      });
+  };
+
+  if (submitted) {
+    return (
+      <CenteredContainer>
+        <h1>Takk!</h1>
+        <h2>Du hører fra oss så snart som mulig.</h2>
+      </CenteredContainer>
+    );
+  }
+
+  if (error) {
+    return (
+      <CenteredContainer>
+        <h1>Noe gikk galt :(</h1>
+        <h2>Prøv igjen senere</h2>
+      </CenteredContainer>
+    );
+  }
 
   return (
     <>
       <h1>Interesseskjema 2020</h1>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit(submitForm)}>
         <section>
           <h2>Din bedrift</h2>
 
@@ -169,9 +215,9 @@ export default function InterestForm() {
             <Legend>echo karriere</Legend>
             <Label htmlFor="day_id">Hvilken dag ønsker du å delta på?</Label>
             <Select id="day_id" name="day" ref={register}>
-              <option value="none">Ingen preferanse</option>
-              <option value="day1">Dag 1 (17. september)</option>
-              <option value="day2">Dag 2 (18. september)</option>
+              <option value="N/A">Ingen preferanse</option>
+              <option value="17">Dag 1 (17. september)</option>
+              <option value="18">Dag 2 (18. september)</option>
             </Select>
             <Label>Ønsker dere å delta/arrangere noe på karrieredagen?</Label>
             <Ul>
@@ -297,11 +343,11 @@ export default function InterestForm() {
             <div style={{ paddingBottom: "0.5rem" }}>
               <input
                 type="checkbox"
-                id="confirmation"
+                id="conf_id"
                 name="confirmation"
                 ref={register({ required: true })}
               />
-              <Label htmlFor="confirmation">
+              <Label htmlFor="conf_id">
                 Vi vil med dette melde vår <strong>interesse</strong> for{" "}
                 <em>echo karriere</em> 2020.
                 {errors.confirmation && <Error> Du må bekrefte</Error>}
