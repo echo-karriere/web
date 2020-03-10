@@ -12,7 +12,6 @@ const Title = styled(Link)`
 `;
 
 const Logo = styled.img`
-  width: 160px;
   padding: 0;
   margin: 0;
 `;
@@ -60,7 +59,7 @@ export default function Header() {
       <Container>
         <Nav>
           <Title to="/">
-            <Logo src="/logo.png" />
+            <Logo src="/logo-small.png" />
           </Title>
           <NavLinks>
             <NavLink to="/for-studenter/">For studenter</NavLink>
