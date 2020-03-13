@@ -6,7 +6,12 @@ module.exports = {
   siteMetadata: {
     siteUrl: "https://www.echokarriere.no",
     title: "echo karriere",
-    description: "echo karriere er en karrieredag for IT-studenter i Bergen."
+    description: "echo karriere er en karrieredag for IT-studenter i Bergen.",
+    navigation: [
+      { title: "For studenter", link: "/for-studenter/" },
+      { title: "For bedrifter", link: "/for-bedrifter/" },
+      { title: "Om", link: "/om/" }
+    ]
   },
   plugins: [
     {

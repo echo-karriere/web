@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Link } from "gatsby";
 
 import { Container } from "./container";
+import useNavigationData, { NavItem } from "../../queries/useNavigationData";
 
 const Wrapper = styled.footer`
   padding: ${({ theme }) => theme.size.spacing} 0;
@@ -34,6 +35,8 @@ const Ul = styled.ul`
 `;
 
 const Footer = () => {
+  const navigation = useNavigationData();
+
   return (
     <Wrapper>
       <FlexContainer>
@@ -46,15 +49,13 @@ const Footer = () => {
         </FlexDiv>
         <FlexDiv>
           <Ul>
-            <li>
-              <Link to="/about">Om</Link>
-            </li>
-            <li>
-              <Link to="/for-bedrifter">For bedrifter</Link>
-            </li>
-            <li>
-              <Link to="/program">Program</Link>
-            </li>
+            {navigation.map((nav: NavItem) => (
+              <li key={nav.link}>
+                <Link to={nav.link} key={nav.link}>
+                  {nav.title}
+                </Link>
+              </li>
+            ))}
           </Ul>
         </FlexDiv>
       </FlexContainer>

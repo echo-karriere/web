@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
 import { Container } from "./container";
+import useNavigationData, { NavItem } from "../../queries/useNavigationData";
 
 const Head = styled.div`
   line-height: 56px;
@@ -54,6 +55,8 @@ const NavLink = styled(Link)`
 `;
 
 export default function Header() {
+  const navigation = useNavigationData();
+
   return (
     <Head>
       <Container>
@@ -62,9 +65,11 @@ export default function Header() {
             <Logo src="/logo-small.png" />
           </Title>
           <NavLinks>
-            <NavLink to="/for-studenter/">For studenter</NavLink>
-            <NavLink to="/for-bedrifter/">For bedrifter</NavLink>
-            <NavLink to="/om/">Om</NavLink>
+            {navigation.map((nav: NavItem) => (
+              <NavLink to={nav.link} key={nav.link}>
+                {nav.title}
+              </NavLink>
+            ))}
           </NavLinks>
         </Nav>
       </Container>
