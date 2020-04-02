@@ -10,7 +10,7 @@ const theme = {
     sm: "540px",
     md: "720px",
     lg: "960px",
-    xl: "1200px"
+    xl: "1200px",
   },
   brand: {
     color1: "#FCC000",
@@ -22,7 +22,7 @@ const theme = {
     color7: "#0090A5",
     color8: "#008195",
     color9: "#373736",
-    color10: "#383836"
+    color10: "#383836",
   },
   color: {
     brandColor: "hsl(213, 66.8%, 43.7%)",
@@ -31,14 +31,14 @@ const theme = {
     textColor: "hsla(0, 0%, 0%, 0.8)",
     backgroundColor: "hsl(0, 0%, 99.2%)",
     grey: "hsl(0, 0%, 30%)",
-    greyLightened: "hsl(0, 0%, 70%)"
+    greyLightened: "hsl(0, 0%, 70%)",
   },
   screen: {
     sm: "640px",
     md: "768px",
     lg: "1024px",
-    xl: "1280px"
-  }
+    xl: "1280px",
+  },
 };
 
 export default theme;

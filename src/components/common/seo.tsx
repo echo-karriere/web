@@ -20,36 +20,36 @@ const SEO: React.FC<Props> = ({ description: desc, title: t }) => {
       meta={[
         {
           name: `description`,
-          content: description
+          content: description,
         },
         {
           property: `og:title`,
-          content: title
+          content: title,
         },
         {
           property: `og:description`,
-          content: description
+          content: description,
         },
         {
           property: `og:type`,
-          content: `website`
+          content: `website`,
         },
         {
           name: `twitter:card`,
-          content: `summary`
+          content: `summary`,
         },
         {
           name: `twitter:creator`,
-          content: meta.title
+          content: meta.title,
         },
         {
           name: `twitter:title`,
-          content: title
+          content: title,
         },
         {
           name: `twitter:description`,
-          content: description
-        }
+          content: description,
+        },
       ]}
     />
   );

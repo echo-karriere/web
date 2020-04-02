@@ -9,14 +9,14 @@ const typography = new Typography({
     "Segoe UI",
     "Helvetica",
     "Arial",
-    "sans-serif"
+    "sans-serif",
   ],
   bodyFontFamily: ["Bitter", "Georgia", "serif"],
   overrideStyles: (): Record<symbol, string> => ({
     body: {
-      backgroundColor: "hsla(0, 0%, 99.2%, 1)"
-    }
-  })
+      backgroundColor: "hsla(0, 0%, 99.2%, 1)",
+    },
+  }),
 });
 
 if (process.env.NODE_ENV !== "production") {

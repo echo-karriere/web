@@ -11,7 +11,7 @@ import {
   Select,
   Ul,
   TextArea,
-  Error
+  Error,
 } from "./common";
 
 type FormData = {
@@ -29,44 +29,29 @@ yup.setLocale({
   mixed: {
     required: "Du må fylle ut dette feltet",
     oneOf: "Du må velge et alternativ",
-    notType: "Feltet må være et gyldig nummer"
+    notType: "Feltet må være et gyldig nummer",
   },
   string: {
-    email: "Feltet må være en gyldig epost-adresse"
+    email: "Feltet må være en gyldig epost-adresse",
   },
   number: {
-    integer: "Feltet må være et gyldig nummer"
-  }
+    integer: "Feltet må være et gyldig nummer",
+  },
 });
 
 const interestSchema = yup.object().shape({
   company: yup.string().required(),
   person: yup.string().required(),
-  email: yup
-    .string()
-    .email()
-    .required(),
-  phone: yup
-    .number()
-    .integer()
-    .required(),
-  day: yup
-    .mixed()
-    .oneOf(["N/A", "17", "18"])
-    .required(),
+  email: yup.string().email().required(),
+  phone: yup.number().integer().required(),
+  day: yup.mixed().oneOf(["N/A", "17", "18"]).required(),
   extra: yup
     .mixed()
     .oneOf(["workshop", "talk", "lightningtalk", "presentation", "interview"])
     .notRequired(),
-  banquet: yup
-    .mixed()
-    .oneOf(["yes", "no", "maybe"])
-    .notRequired(),
+  banquet: yup.mixed().oneOf(["yes", "no", "maybe"]).notRequired(),
   other: yup.string().notRequired(),
-  confirmation: yup
-    .boolean()
-    .oneOf([true], " Du må bekrefte")
-    .required()
+  confirmation: yup.boolean().oneOf([true], " Du må bekrefte").required(),
 });
 
 export default function InterestForm() {
@@ -74,14 +59,14 @@ export default function InterestForm() {
   const [error, setError] = useState(false);
 
   const { register, errors, handleSubmit } = useForm<FormData>({
-    validationSchema: interestSchema
+    validationSchema: interestSchema,
   });
   const submitForm = (data: FormData) => {
     axios
       .post("https://formcarry.com/s/DTkwrilmrEEd", data, {
-        headers: { Accept: "application/json" }
+        headers: { Accept: "application/json" },
       })
-      .then(res => {
+      .then((res) => {
         if (res.status === 200) {
           setSubmitted(res.status === 200);
         } else {

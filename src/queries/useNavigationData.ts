@@ -8,8 +8,8 @@ export interface NavItem {
 const useNavigationData = () => {
   const {
     site: {
-      siteMetadata: { navigation: navigation }
-    }
+      siteMetadata: { navigation: navigation },
+    },
   } = useStaticQuery(graphql`
     query Navigation {
       site {

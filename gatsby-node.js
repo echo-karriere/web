@@ -20,15 +20,15 @@ module.exports.createPages = async ({ graphql, actions }) => {
 
   const {
     data: {
-      allApiPage: { edges: pages = [] }
-    }
+      allApiPage: { edges: pages = [] },
+    },
   } = response;
 
   pages.forEach(({ node: page }) => {
     createPage({
       path: `/${page.slug}/`,
       component: path.resolve("./src/templates/page.tsx"),
-      context: page
+      context: page,
     });
   });
 };
