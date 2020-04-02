@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, graphql, useStaticQuery } from "gatsby";
-import Img from "gatsby-image";
 import styled from "styled-components";
 import { WideContainer } from "./container";
 import useNavigationData, { NavItem } from "../../queries/useNavigationData";
@@ -13,12 +12,10 @@ const Title = styled(Link)`
   align-self: center;
 `;
 
-const Logo = styled(Img)`
-  img {
-    padding: 0;
-    margin: 0;
-  }
-  display: block !important;
+const Logo = styled.img`
+  padding: 0;
+  margin: 0;
+  display: block;
 `;
 
 const Nav = styled.nav`
@@ -65,7 +62,7 @@ export default function Header() {
       logoImage: file(name: { eq: "echo-karriere" }) {
         childImageSharp {
           fixed(width: 160, height: 70) {
-            ...GatsbyImageSharpFixed
+            src
           }
         }
       }
@@ -78,7 +75,7 @@ export default function Header() {
         <Nav>
           <Title to="/">
             <Logo
-              fixed={query.logoImage.childImageSharp.fixed}
+              src={query.logoImage.childImageSharp.fixed.src}
               alt="echo karriere logo"
             />
           </Title>
