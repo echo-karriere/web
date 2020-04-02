@@ -63,6 +63,8 @@ export default function Header() {
         childImageSharp {
           fixed(width: 160, height: 70) {
             src
+            srcSet
+            base64
           }
         }
       }
@@ -75,7 +77,8 @@ export default function Header() {
         <Nav>
           <Title to="/">
             <Logo
-              src={query.logoImage.childImageSharp.fixed.src}
+              src={query.logoImage.childImageSharp.fixed.base64}
+              srcSet={query.logoImage.childImageSharp.fixed.srcSet}
               alt="echo karriere logo"
             />
           </Title>
