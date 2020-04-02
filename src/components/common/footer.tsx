@@ -4,6 +4,7 @@ import { Link } from "gatsby";
 
 import { WideContainer } from "./container";
 import useNavigationData, { NavItem } from "../../queries/useNavigationData";
+import { math } from "polished";
 
 const Wrapper = styled.footer`
   padding: ${({ theme }) => theme.size.spacing} 0;
@@ -23,6 +24,7 @@ const FlexContainer = styled(WideContainer)`
 
 const FlexDiv = styled.div`
   max-width: 100%;
+  align-self: center;
 
   @media screen and (min-width: ${({ theme }) => theme.screen.md}) {
     max-width: 50%;
@@ -32,6 +34,20 @@ const FlexDiv = styled.div`
 const Ul = styled.ul`
   list-style: none;
   margin: 0;
+`;
+
+const Li = styled.li`
+  padding-bottom: ${({ theme }) => math(`${theme.size.spacing} / 4`)};
+  margin-bottom: 0;
+`;
+
+const FooterLink = styled(Link)`
+  color: ${({ theme }) => theme.color.textColor};
+  text-decoration: none;
+
+  &:visited {
+    color: ${({ theme }) => theme.color.textColor};
+  }
 `;
 
 const Footer = () => {
@@ -48,13 +64,14 @@ const Footer = () => {
           </p>
         </FlexDiv>
         <FlexDiv>
+          <h3>Lenker</h3>
           <Ul>
             {navigation.map((nav: NavItem) => (
-              <li key={nav.link}>
-                <Link to={nav.link} key={nav.link}>
+              <Li key={nav.link}>
+                <FooterLink to={nav.link} key={nav.link}>
                   {nav.title}
-                </Link>
-              </li>
+                </FooterLink>
+              </Li>
             ))}
           </Ul>
         </FlexDiv>
