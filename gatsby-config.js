@@ -1,5 +1,5 @@
 require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`
+  path: `.env.${process.env.NODE_ENV}`,
 });
 
 module.exports = {
@@ -10,16 +10,16 @@ module.exports = {
     navigation: [
       { title: "For studenter", link: "/for-studenter/" },
       { title: "For bedrifter", link: "/for-bedrifter/" },
-      { title: "Om", link: "/om/" }
-    ]
+      { title: "Om", link: "/om/" },
+    ],
   },
   plugins: [
     {
       resolve: `gatsby-plugin-typescript`,
       options: {
         isTSX: true,
-        allExtensions: true
-      }
+        allExtensions: true,
+      },
     },
     {
       resolve: `@directus/gatsby-source-directus`,
@@ -29,17 +29,17 @@ module.exports = {
         typePrefix: "api",
         auth: {
           email: process.env.API_EMAIL,
-          password: process.env.API_PASSWORD
+          password: process.env.API_PASSWORD,
         },
-        targetStatuses: ["published", "__NONE__"]
-      }
+        targetStatuses: ["published", "__NONE__"],
+      },
     },
     {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `./src/styles/typography`,
-        omitGoogleFont: true
-      }
+        omitGoogleFont: true,
+      },
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
@@ -53,24 +53,26 @@ module.exports = {
         background_color: `#f7f0eb`,
         theme_color: `#a2466c`,
         display: `standalone`,
-        icon: "./static/icon.png"
-      }
+        icon: "./static/icon.png",
+      },
     },
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: `UA-159946110-1`
-      }
+        trackingId: `UA-159946110-1`,
+      },
     },
     `gatsby-plugin-robots-txt`,
     `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        createLinkInHead: true
-      }
+        createLinkInHead: true,
+      },
     },
     `gatsby-plugin-catch-links`,
-    `gatsby-plugin-netlify`
-  ]
+    `gatsby-plugin-netlify`,
+  ],
 };
