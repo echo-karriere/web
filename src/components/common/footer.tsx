@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
 
-import { Container } from "./container";
+import { WideContainer } from "./container";
 import useNavigationData, { NavItem } from "../../queries/useNavigationData";
 
 const Wrapper = styled.footer`
@@ -10,7 +10,7 @@ const Wrapper = styled.footer`
   background-color: ${({ theme }) => theme.brand.color4};
 `;
 
-const FlexContainer = styled(Container)`
+const FlexContainer = styled(WideContainer)`
   display: flex;
   flex-direction: column;
   align-content: center;

@@ -2,7 +2,7 @@ import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import styled from "styled-components";
 
-import { Container } from "../common/container";
+import { WideContainer } from "../common/container";
 import Hero from "./hero";
 
 import aboutUrl from "../../assets/about.svg";
@@ -28,7 +28,7 @@ const Grid = styled.div<GridType>`
   align-items: center;
   justify-items: center;
   margin: ${({ theme }) => theme.size.spacing} 0;
-  ${props =>
+  ${(props) =>
     props.inverse &&
     `
     text-align: left;
@@ -47,7 +47,7 @@ const Grid = styled.div<GridType>`
       margin-bottom: ${({ theme }) => theme.size.spacing};
     }
 
-    ${props =>
+    ${(props) =>
       props.inverse &&
       `
         ${Art} {
@@ -71,7 +71,7 @@ const Intro: React.FC = () => {
   return (
     <>
       <Hero />
-      <Container>
+      <WideContainer>
         <Grid>
           <div>
             <h2>Om echo karriere</h2>
@@ -105,7 +105,7 @@ const Intro: React.FC = () => {
             <img src={studentsUrl} alt="A graduation cap." />
           </Art>
         </Grid>
-      </Container>
+      </WideContainer>
     </>
   );
 };

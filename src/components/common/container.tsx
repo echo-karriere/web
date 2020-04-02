@@ -19,7 +19,9 @@ export const Container = styled.div`
   @media screen and (min-width: ${({ theme }) => theme.screen.lg}) {
     max-width: ${({ theme }) => theme.size.lg};
   }
+`;
 
+export const WideContainer = styled(Container)`
   @media screen and (min-width: ${({ theme }) => theme.screen.xl}) {
     max-width: ${({ theme }) => theme.size.xl};
   }

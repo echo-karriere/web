@@ -2,7 +2,7 @@ import React from "react";
 import { Link, graphql, useStaticQuery } from "gatsby";
 import Img from "gatsby-image";
 import styled from "styled-components";
-import { Container } from "./container";
+import { WideContainer } from "./container";
 import useNavigationData, { NavItem } from "../../queries/useNavigationData";
 
 const Head = styled.div`
@@ -74,7 +74,7 @@ export default function Header() {
 
   return (
     <Head>
-      <Container>
+      <WideContainer>
         <Nav>
           <Title to="/">
             <Logo
@@ -90,7 +90,7 @@ export default function Header() {
             ))}
           </NavLinks>
         </Nav>
-      </Container>
+      </WideContainer>
     </Head>
   );
 }
