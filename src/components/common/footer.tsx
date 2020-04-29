@@ -60,7 +60,7 @@ const Footer = () => {
           <h3>echo karriere</h3>
           <p>
             echo karriere er en karrieredag for IT-studenter i Bergensområdet
-            som arrangeres 17. og 18. september 2020.
+            som arrangeres 12. februar 2021.
           </p>
         </FlexDiv>
         <FlexDiv>

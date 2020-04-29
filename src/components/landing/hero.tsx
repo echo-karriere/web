@@ -93,9 +93,7 @@ const Hero: React.FC = () => {
             <Title>{data.title}</Title>
             <SubTitle>{data.subtitle}</SubTitle>
             <p>
-              <StyledLink to="/for-bedrifter/interesse/">
-                Meld interesse ➔
-              </StyledLink>
+              <StyledLink to="/utsatt-til-2021/">Utsatt til 2021 ➔</StyledLink>
             </p>
           </Hello>
         </Grid>
