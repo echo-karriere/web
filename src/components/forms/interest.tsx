@@ -98,7 +98,7 @@ export default function InterestForm() {
 
   return (
     <>
-      <h1>Interesseskjema 2020</h1>
+      <h1>Interesseskjema 2021</h1>
       <form onSubmit={handleSubmit(submitForm)}>
         <section>
           <h2>Din bedrift</h2>
@@ -293,7 +293,7 @@ export default function InterestForm() {
               />
               <Label htmlFor="conf_id">
                 Vi vil med dette melde vår <strong>interesse</strong> for{" "}
-                <em>echo karriere</em> 2020.
+                <em>echo karriere</em> 2021.
                 {errors.confirmation && <Error> Du må bekrefte</Error>}
               </Label>
             </div>
