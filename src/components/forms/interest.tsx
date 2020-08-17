@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import { yupResolver } from "@hookform/resolvers";
 import * as yup from "yup";
 import {
   CenteredContainer,
@@ -13,6 +14,7 @@ import {
   TextArea,
   Error,
 } from "./common";
+import { isDev } from "../../config";
 
 type FormData = {
   company: string;
@@ -59,23 +61,28 @@ export default function InterestForm() {
   const [error, setError] = useState(false);
 
   const { register, errors, handleSubmit } = useForm<FormData>({
-    validationSchema: interestSchema,
+    resolver: yupResolver(interestSchema),
   });
   const submitForm = (data: FormData) => {
-    axios
-      .post("https://formcarry.com/s/DTkwrilmrEEd", data, {
-        headers: { Accept: "application/json" },
-      })
-      .then((res) => {
-        if (res.status === 200) {
-          setSubmitted(res.status === 200);
-        } else {
+    if (isDev) {
+      console.log(JSON.stringify(data, null, 2));
+      setSubmitted(true);
+    } else {
+      axios
+        .post("https://formcarry.com/s/DTkwrilmrEEd", data, {
+          headers: { Accept: "application/json" },
+        })
+        .then((res) => {
+          if (res.status === 200) {
+            setSubmitted(res.status === 200);
+          } else {
+            setError(true);
+          }
+        })
+        .catch(() => {
           setError(true);
-        }
-      })
-      .catch(() => {
-        setError(true);
-      });
+        });
+    }
   };
 
   if (submitted) {
