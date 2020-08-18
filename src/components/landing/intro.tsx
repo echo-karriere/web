@@ -9,6 +9,7 @@ import aboutUrl from "../../assets/about.svg";
 import hiringUrl from "../../assets/hiring.svg";
 import studentsUrl from "../../assets/students.svg";
 import { math } from "polished";
+import Notification from "../common/notification";
 
 const Art = styled.figure`
   margin: 0;
@@ -61,6 +62,8 @@ const Intro: React.FC = () => {
   const { apiLanding: data } = useStaticQuery(graphql`
     query IntroPage {
       apiLanding {
+        notification
+        notification_url
         about
         for_companies
         for_students
@@ -70,6 +73,9 @@ const Intro: React.FC = () => {
 
   return (
     <>
+      {data.notification && (
+        <Notification message={data.notification} url={data.notification_url} />
+      )}
       <Hero />
       <WideContainer>
         <Grid>

@@ -60,7 +60,7 @@ const SubTitle = styled.h2`
   }
 `;
 
-const StyledLink = styled(Link)`
+export const StyledLink = styled(Link)`
   font-size: 1.2rem;
   color: ${({ theme }) => theme.color.textColor};
 

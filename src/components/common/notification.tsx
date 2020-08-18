@@ -1,8 +1,11 @@
 import React from "react";
 import styled from "styled-components";
+import { math } from "polished";
+import { StyledLink } from "../landing/hero";
 
 interface Props {
   message: string;
+  url: string;
 }
 
 const NotificationContainer = styled.div`
@@ -18,13 +21,16 @@ const Wrapper = styled.div`
 
 const Message = styled.p`
   margin: revert;
+  margin-top: ${({ theme }) => math(`${theme.size.spacing} / 2`)};
 `;
 
-const Notification: React.FC<Props> = ({ message }) => {
+const Notification: React.FC<Props> = ({ message, url }) => {
   return (
     <NotificationContainer>
       <Wrapper>
-        <Message>{message}</Message>
+        <Message>
+          <StyledLink to={url}>{message} ➔</StyledLink>
+        </Message>
       </Wrapper>
     </NotificationContainer>
   );
