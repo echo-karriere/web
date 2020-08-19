@@ -55,7 +55,7 @@ const NavLink = styled(Link)`
   }
 `;
 
-export default function Header() {
+const Header: React.FC = () => {
   const navigation = useNavigationData();
   const query = useStaticQuery(graphql`
     query LogoQuery {
@@ -93,4 +93,6 @@ export default function Header() {
       </WideContainer>
     </Head>
   );
-}
+};
+
+export default Header;
