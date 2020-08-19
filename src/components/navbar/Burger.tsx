@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import React from "react";
+import { math } from "polished";
 
 const StyledBurger = styled.button<{ open: boolean }>`
   position: absolute;
-  top: 5%;
-  left: 2rem;
+  top: ${({ theme }) => math(`${theme.size.spacing} / 1.5`)};
+  right: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -37,6 +38,10 @@ const StyledBurger = styled.button<{ open: boolean }>`
     :nth-child(3) {
       transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
     }
+  }
+
+  @media screen and (min-width: ${({ theme }) => theme.screen.md}) {
+    display: none;
   }
 `;
 
