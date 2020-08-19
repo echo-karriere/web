@@ -33,5 +33,4 @@ public/
 .cache/
 .env*
 .vscode/
-.graphqlconfig
 schema.graphql
