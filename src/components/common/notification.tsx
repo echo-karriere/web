@@ -9,8 +9,9 @@ interface Props {
 }
 
 const NotificationContainer = styled.div`
-  height: 56px;
+  min-height: 56px;
   background-color: ${({ theme }) => theme.brand.color1};
+  padding: 0 ${({ theme }) => theme.size.spacing};
 `;
 
 const Wrapper = styled.div`
