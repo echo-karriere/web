@@ -24,6 +24,7 @@
     "polished": "^3.6.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-focus-lock": "^2.4.1",
     "react-helmet": "^6.1.0",
     "react-hook-form": "^6.4.0",
     "react-typography": "^0.16.19",
