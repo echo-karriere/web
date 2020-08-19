@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import MenuItem from "./MenuItem";
+import useNavigationData, { NavItem } from "../../queries/useNavigationData";
 
 export const StyledMenu = styled.nav<{ open: boolean }>`
   display: flex;
@@ -40,24 +42,30 @@ export const StyledMenu = styled.nav<{ open: boolean }>`
   }
 `;
 
+const MenuItems = styled.div`
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+
+  @media screen and (max-width: ${({ theme }) => theme.screen.sm}) {
+    margin: 0 auto;
+  }
+`;
+
 interface Props {
   open: boolean;
 }
 
 const Menu: React.FC<Props> = ({ open }) => {
-  const tabIndex = open ? 0 : -1;
+  const navigation = useNavigationData();
 
   return (
     <StyledMenu open={open} aria-hidden={!open}>
-      <a href="/" tabIndex={tabIndex}>
-        About us
-      </a>
-      <a href="/" tabIndex={tabIndex}>
-        Pricing
-      </a>
-      <a href="/" tabIndex={tabIndex}>
-        Contact
-      </a>
+      <MenuItems>
+        {navigation.map((nav: NavItem) => (
+          <MenuItem title={nav.title} to={nav.link} key={nav.link} />
+        ))}
+      </MenuItems>
     </StyledMenu>
   );
 };
