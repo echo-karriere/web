@@ -5,7 +5,7 @@ export interface NavItem {
   link: string;
 }
 
-const useNavigationData = () => {
+const useNavigationData = (): NavItem[] => {
   const {
     site: {
       siteMetadata: { navigation: navigation },
