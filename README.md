@@ -17,4 +17,5 @@ you need to have an API user, ask your friendly responsible developer: @sondr3.
 
 The code in this repository is under the [MIT](https://github.com/echo-uib/echo-karriere/blob/master/LICENSE)
 license, written content is licensed under [CC BY SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/),
-and graphic content is (C) their respective copyright owners.
+and graphic content is (C) their respective copyright owners. Icons are licensed by Font Awesome under their
+[Font Awesome License](https://fontawesome.com/license).
