@@ -6,19 +6,19 @@ import upArrow from "../../assets/angle-up-solid.svg";
 
 const NavLink = styled(Link)`
   color: ${({ theme }) => theme.color.textColor};
-  text-decoration: none;
   align-self: center;
-
-  &:not(:last-child) {
-    margin-right: ${({ theme }) => theme.size.spacing};
-  }
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 2rem 0;
+  font-weight: bold;
+  letter-spacing: 0.5rem;
+  color: ${({ theme }) => theme.color.textColor};
+  text-decoration: none;
+  transition: color 0.3s linear;
+  text-align: center;
 
   &:visited {
     color: ${({ theme }) => theme.color.textColor};
-  }
-
-  @media screen and (min-width: ${({ theme }) => theme.screen.md}) {
-    margin-left: ${({ theme }) => theme.size.spacing};
   }
 `;
 

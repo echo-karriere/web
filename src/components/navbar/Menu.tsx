@@ -20,36 +20,12 @@ export const StyledMenu = styled.nav<{ open: boolean }>`
   @media (max-width: ${({ theme }) => theme.screen.sm}) {
     width: 100%;
   }
-
-  a {
-    font-size: 2rem;
-    text-transform: uppercase;
-    padding: 2rem 0;
-    font-weight: bold;
-    letter-spacing: 0.5rem;
-    color: ${({ theme }) => theme.color.textColor};
-    text-decoration: none;
-    transition: color 0.3s linear;
-
-    @media (max-width: ${({ theme }) => theme.screen.sm}) {
-      font-size: 1.5rem;
-      text-align: center;
-    }
-
-    &:hover {
-      color: ${({ theme }) => theme.color.blue};
-    }
-  }
 `;
 
 const MenuItems = styled.div`
-  margin-left: auto;
   display: flex;
   justify-content: center;
-
-  @media screen and (max-width: ${({ theme }) => theme.screen.sm}) {
-    margin: 0 auto;
-  }
+  flex-direction: column;
 `;
 
 interface Props {
