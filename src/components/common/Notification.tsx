@@ -1,6 +1,6 @@
 import React from "react";
-import { StyledLink } from "../landing/hero";
 
+import StyledLink from "./StyledLink";
 import styles from "./Notification.module.scss";
 
 interface Props {
