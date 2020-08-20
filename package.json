@@ -88,6 +88,10 @@
     ],
     "*.{json,md}": [
       "prettier --write"
+    ],
+    "*.{css,scss}": [
+      "stylelint --fix",
+      "prettier --write"
     ]
   }
 }
