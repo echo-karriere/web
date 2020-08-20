@@ -24,10 +24,11 @@ const FlexContainer = styled(WideContainer)`
 
 const FlexDiv = styled.div`
   max-width: 100%;
-  align-self: center;
+  align-self: flex-start;
 
   @media screen and (min-width: ${({ theme }) => theme.screen.md}) {
     max-width: 50%;
+    align-self: center;
   }
 `;
 
@@ -50,7 +51,7 @@ const FooterLink = styled(Link)`
   }
 `;
 
-const Footer = () => {
+const Footer: React.FC = () => {
   const navigation = useNavigationData();
 
   return (
