@@ -3,18 +3,9 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 import { yupResolver } from "@hookform/resolvers";
 import * as yup from "yup";
-import {
-  CenteredContainer,
-  Fieldset,
-  Legend,
-  Label,
-  Input,
-  Select,
-  Ul,
-  TextArea,
-  Error,
-} from "./common";
 import { isDev } from "../../config";
+
+import styles from "./Forms.module.scss";
 
 type FormData = {
   company: string;
@@ -56,7 +47,7 @@ const interestSchema = yup.object().shape({
   confirmation: yup.boolean().oneOf([true], " Du må bekrefte").required(),
 });
 
-export default function InterestForm() {
+const InterestForm: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState(false);
 
@@ -87,19 +78,19 @@ export default function InterestForm() {
 
   if (submitted) {
     return (
-      <CenteredContainer>
+      <div className={styles.centered}>
         <h1>Takk!</h1>
         <h2>Du hører fra oss så snart som mulig.</h2>
-      </CenteredContainer>
+      </div>
     );
   }
 
   if (error) {
     return (
-      <CenteredContainer>
+      <div className={styles.centered}>
         <h1>Noe gikk galt :(</h1>
         <h2>Prøv igjen senere</h2>
-      </CenteredContainer>
+      </div>
     );
   }
 
@@ -110,70 +101,91 @@ export default function InterestForm() {
         <section>
           <h2>Din bedrift</h2>
 
-          <Fieldset>
-            <Legend>Bedrift</Legend>
-            <Label htmlFor="comp_id">
+          <fieldset className={styles.fieldset}>
+            <legend className={styles.legend}>Bedrift</legend>
+            <label className={styles.label} htmlFor="comp_id">
               Navn
-              {errors.company && <Error> {errors.company.message}</Error>}
-            </Label>
-            <Input
+              {errors.company && (
+                <span className={styles.error}> {errors.company.message}</span>
+              )}
+            </label>
+            <input
+              className={styles.input}
               type="text"
               name="company"
               id="comp_id"
               ref={register({ required: true })}
             />
-          </Fieldset>
+          </fieldset>
 
-          <Fieldset>
-            <Legend>Kontaktperson</Legend>
-            <Label htmlFor="pers_id">
+          <fieldset className={styles.fieldset}>
+            <legend className={styles.legend}>Kontaktperson</legend>
+            <label className={styles.label} htmlFor="pers_id">
               Navn
-              {errors.person && <Error> {errors.person.message}</Error>}
-            </Label>
-            <Input
+              {errors.person && (
+                <span className={styles.error}> {errors.person.message}</span>
+              )}
+            </label>
+            <input
+              className={styles.input}
               type="text"
               name="person"
               id="pers_id"
               ref={register({ required: true })}
             />
 
-            <Label htmlFor="email_id">
+            <label className={styles.label} htmlFor="email_id">
               Epost
-              {errors.email && <Error> {errors.email.message}</Error>}
-            </Label>
-            <Input
+              {errors.email && (
+                <span className={styles.error}> {errors.email.message}</span>
+              )}
+            </label>
+            <input
+              className={styles.input}
               type="email"
               name="email"
               id="email_id"
               ref={register({ required: true })}
             />
 
-            <Label htmlFor="num_id">
+            <label className={styles.label} htmlFor="num_id">
               Telefonnummer
-              {errors.phone && <Error> {errors.phone.message}</Error>}
-            </Label>
-            <Input
+              {errors.phone && (
+                <span className={styles.error}> {errors.phone.message}</span>
+              )}
+            </label>
+            <input
+              className={styles.input}
               type="tel"
               name="phone"
               id="num_id"
               ref={register({ required: true })}
             />
-          </Fieldset>
+          </fieldset>
         </section>
         <section>
           <h2>Ønsker</h2>
-          <Fieldset>
-            <Legend>echo karriere</Legend>
-            <Label htmlFor="day_id">Hvilken dag ønsker du å delta på?</Label>
-            <Select id="day_id" name="day" ref={register}>
+          <fieldset className={styles.fieldset}>
+            <legend className={styles.legend}>echo karriere</legend>
+            <label className={styles.label} htmlFor="day_id">
+              Hvilken dag ønsker du å delta på?
+            </label>
+            <select
+              className={styles.select}
+              id="day_id"
+              name="day"
+              ref={register}
+            >
               <option value="N/A">Ingen preferanse</option>
               <option value="17">Dag 1 (17. september)</option>
               <option value="18">Dag 2 (18. september)</option>
-            </Select>
-            <Label>Ønsker dere å delta/arrangere noe på karrieredagen?</Label>
-            <Ul>
+            </select>
+            <label className={styles.label}>
+              Ønsker dere å delta/arrangere noe på karrieredagen?
+            </label>
+            <ul className={styles.ul}>
               <li>
-                <Label htmlFor="extra_work">
+                <label className={styles.label} htmlFor="extra_work">
                   <input
                     type="checkbox"
                     id="extra_work"
@@ -181,10 +193,10 @@ export default function InterestForm() {
                     ref={register}
                   />
                   Workshop
-                </Label>
+                </label>
               </li>
               <li>
-                <Label htmlFor="extra_talk">
+                <label className={styles.label} htmlFor="extra_talk">
                   <input
                     type="checkbox"
                     id="extra_talk"
@@ -192,10 +204,10 @@ export default function InterestForm() {
                     ref={register}
                   />
                   Foredrag
-                </Label>
+                </label>
               </li>
               <li>
-                <Label htmlFor="extra_speed">
+                <label className={styles.label} htmlFor="extra_speed">
                   <input
                     type="checkbox"
                     id="extra_speed"
@@ -203,10 +215,10 @@ export default function InterestForm() {
                     ref={register}
                   />
                   Lynforedrag
-                </Label>
+                </label>
               </li>
               <li>
-                <Label htmlFor="extra_pres">
+                <label className={styles.label} htmlFor="extra_pres">
                   <input
                     type="checkbox"
                     id="extra_pres"
@@ -214,10 +226,10 @@ export default function InterestForm() {
                     ref={register}
                   />
                   Lynpresentasjon
-                </Label>
+                </label>
               </li>
               <li>
-                <Label htmlFor="extra_view">
+                <label className={styles.label} htmlFor="extra_view">
                   <input
                     type="checkbox"
                     id="extra_view"
@@ -225,17 +237,19 @@ export default function InterestForm() {
                     ref={register}
                   />
                   Lynintervju
-                </Label>
+                </label>
               </li>
-            </Ul>
+            </ul>
 
-            <Label>
+            <label className={styles.label}>
               Ønsker dere å delta på vår bankett?
-              {errors.banquet && <Error> {errors.banquet.message}</Error>}
-            </Label>
-            <Ul>
+              {errors.banquet && (
+                <span className={styles.error}> {errors.banquet.message}</span>
+              )}
+            </label>
+            <ul className={styles.ul}>
               <li>
-                <Label htmlFor="banquet_yes">
+                <label className={styles.label} htmlFor="banquet_yes">
                   <input
                     type="radio"
                     id="banquet_yes"
@@ -244,10 +258,10 @@ export default function InterestForm() {
                     ref={register({ required: true })}
                   />
                   Ja
-                </Label>
+                </label>
               </li>
               <li>
-                <Label htmlFor="banquet_no">
+                <label className={styles.label} htmlFor="banquet_no">
                   <input
                     type="radio"
                     id="banquet_no"
@@ -256,10 +270,10 @@ export default function InterestForm() {
                     ref={register({ required: true })}
                   />
                   Nei
-                </Label>
+                </label>
               </li>
               <li>
-                <Label htmlFor="banquet_maybe">
+                <label className={styles.label} htmlFor="banquet_maybe">
                   <input
                     type="radio"
                     id="banquet_maybe"
@@ -268,29 +282,32 @@ export default function InterestForm() {
                     ref={register({ required: true })}
                   />
                   Usikker/kanskje
-                </Label>
+                </label>
               </li>
-            </Ul>
-          </Fieldset>
+            </ul>
+          </fieldset>
         </section>
         <section>
           <h2>Annet</h2>
-          <Fieldset>
-            <Legend>Diverse</Legend>
-            <Label htmlFor="other">Har dere noe annet på hjertet?</Label>
-            <TextArea
+          <fieldset className={styles.fieldset}>
+            <legend className={styles.legend}>Diverse</legend>
+            <label className={styles.label} htmlFor="other">
+              Har dere noe annet på hjertet?
+            </label>
+            <textarea
+              className={styles.textarea}
               id="other"
               name="other"
               rows={4}
               cols={25}
               ref={register}
             />
-          </Fieldset>
+          </fieldset>
         </section>
         <section>
           <h2>Til slutt...</h2>
-          <Fieldset>
-            <Legend>Bekreftelse</Legend>
+          <fieldset className={styles.fieldset}>
+            <legend className={styles.legend}>Bekreftelse</legend>
             <div style={{ paddingBottom: "0.5rem" }}>
               <input
                 type="checkbox"
@@ -298,18 +315,22 @@ export default function InterestForm() {
                 name="confirmation"
                 ref={register({ required: true })}
               />
-              <Label htmlFor="conf_id">
+              <label className={styles.label} htmlFor="conf_id">
                 Vi vil med dette melde vår <strong>interesse</strong> for{" "}
                 <em>echo karriere</em> 2021.
-                {errors.confirmation && <Error> Du må bekrefte</Error>}
-              </Label>
+                {errors.confirmation && (
+                  <span className={styles.error}> Du må bekrefte</span>
+                )}
+              </label>
             </div>
             <div>
               <input type="submit" value="Meld interesse" />
             </div>
-          </Fieldset>
+          </fieldset>
         </section>
       </form>
     </>
   );
-}
+};
+
+export default InterestForm;

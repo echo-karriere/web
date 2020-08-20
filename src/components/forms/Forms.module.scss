@@ -1,39 +1,37 @@
-import styled from "styled-components";
-
-export const CenteredContainer = styled.div`
+.centered {
   align-items: center;
   display: flex;
   flex-direction: column;
   height: 100vh;
   justify-content: center;
-`;
+}
 
-export const Legend = styled.legend`
+.legend {
   background-color: #000;
   color: #fff;
   padding: 3px 6px;
-`;
+}
 
-export const Input = styled.input`
+.input {
   margin: 0.5rem;
-`;
+}
 
-export const Label = styled.label`
+.label {
   padding: 0 0.5rem;
-`;
+}
 
-export const Fieldset = styled.fieldset`
+.fieldset {
   display: flex;
   flex-direction: column;
   padding: 1rem;
-`;
+}
 
-export const Error = styled.span`
-  color: red;
+.error {
+  color: #f00;
   font-size: 12px;
-`;
+}
 
-export const Ul = styled.ul`
+.ul {
   float: left;
   list-style: none;
   margin: 0;
@@ -41,12 +39,12 @@ export const Ul = styled.ul`
   > li input {
     margin-right: 0.5rem;
   }
-`;
+}
 
-export const Select = styled.select`
+.select {
   margin-bottom: 1rem;
-`;
+}
 
-export const TextArea = styled.textarea`
+.textarea {
   margin: 0.5rem;
-`;
+}

@@ -1,18 +1,11 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers";
 import axios from "axios";
 import * as yup from "yup";
-import {
-  CenteredContainer,
-  Fieldset,
-  Legend,
-  Label,
-  Input,
-  Select,
-  Ul,
-  TextArea,
-  Error,
-} from "./common";
+import { isDev } from "../../config";
+
+import styles from "./Forms.module.scss";
 
 type FormData = {
   name: string;
@@ -40,45 +33,51 @@ const interestSchema = yup.object().shape({
   message: yup.string().required(),
 });
 
-export default function ContactUs() {
+const ContactUs: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState(false);
 
   const { register, errors, handleSubmit } = useForm<FormData>({
-    validationSchema: interestSchema,
+    resolver: yupResolver(interestSchema),
   });
+
   const submitForm = (data: FormData) => {
-    axios
-      .post("https://formcarry.com/s/i4fH6eGjGEzY", data, {
-        headers: { Accept: "application/json" },
-      })
-      .then((res) => {
-        if (res.status === 200) {
-          setSubmitted(res.status === 200);
-        } else {
+    if (isDev) {
+      console.log(JSON.stringify(data, null, 2));
+      setSubmitted(true);
+    } else {
+      axios
+        .post("https://formcarry.com/s/i4fH6eGjGEzY", data, {
+          headers: { Accept: "application/json" },
+        })
+        .then((res) => {
+          if (res.status === 200) {
+            setSubmitted(res.status === 200);
+          } else {
+            setError(true);
+          }
+        })
+        .catch(() => {
           setError(true);
-        }
-      })
-      .catch(() => {
-        setError(true);
-      });
+        });
+    }
   };
 
   if (submitted) {
     return (
-      <CenteredContainer>
+      <div className={styles.centered}>
         <h1>Takk!</h1>
         <h2>Du hører fra oss så snart som mulig.</h2>
-      </CenteredContainer>
+      </div>
     );
   }
 
   if (error) {
     return (
-      <CenteredContainer>
+      <div className={styles.centered}>
         <h1>Noe gikk galt :(</h1>
         <h2>Prøv igjen senere</h2>
-      </CenteredContainer>
+      </div>
     );
   }
 
@@ -87,35 +86,44 @@ export default function ContactUs() {
       <h2>Kontakt oss</h2>
       <form onSubmit={handleSubmit(submitForm)}>
         <section>
-          <Fieldset>
-            <Legend>Kontakt</Legend>
-            <Label htmlFor="name_id">
+          <fieldset className={styles.fieldset}>
+            <legend className={styles.legend}>Kontakt</legend>
+            <label htmlFor="name_id" className={styles.label}>
               Navn
-              {errors.name && <Error> {errors.name.message}</Error>}
-            </Label>
-            <Input
+              {errors.name && (
+                <span className={styles.error}> {errors.name.message}</span>
+              )}
+            </label>
+            <input
+              className={styles.input}
               type="text"
               name="name"
               id="name_id"
               ref={register({ required: true })}
             />
 
-            <Label htmlFor="email_id">
+            <label htmlFor="email_id" className={styles.label}>
               Epost
-              {errors.email && <Error> {errors.email.message}</Error>}
-            </Label>
-            <Input
+              {errors.email && (
+                <span className={styles.error}> {errors.email.message}</span>
+              )}
+            </label>
+            <input
+              className={styles.input}
               type="email"
               name="email"
               id="email_id"
               ref={register({ required: true })}
             />
 
-            <Label htmlFor="message">
+            <label htmlFor="message" className={styles.label}>
               Melding
-              {errors.message && <Error> {errors.message.message}</Error>}
-            </Label>
-            <TextArea
+              {errors.message && (
+                <span className={styles.error}> {errors.message.message}</span>
+              )}
+            </label>
+            <textarea
+              className={styles.textarea}
               id="message"
               name="message"
               rows={4}
@@ -125,9 +133,11 @@ export default function ContactUs() {
             <div>
               <input type="submit" value="Send melding" />
             </div>
-          </Fieldset>
+          </fieldset>
         </section>
       </form>
     </>
   );
-}
+};
+
+export default ContactUs;
