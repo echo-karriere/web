@@ -7,6 +7,7 @@
     "@hookform/resolvers": "^0.1.0",
     "axios": "^0.19.2",
     "babel-plugin-styled-components": "^1.11.1",
+    "classnames": "^2.2.6",
     "gatsby": "^2.24.47",
     "gatsby-image": "^2.4.16",
     "gatsby-plugin-catch-links": "^2.3.11",
@@ -15,6 +16,7 @@
     "gatsby-plugin-netlify": "^2.3.13",
     "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-plugin-robots-txt": "^1.5.1",
+    "gatsby-plugin-sass": "^2.3.12",
     "gatsby-plugin-sharp": "^2.6.27",
     "gatsby-plugin-sitemap": "^2.4.11",
     "gatsby-plugin-styled-components": "^3.3.10",
@@ -29,6 +31,7 @@
     "react-hook-form": "^6.4.0",
     "react-typography": "^0.16.19",
     "sanitize.css": "^11.0.1",
+    "sass": "^1.26.10",
     "styled-components": "^5.1.1",
     "typeface-bitter": "^0.0.71",
     "typeface-cambo": "^0.0.72",
@@ -48,6 +51,7 @@
     "not ie >= 8"
   ],
   "devDependencies": {
+    "@types/classnames": "^2.2.10",
     "@types/node": "14.6.0",
     "@types/react": "16.9.46",
     "@types/react-dom": "16.9.8",
@@ -67,11 +71,9 @@
     "stylelint": "^13.6.1",
     "stylelint-a11y": "^1.2.3",
     "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-sass-guidelines": "^7.0.0",
     "stylelint-config-standard": "^20.0.0",
-    "stylelint-config-styled-components": "^0.1.1",
-    "stylelint-order": "^4.1.0",
     "stylelint-prettier": "^1.1.2",
-    "stylelint-processor-styled-components": "^1.10.0",
     "typescript": "^3.9.7"
   },
   "husky": {
