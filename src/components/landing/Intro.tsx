@@ -1,62 +1,17 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
-import styled from "styled-components";
+import classNames from "classnames/bind";
 
 import { Container } from "../common/Container";
-import Hero from "./hero";
-
+import Hero from "./Hero";
 import aboutUrl from "../../assets/about.svg";
 import hiringUrl from "../../assets/hiring.svg";
 import studentsUrl from "../../assets/students.svg";
-import { math } from "polished";
 import Notification from "../common/Notification";
 
-const Art = styled.figure`
-  margin: 0;
-  max-width: ${({ theme }) => math(`${theme.screen.md} / 2`)};
-  width: 100%;
-`;
+import styles from "./Intro.module.scss";
 
-type GridType = {
-  readonly inverse?: boolean;
-};
-
-const Grid = styled.div<GridType>`
-  align-items: center;
-  display: grid;
-  grid-gap: ${({ theme }) => math(`${theme.size.spacing} * 2`)};
-  grid-template-columns: 3fr 2fr;
-  justify-items: center;
-  margin: ${({ theme }) => theme.size.spacing} 0;
-  text-align: right;
-  ${(props) =>
-    props.inverse &&
-    `
-    text-align: left;
-    grid-template-columns: 2fr 3fr;
-  `}
-
-  h2 {
-    margin-bottom: 16px;
-  }
-
-  @media (max-width: ${({ theme }) => theme.screen.md}) {
-    grid-template-columns: 1fr;
-    text-align: left;
-
-    &:last-child {
-      margin-bottom: ${({ theme }) => theme.size.spacing};
-    }
-
-    ${(props) =>
-      props.inverse &&
-      `
-        ${Art} {
-          order: 2;
-        }
-    `}
-  }
-`;
+const cx = classNames.bind(styles);
 
 const Intro: React.FC = () => {
   const { apiLanding: data } = useStaticQuery(graphql`
@@ -78,39 +33,39 @@ const Intro: React.FC = () => {
       )}
       <Hero />
       <Container wide>
-        <Grid>
+        <div className={styles.grid}>
           <div>
             <h2>Om echo karriere</h2>
             <div dangerouslySetInnerHTML={{ __html: data.about }} />
           </div>
-          <Art>
+          <figure className={styles.art}>
             <img
               src={aboutUrl}
               alt="Four persons standing around with a small dog in front."
             />
-          </Art>
-        </Grid>
-        <Grid inverse>
-          <Art>
+          </figure>
+        </div>
+        <div className={cx("grid", "grid-inverse")}>
+          <figure className={styles.art}>
             <img
               src={hiringUrl}
               alt="Art showing a person looking at online resumes."
             />
-          </Art>
+          </figure>
           <div>
             <h2>For bedrifter</h2>
             <div dangerouslySetInnerHTML={{ __html: data.for_companies }} />
           </div>
-        </Grid>
-        <Grid>
+        </div>
+        <div className={styles.grid}>
           <div>
             <h2>For studenter</h2>
             <div dangerouslySetInnerHTML={{ __html: data.for_students }} />
           </div>
-          <Art>
+          <figure className={styles.art}>
             <img src={studentsUrl} alt="A graduation cap." />
-          </Art>
-        </Grid>
+          </figure>
+        </div>
       </Container>
     </>
   );

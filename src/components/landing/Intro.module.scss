@@ -1,0 +1,39 @@
+@use "../../styles/theme";
+
+.art {
+  margin: 0;
+  max-width: theme.$breakpoint-tablet / 2;
+  width: 100%;
+}
+
+.grid {
+  align-items: center;
+  display: grid;
+  grid-gap: theme.$spacing * 2;
+  grid-template-columns: 3fr 2fr;
+  justify-items: center;
+  margin: theme.$spacing 0;
+  text-align: right;
+
+  @media (max-width: theme.$breakpoint-tablet) {
+    grid-template-columns: 1fr;
+    text-align: left;
+
+    &:last-child {
+      margin-bottom: theme.$spacing;
+    }
+
+    > figure {
+      order: 2;
+    }
+  }
+}
+
+.grid-inverse {
+  grid-template-columns: 2fr 3fr;
+  text-align: left;
+}
+
+.title {
+  margin-bottom: 16px;
+}
