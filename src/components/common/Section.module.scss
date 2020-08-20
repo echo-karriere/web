@@ -1,0 +1,10 @@
+@use "../../styles/theme";
+
+.section {
+  overflow: hidden;
+  padding: theme.$spacing * 5 0;
+
+  @media screen and (min-width: theme.$breakpoint-tablet) {
+    padding: theme.$spacing * 4 0;
+  }
+}

@@ -1,0 +1,27 @@
+@use "../../styles/theme";
+
+.container {
+  flex: 1;
+  margin: 0 auto;
+  max-width: theme.$size-xl;
+  padding: 0 theme.$spacing;
+  width: 100%;
+
+  @media screen and (min-width: theme.$breakpoint-mobile) {
+    max-width: theme.$size-sm;
+  }
+
+  @media screen and (min-width: theme.$breakpoint-tablet) {
+    max-width: theme.$size-md;
+  }
+
+  @media screen and (min-width: theme.$breakpoint-desktop) {
+    max-width: theme.$size-lg;
+  }
+}
+
+.wide {
+  @media screen and (min-width: theme.$breakpoint-desktop-wide) {
+    max-width: theme.$size-xl;
+  }
+}

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Link, useStaticQuery, graphql } from "gatsby";
 import { math } from "polished";
 
-import { WideContainer } from "../common/container";
+import { Container } from "../common/Container";
 
 import mountains from "../../assets/mountains.svg";
 
@@ -81,7 +81,7 @@ const Hero: React.FC = () => {
 
   return (
     <Wrapper>
-      <WideContainer>
+      <Container wide>
         <Grid>
           <HeroImage>
             <img
@@ -97,7 +97,7 @@ const Hero: React.FC = () => {
             </p>
           </Hello>
         </Grid>
-      </WideContainer>
+      </Container>
     </Wrapper>
   );
 };

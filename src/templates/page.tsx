@@ -1,7 +1,7 @@
 import React from "react";
-import SEO from "../components/common/seo";
-import Layout from "../components/common/layout";
-import { Container } from "../components/common/container";
+import SEO from "../components/common/Seo";
+import Layout from "../components/common/Layout";
+import { Container } from "../components/common/Container";
 
 interface PageData {
   pageContext: {
@@ -10,7 +10,9 @@ interface PageData {
   };
 }
 
-const PageTemplate = ({ pageContext: { title, content } }: PageData) => {
+const PageTemplate: React.FC<PageData> = ({
+  pageContext: { title, content },
+}: PageData) => {
   return (
     <Layout>
       <SEO title={title} />

@@ -1,0 +1,68 @@
+@use "theme";
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+table {
+  margin: 0 0 20px;
+  text-align: left;
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+figure > img {
+  display: block;
+}
+
+li {
+  > ul,
+  > ol {
+    margin-bottom: 0;
+  }
+}
+
+a {
+  color: theme.$brand-color;
+  text-decoration: none;
+
+  &:visited {
+    color: theme.$brand-color-darkened;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+blockquote {
+  border-left: 4px solid theme.$brand-grey-lightened;
+  color: theme.$brand-grey;
+  font-size: 18px;
+  font-style: italic;
+  letter-spacing: -1px;
+  padding-left: theme.$spacing / 2;
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+
+  pre,
+  code {
+    color: theme.$text-color;
+  }
+}
+
+hr {
+  background-color: theme.$brand-grey-lightened;
+  border: 0;
+  height: 4px;
+  margin: theme.$spacing / 2 0;
+}

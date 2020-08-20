@@ -2,14 +2,14 @@ import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import styled from "styled-components";
 
-import { WideContainer } from "../common/container";
+import { Container } from "../common/Container";
 import Hero from "./hero";
 
 import aboutUrl from "../../assets/about.svg";
 import hiringUrl from "../../assets/hiring.svg";
 import studentsUrl from "../../assets/students.svg";
 import { math } from "polished";
-import Notification from "../common/notification";
+import Notification from "../common/Notification";
 
 const Art = styled.figure`
   margin: 0;
@@ -77,7 +77,7 @@ const Intro: React.FC = () => {
         <Notification message={data.notification} url={data.notification_url} />
       )}
       <Hero />
-      <WideContainer>
+      <Container wide>
         <Grid>
           <div>
             <h2>Om echo karriere</h2>
@@ -111,7 +111,7 @@ const Intro: React.FC = () => {
             <img src={studentsUrl} alt="A graduation cap." />
           </Art>
         </Grid>
-      </WideContainer>
+      </Container>
     </>
   );
 };

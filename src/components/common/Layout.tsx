@@ -1,18 +1,14 @@
 import React from "react";
-import styled, { ThemeProvider } from "styled-components";
+import { ThemeProvider } from "styled-components";
 
-import Header from "./header";
-import SEO from "./seo";
+import Header from "./Header";
+import SEO from "./Seo";
 
 import theme from "../../styles/theme";
-import GlobalStyle from "../../styles/global";
-import Footer from "./footer";
+import Footer from "./Footer";
 
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-`;
+import "../../styles/global.scss";
+import styles from "./Layout.module.scss";
 
 interface Props {
   children: React.ReactNode;
@@ -22,13 +18,12 @@ const Layout: React.FC<Props> = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
       <>
-        <GlobalStyle />
         <SEO />
-        <Wrapper>
+        <div className={styles.wrapper}>
           <Header />
           {children}
           <Footer />
-        </Wrapper>
+        </div>
       </>
     </ThemeProvider>
   );

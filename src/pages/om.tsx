@@ -1,9 +1,9 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 
-import Layout from "../components/common/layout";
-import SEO from "../components/common/seo";
-import { Container } from "../components/common/container";
+import Layout from "../components/common/Layout";
+import SEO from "../components/common/Seo";
+import { Container } from "../components/common/Container";
 
 const About: React.FC = () => {
   const { apiAbout: data } = useStaticQuery(graphql`

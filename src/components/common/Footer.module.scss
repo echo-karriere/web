@@ -1,0 +1,46 @@
+@use "../../styles/theme";
+
+.footer {
+  background-color: theme.$color4;
+  padding: theme.$spacing 0;
+}
+
+.flex {
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  @media screen and (min-width: theme.$breakpoint-tablet) {
+    flex-direction: row;
+  }
+}
+
+.element {
+  align-self: flex-start;
+  max-width: 100%;
+
+  @media screen and (min-width: theme.$breakpoint-tablet) {
+    align-self: center;
+    max-width: 50%;
+  }
+}
+
+.ul {
+  list-style: none;
+  margin: 0;
+}
+
+.li {
+  margin-bottom: 0;
+  padding-bottom: theme.$spacing / 4;
+}
+
+.link {
+  color: theme.$text-color;
+  text-decoration: none;
+
+  &:visited {
+    color: theme.$text-color;
+  }
+}

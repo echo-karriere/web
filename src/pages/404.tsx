@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { math } from "polished";
 
-import Layout from "../components/common/layout";
-import SEO from "../components/common/seo";
+import Layout from "../components/common/Layout";
+import SEO from "../components/common/Seo";
 
 const Wrapper = styled.main`
   align-items: center;
