@@ -44,6 +44,12 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        implementation: require("sass"),
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: "echo karriere",
