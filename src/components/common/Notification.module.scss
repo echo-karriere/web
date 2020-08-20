@@ -1,0 +1,17 @@
+@use "../../styles/theme";
+
+.container {
+  background-color: theme.$color1;
+  min-height: 56px;
+  padding: 0 theme.$spacing;
+}
+
+.wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.message {
+  margin: theme.$spacing / 2;
+}

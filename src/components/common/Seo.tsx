@@ -10,8 +10,8 @@ export interface Props {
 const SEO: React.FC<Props> = ({ description: desc, title: t }) => {
   const meta = useSiteMetadata();
 
-  const title = typeof t !== "undefined" ? t : meta.title;
-  const description = typeof desc !== "undefined" ? desc : meta.description;
+  const title = t ?? meta.title;
+  const description = desc ?? meta.description;
 
   return (
     <Helmet

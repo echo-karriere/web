@@ -1,16 +1,15 @@
 import React from "react";
-import Layout from "../components/common/layout";
-import SEO from "../components/common/seo";
-import { Container } from "../components/common/container";
+import Layout from "../components/common/Layout";
+import SEO from "../components/common/Seo";
+import { Container } from "../components/common/Container";
 import ContactUs from "../components/forms/contact";
 
-export default function Index() {
-  return (
-    <Layout>
-      <SEO title="Kontakt oss" />
-      <Container>
-        <ContactUs />
-      </Container>
-    </Layout>
-  );
-}
+const Index: React.FC = () => (
+  <Layout>
+    <SEO title="Kontakt oss" />
+    <Container>
+      <ContactUs />
+    </Container>
+  </Layout>
+);
+export default Index;

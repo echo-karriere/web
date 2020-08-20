@@ -1,30 +1,9 @@
 import React from "react";
 import { Link, graphql, useStaticQuery } from "gatsby";
-import styled from "styled-components";
-import { WideContainer } from "./container";
+import { Container } from "./Container";
 import Navbar from "../navbar";
 
-const HeaderWrapper = styled.div`
-  line-height: 56px;
-`;
-
-const Title = styled(Link)`
-  align-self: center;
-`;
-
-const Logo = styled.img`
-  display: block;
-  margin: 0;
-  padding: 0;
-`;
-
-const NavContainer = styled(WideContainer)`
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  max-height: 70px;
-`;
+import styles from "./Header.module.scss";
 
 const Header: React.FC = () => {
   const query = useStaticQuery(graphql`
@@ -42,18 +21,19 @@ const Header: React.FC = () => {
   `);
 
   return (
-    <HeaderWrapper>
-      <NavContainer>
-        <Title to="/">
-          <Logo
+    <div className={styles.wrapper}>
+      <Container wide style={styles.container}>
+        <Link to="/" className={styles.title}>
+          <img
             src={query.logoImage.childImageSharp.fixed.base64}
             srcSet={query.logoImage.childImageSharp.fixed.srcSet}
             alt="echo karriere logo"
+            className={styles.logo}
           />
-        </Title>
+        </Link>
         <Navbar />
-      </NavContainer>
-    </HeaderWrapper>
+      </Container>
+    </div>
   );
 };
 
