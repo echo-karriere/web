@@ -1,0 +1,67 @@
+@use "../../styles/theme";
+
+.burger {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 2rem;
+  justify-content: space-around;
+  outline: none;
+  padding: 0;
+  position: absolute;
+  right: 2rem;
+  top: theme.$spacing / 1.5;
+  width: 2rem;
+  z-index: 10;
+
+  @media screen and (min-width: theme.$breakpoint-tablet) {
+    display: none;
+  }
+}
+
+.line {
+  background: theme.$brand-grey;
+  border-radius: 10px;
+  height: 0.25rem;
+  position: relative;
+  transform-origin: 1px;
+  transition: all 0.3s linear;
+  width: 2rem;
+
+  @media screen and (prefers-reduced-motion: reduce) {
+    background: theme.$brand-grey;
+    border-radius: 10px;
+    height: 0.25rem;
+    position: relative;
+    transform-origin: 1px;
+    transition: none;
+    width: 2rem;
+  }
+}
+
+.first-open {
+  transform: rotate(45deg);
+}
+
+.first-closed {
+  transform: rotate(0);
+}
+
+.second-open {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.second-closed {
+  transform: translateX(0);
+}
+
+.third-open {
+  transform: rotate(-45deg);
+}
+
+.third-closed {
+  transform: rotate(0);
+}
