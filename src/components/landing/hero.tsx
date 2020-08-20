@@ -21,19 +21,19 @@ const Hello = styled.div`
 `;
 
 const HeroImage = styled.figure`
-  width: 100%;
   margin: 0;
+  width: 100%;
 `;
 
 const Grid = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   align-items: center;
+  display: grid;
   grid-gap: ${({ theme }) => math(`${theme.size.spacing} * 2`)};
+  grid-template-columns: 1fr 1fr;
 
   @media screen and (max-width: ${({ theme }) => theme.screen.md}) {
-    grid-template-columns: 1fr;
     grid-gap: ${({ theme }) => math(`${theme.size.spacing} * 3`)};
+    grid-template-columns: 1fr;
 
     > ${HeroImage} {
       order: 2;
@@ -43,8 +43,8 @@ const Grid = styled.div`
 
 const Title = styled.h1`
   font-size: 2.5rem;
-  padding-bottom: 0;
   margin-bottom: 0;
+  padding-bottom: 0;
 
   @media screen and (min-width: ${({ theme }) => theme.screen.md}) {
     font-size: 3rem;
@@ -52,8 +52,8 @@ const Title = styled.h1`
 `;
 
 const SubTitle = styled.h2`
-  font-size: 1.5rem;
   color: ${({ theme }) => theme.color.grey};
+  font-size: 1.5rem;
 
   @media screen and (min-width: ${({ theme }) => theme.screen.md}) {
     font-size: 2rem;
@@ -61,11 +61,11 @@ const SubTitle = styled.h2`
 `;
 
 export const StyledLink = styled(Link)`
+  color: ${({ theme }) => theme.color.textcolor};
   font-size: 1.2rem;
-  color: ${({ theme }) => theme.color.textColor};
 
   &:visited {
-    color: ${({ theme }) => theme.color.textColor};
+    color: ${({ theme }) => theme.color.textcolor};
   }
 `;
 

@@ -4,38 +4,38 @@ import MenuItem from "./MenuItem";
 import useNavigationData, { NavItem } from "../../queries/useNavigationData";
 
 export const StyledMenu = styled.nav<{ open: boolean }>`
+  background: ${({ theme }) => theme.color.backgroundcolor};
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  background: ${({ theme }) => theme.color.backgroundColor};
   height: 100vh;
-  text-align: left;
+  justify-content: center;
+  left: 0;
   padding: 2rem;
   position: absolute;
+  text-align: left;
   top: 0;
-  left: 0;
-  transition: transform 0.3s ease-in-out;
   transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
+  transition: transform 0.3s ease-in-out;
 
   @media (max-width: ${({ theme }) => theme.screen.sm}) {
     width: 100%;
   }
 
   @media screen and (min-width: ${({ theme }) => theme.screen.md}) {
-    transform: none;
+    display: flex;
     flex-direction: row;
     height: auto;
-    top: initial;
     left: initial;
     position: initial;
-    display: flex;
+    top: initial;
+    transform: none;
   }
 `;
 
 const MenuItems = styled.div`
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
 
   @media screen and (min-width: ${({ theme }) => theme.screen.md}) {
     flex-direction: row;

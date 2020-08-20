@@ -9,9 +9,9 @@ import GlobalStyle from "../../styles/global";
 import Footer from "./footer";
 
 const Wrapper = styled.div`
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 `;
 
 interface Props {

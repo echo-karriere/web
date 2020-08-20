@@ -5,27 +5,27 @@ import downArrow from "../../assets/angle-down-solid.svg";
 import upArrow from "../../assets/angle-up-solid.svg";
 
 const NavLink = styled(Link)`
-  color: ${({ theme }) => theme.color.textColor};
   align-self: center;
+  color: ${({ theme }) => theme.color.textcolor};
+  color: ${({ theme }) => theme.color.textcolor};
   font-size: 2rem;
-  text-transform: uppercase;
-  padding: 2rem 0;
   font-weight: bold;
   letter-spacing: 0.5rem;
-  color: ${({ theme }) => theme.color.textColor};
-  text-decoration: none;
-  transition: color 0.3s linear;
+  padding: 2rem 0;
   text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.3s linear;
 
   &:visited {
-    color: ${({ theme }) => theme.color.textColor};
+    color: ${({ theme }) => theme.color.textcolor};
   }
 
   @media screen and (min-width: ${({ theme }) => theme.screen.md}) {
     font-size: 1rem;
+    font-weight: normal;
     letter-spacing: normal;
     text-transform: none;
-    font-weight: normal;
   }
 `;
 
