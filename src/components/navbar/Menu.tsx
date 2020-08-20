@@ -20,12 +20,32 @@ export const StyledMenu = styled.nav<{ open: boolean }>`
   @media (max-width: ${({ theme }) => theme.screen.sm}) {
     width: 100%;
   }
+
+  @media screen and (min-width: ${({ theme }) => theme.screen.md}) {
+    transform: none;
+    flex-direction: row;
+    height: auto;
+    top: initial;
+    left: initial;
+    position: initial;
+    display: flex;
+  }
 `;
 
 const MenuItems = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
+
+  @media screen and (min-width: ${({ theme }) => theme.screen.md}) {
+    flex-direction: row;
+
+    > * {
+      &:not(:last-child) {
+        margin-right: ${({ theme }) => theme.size.spacing};
+      }
+    }
+  }
 `;
 
 interface Props {
