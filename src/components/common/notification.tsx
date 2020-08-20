@@ -9,15 +9,15 @@ interface Props {
 }
 
 const NotificationContainer = styled.div`
-  min-height: 56px;
   background-color: ${({ theme }) => theme.brand.color1};
+  min-height: 56px;
   padding: 0 ${({ theme }) => theme.size.spacing};
 `;
 
 const Wrapper = styled.div`
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
 `;
 
 const Message = styled.p`

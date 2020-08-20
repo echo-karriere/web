@@ -7,14 +7,14 @@ import useNavigationData, { NavItem } from "../../queries/useNavigationData";
 import { math } from "polished";
 
 const Wrapper = styled.footer`
-  padding: ${({ theme }) => theme.size.spacing} 0;
   background-color: ${({ theme }) => theme.brand.color4};
+  padding: ${({ theme }) => theme.size.spacing} 0;
 `;
 
 const FlexContainer = styled(WideContainer)`
+  align-content: center;
   display: flex;
   flex-direction: column;
-  align-content: center;
   justify-content: space-around;
 
   @media screen and (min-width: ${({ theme }) => theme.screen.md}) {
@@ -23,12 +23,12 @@ const FlexContainer = styled(WideContainer)`
 `;
 
 const FlexDiv = styled.div`
-  max-width: 100%;
   align-self: flex-start;
+  max-width: 100%;
 
   @media screen and (min-width: ${({ theme }) => theme.screen.md}) {
-    max-width: 50%;
     align-self: center;
+    max-width: 50%;
   }
 `;
 
@@ -38,16 +38,16 @@ const Ul = styled.ul`
 `;
 
 const Li = styled.li`
-  padding-bottom: ${({ theme }) => math(`${theme.size.spacing} / 4`)};
   margin-bottom: 0;
+  padding-bottom: ${({ theme }) => math(`${theme.size.spacing} / 4`)};
 `;
 
 const FooterLink = styled(Link)`
-  color: ${({ theme }) => theme.color.textColor};
+  color: ${({ theme }) => theme.color.textcolor};
   text-decoration: none;
 
   &:visited {
-    color: ${({ theme }) => theme.color.textColor};
+    color: ${({ theme }) => theme.color.textcolor};
   }
 `;
 

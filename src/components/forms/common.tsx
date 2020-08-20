@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const CenteredContainer = styled.div`
-  height: 100vh;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  height: 100vh;
   justify-content: center;
 `;
 
@@ -29,13 +29,13 @@ export const Fieldset = styled.fieldset`
 `;
 
 export const Error = styled.span`
-  font-size: 12px;
   color: red;
+  font-size: 12px;
 `;
 
 export const Ul = styled.ul`
-  list-style: none;
   float: left;
+  list-style: none;
   margin: 0;
 
   > li input {

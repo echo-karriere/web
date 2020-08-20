@@ -13,16 +13,16 @@ const Title = styled(Link)`
 `;
 
 const Logo = styled.img`
-  padding: 0;
-  margin: 0;
   display: block;
+  margin: 0;
+  padding: 0;
 `;
 
 const NavContainer = styled(WideContainer)`
+  align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
   max-height: 70px;
 `;
 

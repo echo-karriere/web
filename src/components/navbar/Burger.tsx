@@ -3,28 +3,54 @@ import React from "react";
 import { math } from "polished";
 
 const StyledBurger = styled.button<{ open: boolean }>`
-  position: absolute;
-  top: ${({ theme }) => math(`${theme.size.spacing} / 1.5`)};
-  right: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 2rem;
-  height: 2rem;
   background: transparent;
   border: none;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 2rem;
+  justify-content: space-around;
   padding: 0;
+  position: absolute;
+  right: 2rem;
+  top: ${({ theme }) => math(`${theme.size.spacing} / 1.5`)};
+  width: 2rem;
   z-index: 10;
 
+  @media screen and (prefers-reduced-motion: reduce) {
+    span {
+      background: ${({ theme }) => theme.color.grey};
+      border-radius: 10px;
+      height: 0.25rem;
+      position: relative;
+      transform-origin: 1px;
+      transition: none;
+      width: 2rem;
+
+      :first-child {
+        transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
+      }
+
+      :nth-child(2) {
+        opacity: ${({ open }) => (open ? "0" : "1")};
+        transform: ${({ open }) =>
+          open ? "translateX(20px)" : "translateX(0)"};
+      }
+
+      :nth-child(3) {
+        transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
+      }
+    }
+  }
+
   span {
-    width: 2rem;
-    height: 0.25rem;
     background: ${({ theme }) => theme.color.grey};
     border-radius: 10px;
-    transition: all 0.3s linear;
+    height: 0.25rem;
     position: relative;
     transform-origin: 1px;
+    transition: all 0.3s linear;
+    width: 2rem;
 
     :first-child {
       transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};

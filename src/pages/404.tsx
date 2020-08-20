@@ -6,13 +6,13 @@ import Layout from "../components/common/layout";
 import SEO from "../components/common/seo";
 
 const Wrapper = styled.main`
-  width: 100vw;
-  height: 100vh;
-  padding: ${({ theme }) => math(`${theme.size.spacing} / 2`)};
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  height: 100vh;
   justify-content: center;
+  padding: ${({ theme }) => math(`${theme.size.spacing} / 2`)};
+  width: 100vw;
 `;
 
 const FourOhFour: React.FC = () => {

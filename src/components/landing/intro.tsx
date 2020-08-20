@@ -22,13 +22,13 @@ type GridType = {
 };
 
 const Grid = styled.div<GridType>`
-  display: grid;
-  grid-template-columns: 3fr 2fr;
-  grid-gap: ${({ theme }) => math(`${theme.size.spacing} * 2`)};
-  text-align: right;
   align-items: center;
+  display: grid;
+  grid-gap: ${({ theme }) => math(`${theme.size.spacing} * 2`)};
+  grid-template-columns: 3fr 2fr;
   justify-items: center;
   margin: ${({ theme }) => theme.size.spacing} 0;
+  text-align: right;
   ${(props) =>
     props.inverse &&
     `
