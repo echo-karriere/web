@@ -6,8 +6,7 @@ import upArrow from "../../assets/angle-up-solid.svg";
 
 const NavLink = styled(Link)`
   align-self: center;
-  color: ${({ theme }) => theme.color.textcolor};
-  color: ${({ theme }) => theme.color.textcolor};
+  color: ${({ theme }) => theme.color.textColor};
   font-size: 2rem;
   font-weight: bold;
   letter-spacing: 0.5rem;
@@ -18,7 +17,7 @@ const NavLink = styled(Link)`
   transition: color 0.3s linear;
 
   &:visited {
-    color: ${({ theme }) => theme.color.textcolor};
+    color: ${({ theme }) => theme.color.textColor};
   }
 
   @media screen and (min-width: ${({ theme }) => theme.screen.md}) {
