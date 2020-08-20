@@ -1,0 +1,11 @@
+@use "../styles/theme";
+
+.wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  padding: theme.$spacing / 2;
+  width: 100vw;
+}

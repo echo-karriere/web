@@ -1,28 +1,17 @@
 import React from "react";
-import styled from "styled-components";
-import { math } from "polished";
 
 import Layout from "../components/common/Layout";
 import SEO from "../components/common/Seo";
-
-const Wrapper = styled.main`
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  justify-content: center;
-  padding: ${({ theme }) => math(`${theme.size.spacing} / 2`)};
-  width: 100vw;
-`;
+import styles from "./404.module.scss";
 
 const FourOhFour: React.FC = () => {
   return (
     <Layout>
       <SEO title="404: Ikke funnet" />
-      <Wrapper>
+      <main className={styles.wrapper}>
         <h1>404: Vi finner ikke siden din :(</h1>
         <p>Gå tilbake eller prøvd på nytt.</p>
-      </Wrapper>
+      </main>
     </Layout>
   );
 };
