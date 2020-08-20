@@ -1,0 +1,33 @@
+@use "../../styles/theme";
+
+.link {
+  align-self: center;
+  color: theme.$text-color;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 0.5rem;
+  padding: 2rem 0;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.3s linear;
+
+  &:visited {
+    color: theme.$text-color;
+  }
+
+  @media screen and (min-width: theme.$breakpoint-tablet) {
+    font-size: 1rem;
+    font-weight: normal;
+    letter-spacing: normal;
+    text-transform: none;
+  }
+
+  @media screen and (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}
+
+.icon {
+  width: 12px;
+}
