@@ -29,12 +29,7 @@ li {
 }
 
 a {
-  color: theme.$brand-color;
   text-decoration: none;
-
-  &:visited {
-    color: theme.$brand-color-darkened;
-  }
 
   &:hover,
   &:focus {
