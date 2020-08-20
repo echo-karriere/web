@@ -20,6 +20,13 @@ const NavLink = styled(Link)`
   &:visited {
     color: ${({ theme }) => theme.color.textColor};
   }
+
+  @media screen and (min-width: ${({ theme }) => theme.screen.md}) {
+    font-size: 1rem;
+    letter-spacing: normal;
+    text-transform: none;
+    font-weight: normal;
+  }
 `;
 
 const Icon = styled.img`

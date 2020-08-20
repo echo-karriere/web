@@ -18,6 +18,14 @@ const Logo = styled.img`
   display: block;
 `;
 
+const NavContainer = styled(WideContainer)`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-height: 70px;
+`;
+
 const Header: React.FC = () => {
   const query = useStaticQuery(graphql`
     query LogoQuery {
@@ -35,7 +43,7 @@ const Header: React.FC = () => {
 
   return (
     <HeaderWrapper>
-      <WideContainer>
+      <NavContainer>
         <Title to="/">
           <Logo
             src={query.logoImage.childImageSharp.fixed.base64}
@@ -44,7 +52,7 @@ const Header: React.FC = () => {
           />
         </Title>
         <Navbar />
-      </WideContainer>
+      </NavContainer>
     </HeaderWrapper>
   );
 };
