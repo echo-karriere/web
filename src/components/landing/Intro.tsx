@@ -45,7 +45,7 @@ const Intro: React.FC = () => {
             />
           </figure>
         </div>
-        <div className={cx("grid", "grid-inverse")}>
+        <div className={cx("grid", { gridInverse: true })}>
           <figure className={styles.art}>
             <img
               src={hiringUrl}
