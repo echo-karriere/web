@@ -31,7 +31,11 @@ module.exports = {
           email: process.env.API_EMAIL,
           password: process.env.API_PASSWORD,
         },
-        targetStatuses: ["published", "__NONE__"],
+        targetStatuses: [
+          "published",
+          process.env.NODE_ENV === "development" ? "draft" : null,
+          "__NONE__",
+        ],
       },
     },
     {

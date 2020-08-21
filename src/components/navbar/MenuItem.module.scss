@@ -29,5 +29,12 @@
 }
 
 .icon {
-  width: 12px;
+  display: none;
+
+  @media screen and (min-width: theme.$breakpoint-tablet) {
+    display: inline;
+    margin-left: theme.$spacing / 4;
+    margin-top: theme.$spacing;
+    width: 12px;
+  }
 }

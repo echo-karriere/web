@@ -3,6 +3,8 @@ import MenuItem from "./MenuItem";
 import useNavigationData, { NavItem } from "../../queries/useNavigationData";
 import classNamesBind from "classnames/bind";
 
+import downArrow from "../../assets/angle-down-solid.svg";
+import upArrow from "../../assets/angle-up-solid.svg";
 import styles from "./Menu.module.scss";
 
 const cx = classNamesBind.bind(styles);
@@ -10,6 +12,14 @@ const cx = classNamesBind.bind(styles);
 interface Props {
   open: boolean;
 }
+
+export const DownArrow: React.FC = () => {
+  return <img src={downArrow} alt="Expand icon" className={styles.icon} />;
+};
+
+export const UpArrow: React.FC = () => {
+  return <img src={upArrow} alt="Minimize icon" className={styles.icon} />;
+};
 
 const Menu: React.FC<Props> = ({ open }) => {
   const navigation = useNavigationData();
@@ -19,12 +29,15 @@ const Menu: React.FC<Props> = ({ open }) => {
       className={cx("menu", { menuOpen: open, menuClosed: !open })}
       aria-hidden={!open}
     >
-      <div className={styles.item}>
-        {navigation.map((nav: NavItem) => (
-          <MenuItem title={nav.title} to={nav.link} key={nav.link} />
-        ))}
-      </div>
+      {navigation.map(({ children, name, url }: NavItem) =>
+        children ? (
+          <MenuItem title={name} to={url} />
+        ) : (
+          <MenuItem title={name} to={url} />
+        ),
+      )}
     </nav>
   );
 };
+
 export default Menu;
