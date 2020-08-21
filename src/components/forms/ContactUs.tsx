@@ -131,7 +131,11 @@ const ContactUs: React.FC = () => {
               ref={register}
             />
             <div>
-              <input type="submit" value="Send melding" />
+              <input
+                className={styles.input}
+                type="submit"
+                value="Send melding"
+              />
             </div>
           </fieldset>
         </section>

@@ -308,8 +308,9 @@ const InterestForm: React.FC = () => {
           <h2>Til slutt...</h2>
           <fieldset className={styles.fieldset}>
             <legend className={styles.legend}>Bekreftelse</legend>
-            <div style={{ paddingBottom: "0.5rem" }}>
+            <div>
               <input
+                className={styles.input}
                 type="checkbox"
                 id="conf_id"
                 name="confirmation"
@@ -324,7 +325,11 @@ const InterestForm: React.FC = () => {
               </label>
             </div>
             <div>
-              <input type="submit" value="Meld interesse" />
+              <input
+                className={styles.input}
+                type="submit"
+                value="Meld interesse"
+              />
             </div>
           </fieldset>
         </section>
