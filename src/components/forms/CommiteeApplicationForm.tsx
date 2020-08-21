@@ -27,7 +27,7 @@ const interestSchema = yup.object().shape({
   application: yup.string().required(),
 });
 
-const CommiteeApplication: React.FC = () => {
+const CommitteeApplication: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState(false);
   const { register, errors, handleSubmit } = useForm<FormData>({
@@ -140,4 +140,4 @@ const CommiteeApplication: React.FC = () => {
   );
 };
 
-export default CommiteeApplication;
+export default CommitteeApplication;
