@@ -8,6 +8,9 @@ module.exports.createPages = async ({ graphql, actions }) => {
       allApiPage {
         edges {
           node {
+            category {
+              slug
+            }
             apiId
             slug
             title
@@ -25,8 +28,11 @@ module.exports.createPages = async ({ graphql, actions }) => {
   } = response;
 
   pages.forEach(({ node: page }) => {
+    const slug = page.category
+      ? page.category.slug.concat("/", page.slug, "/")
+      : `/${page.slug}/`;
     createPage({
-      path: `/${page.slug}/`,
+      path: slug,
       component: path.resolve("./src/templates/page.tsx"),
       context: page,
     });
