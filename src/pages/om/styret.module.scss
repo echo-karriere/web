@@ -1,0 +1,31 @@
+@use "../../styles/theme";
+
+.members {
+  display: flex;
+  flex-wrap: wrap;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 15rem;
+  height: 15rem;
+  margin: 15px;
+  padding: 10px;
+  border-radius: 5%;
+  background-color: theme.$background-color;
+  box-shadow: 2px 2px 4px theme.$brand-grey-lightened;
+}
+.name {
+  color: theme.$color10;
+  margin-bottom: 0.5rem;
+}
+.title {
+  color: theme.$color9;
+  margin-bottom: 0.5rem;
+}
+.email {
+  color: theme.$color9;
+  margin-bottom: 0.5rem;
+  font-size: 14px;
+}
