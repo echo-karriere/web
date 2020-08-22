@@ -41,18 +41,31 @@
   }
 }
 
-.item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.icon {
+  display: none;
 
   @media screen and (min-width: theme.$breakpoint-tablet) {
-    flex-direction: row;
-
-    > * {
-      &:not(:last-child) {
-        margin-right: theme.$spacing;
-      }
-    }
+    display: inline;
+    margin-left: theme.$spacing / 4;
+    margin-top: theme.$spacing;
+    width: 12px;
   }
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown-content {
+  background-color: theme.$background-color;
+  display: none;
+  min-width: 180px;
+  position: absolute;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus .dropdown-content {
+  display: block;
 }
