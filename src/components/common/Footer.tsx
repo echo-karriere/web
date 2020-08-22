@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 
 import { Container } from "./Container";
-import useNavigationData, { NavApiItem } from "../../queries/useNavigationData";
+import useNavigationData, { NavItem } from "../../queries/useNavigationData";
 
 import styles from "./Footer.module.scss";
 
@@ -22,10 +22,10 @@ const Footer: React.FC = () => {
         <div className={styles.element}>
           <h3>Lenker</h3>
           <ul className={styles.ul}>
-            {navigation.map((nav: NavApiItem) => (
-              <li className={styles.li} key={nav.link}>
-                <Link to={nav.link} key={nav.link} className={styles.link}>
-                  {nav.title}
+            {navigation.map((nav: NavItem) => (
+              <li className={styles.li} key={nav.url}>
+                <Link to={nav.url} className={styles.link}>
+                  {nav.name}
                 </Link>
               </li>
             ))}
