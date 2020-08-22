@@ -5,16 +5,16 @@
   flex-wrap: wrap;
 }
 .card {
+  background-color: theme.$background-color;
+  border-radius: 5%;
+  box-shadow: 2px 2px 4px theme.$brand-grey-lightened;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  width: 15rem;
   height: 15rem;
+  justify-content: flex-end;
   margin: 15px;
   padding: 10px;
-  border-radius: 5%;
-  background-color: theme.$background-color;
-  box-shadow: 2px 2px 4px theme.$brand-grey-lightened;
+  width: 15rem;
 }
 .name {
   color: theme.$color10;
@@ -26,6 +26,6 @@
 }
 .email {
   color: theme.$color9;
-  margin-bottom: 0.5rem;
   font-size: 14px;
+  margin-bottom: 0.5rem;
 }
