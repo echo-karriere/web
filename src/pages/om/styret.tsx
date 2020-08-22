@@ -43,13 +43,9 @@ const Committee: React.FC = () => {
     }
   `);
 
-  console.log(JSON.stringify(response, null, 2));
-
   const {
     allApiCommittee: { edges: members },
   } = response;
-
-  console.log(JSON.stringify(members, null, 2));
 
   return (
     <Layout>
