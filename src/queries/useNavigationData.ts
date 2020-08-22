@@ -61,8 +61,6 @@ const useNavigationData = (): NavItem[] => {
     }
   });
 
-  console.log([...generatedData.values()]);
-
   return [...generatedData.values()];
 };
 
