@@ -1,5 +1,5 @@
-import React from "react";
-import MenuItem from "./MenuItem";
+import React, { useState } from "react";
+import MenuItem, { MenuItemIcon } from "./MenuItem";
 import useNavigationData, { NavItem } from "../../queries/useNavigationData";
 import classNamesBind from "classnames/bind";
 
@@ -22,6 +22,7 @@ export const UpArrow: React.FC = () => {
 };
 
 const Menu: React.FC<Props> = ({ open }) => {
+  const [hover, setHover] = useState(false);
   const navigation = useNavigationData();
 
   return (
@@ -31,7 +32,18 @@ const Menu: React.FC<Props> = ({ open }) => {
     >
       {navigation.map(({ children, name, url }: NavItem) =>
         children ? (
-          <MenuItem title={name} to={url} />
+          <div
+            className={styles.dropdown}
+            onMouseEnter={() => setHover(true)}
+            onMouseLeave={() => setHover(false)}
+          >
+            <MenuItemIcon title={name} to={url} open={hover} />
+            <div className={styles.dropdownContent}>
+              {children.map((it) => (
+                <MenuItem title={it.name} to={it.url} key={it.url} />
+              ))}
+            </div>
+          </div>
         ) : (
           <MenuItem title={name} to={url} />
         ),
