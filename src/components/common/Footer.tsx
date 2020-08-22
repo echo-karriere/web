@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
           <ul className={styles.ul}>
             {navigation.map((nav: NavItem) => (
               <li className={styles.li} key={nav.url}>
-                <Link to={nav.url} className={styles.link}>
+                <Link to={`/${nav.url}/`} className={styles.link}>
                   {nav.name}
                 </Link>
               </li>
