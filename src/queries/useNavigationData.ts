@@ -17,8 +17,14 @@ export interface NavItem {
   children?: NavItem[];
 }
 
+interface Response {
+  allApiNavigation: {
+    edges: Array<{ node: NavApiItem }>;
+  };
+}
+
 const useNavigationData = (): NavItem[] => {
-  const data = useStaticQuery(graphql`
+  const data = useStaticQuery<Response>(graphql`
     query Navigation {
       allApiNavigation {
         edges {
@@ -36,7 +42,7 @@ const useNavigationData = (): NavItem[] => {
   `);
 
   const generatedData = new Map<number, NavItem>();
-  data.allApiNavigation.edges.forEach(({ node }: { node: NavApiItem }) => {
+  data.allApiNavigation.edges.forEach(({ node }) => {
     if (node.owner) {
       if (!generatedData.has(node.owner.apiId)) {
         generatedData.set(node.apiId, { name: "", url: "" });
@@ -46,7 +52,10 @@ const useNavigationData = (): NavItem[] => {
       if (parent === undefined) return;
 
       if (!parent.children) parent.children = [];
-      parent.children.push(node);
+      parent.children.push({
+        name: node.name,
+        url: `${parent.url}/${node.url}`,
+      });
     } else {
       generatedData.set(node.apiId, { name: node.name, url: node.url });
     }
