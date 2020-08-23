@@ -1,5 +1,18 @@
 {
-  "extends": [
-    "config:base"
-  ]
+  "extends": ["config:base"],
+  "dependencyDashboard": true,
+  "lockFileMaintenance": {
+    "enabled": true
+  },
+  "major": {
+    "automerge": false
+  },
+  "pin": {
+    "automerge": true
+  },
+  "prCreation": "not-pending",
+  "schedule": ["before 6am", "every weekend"],
+  "stabilityDays": 3,
+  "prNotPendingHours": 24,
+  "timezone": "Europe/Oslo"
 }
