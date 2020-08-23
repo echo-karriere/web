@@ -43,9 +43,25 @@ const useNavigationData = (): NavItem[] => {
 
   const generatedData = new Map<number, NavItem>();
   data.allApiNavigation.edges.forEach(({ node }) => {
+    // Might happen if node is created when a child is encountered before a
+    // parent, in which case we just skip it and continue
+    if (generatedData.has(node.apiId)) return;
+
     if (node.owner) {
       if (!generatedData.has(node.owner.apiId)) {
-        generatedData.set(node.apiId, { name: "", url: "" });
+        const parent = data.allApiNavigation.edges.find(
+          (it) => it.node.apiId === node.owner?.apiId,
+        )?.node;
+
+        if (parent === undefined) {
+          throw Error(`parent ${node.owner.apiId} not found`);
+        }
+
+        generatedData.set(parent.apiId, {
+          name: parent.name,
+          url: parent.url,
+          children: [],
+        });
       }
 
       const parent = generatedData.get(node.owner.apiId);
