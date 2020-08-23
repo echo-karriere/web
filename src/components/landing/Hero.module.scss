@@ -14,7 +14,7 @@
 }
 
 .hero {
-  margin: 0;
+  margin: 0 0 1.45rem;
   width: 100%;
 }
 
@@ -39,7 +39,7 @@
   margin-bottom: 0;
   padding-bottom: 0;
 
-  @media screen and (max-width: theme.$breakpoint-tablet) {
+  @media screen and (min-width: theme.$breakpoint-tablet) {
     font-size: 3rem;
   }
 }
@@ -47,8 +47,10 @@
 .subtitle {
   color: theme.$brand-grey;
   font-size: 1.5rem;
+  margin-top: 0;
+  padding-top: 0;
 
-  @media screen and (max-width: theme.$breakpoint-tablet) {
+  @media screen and (min-width: theme.$breakpoint-tablet) {
     font-size: 2rem;
   }
 }
