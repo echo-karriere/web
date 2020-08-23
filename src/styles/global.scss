@@ -98,6 +98,24 @@ select {
   padding: 10px;
 }
 
+@media screen and (prefers-reduced-motion: reduce) {
+  button,
+  input,
+  textarea {
+    transition: none;
+  }
+}
+
+button,
+input,
+textarea {
+  transition: background-color theme.$animation-short linear,
+    border-color theme.$animation-short linear,
+    color theme.$animation-short linear,
+    box-shadow theme.$animation-short linear,
+    transform theme.$animation-short ease;
+}
+
 button,
 select,
 input[type="submit"],
