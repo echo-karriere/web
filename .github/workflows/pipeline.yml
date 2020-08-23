@@ -24,3 +24,8 @@ jobs:
 
       - name: Build
         run: yarn build
+        env:
+          API_URL: ${{ secrets.API_URL }}
+          API_PROJECT: ${{ secrets.API_PROJECT }}
+          API_EMAIL: ${{ secrets.API_EMAIL }}
+          API_PASSWORD: ${{ secrets.API_PASSWORD }}
