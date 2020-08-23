@@ -325,11 +325,9 @@ const InterestForm: React.FC = () => {
               </label>
             </div>
             <div>
-              <input
-                className={styles.input}
-                type="submit"
-                value="Meld interesse"
-              />
+              <button className={styles.button} type="submit">
+                Meld interesse
+              </button>
             </div>
           </fieldset>
         </section>

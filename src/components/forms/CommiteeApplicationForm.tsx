@@ -35,7 +35,7 @@ const CommitteeApplication: React.FC = () => {
   });
 
   const submitForm = (data: FormData) => {
-    if (!isDev) {
+    if (isDev) {
       console.log(JSON.stringify(data, null, 2));
       setSubmitted(true);
     } else {
@@ -127,11 +127,9 @@ const CommitteeApplication: React.FC = () => {
               ref={register({ required: true })}
             />
             <div>
-              <input
-                className={styles.input}
-                type="submit"
-                value="Send søknad"
-              />
+              <button className={styles.button} type="submit">
+                Send søknad
+              </button>
             </div>
           </fieldset>
         </section>
