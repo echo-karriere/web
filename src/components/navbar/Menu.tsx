@@ -29,7 +29,7 @@ const Menu: React.FC<Props> = ({ open }) => {
       <ul className={styles.ul}>
         {navigation.map(({ children, name, url }: NavItem) =>
           children ? (
-            <li className={cx("dropdown", { li: true })}>
+            <li className={cx("dropdown", { li: true })} key={url}>
               <MenuItem title={name} to={url} icon />
               <ul className={styles.dropdownContent}>
                 {children.map((it) => (
@@ -40,7 +40,7 @@ const Menu: React.FC<Props> = ({ open }) => {
               </ul>
             </li>
           ) : (
-            <li className={styles.li}>
+            <li className={styles.li} key={url}>
               <MenuItem title={name} to={url} />
             </li>
           ),
