@@ -1,4 +1,4 @@
-# echo karriere [![Netlify Status](https://api.netlify.com/api/v1/badges/7f4062ba-7f17-4dcf-87dd-39a963ae7ee2/deploy-status)](https://app.netlify.com/sites/echokarriere/deploys)
+# echo karriere [![Netlify Status](https://api.netlify.com/api/v1/badges/7f4062ba-7f17-4dcf-87dd-39a963ae7ee2/deploy-status)](https://app.netlify.com/sites/echokarriere/deploys) ![pipeline](https://github.com/echo-karriere/web/workflows/pipeline/badge.svg)
 
 This is the front-end (aka website) for _echo karriere_; a career day for IT
 students in and around Bergen. It is written using a symphony of modern tools,
