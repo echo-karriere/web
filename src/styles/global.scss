@@ -114,6 +114,10 @@ textarea {
     color theme.$animation-short linear,
     box-shadow theme.$animation-short linear,
     transform theme.$animation-short ease;
+
+  @media screen and (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
 }
 
 button,

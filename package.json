@@ -33,7 +33,10 @@
   "scripts": {
     "develop": "gatsby develop",
     "build": "gatsby build",
-    "serve": "gatsby serve"
+    "serve": "gatsby serve",
+    "lint:ts": "eslint .",
+    "lint:css": "stylelint src/**/*.scss",
+    "lint:style": "prettier --check src"
   },
   "eslintConfig": {
     "extends": "react-app"
