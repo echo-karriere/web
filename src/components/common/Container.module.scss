@@ -2,10 +2,15 @@
 
 .container {
   flex: 1;
-  margin: 0 auto;
+  margin: 0 auto theme.$spacing * 2;
   max-width: theme.$size-xl;
   padding: 0 theme.$spacing;
   width: 100%;
+
+  &:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
 
   @media screen and (min-width: theme.$breakpoint-mobile) {
     max-width: theme.$size-sm;
