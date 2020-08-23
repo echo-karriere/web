@@ -88,28 +88,26 @@ const ContactUs: React.FC = () => {
         <section>
           <fieldset className={styles.fieldset}>
             <legend className={styles.legend}>Kontakt</legend>
-            <label htmlFor="name_id" className={styles.label}>
+            <label htmlFor="name_id">
               Navn
               {errors.name && (
                 <span className={styles.error}> {errors.name.message}</span>
               )}
             </label>
             <input
-              className={styles.input}
               type="text"
               name="name"
               id="name_id"
               ref={register({ required: true })}
             />
 
-            <label htmlFor="email_id" className={styles.label}>
+            <label htmlFor="email_id">
               Epost
               {errors.email && (
                 <span className={styles.error}> {errors.email.message}</span>
               )}
             </label>
             <input
-              className={styles.input}
               type="email"
               name="email"
               id="email_id"
@@ -123,7 +121,6 @@ const ContactUs: React.FC = () => {
               )}
             </label>
             <textarea
-              className={styles.textarea}
               id="message"
               name="message"
               rows={4}
@@ -131,9 +128,7 @@ const ContactUs: React.FC = () => {
               ref={register}
             />
             <div>
-              <button className={styles.button} type="submit">
-                Send melding
-              </button>
+              <button type="submit">Send melding</button>
             </div>
           </fieldset>
         </section>

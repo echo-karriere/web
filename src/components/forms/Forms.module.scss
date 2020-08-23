@@ -12,15 +12,6 @@
   padding: 3px 6px;
 }
 
-.input {
-  margin: 0.5rem;
-  width: 100%;
-}
-
-.label {
-  padding: 0 0.5rem;
-}
-
 .fieldset {
   display: flex;
   flex-direction: column;
@@ -36,21 +27,9 @@
   float: left;
   list-style: none;
   margin: 0;
+  padding: 0;
 
   > li input {
     margin-right: 0.5rem;
   }
-}
-
-.select {
-  margin-bottom: 1rem;
-}
-
-.textarea {
-  margin: 0.5rem;
-  width: 100%;
-}
-
-.button {
-  margin: 0.5rem;
 }

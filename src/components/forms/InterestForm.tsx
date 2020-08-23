@@ -103,14 +103,13 @@ const InterestForm: React.FC = () => {
 
           <fieldset className={styles.fieldset}>
             <legend className={styles.legend}>Bedrift</legend>
-            <label className={styles.label} htmlFor="comp_id">
+            <label htmlFor="comp_id">
               Navn
               {errors.company && (
                 <span className={styles.error}> {errors.company.message}</span>
               )}
             </label>
             <input
-              className={styles.input}
               type="text"
               name="company"
               id="comp_id"
@@ -120,42 +119,39 @@ const InterestForm: React.FC = () => {
 
           <fieldset className={styles.fieldset}>
             <legend className={styles.legend}>Kontaktperson</legend>
-            <label className={styles.label} htmlFor="pers_id">
+            <label htmlFor="pers_id">
               Navn
               {errors.person && (
                 <span className={styles.error}> {errors.person.message}</span>
               )}
             </label>
             <input
-              className={styles.input}
               type="text"
               name="person"
               id="pers_id"
               ref={register({ required: true })}
             />
 
-            <label className={styles.label} htmlFor="email_id">
+            <label htmlFor="email_id">
               Epost
               {errors.email && (
                 <span className={styles.error}> {errors.email.message}</span>
               )}
             </label>
             <input
-              className={styles.input}
               type="email"
               name="email"
               id="email_id"
               ref={register({ required: true })}
             />
 
-            <label className={styles.label} htmlFor="num_id">
+            <label htmlFor="num_id">
               Telefonnummer
               {errors.phone && (
                 <span className={styles.error}> {errors.phone.message}</span>
               )}
             </label>
             <input
-              className={styles.input}
               type="tel"
               name="phone"
               id="num_id"
@@ -167,25 +163,16 @@ const InterestForm: React.FC = () => {
           <h2>Ønsker</h2>
           <fieldset className={styles.fieldset}>
             <legend className={styles.legend}>echo karriere</legend>
-            <label className={styles.label} htmlFor="day_id">
-              Hvilken dag ønsker du å delta på?
-            </label>
-            <select
-              className={styles.select}
-              id="day_id"
-              name="day"
-              ref={register}
-            >
+            <label htmlFor="day_id">Hvilken dag ønsker du å delta på?</label>
+            <select id="day_id" name="day" ref={register}>
               <option value="N/A">Ingen preferanse</option>
               <option value="17">Dag 1 (17. september)</option>
               <option value="18">Dag 2 (18. september)</option>
             </select>
-            <label className={styles.label}>
-              Ønsker dere å delta/arrangere noe på karrieredagen?
-            </label>
+            <label>Ønsker dere å delta/arrangere noe på karrieredagen?</label>
             <ul className={styles.ul}>
               <li>
-                <label className={styles.label} htmlFor="extra_work">
+                <label htmlFor="extra_work">
                   <input
                     type="checkbox"
                     id="extra_work"
@@ -196,7 +183,7 @@ const InterestForm: React.FC = () => {
                 </label>
               </li>
               <li>
-                <label className={styles.label} htmlFor="extra_talk">
+                <label htmlFor="extra_talk">
                   <input
                     type="checkbox"
                     id="extra_talk"
@@ -207,7 +194,7 @@ const InterestForm: React.FC = () => {
                 </label>
               </li>
               <li>
-                <label className={styles.label} htmlFor="extra_speed">
+                <label htmlFor="extra_speed">
                   <input
                     type="checkbox"
                     id="extra_speed"
@@ -218,7 +205,7 @@ const InterestForm: React.FC = () => {
                 </label>
               </li>
               <li>
-                <label className={styles.label} htmlFor="extra_pres">
+                <label htmlFor="extra_pres">
                   <input
                     type="checkbox"
                     id="extra_pres"
@@ -229,7 +216,7 @@ const InterestForm: React.FC = () => {
                 </label>
               </li>
               <li>
-                <label className={styles.label} htmlFor="extra_view">
+                <label htmlFor="extra_view">
                   <input
                     type="checkbox"
                     id="extra_view"
@@ -241,7 +228,7 @@ const InterestForm: React.FC = () => {
               </li>
             </ul>
 
-            <label className={styles.label}>
+            <label>
               Ønsker dere å delta på vår bankett?
               {errors.banquet && (
                 <span className={styles.error}> {errors.banquet.message}</span>
@@ -249,7 +236,7 @@ const InterestForm: React.FC = () => {
             </label>
             <ul className={styles.ul}>
               <li>
-                <label className={styles.label} htmlFor="banquet_yes">
+                <label htmlFor="banquet_yes">
                   <input
                     type="radio"
                     id="banquet_yes"
@@ -261,7 +248,7 @@ const InterestForm: React.FC = () => {
                 </label>
               </li>
               <li>
-                <label className={styles.label} htmlFor="banquet_no">
+                <label htmlFor="banquet_no">
                   <input
                     type="radio"
                     id="banquet_no"
@@ -273,7 +260,7 @@ const InterestForm: React.FC = () => {
                 </label>
               </li>
               <li>
-                <label className={styles.label} htmlFor="banquet_maybe">
+                <label htmlFor="banquet_maybe">
                   <input
                     type="radio"
                     id="banquet_maybe"
@@ -291,11 +278,8 @@ const InterestForm: React.FC = () => {
           <h2>Annet</h2>
           <fieldset className={styles.fieldset}>
             <legend className={styles.legend}>Diverse</legend>
-            <label className={styles.label} htmlFor="other">
-              Har dere noe annet på hjertet?
-            </label>
+            <label htmlFor="other">Har dere noe annet på hjertet?</label>
             <textarea
-              className={styles.textarea}
               id="other"
               name="other"
               rows={4}
@@ -310,13 +294,12 @@ const InterestForm: React.FC = () => {
             <legend className={styles.legend}>Bekreftelse</legend>
             <div>
               <input
-                className={styles.input}
                 type="checkbox"
                 id="conf_id"
                 name="confirmation"
                 ref={register({ required: true })}
               />
-              <label className={styles.label} htmlFor="conf_id">
+              <label htmlFor="conf_id">
                 Vi vil med dette melde vår <strong>interesse</strong> for{" "}
                 <em>echo karriere</em> 2021.
                 {errors.confirmation && (
@@ -325,9 +308,7 @@ const InterestForm: React.FC = () => {
               </label>
             </div>
             <div>
-              <button className={styles.button} type="submit">
-                Meld interesse
-              </button>
+              <button type="submit">Meld interesse</button>
             </div>
           </fieldset>
         </section>

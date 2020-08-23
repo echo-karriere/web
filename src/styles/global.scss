@@ -80,3 +80,148 @@ a {
     text-decoration: underline;
   }
 }
+
+input,
+button,
+textarea,
+select {
+  appearance: none;
+  background-color: theme.$background-color;
+  border: 1px solid theme.$brand-grey-lightened;
+  border-radius: 6px;
+  color: theme.$text-color;
+  font-family: inherit;
+  font-size: inherit;
+  margin-bottom: 6px;
+  margin-right: 6px;
+  outline: none;
+  padding: 10px;
+}
+
+button,
+select,
+input[type="submit"],
+input[type="button"],
+input[type="checkbox"],
+input[type="range"],
+input[type="radio"] {
+  cursor: pointer;
+}
+
+textarea {
+  box-sizing: border-box;
+  margin-right: 0;
+  resize: vertical;
+  width: 100%;
+}
+
+select {
+  background: theme.$background-color url("../assets/angle-down-solid.svg")
+    calc(100% - 12px) 50% / 12px no-repeat;
+  display: block;
+  padding-right: 35px;
+  width: max-content;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+select[multiple] {
+  background-image: none;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+button,
+input[type="submit"],
+input[type="button"] {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover {
+  background: theme.$color4;
+}
+
+input:focus,
+select:focus,
+button:focus,
+textarea:focus {
+  box-shadow: 0 0 0 2px theme.$color4;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline-block;
+  height: 20px;
+  margin: 0 2px 0 0;
+  position: relative;
+  vertical-align: middle;
+  width: 20px;
+}
+
+input[type="radio"] {
+  border-radius: 50%;
+}
+
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+  background: theme.$color4;
+}
+
+input[type="checkbox"]:checked::before,
+input[type="radio"]:checked::before {
+  content: "•";
+  display: block;
+  font-size: theme.$font-scale-3;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+input[type="checkbox"]:checked::before {
+  content: "✔";
+  font-size: theme.$font-scale-0;
+  transform: translateY(-50%) translateY(0.5px) translateX(-6px);
+}
+
+input[type="checkbox"]:active,
+input[type="radio"]:active,
+input[type="submit"]:active,
+input[type="button"]:active,
+input[type="range"]:active,
+button:active {
+  transform: translateY(2px);
+}
+
+input:disabled,
+select:disabled,
+button:disabled,
+textarea:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+input:not([type="checkbox"]):not([type="radio"]) {
+  display: block;
+}
+
+::placeholder {
+  color: theme.$brand-grey-lightened;
+}
+
+fieldset {
+  border: 1px theme.$color4 solid;
+  border-radius: 6px;
+  margin: 0 0 6px;
+  padding: 10px;
+}
+
+legend {
+  font-size: 0.9em;
+  font-weight: 600;
+}

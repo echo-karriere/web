@@ -81,35 +81,33 @@ const CommitteeApplication: React.FC = () => {
         <section>
           <fieldset className={styles.fieldset}>
             <legend className={styles.legend}>Søknad</legend>
-            <label className={styles.label} htmlFor="name_id">
+            <label htmlFor="name_id">
               Navn
               {errors.name && (
                 <span className={styles.error}> {errors.name.message}</span>
               )}
             </label>
             <input
-              className={styles.input}
               type="text"
               name="name"
               id="name_id"
               ref={register({ required: true })}
             />
 
-            <label className={styles.label} htmlFor="email_id">
+            <label htmlFor="email_id">
               Epost
               {errors.email && (
                 <span className={styles.error}> {errors.email.message}</span>
               )}
             </label>
             <input
-              className={styles.input}
               type="email"
               name="email"
               id="email_id"
               ref={register({ required: true })}
             />
 
-            <label className={styles.label} htmlFor="application">
+            <label htmlFor="application">
               Søknadstekst
               {errors.application && (
                 <span className={styles.error}>
@@ -119,7 +117,6 @@ const CommitteeApplication: React.FC = () => {
               )}
             </label>
             <textarea
-              className={styles.textarea}
               id="application"
               name="application"
               rows={4}
@@ -127,9 +124,7 @@ const CommitteeApplication: React.FC = () => {
               ref={register({ required: true })}
             />
             <div>
-              <button className={styles.button} type="submit">
-                Send søknad
-              </button>
+              <button type="submit">Send søknad</button>
             </div>
           </fieldset>
         </section>
