@@ -3,7 +3,7 @@
 .link {
   align-self: center;
   color: theme.$text-color;
-  font-size: 2rem;
+  font-size: theme.$font-scale-2;
   font-weight: bold;
   letter-spacing: 0.5rem;
   text-align: center;
@@ -16,18 +16,25 @@
   }
 
   @media screen and (min-width: theme.$breakpoint-tablet) {
-    font-size: 1rem;
+    font-size: theme.$font-scale-0;
     font-weight: normal;
     letter-spacing: normal;
     margin-left: theme.$spacing;
     text-transform: none;
-
-    &:not(:last-child) {
-      margin-right: theme.$spacing;
-    }
   }
 
   @media screen and (prefers-reduced-motion: reduce) {
     transition: none;
+  }
+}
+
+.icon {
+  display: none;
+
+  @media screen and (min-width: theme.$breakpoint-tablet) {
+    color: theme.$brand-grey-lightened;
+    display: inline;
+    margin-left: theme.$spacing / 4;
+    width: 12px;
   }
 }

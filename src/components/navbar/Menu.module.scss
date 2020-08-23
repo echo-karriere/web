@@ -2,10 +2,7 @@
 
 .menu {
   background: theme.$background-color;
-  display: flex;
-  flex-direction: column;
   height: 100vh;
-  justify-content: center;
   left: 0;
   position: fixed;
   top: 0;
@@ -16,11 +13,8 @@
   }
 
   @media screen and (min-width: theme.$breakpoint-tablet) {
-    flex-direction: row;
-    height: auto;
-    left: initial;
+    max-height: 70px;
     position: initial;
-    top: initial;
     transform: none;
   }
 
@@ -41,31 +35,71 @@
   }
 }
 
-.icon {
-  display: none;
+.ul {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
   @media screen and (min-width: theme.$breakpoint-tablet) {
-    display: inline;
-    margin-left: theme.$spacing / 4;
-    margin-top: theme.$spacing;
-    width: 12px;
+    flex-direction: row;
+  }
+}
+
+.li {
+  margin-bottom: 2rem;
+
+  @media screen and (min-width: theme.$breakpoint-tablet) {
+    &:not(:last-child) {
+      margin-right: theme.$spacing;
+    }
+  }
+}
+
+.submenu {
+  @media screen and (max-width: theme.$breakpoint-tablet - 1) {
+    a {
+      font-size: 1rem;
+      font-weight: 400;
+      letter-spacing: 0.2rem;
+    }
   }
 }
 
 .dropdown {
-  float: left;
-  overflow: hidden;
+  @media screen and (min-width: theme.$breakpoint-tablet) {
+    float: left;
+    overflow: hidden;
+  }
 }
 
 .dropdown-content {
-  background-color: theme.$background-color;
-  display: none;
-  min-width: 180px;
-  position: absolute;
-  z-index: 1;
+  display: block;
+
+  @media screen and (min-width: theme.$breakpoint-tablet) {
+    display: none;
+    background-color: theme.$background-color;
+    min-width: 180px;
+    position: absolute;
+    z-index: 1;
+    box-shadow: 0 theme.$spacing / 3 theme.$spacing / 1.5 0 theme.$shadow-color;
+  }
 }
 
 .dropdown:hover .dropdown-content,
 .dropdown:focus .dropdown-content {
-  display: block;
+  @media screen and (min-width: theme.$breakpoint-tablet) {
+    display: block;
+  }
+}
+
+.right-arrow {
+  width: 8px;
+  display: inline;
+  margin-bottom: 2px;
+
+  @media screen and (min-width: theme.$breakpoint-tablet) {
+    display: none;
+  }
 }
