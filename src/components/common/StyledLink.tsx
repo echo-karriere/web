@@ -8,12 +8,10 @@ interface Props {
   children: ReactNode;
 }
 
-const StyledLink: React.FC<Props> = ({ to, children }) => {
+export function StyledLink({ to, children }: Props): JSX.Element {
   return (
     <Link to={to} className={styles.link}>
       {children}
     </Link>
   );
-};
-
-export default StyledLink;
+}

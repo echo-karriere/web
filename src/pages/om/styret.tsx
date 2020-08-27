@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
-import Layout from "../../components/common/Layout";
-import SEO from "../../components/common/Seo";
+import { Layout } from "../../components/common/Layout";
+import { SEO } from "../../components/common/Seo";
 import { Container } from "../../components/common/Container";
 import styles from "./styret.module.scss";
 
@@ -24,7 +24,7 @@ interface Response {
   };
 }
 
-const Committee: React.FC = () => {
+export default function Committee(): JSX.Element {
   const response = useStaticQuery<Response>(graphql`
     query MyQuery {
       allApiCommittee {
@@ -65,6 +65,4 @@ const Committee: React.FC = () => {
       </Container>
     </Layout>
   );
-};
-
-export default Committee;
+}

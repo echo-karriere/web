@@ -1,11 +1,11 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 
-import Layout from "../components/common/Layout";
-import SEO from "../components/common/Seo";
+import { Layout } from "../components/common/Layout";
+import { SEO } from "../components/common/Seo";
 import { Container } from "../components/common/Container";
 
-const About: React.FC = () => {
+export default function About(): JSX.Element {
   const { apiAbout: data } = useStaticQuery(graphql`
     query AboutPage {
       apiAbout {
@@ -24,6 +24,4 @@ const About: React.FC = () => {
       </Container>
     </Layout>
   );
-};
-
-export default About;
+}

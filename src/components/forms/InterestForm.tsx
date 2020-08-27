@@ -47,7 +47,7 @@ const interestSchema = yup.object().shape({
   confirmation: yup.boolean().oneOf([true], " Du må bekrefte").required(),
 });
 
-const InterestForm: React.FC = () => {
+export function InterestForm(): JSX.Element {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState(false);
 
@@ -315,6 +315,4 @@ const InterestForm: React.FC = () => {
       </form>
     </>
   );
-};
-
-export default InterestForm;
+}

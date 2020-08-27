@@ -9,16 +9,14 @@ interface Props {
   icon?: boolean;
 }
 
-const DownArrow: React.FC = () => {
+function DownArrow() {
   return <img src={downArrow} alt="Expand icon" className={styles.icon} />;
-};
+}
 
-const MenuItem: React.FC<Props> = ({ title, to, icon = false }) => {
+export function MenuItem({ title, to, icon = false }: Props): JSX.Element {
   return (
     <Link to={`/${to}/`} className={styles.link}>
       {title} {icon && <DownArrow />}
     </Link>
   );
-};
-
-export default MenuItem;
+}

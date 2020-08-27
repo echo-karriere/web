@@ -1,8 +1,8 @@
 import React from "react";
-import MenuItem from "./MenuItem";
+import { MenuItem } from "./MenuItem";
 import classNamesBind from "classnames/bind";
 
-import useNavigationData, { NavItem } from "../../queries/useNavigationData";
+import { useNavigationData, NavItem } from "../../queries/useNavigationData";
 import AngleRight from "../../assets/angle-right-solid.svg";
 import styles from "./Menu.module.scss";
 
@@ -12,11 +12,17 @@ interface Props {
   open: boolean;
 }
 
-const RightArrow: React.FC = () => (
-  <img src={AngleRight} alt="Indicator of link" className={styles.rightArrow} />
-);
+function RightArrow() {
+  return (
+    <img
+      src={AngleRight}
+      alt="Indicator of link"
+      className={styles.rightArrow}
+    />
+  );
+}
 
-const Menu: React.FC<Props> = ({ open }) => {
+export function Menu({ open }: Props): JSX.Element {
   const navigation = useNavigationData();
 
   return (
@@ -48,6 +54,4 @@ const Menu: React.FC<Props> = ({ open }) => {
       </ul>
     </nav>
   );
-};
-
-export default Menu;
+}

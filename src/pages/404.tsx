@@ -1,10 +1,10 @@
 import React from "react";
 
-import Layout from "../components/common/Layout";
-import SEO from "../components/common/Seo";
+import { Layout } from "../components/common/Layout";
+import { SEO } from "../components/common/Seo";
 import styles from "./404.module.scss";
 
-const FourOhFour: React.FC = () => {
+export default function FourOhFour(): JSX.Element {
   return (
     <Layout>
       <SEO title="404: Ikke funnet" />
@@ -14,6 +14,4 @@ const FourOhFour: React.FC = () => {
       </main>
     </Layout>
   );
-};
-
-export default FourOhFour;
+}

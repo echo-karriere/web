@@ -1,11 +1,11 @@
 import React from "react";
 import { Link, graphql, useStaticQuery } from "gatsby";
 import { Container } from "./Container";
-import Navbar from "../navbar";
+import { Navbar } from "../navbar";
 
 import styles from "./Header.module.scss";
 
-const Header: React.FC = () => {
+export function Header(): JSX.Element {
   const query = useStaticQuery(graphql`
     query LogoQuery {
       logoImage: file(name: { eq: "echo-karriere" }) {
@@ -35,6 +35,4 @@ const Header: React.FC = () => {
       </Container>
     </div>
   );
-};
-
-export default Header;
+}

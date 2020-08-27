@@ -1,13 +1,13 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
+import { StyledLink } from "../common/StyledLink";
 import { Container } from "../common/Container";
 
 import mountains from "../../assets/mountains.svg";
 import styles from "./Hero.module.scss";
-import StyledLink from "../common/StyledLink";
 
-const Hero: React.FC = () => {
+export function Hero(): JSX.Element {
   const { apiLanding: data } = useStaticQuery(graphql`
     query HeroPage {
       apiLanding {
@@ -38,6 +38,4 @@ const Hero: React.FC = () => {
       </Container>
     </div>
   );
-};
-
-export default Hero;
+}

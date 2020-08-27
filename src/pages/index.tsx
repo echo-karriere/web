@@ -1,13 +1,13 @@
 import React from "react";
-import Layout from "../components/common/Layout";
-import Intro from "../components/landing/Intro";
-import SEO from "../components/common/Seo";
+import { Layout } from "../components/common/Layout";
+import { Intro } from "../components/landing/Intro";
+import { SEO } from "../components/common/Seo";
 
-const Index: React.FC = () => (
-  <Layout>
-    <SEO title="Hjem" />
-    <Intro />
-  </Layout>
-);
-
-export default Index;
+export default function Index(): JSX.Element {
+  return (
+    <Layout>
+      <SEO title="Hjem" />
+      <Intro />
+    </Layout>
+  );
+}

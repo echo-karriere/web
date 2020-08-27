@@ -6,6 +6,6 @@ interface Props {
   children: ReactNode;
 }
 
-export const Section: React.FC<Props> = ({ children }) => {
+export function Section({ children }: Props): JSX.Element {
   return <section className="section">{children}</section>;
-};
+}

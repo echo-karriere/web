@@ -33,7 +33,7 @@ const interestSchema = yup.object().shape({
   message: yup.string().required(),
 });
 
-const ContactUs: React.FC = () => {
+export function ContactUs(): JSX.Element {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState(false);
 
@@ -135,6 +135,4 @@ const ContactUs: React.FC = () => {
       </form>
     </>
   );
-};
-
-export default ContactUs;
+}

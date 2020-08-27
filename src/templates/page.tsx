@@ -1,6 +1,6 @@
 import React from "react";
-import SEO from "../components/common/Seo";
-import Layout from "../components/common/Layout";
+import { SEO } from "../components/common/Seo";
+import { Layout } from "../components/common/Layout";
 import { Container } from "../components/common/Container";
 
 interface PageData {
@@ -10,9 +10,9 @@ interface PageData {
   };
 }
 
-const PageTemplate: React.FC<PageData> = ({
+export default function PageTemplate({
   pageContext: { title, content },
-}: PageData) => {
+}: PageData): JSX.Element {
   return (
     <Layout>
       <SEO title={title} />
@@ -22,6 +22,4 @@ const PageTemplate: React.FC<PageData> = ({
       </Container>
     </Layout>
   );
-};
-
-export default PageTemplate;
+}

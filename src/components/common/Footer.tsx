@@ -2,11 +2,11 @@ import React from "react";
 import { Link } from "gatsby";
 
 import { Container } from "./Container";
-import useNavigationData, { NavItem } from "../../queries/useNavigationData";
+import { useNavigationData, NavItem } from "../../queries/useNavigationData";
 
 import styles from "./Footer.module.scss";
 
-const Footer: React.FC = () => {
+export function Footer(): JSX.Element {
   const navigation = useNavigationData();
 
   return (
@@ -34,6 +34,4 @@ const Footer: React.FC = () => {
       </Container>
     </div>
   );
-};
-
-export default Footer;
+}

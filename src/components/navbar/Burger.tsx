@@ -10,7 +10,7 @@ interface Props {
   setOpen: (val: boolean) => void;
 }
 
-const Burger: React.FC<Props> = ({ open, setOpen }) => {
+export function Burger({ open, setOpen }: Props): JSX.Element {
   return (
     <button
       className={styles.burger}
@@ -23,6 +23,4 @@ const Burger: React.FC<Props> = ({ open, setOpen }) => {
       <span className={cx("line", { thirdOpen: open, thirdClosed: !open })} />
     </button>
   );
-};
-
-export default Burger;
+}

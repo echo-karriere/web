@@ -11,10 +11,10 @@ interface ContainerProps {
 
 const cx = classname.bind(styles);
 
-export const Container: React.FC<ContainerProps> = ({
+export function Container({
   wide = false,
   children,
   style,
-}) => {
+}: ContainerProps): JSX.Element {
   return <div className={cx(style, { container: true, wide })}>{children}</div>;
-};
+}

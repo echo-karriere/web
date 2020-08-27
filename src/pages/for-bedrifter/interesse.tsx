@@ -1,15 +1,16 @@
 import React from "react";
-import InterestForm from "../../components/forms/InterestForm";
-import Layout from "../../components/common/Layout";
-import SEO from "../../components/common/Seo";
+import { InterestForm } from "../../components/forms/InterestForm";
+import { Layout } from "../../components/common/Layout";
+import { SEO } from "../../components/common/Seo";
 import { Container } from "../../components/common/Container";
 
-const InterestPage: React.FC = () => (
-  <Layout>
-    <SEO title="Interesseskjema" />
-    <Container>
-      <InterestForm />
-    </Container>
-  </Layout>
-);
-export default InterestPage;
+export default function InterestPage(): JSX.Element {
+  return (
+    <Layout>
+      <SEO title="Interesseskjema" />
+      <Container>
+        <InterestForm />
+      </Container>
+    </Layout>
+  );
+}

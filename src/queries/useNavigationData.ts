@@ -23,7 +23,7 @@ interface Response {
   };
 }
 
-const useNavigationData = (): NavItem[] => {
+export const useNavigationData = (): NavItem[] => {
   const data = useStaticQuery<Response>(graphql`
     query Navigation {
       allApiNavigation {
@@ -79,5 +79,3 @@ const useNavigationData = (): NavItem[] => {
 
   return [...generatedData.values()];
 };
-
-export default useNavigationData;

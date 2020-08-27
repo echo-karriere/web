@@ -1,6 +1,6 @@
 import React from "react";
 
-import StyledLink from "./StyledLink";
+import { StyledLink } from "./StyledLink";
 import styles from "./Notification.module.scss";
 
 interface Props {
@@ -8,7 +8,7 @@ interface Props {
   url: string;
 }
 
-const Notification: React.FC<Props> = ({ message, url }) => {
+export function Notification({ message, url }: Props): JSX.Element {
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
@@ -18,6 +18,4 @@ const Notification: React.FC<Props> = ({ message, url }) => {
       </div>
     </div>
   );
-};
-
-export default Notification;
+}

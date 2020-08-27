@@ -2,18 +2,18 @@ import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import classNames from "classnames/bind";
 
+import { Notification } from "../common/Notification";
 import { Container } from "../common/Container";
-import Hero from "./Hero";
+import { Hero } from "./Hero";
+
 import aboutUrl from "../../assets/about.svg";
 import hiringUrl from "../../assets/hiring.svg";
 import studentsUrl from "../../assets/students.svg";
-import Notification from "../common/Notification";
-
 import styles from "./Intro.module.scss";
 
 const cx = classNames.bind(styles);
 
-const Intro: React.FC = () => {
+export function Intro(): JSX.Element {
   const { apiLanding: data } = useStaticQuery(graphql`
     query IntroPage {
       apiLanding {
@@ -69,6 +69,4 @@ const Intro: React.FC = () => {
       </Container>
     </>
   );
-};
-
-export default Intro;
+}

@@ -1,13 +1,13 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import useSiteMetadata from "../../queries/useSiteMetadata";
+import { useSiteMetadata } from "../../queries/useSiteMetadata";
 
 export interface Props {
   description?: string;
   title?: string;
 }
 
-const SEO: React.FC<Props> = ({ description: desc, title: t }) => {
+export function SEO({ description: desc, title: t }: Props): JSX.Element {
   const meta = useSiteMetadata();
 
   const title = t ?? meta.title;
@@ -53,6 +53,4 @@ const SEO: React.FC<Props> = ({ description: desc, title: t }) => {
       ]}
     />
   );
-};
-
-export default SEO;
+}

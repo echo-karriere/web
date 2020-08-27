@@ -1,9 +1,8 @@
 import React from "react";
 
-import Header from "./Header";
-import SEO from "./Seo";
-
-import Footer from "./Footer";
+import { Header } from "./Header";
+import { Footer } from "./Footer";
+import { SEO } from "./Seo";
 
 import "../../styles/global.scss";
 import styles from "./Layout.module.scss";
@@ -12,7 +11,7 @@ interface Props {
   children: React.ReactNode;
 }
 
-const Layout: React.FC<Props> = ({ children }) => {
+export function Layout({ children }: Props): JSX.Element {
   return (
     <>
       <SEO />
@@ -23,6 +22,4 @@ const Layout: React.FC<Props> = ({ children }) => {
       </div>
     </>
   );
-};
-
-export default Layout;
+}

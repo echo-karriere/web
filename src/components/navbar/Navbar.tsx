@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Burger from "./Burger";
-import Menu from "./Menu";
+import { Burger } from "./Burger";
+import { Menu } from "./Menu";
 
-const Navbar: React.FC = () => {
+export function Navbar(): JSX.Element {
   const [open, setOpen] = useState(false);
   return (
     <>
@@ -10,6 +10,4 @@ const Navbar: React.FC = () => {
       <Menu open={open} />
     </>
   );
-};
-
-export default Navbar;
+}
