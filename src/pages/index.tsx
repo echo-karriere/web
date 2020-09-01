@@ -6,7 +6,7 @@ import { SEO } from "../components/common/Seo";
 export default function Index(): JSX.Element {
   return (
     <Layout>
-      <SEO title="Hjem" />
+      <SEO />
       <Intro />
     </Layout>
   );
