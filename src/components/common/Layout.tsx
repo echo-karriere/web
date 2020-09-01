@@ -2,7 +2,6 @@ import React from "react";
 
 import { Header } from "./Header";
 import { Footer } from "./Footer";
-import { SEO } from "./Seo";
 
 import "../../styles/global.scss";
 import styles from "./Layout.module.scss";
@@ -14,7 +13,6 @@ interface Props {
 export function Layout({ children }: Props): JSX.Element {
   return (
     <>
-      <SEO />
       <div className={styles.wrapper}>
         <Header />
         {children}
