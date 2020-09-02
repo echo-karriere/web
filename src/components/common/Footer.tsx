@@ -1,14 +1,11 @@
 import React from "react";
-import { Link } from "gatsby";
 
 import { Container } from "./Container";
-import { useNavigationData, NavItem } from "../../queries/useNavigationData";
 
 import styles from "./Footer.module.scss";
+import FacebookSquare from "../../assets/facebook-square.svg";
 
 export function Footer(): JSX.Element {
-  const navigation = useNavigationData();
-
   return (
     <div className={styles.footer}>
       <Container wide style={styles.flex}>
@@ -20,15 +17,21 @@ export function Footer(): JSX.Element {
           </p>
         </div>
         <div className={styles.element}>
-          <h3>Lenker</h3>
+          <h3>Sosiale medier</h3>
           <ul className={styles.ul}>
-            {navigation.map((nav: NavItem) => (
-              <li className={styles.li} key={nav.url}>
-                <Link to={`/${nav.url}/`} className={styles.link}>
-                  {nav.name}
-                </Link>
-              </li>
-            ))}
+            <li className={styles.li}>
+              <a
+                href="https://www.facebook.com/echokarriere/"
+                className={styles.link}
+              >
+                <img
+                  src={FacebookSquare}
+                  alt="Indicator of link"
+                  className={styles.social}
+                />{" "}
+                Facebook
+              </a>
+            </li>
           </ul>
         </div>
       </Container>
