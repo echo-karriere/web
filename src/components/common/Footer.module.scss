@@ -5,24 +5,30 @@
   padding: theme.$spacing 0;
 }
 
-.flex {
-  align-content: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+.grid {
+  display: grid;
+  grid-gap: theme.$spacing;
+  grid-template-areas:
+    "links"
+    "socials"
+    "sponsored";
+  justify-items: center;
 
   @media screen and (min-width: theme.$breakpoint-tablet) {
-    flex-direction: row;
+    grid-template-areas: "links sponsored socials";
   }
 }
 
-.element {
-  align-self: flex-start;
-  max-width: 100%;
+.links {
+  grid-area: links;
+}
 
-  @media screen and (min-width: theme.$breakpoint-tablet) {
-    max-width: 50%;
-  }
+.powered-by {
+  grid-area: sponsored;
+}
+
+.socials {
+  grid-area: socials;
 }
 
 .ul {

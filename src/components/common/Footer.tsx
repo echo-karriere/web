@@ -14,8 +14,8 @@ export function Footer(): JSX.Element {
 
   return (
     <div className={styles.footer}>
-      <Container wide style={styles.flex}>
-        <div className={styles.element}>
+      <Container wide style={styles.grid}>
+        <div className={styles.links}>
           <h3>Lenker</h3>
           <ul className={styles.ul}>
             {navigation.map((nav: NavItem) => (
@@ -27,13 +27,13 @@ export function Footer(): JSX.Element {
             ))}
           </ul>
         </div>
-        <div className={styles.element}>
+        <div className={styles.poweredBy}>
           <h3>Powered by</h3>
           <a href="https://vercel.com?utm_source=echo-karriere-website&utm_campaign=oss">
             <img src={Vercel} alt="Vercel logo" className={styles.vercel} />
           </a>
         </div>
-        <div className={styles.element}>
+        <div className={styles.socials}>
           <h3>Sosiale medier</h3>
           <ul className={styles.ul}>
             <li className={styles.li}>
