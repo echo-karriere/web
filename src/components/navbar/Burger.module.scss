@@ -21,6 +21,12 @@
   }
 }
 
+.burger:hover,
+.burger:focus {
+  background: transparent;
+  box-shadow: none;
+}
+
 .line {
   background: theme.$brand-grey;
   border-radius: 10px;
