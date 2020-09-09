@@ -1,4 +1,6 @@
-# echo karriere [![Powered by Vercel](https://raw.githubusercontent.com/echo-karriere/web/develop/src/assets/powered-by-vercel.svg)](https://vercel.com?utm_source=echo-karriere-website&utm_campaign=oss) ![pipeline](https://github.com/echo-karriere/web/workflows/pipeline/badge.svg)
+# echo karriere ![pipeline](https://github.com/echo-karriere/web/workflows/pipeline/badge.svg)
+
+[![Powered by Vercel](https://raw.githubusercontent.com/echo-karriere/web/develop/src/assets/powered-by-vercel.svg)](https://vercel.com?utm_source=echo-karriere-website&utm_campaign=oss)
 
 This is the front-end (aka website) for _echo karriere_; a career day for IT
 students in and around Bergen. It is written using a symphony of modern tools,
