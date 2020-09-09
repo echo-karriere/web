@@ -1,20 +1,37 @@
 import React from "react";
+import { Link } from "gatsby";
 
+import { NavItem, useNavigationData } from "../../queries/useNavigationData";
 import { Container } from "./Container";
 
 import styles from "./Footer.module.scss";
 import FacebookSquare from "../../assets/facebook-square.svg";
+import GitHubSquare from "../../assets/github-square.svg";
+import Vercel from "../../assets/vercel-logo.svg";
 
 export function Footer(): JSX.Element {
+  const navigation = useNavigationData();
+
   return (
     <div className={styles.footer}>
       <Container wide style={styles.flex}>
         <div className={styles.element}>
-          <h3>echo karriere</h3>
-          <p>
-            echo karriere er en karrieredag for IT-studenter i Bergensområdet
-            som arrangeres 12. februar 2021.
-          </p>
+          <h3>Lenker</h3>
+          <ul className={styles.ul}>
+            {navigation.map((nav: NavItem) => (
+              <li className={styles.li} key={nav.url}>
+                <Link to={`/${nav.url}/`} className={styles.link}>
+                  {nav.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className={styles.element}>
+          <h3>Powered by</h3>
+          <a href="https://vercel.com?utm_source=echo-karriere-website&utm_campaign=oss">
+            <img src={Vercel} alt="Vercel logo" className={styles.vercel} />
+          </a>
         </div>
         <div className={styles.element}>
           <h3>Sosiale medier</h3>
@@ -26,10 +43,23 @@ export function Footer(): JSX.Element {
               >
                 <img
                   src={FacebookSquare}
-                  alt="Indicator of link"
+                  alt="Facebook icon"
                   className={styles.social}
                 />{" "}
                 Facebook
+              </a>
+            </li>
+            <li className={styles.li}>
+              <a
+                href="https://github.com/echo-karriere"
+                className={styles.link}
+              >
+                <img
+                  src={GitHubSquare}
+                  alt="GitHub icon"
+                  className={styles.social}
+                />{" "}
+                Github
               </a>
             </li>
           </ul>
