@@ -7,6 +7,7 @@ import { Container } from "./Container";
 import styles from "./Footer.module.scss";
 import FacebookSquare from "../../assets/facebook-square.svg";
 import GitHubSquare from "../../assets/github-square.svg";
+import LinkedinSquare from "../../assets/linkedin-square.svg";
 import Vercel from "../../assets/vercel-logo.svg";
 
 export function Footer(): JSX.Element {
@@ -60,6 +61,19 @@ export function Footer(): JSX.Element {
                   className={styles.social}
                 />{" "}
                 Github
+              </a>
+            </li>
+            <li className={styles.li}>
+              <a
+                href="https://www.linkedin.com/company/echo-karriere"
+                className={styles.link}
+              >
+                <img
+                  src={LinkedinSquare}
+                  alt="Linkedin icon"
+                  className={styles.social}
+                />{" "}
+                LinkedIn
               </a>
             </li>
           </ul>
