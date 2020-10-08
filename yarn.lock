@@ -1186,10 +1186,10 @@
   dependencies:
     "@hapi/hoek" "^8.3.0"
 
-"@hookform/resolvers@0.1.1":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@hookform/resolvers/-/resolvers-0.1.1.tgz#285fa7aa1b7b94fab526c4d39713ed3470558497"
-  integrity sha512-IKWcvDG82D0N+3ZjMSbdHul6TgL2Dd68aXyijLvc1mUCzBChvQwS6YDsXRrc9WuIjUPb9nluaVIIrmg3V1JMGQ==
+"@hookform/resolvers@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@hookform/resolvers/-/resolvers-1.0.0.tgz#ad924cb846343fe0a42addcf0b055c4f9aa2dcb9"
+  integrity sha512-YzBq6ZFw/uWGa3rXBNSHqnsE4hDXLrzdboDxPRKGjYHVzs1dBxjvELftP8iTmRPqP32VjnbVfUktX1CQ6Y7sog==
 
 "@jest/types@^25.5.0":
   version "25.5.0"
