@@ -27,7 +27,7 @@
     "sass": "1.29.0",
     "typeface-bitter": "1.1.13",
     "typeface-cambo": "1.1.13",
-    "yup": "0.29.3"
+    "yup": "0.30.0"
   },
   "scripts": {
     "develop": "gatsby develop",
