@@ -1212,10 +1212,10 @@
   dependencies:
     "@hapi/hoek" "^9.0.0"
 
-"@hookform/resolvers@1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@hookform/resolvers/-/resolvers-1.1.1.tgz#20baf66cfd21f0feb65eea4f150ae8693be795f5"
-  integrity sha512-X6OWofkjr7U4Yjb0+OIgOKWttsy2UB8NeLejegGuWgcVad0kHQGezo7S1lhJmGS4icva13gfmGGcW3EOeEEQ5Q==
+"@hookform/resolvers@1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@hookform/resolvers/-/resolvers-1.1.2.tgz#3e3521a71e701ae133f02d53a6994a1037b0ef22"
+  integrity sha512-I3kYtdj1QX9VkNq4GtC2ZNfoBV13GpoxZCsoA9F3CyAmkQmiznJt6HG8Oc9/R3PLqPrw98FiIzyVs/rG0FnGAA==
 
 "@iarna/toml@^2.2.5":
   version "2.2.5"
