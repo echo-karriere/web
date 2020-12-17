@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@directus/gatsby-source-directus": "0.2.9",
-    "@hookform/resolvers": "1.1.2",
+    "@hookform/resolvers": "1.2.0",
     "axios": "0.21.0",
     "classnames": "2.2.6",
     "gatsby": "2.28.2",
