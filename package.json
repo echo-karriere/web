@@ -5,7 +5,7 @@
   "dependencies": {
     "@directus/gatsby-source-directus": "0.2.9",
     "@hookform/resolvers": "1.2.0",
-    "axios": "0.21.0",
+    "axios": "0.21.1",
     "classnames": "2.2.6",
     "gatsby": "2.29.1",
     "gatsby-image": "2.8.0",
