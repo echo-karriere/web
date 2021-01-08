@@ -976,6 +976,11 @@
     axios "^0.19.0"
     base-64 "^0.1.0"
 
+"@echo-karriere/clubhouse-lint@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@echo-karriere/clubhouse-lint/-/clubhouse-lint-0.2.1.tgz#bbfd2961ad39b4314b20353507cb7585d26f93f9"
+  integrity sha512-l/wJM/pkbefbtKAnHQN20DK6MmspwBaVr/hzndXENVITNcowQTuHsuTaADVrf4fEf23vowG6xpJ3HB6aN/oWHw==
+
 "@endemolshinegroup/cosmiconfig-typescript-loader@3.0.2":
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/@endemolshinegroup/cosmiconfig-typescript-loader/-/cosmiconfig-typescript-loader-3.0.2.tgz#eea4635828dde372838b0909693ebd9aafeec22d"
