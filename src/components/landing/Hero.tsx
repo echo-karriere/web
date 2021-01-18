@@ -31,7 +31,7 @@ export function Hero(): JSX.Element {
             <h1 className={styles.title}>{data.title}</h1>
             <h2 className={styles.subtitle}>{data.subtitle}</h2>
             <p>
-              <StyledLink to="/utsatt-til-2021/">Utsatt til 2021 ➔</StyledLink>
+              <StyledLink to="/pamelding/">Les mer her ➔</StyledLink>
             </p>
           </div>
         </div>
