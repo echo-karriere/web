@@ -93,7 +93,7 @@ export function Footer(): JSX.Element {
               </a>
             </div>
             <div>
-              <h4 className="text-sm font-semibold tracking-wider text-gray-400 uppercase">
+              <h4 className="text-sm font-semibold tracking-wider text-gray-400 uppercase mt-8">
                 Powered by
               </h4>
               <a
@@ -101,7 +101,7 @@ export function Footer(): JSX.Element {
                 className="text-gray-400 hover:text-gray-500"
               >
                 <svg
-                  className="h-8 w-32"
+                  className="h-8 w-32 mt-4"
                   fill="currentColor"
                   viewBox="0 0 283 64"
                   xmlns="http://www.w3.org/2000/svg"
