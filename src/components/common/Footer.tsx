@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, Link, useStaticQuery } from "gatsby";
 
 import { useSiteMetadata } from "../../queries/useSiteMetadata";
 
@@ -118,12 +118,12 @@ export function Footer(): JSX.Element {
               </h4>
               <ul className="mt-4">
                 <li>
-                  <a
-                    href="/for-studenter/"
+                  <Link
+                    to="/for-studenter/"
                     className="text-base text-gray-500 hover:text-gray-900"
                   >
                     Informasjon
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -133,20 +133,20 @@ export function Footer(): JSX.Element {
               </h4>
               <ul className="mt-4">
                 <li>
-                  <a
-                    href="/for-bedrifter/"
+                  <Link
+                    to="/for-bedrifter/"
                     className="text-base text-gray-500 hover:text-gray-900"
                   >
                     Informasjon
-                  </a>
+                  </Link>
                 </li>
                 <li className="mt-4">
-                  <a
-                    href="/for-bedrifter/pamelding/"
+                  <Link
+                    to="/for-bedrifter/pamelding/"
                     className="text-base text-gray-500 hover:text-gray-900"
                   >
                     Påmelding
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -156,12 +156,12 @@ export function Footer(): JSX.Element {
               </h4>
               <ul className="mt-4">
                 <li>
-                  <a
-                    href="/om/"
+                  <Link
+                    to="/om/"
                     className="text-base text-gray-500 hover:text-gray-900"
                   >
                     Om oss
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
