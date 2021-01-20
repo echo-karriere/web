@@ -9,7 +9,7 @@ interface Props {
 
 export function MenuDropdown({ title, children }: Props): JSX.Element {
   return (
-    <div className="relative">
+    <div className="relative z-50">
       <Menu>
         {({ open }) => (
           <>
@@ -24,7 +24,7 @@ export function MenuDropdown({ title, children }: Props): JSX.Element {
               leaveFrom="opacity-100 translate-y-0"
               leaveTo="opacity-0 translate-y-1"
             >
-              <div className="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0">
+              <div className="absolute -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0">
                 <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                   <Menu.Items>
                     <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
