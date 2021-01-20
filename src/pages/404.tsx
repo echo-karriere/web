@@ -1,4 +1,5 @@
 import React from "react";
+import { Content } from "../components/common/Content";
 
 import { Layout } from "../components/common/Layout";
 import { SEO } from "../components/common/Seo";
@@ -9,8 +10,9 @@ export default function FourOhFour(): JSX.Element {
     <Layout>
       <SEO title="404: Ikke funnet" />
       <main className={styles.wrapper}>
-        <h1>404: Vi finner ikke siden din :(</h1>
-        <p>Gå tilbake eller prøvd på nytt.</p>
+        <Content title="404: Vi finner ikke siden din :(">
+          <p>Gå tilbake eller prøvd på nytt.</p>
+        </Content>
       </main>
     </Layout>
   );

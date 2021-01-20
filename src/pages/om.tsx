@@ -4,6 +4,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import { Layout } from "../components/common/Layout";
 import { SEO } from "../components/common/Seo";
 import { Container } from "../components/common/Container";
+import { Content } from "../components/common/Content";
 
 export default function About(): JSX.Element {
   const { apiAbout: data } = useStaticQuery(graphql`
@@ -19,8 +20,9 @@ export default function About(): JSX.Element {
     <Layout>
       <SEO title={data.title} />
       <Container>
-        <h1>{data.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: data.main_content }} />
+        <Content title={data.title}>
+          <div dangerouslySetInnerHTML={{ __html: data.main_content }} />
+        </Content>
       </Container>
     </Layout>
   );
