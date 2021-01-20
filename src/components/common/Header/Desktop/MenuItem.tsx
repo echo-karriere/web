@@ -6,17 +6,22 @@ interface Props {
   title: string;
   description: string;
   to: string;
-  icon: React.ReactNode;
+  children: React.ReactNode;
 }
 
-export function MenuItem({ title, description, to, icon }: Props): JSX.Element {
+export function MenuItem({
+  title,
+  description,
+  to,
+  children,
+}: Props): JSX.Element {
   return (
     <Menu.Item>
       <Link
         to={to}
         className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
       >
-        {icon}
+        {children}
         <div className="ml-4">
           <p className="text-base font-medium text-gray-900">{title}</p>
           <p className="mt-1 text-sm text-gray-500">{description}</p>
