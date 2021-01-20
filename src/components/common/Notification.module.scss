@@ -15,3 +15,10 @@
 .message {
   margin: theme.$spacing / 2;
 }
+
+.link {
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}

@@ -13,7 +13,9 @@ export function Notification({ message, url }: Props): JSX.Element {
     <div className={styles.container}>
       <div className={styles.wrapper}>
         <div className={styles.message}>
-          <StyledLink to={url}>{message} ➔</StyledLink>
+          <span className={styles.link}>
+            <StyledLink to={url}>{message} ➔</StyledLink>
+          </span>
         </div>
       </div>
     </div>
