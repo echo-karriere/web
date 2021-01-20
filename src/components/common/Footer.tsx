@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql, Link, useStaticQuery } from "gatsby";
 
+import { navigationData } from "../../data/navigation";
 import { useSiteMetadata } from "../../queries/useSiteMetadata";
 
 export function Footer(): JSX.Element {
@@ -112,59 +113,25 @@ export function Footer(): JSX.Element {
             </div>
           </div>
           <div className="grid grid-cols-3 gap-8 xl:col-span-2">
-            <div>
-              <h4 className="text-sm font-semibold tracking-wider text-gray-400 uppercase">
-                For studenter
-              </h4>
-              <ul className="mt-4">
-                <li>
-                  <Link
-                    to="/for-studenter/"
-                    className="text-base text-gray-500 hover:text-gray-900"
-                  >
-                    Informasjon
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-sm font-semibold tracking-wider text-gray-400 uppercase">
-                For bedrifter
-              </h4>
-              <ul className="mt-4">
-                <li>
-                  <Link
-                    to="/for-bedrifter/"
-                    className="text-base text-gray-500 hover:text-gray-900"
-                  >
-                    Informasjon
-                  </Link>
-                </li>
-                <li className="mt-4">
-                  <Link
-                    to="/for-bedrifter/pamelding/"
-                    className="text-base text-gray-500 hover:text-gray-900"
-                  >
-                    Påmelding
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-sm font-semibold tracking-wider text-gray-400 uppercase">
-                echo karriere
-              </h4>
-              <ul className="mt-4">
-                <li>
-                  <Link
-                    to="/om/"
-                    className="text-base text-gray-500 hover:text-gray-900"
-                  >
-                    Om oss
-                  </Link>
-                </li>
-              </ul>
-            </div>
+            {navigationData.map((item) => (
+              <div key={item.title}>
+                <h4 className="text-sm font-semibold tracking-wider text-gray-400 uppercase">
+                  {item.title}
+                </h4>
+                <ul className="mt-4">
+                  {item.items.map((child, index) => (
+                    <li key={child.to} className={index !== 0 ? "mt-4" : ""}>
+                      <Link
+                        to={child.to}
+                        className="text-base text-gray-500 hover:text-gray-900"
+                      >
+                        {child.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
         <div className="mt-12 border-t border-gray-200 pt-4">

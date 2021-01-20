@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import { Menu } from "@headlessui/react";
 
-interface Props {
+export interface MenuItemProps {
   title: string;
   description: string;
   to: string;
@@ -14,7 +14,7 @@ export function MenuItem({
   description,
   to,
   children,
-}: Props): JSX.Element {
+}: MenuItemProps): JSX.Element {
   return (
     <Menu.Item>
       <Link

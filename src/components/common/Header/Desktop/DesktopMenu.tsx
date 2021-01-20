@@ -3,6 +3,9 @@ import { Menu } from "@headlessui/react";
 import { graphql, Link, useStaticQuery } from "gatsby";
 import { MenuDropdown } from ".";
 
+import { navigationData } from "../../../../data/navigation";
+import { MenuItem } from "./MenuItem";
+
 interface Props {
   mobileButtonClicked: () => void;
 }
@@ -60,15 +63,20 @@ export function DesktopMenu({ mobileButtonClicked }: Props): JSX.Element {
           </Menu.Button>
         </div>
         <nav className="hidden md:flex space-x-10 pl-8">
-          <MenuDropdown title="For studenter">
-            <p>test</p>
-          </MenuDropdown>
-          <MenuDropdown title="For bedrifter">
-            <p>test</p>
-          </MenuDropdown>
-          <MenuDropdown title="echo karriere">
-            <p>test</p>
-          </MenuDropdown>
+          {navigationData.map((item) => (
+            <MenuDropdown title={item.title} key={item.title}>
+              {item.items.map((child) => (
+                <MenuItem
+                  title={child.title}
+                  to={child.to}
+                  description={child.description}
+                  key={child.to}
+                >
+                  {child.children}
+                </MenuItem>
+              ))}
+            </MenuDropdown>
+          ))}
         </nav>
       </div>
     </div>
