@@ -1,6 +1,7 @@
 import React from "react";
 import { Menu } from "@headlessui/react";
 import { graphql, Link, useStaticQuery } from "gatsby";
+import Img from "gatsby-image";
 import { MenuDropdown } from ".";
 
 import { navigationData } from "../../../../data/navigation";
@@ -11,14 +12,12 @@ interface Props {
 }
 
 export function DesktopMenu({ mobileButtonClicked }: Props): JSX.Element {
-  const query = useStaticQuery(graphql`
+  const { file } = useStaticQuery(graphql`
     query DesktopLogo {
-      logoText: file(name: { eq: "echo-karriere" }) {
+      file(name: { eq: "echo-karriere" }) {
         childImageSharp {
           fixed(width: 160, height: 70) {
-            src
-            srcSet
-            base64
+            ...GatsbyImageSharpFixed
           }
         }
       }
@@ -27,14 +26,13 @@ export function DesktopMenu({ mobileButtonClicked }: Props): JSX.Element {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6">
-      <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
+      <div className="flex justify-between items-center border-b-2 border-gray-100 pt-6 md:justify-start md:space-x-10">
         <div>
           <Link to="/">
             <span className="sr-only">echo karriere</span>
-            <img
+            <Img
               className="h-12 w-auto sm:h-10"
-              src={query.logoText.childImageSharp.fixed.base64}
-              srcSet={query.logoText.childImageSharp.fixed.srcSet}
+              fixed={file.childImageSharp.fixed}
               alt="echo karriere logo"
             />
           </Link>
