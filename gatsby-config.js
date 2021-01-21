@@ -22,6 +22,20 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/content/pages/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/content/posts/`,
+      },
+    },
+    {
       resolve: `@directus/gatsby-source-directus`,
       options: {
         url: process.env.API_URL,
@@ -36,6 +50,17 @@ module.exports = {
           process.env.NODE_ENV === "development" ? "draft" : null,
           "__NONE__",
         ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+        defaultLayouts: {
+          pages: require.resolve("./src/templates/page.tsx"),
+          posts: require.resolve("./src/templates/page.tsx"),
+          default: require.resolve("./src/templates/page.tsx"),
+        },
       },
     },
     `gatsby-plugin-react-helmet`,

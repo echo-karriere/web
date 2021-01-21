@@ -4,17 +4,16 @@ module.exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
 
   const response = await graphql(`
-    query ApiPages {
-      allApiPage {
+    query Pages {
+      allMdx(filter: { fileAbsolutePath: { glob: "**/*/pages/*" } }) {
         edges {
           node {
-            category {
-              slug
+            frontmatter {
+              title
+              path
+              published
             }
-            apiId
-            slug
-            title
-            content
+            body
           }
         }
       }
@@ -23,16 +22,18 @@ module.exports.createPages = async ({ graphql, actions }) => {
 
   const {
     data: {
-      allApiPage: { edges: pages = [] },
+      allMdx: { edges: pages = [] },
     },
   } = response;
 
   pages.forEach(({ node: page }) => {
-    const slug = page.category
-      ? page.category.slug.concat("/", page.slug, "/")
-      : `/${page.slug}/`;
+    if (process.env.NODE_ENV === "production" && !page.frontmatter.published) {
+      return;
+    } else if (page.frontmatter.path === null) {
+      return;
+    }
     createPage({
-      path: slug,
+      path: page.frontmatter.path,
       component: path.resolve("./src/templates/page.tsx"),
       context: page,
     });
