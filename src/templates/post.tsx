@@ -44,8 +44,8 @@ export default function PageTemplate({ pageContext }: PageData): JSX.Element {
           <MDXRenderer>{node.body}</MDXRenderer>
         </Content>
         <nav aria-label="Progress">
-          <ol className="space-y-4 md:flex md:space-y-0 md:space-x-8">
-            <li className="md:flex-1">
+          <ol className="space-y-4 md:flex md:justify-between md:space-y-0 md:space-x-8">
+            <li className="">
               {previous && (
                 <Link
                   to={previous.frontmatter.path}
@@ -64,7 +64,7 @@ export default function PageTemplate({ pageContext }: PageData): JSX.Element {
                       />
                     </svg>
                     <span className="text-sm text-gray-500 font-semibold uppercase group-hover:text-gray-700">
-                      Neste
+                      Nyere
                     </span>
                   </div>
                   <span className="font-medium">
@@ -73,9 +73,7 @@ export default function PageTemplate({ pageContext }: PageData): JSX.Element {
                 </Link>
               )}
             </li>
-            <li className="md:flex-1 md:hidden" />
-            <li className="md:flex-1" />
-            <li className="md:flex-1">
+            <li className="">
               {next && (
                 <Link
                   to={next.frontmatter.path}
