@@ -90,7 +90,7 @@
       "eslint --fix",
       "prettier --write"
     ],
-    "*.{json,md}": [
+    "*.{json,md,mdx}": [
       "prettier --write"
     ],
     "*.{css,scss}": [
