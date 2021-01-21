@@ -13,12 +13,14 @@ interface NavItem {
 
 interface DesktopMenu {
   title: string;
+  hasPosts: boolean;
   items: (MenuItemProps & NavItem)[];
 }
 
 export const navigationData: DesktopMenu[] = [
   {
     title: "For studenter",
+    hasPosts: false,
     items: [
       {
         title: "For studenter",
@@ -31,6 +33,7 @@ export const navigationData: DesktopMenu[] = [
   },
   {
     title: "For bedrifter",
+    hasPosts: false,
     items: [
       {
         title: "For bedrifter",
@@ -50,6 +53,7 @@ export const navigationData: DesktopMenu[] = [
   },
   {
     title: "echo karriere",
+    hasPosts: true,
     items: [
       {
         title: "Om oss",

@@ -19,16 +19,6 @@ export function ReadMore({ to, title }: ReadMoreProps): JSX.Element {
   );
 }
 
-interface MoreLinkWrapperProps {
-  children: React.ReactNode;
-}
-
-export function MoreLinkWrapper({
-  children,
-}: MoreLinkWrapperProps): JSX.Element {
-  return <ul className="mt-4 space-y-4">{children}</ul>;
-}
-
 interface MoreLinkProps {
   to: string;
   title: string;
@@ -50,6 +40,7 @@ interface MoreProps {
   readMoreLink: string;
   readMoreTitle: string;
 }
+
 export function More({
   title,
   readMoreLink,
@@ -57,14 +48,14 @@ export function More({
   children,
 }: MoreProps): JSX.Element {
   return (
-    <div className="px-5 py-5 bg-gray-50 sm:px-8 sm:py-8">
+    <>
       <div>
         <h3 className="text-sm tracking-wide font-medium text-gray-500 uppercase">
           {title}
         </h3>
-        {children}
+        <ul className="mt-4 space-y-4">{children}</ul>
       </div>
       <ReadMore title={readMoreTitle} to={readMoreLink} />
-    </div>
+    </>
   );
 }
