@@ -3,6 +3,7 @@ import {
   BookOpenIcon,
   CalendarIcon,
   InboxInIcon,
+  NewspaperIcon,
   OfficeBuildingIcon,
 } from "../assets/icons";
 import { MenuItemProps } from "../components/common/Header/Desktop";
@@ -68,6 +69,13 @@ export const navigationData: DesktopMenu[] = [
         description:
           "Spørsmål, tilbakemelding eller vil du komme i kontakt med styret?",
         children: InboxInIcon,
+        mainMobile: true,
+      },
+      {
+        title: "Nyheter",
+        to: "/nyheter/",
+        description: "Nyheter og informasjon fra echo karriere",
+        children: NewspaperIcon,
         mainMobile: true,
       },
     ],

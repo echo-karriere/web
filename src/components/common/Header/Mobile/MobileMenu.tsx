@@ -90,9 +90,6 @@ export function MobileMenu({
                       </BigMobileLink>
                     ));
                 })}
-                <BigMobileLink title="Nyheter" to="/nyheter/">
-                  {NewspaperIcon}
-                </BigMobileLink>
               </nav>
             </div>
           </div>
