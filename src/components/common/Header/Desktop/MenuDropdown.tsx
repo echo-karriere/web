@@ -9,7 +9,7 @@ interface Props {
 
 export function MenuDropdown({ title, children }: Props): JSX.Element {
   return (
-    <div className="relative z-50">
+    <div>
       <Menu>
         {({ open }) => (
           <>

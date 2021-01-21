@@ -8,7 +8,7 @@ export function Header(): JSX.Element {
   const mobileButtonClicked = () => setMobileOpen(!mobileOpen);
 
   return (
-    <div className="relative bg-white">
+    <div className="relative bg-white z-50">
       <Menu>
         <DesktopMenu mobileButtonClicked={mobileButtonClicked} />
         <MobileMenu
