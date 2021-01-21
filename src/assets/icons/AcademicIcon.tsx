@@ -1,6 +1,6 @@
 import React from "react";
 
-export const AcademcCapIcon = (
+export const AcademicIcon = (
   <svg
     className="flex-shrink-0 h-6 w-6 text-indigo-600"
     xmlns="http://www.w3.org/2000/svg"

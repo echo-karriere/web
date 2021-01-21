@@ -1,5 +1,5 @@
 import {
-  AcademcCapIcon,
+  AcademicIcon,
   BookOpenIcon,
   CalendarIcon,
   InboxInIcon,
@@ -26,7 +26,7 @@ export const navigationData: DesktopMenu[] = [
         title: "For studenter",
         to: "/for-studenter/",
         description: "Hva er echo karriere og hva skjer?",
-        children: AcademcCapIcon,
+        children: AcademicIcon,
         mainMobile: true,
       },
     ],
