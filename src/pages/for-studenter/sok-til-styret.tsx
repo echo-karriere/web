@@ -2,14 +2,18 @@ import React from "react";
 import { Layout } from "../../components/common/Layout";
 import { SEO } from "../../components/common/Seo";
 import { Container } from "../../components/common/Container";
-import { CommitteeApplication } from "../../components/forms/CommiteeApplicationForm";
+import { Content } from "../../components/common/Content";
 
 export default function Index(): JSX.Element {
   return (
     <Layout>
       <SEO title="Søk til styret" />
       <Container>
-        <CommitteeApplication />
+        <Content title="Søk til styret" subtitle="Bli med!">
+          <div>
+            <p>Vi tar ikke inn medlemmer for øyeblikket.</p>
+          </div>
+        </Content>
       </Container>
     </Layout>
   );
