@@ -17,6 +17,7 @@ interface PageData {
     node: {
       frontmatter: {
         title: string;
+        date: string;
       };
       body: string;
     };
@@ -36,7 +37,10 @@ export default function PageTemplate({ pageContext }: PageData): JSX.Element {
     <Layout>
       <SEO title={node.frontmatter.title} />
       <Container>
-        <Content title={node.frontmatter.title}>
+        <Content
+          title={node.frontmatter.title}
+          subtitle={node.frontmatter.date}
+        >
           <MDXRenderer>{node.body}</MDXRenderer>
         </Content>
         <nav aria-label="Progress">
@@ -60,7 +64,7 @@ export default function PageTemplate({ pageContext }: PageData): JSX.Element {
                       />
                     </svg>
                     <span className="text-sm text-gray-500 font-semibold uppercase group-hover:text-gray-700">
-                      Nyere
+                      Neste
                     </span>
                   </div>
                   <span className="font-medium">

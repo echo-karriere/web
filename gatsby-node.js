@@ -27,6 +27,7 @@ const buildPosts = async (graphql, actions) => {
               title
               path
               published
+              date(formatString: "DD MMMM YYYY", locale: "nb-NO")
             }
             body
           }
