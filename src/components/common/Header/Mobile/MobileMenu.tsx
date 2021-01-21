@@ -4,6 +4,7 @@ import { graphql, Link, useStaticQuery } from "gatsby";
 import { BigMobileLink } from "./BigMobileLink";
 
 import { navigationData } from "../../../../data/navigation";
+import { NewspaperIcon } from "../../../../assets/icons/";
 
 interface Props {
   mobileOpen: boolean;
@@ -89,6 +90,9 @@ export function MobileMenu({
                       </BigMobileLink>
                     ));
                 })}
+                <BigMobileLink title="Nyheter" to="/nyheter/">
+                  {NewspaperIcon}
+                </BigMobileLink>
               </nav>
             </div>
           </div>
