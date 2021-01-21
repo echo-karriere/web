@@ -1,6 +1,66 @@
 const path = require("path");
 
 module.exports.createPages = async ({ graphql, actions }) => {
+  await buildPages(graphql, actions);
+  await buildPosts(graphql, actions);
+};
+
+const buildPosts = async (graphql, actions) => {
+  const { createPage } = actions;
+
+  const response = await graphql(`
+    query Posts {
+      allMdx(
+        filter: { fileAbsolutePath: { glob: "**/*/posts/*" } }
+        sort: { fields: [frontmatter___date], order: ASC }
+        limit: 1000
+      ) {
+        edges {
+          next {
+            frontmatter {
+              title
+              path
+            }
+          }
+          node {
+            frontmatter {
+              title
+              path
+              published
+            }
+            body
+          }
+          previous {
+            frontmatter {
+              title
+              path
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  const posts = response.data.allMdx.edges;
+
+  posts.forEach((edge) => {
+    if (
+      (process.env.NODE_ENV === "production" &&
+        !edge.node.frontmatter.published) ||
+      edge.node.frontmatter.path === null
+    ) {
+      return;
+    }
+
+    createPage({
+      path: edge.node.frontmatter.path,
+      component: path.resolve("./src/templates/post.tsx"),
+      context: edge,
+    });
+  });
+};
+
+const buildPages = async (graphql, actions) => {
   const { createPage } = actions;
 
   const response = await graphql(`
@@ -20,11 +80,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
     }
   `);
 
-  const {
-    data: {
-      allMdx: { edges: pages = [] },
-    },
-  } = response;
+  const pages = response.data.allMdx.edges;
 
   pages.forEach(({ node: page }) => {
     if (process.env.NODE_ENV === "production" && !page.frontmatter.published) {
