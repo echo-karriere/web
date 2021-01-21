@@ -32,7 +32,7 @@
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-helmet": "6.1.0",
-    "react-hook-form": "6.14.1",
+    "react-hook-form": "6.14.2",
     "sass": "1.32.4",
     "tailwindcss": "2.0.2",
     "typeface-bitter": "1.1.13",
