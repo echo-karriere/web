@@ -4,7 +4,6 @@ import { graphql, Link, useStaticQuery } from "gatsby";
 import { BigMobileLink } from "./BigMobileLink";
 
 import { navigationData } from "../../../../data/navigation";
-import { NewspaperIcon } from "../../../../assets/icons/";
 
 interface Props {
   mobileOpen: boolean;
