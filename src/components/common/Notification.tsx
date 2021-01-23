@@ -1,7 +1,5 @@
+import { Link } from "gatsby";
 import React from "react";
-
-import { StyledLink } from "./StyledLink";
-import styles from "./Notification.module.scss";
 
 interface Props {
   message: string;
@@ -10,11 +8,13 @@ interface Props {
 
 export function Notification({ message, url }: Props): JSX.Element {
   return (
-    <div className={styles.container}>
-      <div className={styles.wrapper}>
-        <div className={styles.message}>
-          <span className={styles.link}>
-            <StyledLink to={url}>{message} ➔</StyledLink>
+    <div className="bg-yellow-400">
+      <div className="flex justify-center items-center">
+        <div className="m-3">
+          <span className="hover:underline">
+            <Link className="text-gray-800 md:text-lg text-xl" to={url}>
+              {message} ➔
+            </Link>
           </span>
         </div>
       </div>

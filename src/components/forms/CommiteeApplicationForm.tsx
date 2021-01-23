@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import * as yup from "yup";
-import styles from "./Forms.module.scss";
+import styles from "./Forms.module.css";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { isDev } from "../../config";

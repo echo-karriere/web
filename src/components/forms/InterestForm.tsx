@@ -5,7 +5,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { isDev } from "../../config";
 
-import styles from "./Forms.module.scss";
+import styles from "./Forms.module.css";
 
 type FormData = {
   company: string;
