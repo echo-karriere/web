@@ -17,13 +17,6 @@ module.exports = {
         c6: "#049fb2",
         c7: "#0090a5",
         c8: "#008195",
-        c9: "#373736",
-        c10: "#383836",
-        brand: "#2568ba",
-        brandDark: "#205aa2",
-        brandBlue: "#007bff",
-        brandGrey: "#4d4d4d",
-        brandGreyLight: "#b3b3b3",
       },
       fontFamily: {
         sans: ["Bitter", ...defaultTheme.fontFamily.sans],

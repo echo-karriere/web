@@ -74,7 +74,7 @@ export default function News(): JSX.Element {
                   <div className="mt-3">
                     <Link
                       to={edge.node.frontmatter.path}
-                      className="text-base font-semibold text-indigo-600 hover:text-indigo-500"
+                      className="text-base font-semibold text-c6 hover:text-c5"
                     >
                       Les mer
                     </Link>

@@ -126,7 +126,7 @@ export function ContactUs(): JSX.Element {
                   name="name"
                   id="name_id"
                   autoComplete="full-name"
-                  className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                  className="py-3 px-4 block w-full shadow-sm focus:ring-c6 focus:border-c6 border-gray-300 rounded-md"
                   ref={register({ required: true })}
                 />
               </div>
@@ -149,7 +149,7 @@ export function ContactUs(): JSX.Element {
                 name="email"
                 id="email_id"
                 autoComplete="email"
-                className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                className="py-3 px-4 block w-full shadow-sm focus:ring-c6 focus:border-c6 border-gray-300 rounded-md"
                 ref={register({ required: true })}
               />
             </div>
@@ -171,13 +171,13 @@ export function ContactUs(): JSX.Element {
                 name="message"
                 rows={4}
                 cols={25}
-                className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                className="py-3 px-4 block w-full shadow-sm focus:ring-c6 focus:border-c6 border-gray-300 rounded-md"
                 ref={register}
               />
             </div>
             <div className="mt-4 sm:col-span-2">
               <button
-                className="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                className="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-c8 hover:bg-c7 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-c6"
                 type="submit"
               >
                 Kontakt oss

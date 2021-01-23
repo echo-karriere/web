@@ -17,7 +17,7 @@ export const Content = ({
         <div className="text-lg max-w-prose">
           <h1 className="">
             {subtitle && (
-              <span className="block text-base text-indigo-600 font-semibold tracking-wide uppercase">
+              <span className="block text-base text-c6 font-semibold tracking-wide uppercase">
                 {subtitle}
               </span>
             )}

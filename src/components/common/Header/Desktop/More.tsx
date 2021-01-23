@@ -9,10 +9,7 @@ interface ReadMoreProps {
 export function ReadMore({ to, title }: ReadMoreProps): JSX.Element {
   return (
     <div className="mt-5 text-sm">
-      <Link
-        to={to}
-        className="font-medium text-indigo-600 hover:text-indigo-500"
-      >
+      <Link to={to} className="font-medium text-c8 hover:text-c6">
         {title} <span aria-hidden="true">&rarr;</span>
       </Link>
     </div>
@@ -50,7 +47,7 @@ export function More({
   return (
     <>
       <div>
-        <h3 className="text-sm tracking-wide font-medium text-gray-500 uppercase">
+        <h3 className="text-sm tracking-wide font-medium text-c6 uppercase">
           {title}
         </h3>
         <ul className="mt-4 space-y-4">{children}</ul>

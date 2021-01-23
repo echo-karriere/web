@@ -8,7 +8,7 @@ interface Props {
 
 export function Notification({ message, url }: Props): JSX.Element {
   return (
-    <div className="bg-yellow-400">
+    <div className="bg-c1">
       <div className="flex justify-center items-center">
         <div className="m-3">
           <span className="hover:underline">
