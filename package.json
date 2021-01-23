@@ -12,7 +12,6 @@
     "@tailwindcss/typography": "0.4.0",
     "autoprefixer": "10.2.1",
     "axios": "0.21.1",
-    "classnames": "2.2.6",
     "gatsby": "2.30.3",
     "gatsby-image": "2.9.0",
     "gatsby-plugin-catch-links": "2.8.0",
@@ -22,7 +21,6 @@
     "gatsby-plugin-postcss": "3.5.0",
     "gatsby-plugin-react-helmet": "3.8.0",
     "gatsby-plugin-robots-txt": "1.5.5",
-    "gatsby-plugin-sass": "3.0.0",
     "gatsby-plugin-sharp": "2.12.2",
     "gatsby-plugin-sitemap": "2.10.0",
     "gatsby-plugin-typescript": "2.10.0",
@@ -33,7 +31,6 @@
     "react-dom": "17.0.1",
     "react-helmet": "6.1.0",
     "react-hook-form": "6.14.2",
-    "sass": "1.32.4",
     "tailwindcss": "2.0.2",
     "typeface-bitter": "1.1.13",
     "typeface-cambo": "1.1.13",
@@ -44,7 +41,6 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "lint:ts": "eslint .",
-    "lint:css": "stylelint src/**/*.scss",
     "lint:style": "prettier --check src"
   },
   "eslintConfig": {
@@ -56,8 +52,7 @@
   ],
   "devDependencies": {
     "@echo-karriere/clubhouse-lint": "0.2.1",
-    "@types/classnames": "2.2.11",
-    "@types/node": "14.14.22",
+    "@types/node": "14.14.21",
     "@types/react": "17.0.0",
     "@types/react-dom": "17.0.0",
     "@types/react-helmet": "6.1.0",
@@ -71,12 +66,6 @@
     "husky": "4.3.8",
     "lint-staged": "10.5.3",
     "prettier": "2.2.1",
-    "stylelint": "13.9.0",
-    "stylelint-a11y": "1.2.3",
-    "stylelint-config-prettier": "8.0.2",
-    "stylelint-config-sass-guidelines": "7.1.0",
-    "stylelint-config-standard": "20.0.0",
-    "stylelint-prettier": "1.1.2",
     "typescript": "4.1.3"
   },
   "husky": {
@@ -93,8 +82,7 @@
     "*.{json,md,mdx}": [
       "prettier --write"
     ],
-    "*.{css,scss}": [
-      "stylelint --fix",
+    "*.{css}": [
       "prettier --write"
     ]
   }

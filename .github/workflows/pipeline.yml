@@ -37,7 +37,6 @@ jobs:
       - name: Lint
         run: |
           yarn lint:ts
-          yarn lint:css
           yarn lint:style
 
       - name: Build
