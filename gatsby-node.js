@@ -12,7 +12,7 @@ const buildPosts = async (graphql, actions) => {
     query Posts {
       allMdx(
         filter: { fileAbsolutePath: { glob: "**/*/posts/*" } }
-        sort: { fields: [frontmatter___date], order: ASC }
+        sort: { fields: [frontmatter___date], order: DESC }
         limit: 1000
       ) {
         edges {

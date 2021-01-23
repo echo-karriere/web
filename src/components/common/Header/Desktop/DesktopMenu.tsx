@@ -33,7 +33,7 @@ export function DesktopMenu({ mobileButtonClicked }: Props): JSX.Element {
       }
       allMdx(
         filter: { fileAbsolutePath: { glob: "**/*/posts/*" } }
-        sort: { fields: [frontmatter___date], order: ASC }
+        sort: { fields: [frontmatter___date], order: DESC }
         limit: 3
       ) {
         edges {
