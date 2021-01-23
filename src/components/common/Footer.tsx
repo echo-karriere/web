@@ -27,13 +27,13 @@ export function Footer(): JSX.Element {
           <div className="xl:col-span-1">
             <img
               className="h-10"
+              height="32"
+              width="32"
               src={query.logoImage.childImageSharp.fluid.base64}
               srcSet={query.logoImage.childImageSharp.fluid.srcSet}
               alt="echo karriere logo"
             />
-            <p className="mt-8 text-gray-500 text-base">
-              {metadata.description}
-            </p>
+            <p className="mt-8 text-gray-600 text-lg">{metadata.description}</p>
             <div className="mt-8 flex">
               <a
                 href="https://www.facebook.com/echokarriere"
@@ -94,12 +94,12 @@ export function Footer(): JSX.Element {
               </a>
             </div>
             <div>
-              <h4 className="text-sm font-semibold tracking-wider text-gray-400 uppercase mt-8">
+              <h4 className="text-sm font-semibold tracking-wider text-gray-600 uppercase mt-8">
                 Powered by
               </h4>
               <a
                 href="https://vercel.com?utm_source=echo-karriere-website&utm_campaign=oss"
-                className="text-gray-400 hover:text-gray-500"
+                className="text-gray-500 hover:text-gray-600"
               >
                 <svg
                   className="h-8 w-32 mt-4"
@@ -115,7 +115,7 @@ export function Footer(): JSX.Element {
           <div className="grid grid-cols-3 gap-8 xl:col-span-2">
             {navigationData.map((item) => (
               <div key={item.title}>
-                <h4 className="text-sm font-semibold tracking-wider text-gray-400 uppercase">
+                <h4 className="text-sm font-semibold tracking-wider text-gray-600 uppercase">
                   {item.title}
                 </h4>
                 <ul className="mt-4">
@@ -135,7 +135,7 @@ export function Footer(): JSX.Element {
           </div>
         </div>
         <div className="mt-12 border-t border-gray-200 pt-4">
-          <p className="text-base text-gray-400 xl:text-center">
+          <p className="text-base text-gray-500 xl:text-center">
             © 2021 echo karriere
           </p>
         </div>

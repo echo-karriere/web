@@ -50,7 +50,7 @@ export function Intro(): JSX.Element {
                 dangerouslySetInnerHTML={{ __html: data.about }}
               />
 
-              <dl className="mt-10 space-y-10">
+              <div className="mt-10 space-y-10">
                 <div className="flex">
                   <div className="flex-shrink-0">
                     <div className="flex items-center justify-center h-12 w-12 rounded-md bg-c6 text-white">
@@ -72,15 +72,15 @@ export function Intro(): JSX.Element {
                     </div>
                   </div>
                   <div className="ml-4">
-                    <dt className="text-lg leading-6 font-medium text-gray-900">
+                    <h4 className="text-lg leading-6 font-medium text-gray-900">
                       Bredde
-                    </dt>
-                    <dd className="mt-2 text-base text-gray-500">
+                    </h4>
+                    <p className="mt-2 text-base text-gray-500">
                       echo karriere ønsker å vise mulighetene studentene har når
                       de er ferdig med studiene. Derfor har vi et fokus på å ha
                       bedrifter med forskjellige fagretninger, størrelser og
                       lokasjoner i Norge.
-                    </dd>
+                    </p>
                   </div>
                 </div>
 
@@ -111,22 +111,23 @@ export function Intro(): JSX.Element {
                     </div>
                   </div>
                   <div className="ml-4">
-                    <dt className="text-lg leading-6 font-medium text-gray-900">
+                    <h4 className="text-lg leading-6 font-medium text-gray-900">
                       Fokus
-                    </dt>
-                    <dd className="mt-2 text-base text-gray-500">
+                    </h4>
+                    <p className="mt-2 text-base text-gray-500">
                       echo karriere er drevet av studenter, for studenter. Vårt
                       mål er å gi IT-studentene i Bergen en fantastisk plattform
                       for jobb etter utdanning.
-                    </dd>
+                    </p>
                   </div>
                 </div>
-              </dl>
+              </div>
             </div>
 
             <div className="mt-10 -mx-4 relative lg:mt-0" aria-hidden="true">
               <img
                 className="relative mx-auto"
+                height="370"
                 width="490"
                 src={aboutUrl}
                 alt="Four persons standing around with a small dog in front."
@@ -145,7 +146,7 @@ export function Intro(): JSX.Element {
                   dangerouslySetInnerHTML={{ __html: data.for_students }}
                 />
 
-                <dl className="mt-10 space-y-10">
+                <div className="mt-10 space-y-10">
                   <div className="flex">
                     <div className="flex-shrink-0">
                       <div className="flex items-center justify-center h-12 w-12 rounded-md bg-c6 text-white">
@@ -167,14 +168,14 @@ export function Intro(): JSX.Element {
                       </div>
                     </div>
                     <div className="ml-4">
-                      <dt className="text-lg leading-6 font-medium text-gray-900">
+                      <h4 className="text-lg leading-6 font-medium text-gray-900">
                         Direkte kontakt med bedrifter
-                      </dt>
-                      <dd className="mt-2 text-base text-gray-500">
+                      </h4>
+                      <p className="mt-2 text-base text-gray-500">
                         På karrieredagene våre møter du og kan snakke direkte
                         med ansatte i bedriftene som deltar, noe du lurer på?
                         Spør i vei.
-                      </dd>
+                      </p>
                     </div>
                   </div>
 
@@ -205,21 +206,22 @@ export function Intro(): JSX.Element {
                       </div>
                     </div>
                     <div className="ml-4">
-                      <dt className="text-lg leading-6 font-medium text-gray-900">
+                      <h4 className="text-lg leading-6 font-medium text-gray-900">
                         Se hva som skjer
-                      </dt>
-                      <dd className="mt-2 text-base text-gray-500">
+                      </h4>
+                      <p className="mt-2 text-base text-gray-500">
                         Delta på presentasjoner og workshops, bli med på
                         lynintervju og konkurranser i løpet av arrangementet.
-                      </dd>
+                      </p>
                     </div>
                   </div>
-                </dl>
+                </div>
               </div>
 
               <div className="mt-10 -mx-4 relative lg:mt-0 lg:col-start-1">
                 <img
                   className="relative mx-auto"
+                  height="350"
                   width="490"
                   src={studentsUrl}
                   alt="A graduation cap."
@@ -238,7 +240,7 @@ export function Intro(): JSX.Element {
                 dangerouslySetInnerHTML={{ __html: data.for_companies }}
               />
 
-              <dl className="mt-10 space-y-10">
+              <div className="mt-10 space-y-10">
                 <div className="flex">
                   <div className="flex-shrink-0">
                     <div className="flex items-center justify-center h-12 w-12 rounded-md bg-c6 text-white">
@@ -260,15 +262,15 @@ export function Intro(): JSX.Element {
                     </div>
                   </div>
                   <div className="ml-4">
-                    <dt className="text-lg leading-6 font-medium text-gray-900">
+                    <h4 className="text-lg leading-6 font-medium text-gray-900">
                       Vis frem deres bedrift
-                    </dt>
-                    <dd className="mt-2 text-base text-gray-500">
+                    </h4>
+                    <p className="mt-2 text-base text-gray-500">
                       På karrieredagen er det muligheter for
                       konseptpresentasjoner og workshops som er en flott måte å
                       vise frem kompetansen deres og hva som gjør at dere
                       skiller dere ut.
-                    </dd>
+                    </p>
                   </div>
                 </div>
 
@@ -293,14 +295,14 @@ export function Intro(): JSX.Element {
                     </div>
                   </div>
                   <div className="ml-4">
-                    <dt className="text-lg leading-6 font-medium text-gray-900">
+                    <h4 className="text-lg leading-6 font-medium text-gray-900">
                       Møt engasjerte studenter
-                    </dt>
-                    <dd className="mt-2 text-base text-gray-500">
+                    </h4>
+                    <p className="mt-2 text-base text-gray-500">
                       echo karriere er en plattform for alle IT-studenter i
                       Bergen &mdash; UiB så vel som HVL. Dere kommer i direkte
                       kontakt med studenter som studerer IT.
-                    </dd>
+                    </p>
                   </div>
                 </div>
 
@@ -325,22 +327,23 @@ export function Intro(): JSX.Element {
                     </div>
                   </div>
                   <div className="ml-4">
-                    <dt className="text-lg leading-6 font-medium text-gray-900">
+                    <h4 className="text-lg leading-6 font-medium text-gray-900">
                       Annonser jobber
-                    </dt>
-                    <dd className="mt-2 text-base text-gray-500">
+                    </h4>
+                    <p className="mt-2 text-base text-gray-500">
                       Som deltaker av karrieredagen får du muligheten til å
                       reklamere for ledige stillinger direkte på våre nettsider.
-                    </dd>
+                    </p>
                   </div>
                 </div>
-              </dl>
+              </div>
             </div>
 
             <div className="mt-10 -mx-4 relative lg:mt-0" aria-hidden="true">
               <img
                 className="relative mx-auto"
                 width="490"
+                height="300"
                 src={hiringUrl}
                 alt="Art showing a person looking at online resumes."
               />

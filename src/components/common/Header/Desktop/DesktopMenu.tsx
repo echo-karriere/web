@@ -55,6 +55,8 @@ export function DesktopMenu({ mobileButtonClicked }: Props): JSX.Element {
           <Link to="/">
             <span className="sr-only">echo karriere</span>
             <img
+              width="160"
+              height="70"
               className="w-auto"
               src={file.childImageSharp.fixed.base64}
               srcSet={file.childImageSharp.fixed.srcSet}
