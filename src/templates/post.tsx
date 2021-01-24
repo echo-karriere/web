@@ -31,7 +31,6 @@ interface PageData {
 }
 
 export default function PageTemplate({ pageContext }: PageData): JSX.Element {
-  console.log(pageContext);
   const { next, node, previous } = pageContext;
   return (
     <Layout>
