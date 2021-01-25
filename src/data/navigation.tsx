@@ -92,7 +92,7 @@ export const navigationData: DesktopMenu[] = [
         to: "/nyheter/",
         description: "Nyheter og informasjon fra echo karriere",
         children: NewspaperIcon,
-        mainMobile: true,
+        mainMobile: false,
       },
     ],
   },
