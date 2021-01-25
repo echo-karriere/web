@@ -3,6 +3,7 @@ import {
   BookOpenIcon,
   CalendarIcon,
   InboxInIcon,
+  LightBulbIcon,
   NewspaperIcon,
   OfficeBuildingIcon,
 } from "../assets/icons";
@@ -28,6 +29,13 @@ export const navigationData: DesktopMenu[] = [
         to: "/for-studenter/",
         description: "Hva er echo karriere og hva skjer?",
         children: AcademicIcon,
+        mainMobile: true,
+      },
+      {
+        title: "Karrieredagen 2021",
+        to: "/karrieredagen-2021/",
+        description: "Hvem deltar og hva skjer på dagen?",
+        children: LightBulbIcon,
         mainMobile: true,
       },
     ],
