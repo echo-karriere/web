@@ -17,6 +17,7 @@ interface PageData {
     node: {
       frontmatter: {
         title: string;
+        description: string;
         date: string;
       };
       body: string;
@@ -34,7 +35,10 @@ export default function PageTemplate({ pageContext }: PageData): JSX.Element {
   const { next, node, previous } = pageContext;
   return (
     <Layout>
-      <SEO title={node.frontmatter.title} />
+      <SEO
+        title={node.frontmatter.title}
+        description={node.frontmatter.description}
+      />
       <Container>
         <Content
           title={node.frontmatter.title}

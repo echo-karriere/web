@@ -7,7 +7,10 @@ import { Content } from "../../components/common/Content";
 export default function Index(): JSX.Element {
   return (
     <Layout>
-      <SEO title="Søk til styret" />
+      <SEO
+        title="Søk til styret"
+        description="Send din søknad til styret her!"
+      />
       <Container>
         <Content title="Søk til styret" subtitle="Bli med!">
           <div>

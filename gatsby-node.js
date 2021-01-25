@@ -25,6 +25,7 @@ const buildPosts = async (graphql, actions) => {
           node {
             frontmatter {
               title
+              description
               path
               published
               date(formatString: "DD MMMM YYYY", locale: "nb-NO")
@@ -71,6 +72,7 @@ const buildPages = async (graphql, actions) => {
           node {
             frontmatter {
               title
+              description
               path
               published
             }

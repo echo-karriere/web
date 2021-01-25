@@ -7,7 +7,10 @@ import { Container } from "../../components/common/Container";
 export default function InterestPage(): JSX.Element {
   return (
     <Layout>
-      <SEO title="Interesseskjema" />
+      <SEO
+        title="Interesseskjema"
+        description="Vis interesse for å delta på echo karriere sin karrieredag"
+      />
       <Container>
         <InterestForm />
       </Container>

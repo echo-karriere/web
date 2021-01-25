@@ -7,7 +7,10 @@ import { Jobs } from "../components/event/Jobs";
 export default function News(): JSX.Element {
   return (
     <Layout>
-      <SEO title="Jobb" />
+      <SEO
+        title="Jobb"
+        description="Se stillingsutlysninger fra våre deltakere her."
+      />
       <Container>
         <div className="relative py-16 bg-white overflow-hidden">
           <div className="relative px-4 sm:px-6 lg:px-8">
