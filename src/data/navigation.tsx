@@ -1,6 +1,7 @@
 import {
   AcademicIcon,
   BookOpenIcon,
+  BriefcaseIcon,
   CalendarIcon,
   InboxInIcon,
   LightBulbIcon,
@@ -37,6 +38,13 @@ export const navigationData: DesktopMenu[] = [
         description: "Hvem deltar og hva skjer på dagen?",
         children: LightBulbIcon,
         mainMobile: true,
+      },
+      {
+        title: "Jobb",
+        to: "/jobb/",
+        description: "Se stillingsutlysninger fra deltakere",
+        children: BriefcaseIcon,
+        mainMobile: false,
       },
     ],
   },
