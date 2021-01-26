@@ -1,31 +1,50 @@
 import React from "react";
-import { Link } from "gatsby";
+import { graphql, Link as a, useStaticQuery } from "gatsby";
+import { shuffleArray } from "../../utils";
+
+type JobType = "full" | "part" | "summer";
 
 interface JobProps {
-  title: string;
+  name: string;
   company: string;
-  location: string;
-  type: "full" | "part";
-  date: Date;
   link: string;
+  location: string | null;
+  type: JobType;
+  deadline: string | null;
 }
 
+const jobType = (type: JobType): string => {
+  switch (type) {
+    case "full":
+      return "Fulltid";
+    case "part":
+      return "Deltid";
+    case "summer":
+      return "Sommerjobb";
+  }
+};
+
 const Job = ({
-  title,
+  name,
   company,
   location,
   type,
-  date,
+  deadline,
   link,
 }: JobProps): JSX.Element => (
   <li>
-    <Link to={link} className="block hover:bg-gray-50">
+    <a
+      href={link}
+      className="block hover:bg-gray-50"
+      target="_blank"
+      rel="noreferrer noopener"
+    >
       <div className="px-4 py-4 sm:px-6">
         <div className="flex items-center justify-between">
-          <p className="text-sm font-medium text-c6 truncate">{title}</p>
+          <p className="text-sm font-medium text-c6 truncate">{name}</p>
           <div className="ml-2 flex-shrink-0 flex">
             <p className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-c2 text-c8">
-              {type === "full" ? "Fulltid" : "Deltid"}
+              {jobType(type)}
             </p>
           </div>
         </div>
@@ -43,22 +62,24 @@ const Job = ({
               </svg>
               {company}
             </p>
-            <p className="mt-2 flex items-center text-sm text-gray-500 sm:mt-0 sm:ml-6">
-              <svg
-                className="flex-shrink-0 mr-1.5 h-5 w-5 text-c5"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                  clipRule="evenodd"
-                />
-              </svg>
-              {location}
-            </p>
+            {location && (
+              <p className="mt-2 flex items-center text-sm text-gray-500 sm:mt-0 sm:ml-6">
+                <svg
+                  className="flex-shrink-0 mr-1.5 h-5 w-5 text-c5"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                {location}
+              </p>
+            )}
           </div>
           <div className="mt-2 flex items-center text-sm text-gray-500 sm:mt-0">
             <svg
@@ -74,33 +95,54 @@ const Job = ({
                 clipRule="evenodd"
               />
             </svg>
-            <p>
-              Frist til
-              <time dateTime="2020-01-07">
-                {" "}
-                {date.toLocaleDateString("nb-NO")}
-              </time>
-            </p>
+            {deadline ? (
+              <p>
+                Frist til
+                <time dateTime="2020-01-07"> {deadline}</time>
+              </p>
+            ) : (
+              <p>Fortløpende</p>
+            )}
           </div>
         </div>
       </div>
-    </Link>
+    </a>
   </li>
 );
 
 export const Jobs = (): JSX.Element => {
+  const data = useStaticQuery(graphql`
+    query Jobs {
+      allJobsJson {
+        edges {
+          node {
+            name
+            company
+            link
+            location
+            type
+            deadline
+          }
+        }
+      }
+    }
+  `);
+
+  const jobs = data.allJobsJson.edges;
+  shuffleArray(jobs);
+
   return (
     <div className="bg-white shadow overflow-hidden sm:rounded-md">
       <ul className="divide-y divide-gray-200">
-        {[1, 2, 3, 4].map((i) => (
+        {jobs.map(({ node }: { node: JobProps }) => (
           <Job
-            key={i}
-            title="Frontendutvikler"
-            company="Norge AS"
-            location="Oslo"
-            type="full"
-            date={new Date()}
-            link="#"
+            key={node.link}
+            name={node.name}
+            company={node.company}
+            location={node.location}
+            type={node.type}
+            deadline={node.deadline}
+            link={node.link}
           />
         ))}
       </ul>
