@@ -3,7 +3,7 @@ import { Menu, Transition } from "@headlessui/react";
 import { graphql, Link, useStaticQuery } from "gatsby";
 import { BigMobileLink } from "./BigMobileLink";
 
-import { navigationData } from "../../../../data/navigation";
+import { useNavigationData } from "../../../../queries";
 
 interface Props {
   mobileOpen: boolean;
@@ -14,6 +14,7 @@ export function MobileMenu({
   mobileOpen,
   mobileButtonClicked,
 }: Props): JSX.Element {
+  const navigation = useNavigationData();
   const query = useStaticQuery(graphql`
     query LogoQuery {
       logo: file(name: { eq: "echo-karriere-logo" }) {
@@ -76,7 +77,7 @@ export function MobileMenu({
             </div>
             <div className="mt-6">
               <nav className="grid gap-y-8">
-                {navigationData.map((item) => {
+                {navigation.map((item) => {
                   return item.items
                     .filter((child) => child.mainMobile)
                     .map((child) => (
@@ -94,7 +95,7 @@ export function MobileMenu({
           </div>
           <div className="py-6 px-5 space-y-6">
             <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-              {navigationData.map((item) => {
+              {navigation.map((item) => {
                 return item.items
                   .filter((child) => !child.mainMobile)
                   .map((child) => (

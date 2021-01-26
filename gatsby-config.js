@@ -21,6 +21,7 @@ module.exports = {
         allExtensions: true,
       },
     },
+    `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -33,6 +34,12 @@ module.exports = {
       options: {
         name: `posts`,
         path: `${__dirname}/content/posts/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/data/`,
       },
     },
     {

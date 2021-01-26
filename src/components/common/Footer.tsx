@@ -1,11 +1,11 @@
 import React from "react";
 import { graphql, Link, useStaticQuery } from "gatsby";
 
-import { navigationData } from "../../data/navigation";
-import { useSiteMetadata } from "../../queries/useSiteMetadata";
+import { useNavigationData, useSiteMetadata } from "../../queries";
 
 export function Footer(): JSX.Element {
   const metadata = useSiteMetadata();
+  const navigation = useNavigationData();
   const query = useStaticQuery(graphql`
     query FooterLogoQuery {
       logoImage: file(name: { eq: "echo-karriere-logo" }) {
@@ -113,7 +113,7 @@ export function Footer(): JSX.Element {
             </div>
           </div>
           <div className="grid grid-cols-3 gap-8 xl:col-span-2">
-            {navigationData.map((item) => (
+            {navigation.map((item) => (
               <div key={item.title}>
                 <h4 className="text-sm font-semibold tracking-wider text-gray-600 uppercase">
                   {item.title}

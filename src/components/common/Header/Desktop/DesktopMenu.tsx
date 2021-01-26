@@ -3,9 +3,9 @@ import { Menu } from "@headlessui/react";
 import { graphql, Link, useStaticQuery } from "gatsby";
 import { MenuDropdown } from ".";
 
-import { navigationData } from "../../../../data/navigation";
 import { MenuItem } from "./MenuItem";
 import { More, MoreLink } from "./More";
+import { useNavigationData } from "../../../../queries";
 
 interface Props {
   mobileButtonClicked: () => void;
@@ -21,6 +21,7 @@ interface Edge {
 }
 
 export function DesktopMenu({ mobileButtonClicked }: Props): JSX.Element {
+  const navigation = useNavigationData();
   const { file, allMdx } = useStaticQuery(graphql`
     query DesktopLogo {
       file(name: { eq: "echo-karriere" }) {
@@ -88,7 +89,7 @@ export function DesktopMenu({ mobileButtonClicked }: Props): JSX.Element {
           </Menu.Button>
         </div>
         <nav className="hidden md:flex space-x-10 pl-8">
-          {navigationData.map((item) => (
+          {navigation.map((item) => (
             <MenuDropdown title={item.title} key={item.title}>
               <div className="absolute -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0">
                 <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
