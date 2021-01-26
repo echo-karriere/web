@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql, Link as a, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
 import { shuffleArray } from "../../utils";
 
 type JobType = "full" | "part" | "summer";
@@ -132,20 +132,34 @@ export const Jobs = (): JSX.Element => {
   shuffleArray(jobs);
 
   return (
-    <div className="bg-white shadow overflow-hidden sm:rounded-md">
-      <ul className="divide-y divide-gray-200">
-        {jobs.map(({ node }: { node: JobProps }) => (
-          <Job
-            key={node.link}
-            name={node.name}
-            company={node.company}
-            location={node.location}
-            type={node.type}
-            deadline={node.deadline}
-            link={node.link}
-          />
-        ))}
-      </ul>
+    <div className="py-8 xl:py-10 max-w-3xl lg:max-w-5xl xl:grid xl:grid-cols-3">
+      <div className="xl:col-span-2 xl:border-r xl:border-gray-200">
+        <div>
+          <aside className="mt-8 xl:hidden">
+            <h2 className="sr-only">Details</h2>
+            <p>Sorter</p>
+          </aside>
+          <div className="bg-white shadow overflow-hidden sm:rounded-md md:mr-8">
+            <ul className="divide-y divide-gray-200">
+              {jobs.map(({ node }: { node: JobProps }) => (
+                <Job
+                  key={node.link}
+                  name={node.name}
+                  company={node.company}
+                  location={node.location}
+                  type={node.type}
+                  deadline={node.deadline}
+                  link={node.link}
+                />
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <aside className="hidden xl:block xl:pl-8">
+        <h2 className="sr-only">Details</h2>
+        <p>Sorter</p>
+      </aside>
     </div>
   );
 };

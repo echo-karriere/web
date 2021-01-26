@@ -24,7 +24,7 @@ export default function News(): JSX.Element {
                 </span>
               </h1>
             </div>
-            <div className="mt-6 md:max-w-2xl">
+            <div className="mt-6">
               <Jobs />
             </div>
           </div>
