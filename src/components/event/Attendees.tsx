@@ -7,6 +7,8 @@ const Attendee = ({ name, link }: AttendeeProps): JSX.Element => (
   <a
     href={link}
     className="col-span-1 flex justify-center items-center py-8 px-8 bg-gray-50 hover:bg-gray-200 h-36"
+    target="_blank"
+    rel="noreferrer noopener"
   >
     {logos.get(name)}
   </a>
