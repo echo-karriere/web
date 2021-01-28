@@ -89,7 +89,7 @@ export function DesktopMenu({ mobileButtonClicked }: Props): JSX.Element {
           </Menu.Button>
         </div>
         <nav className="hidden md:flex space-x-10 pl-8">
-          {navigation.map((item, i) => (
+          {navigation.map((item) => (
             <div key={item.title} className="relative">
               <MenuDropdown title={item.title}>
                 <div className="absolute -ml-4 mt-3 transform px-2 w-screen max-w-sm sm:px-0 lg:ml-0 lg:left-1/2 md:-translate-x-1/2">
