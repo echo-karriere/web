@@ -46,5 +46,69 @@
     "location": "Oslo",
     "type": "full",
     "deadline": null
+  },
+  {
+    "name": "Graduate 2021 Cloud – Bergen",
+    "company": "Capgemini",
+    "link": "https://www.capgemini.com/no-no/jobs/graduate-2021-cloud-bergen/",
+    "location": "Bergen",
+    "type": "full",
+    "deadline": "28.09.2021"
+  },
+  {
+    "name": "Graduate Cloud – Oslo",
+    "company": "Capgemini",
+    "link": "https://www.capgemini.com/no-no/jobs/graduate-cloud-oslo/",
+    "location": "Oslo",
+    "type": "full",
+    "deadline": null
+  },
+  {
+    "name": "Software Engineer – Oslo",
+    "company": "Capgemini",
+    "link": "https://www.capgemini.com/no-no/jobs/software-engineer-oslo/",
+    "location": "Oslo",
+    "type": "full",
+    "deadline": null
+  },
+  {
+    "name": "Graduate Cybersecurity – Stavanger",
+    "company": "Capgemini",
+    "link": "https://www.capgemini.com/no-no/jobs/graduate-cybersecurity-stavanger/",
+    "location": "Stavanger",
+    "type": "full",
+    "deadline": null
+  },
+  {
+    "name": "Graduate 2021 – Cybersecurity",
+    "company": "Capgemini",
+    "link": "https://www.capgemini.com/no-no/jobs/graduate-2021-cybersecurity/",
+    "location": "Oslo",
+    "type": "full",
+    "deadline": null
+  },
+  {
+    "name": "Equinor - karriere",
+    "company": "Equinor",
+    "link": "https://www.equinor.com/en/careers.html",
+    "location": null,
+    "type": null,
+    "deadline": null
+  },
+  {
+    "name": "Bekk - karriere",
+    "company": "Bekk",
+    "link": "http://bekk.no/jobb",
+    "location": null,
+    "type": null,
+    "deadline": null
+  },
+  {
+    "name": "Tripletex - karriere",
+    "company": "Tripletex",
+    "link": "https://www.tripletex.no/utvikling-pa-jakt-etter-kloke-hoder/",
+    "location": null,
+    "type": null,
+    "deadline": null
   }
 ]
