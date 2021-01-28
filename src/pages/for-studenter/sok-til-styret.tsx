@@ -2,7 +2,7 @@ import React from "react";
 import { Layout } from "../../components/common/Layout";
 import { SEO } from "../../components/common/Seo";
 import { Container } from "../../components/common/Container";
-import { Content } from "../../components/common/Content";
+import { CommitteeApplication } from "../../components/forms/CommiteeApplicationForm";
 
 export default function Index(): JSX.Element {
   return (
@@ -12,11 +12,7 @@ export default function Index(): JSX.Element {
         description="Send din søknad til styret her!"
       />
       <Container>
-        <Content title="Søk til styret" subtitle="Bli med!">
-          <div>
-            <p>Vi tar ikke inn medlemmer for øyeblikket.</p>
-          </div>
-        </Content>
+        <CommitteeApplication />
       </Container>
     </Layout>
   );
