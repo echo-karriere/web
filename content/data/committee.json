@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Sondre Eide Omland",
+    "position": "Leder",
+    "sosials": {
+      "github": null,
+      "linkedin": null,
+      "website": null
+    }
+  },
+  {
+    "name": "Endre Borgen Egge",
+    "position": "Nestleder",
+    "sosials": {
+      "github": null,
+      "linkedin": null,
+      "website": null
+    }
+  },
+  {
+    "name": "Marie Heggebakk",
+    "position": "Økonomiansvarlig",
+    "sosials": {
+      "github": "heggebakk",
+      "linkedin": "marieheggebakk",
+      "website": "https://heggebakk.no"
+    }
+  },
+  {
+    "name": "Sondre Nilsen",
+    "position": "Webansvarlig",
+    "sosials": {
+      "github": "sondr3",
+      "linkedin": "sondr3",
+      "website": "https://www.eons.io"
+    }
+  },
+  {
+    "name": "Nikoline Liseth",
+    "position": "Bedriftsansvarlig",
+    "sosials": {
+      "github": null,
+      "linkedin": null,
+      "website": null
+    }
+  },
+  {
+    "name": "Kristine Enger",
+    "position": "Bedriftsansvarlig",
+    "sosials": {
+      "github": null,
+      "linkedin": null,
+      "website": null
+    }
+  }
+]
