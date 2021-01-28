@@ -19,5 +19,5 @@
     "resolveJsonModule": true,
     "isolatedModules": true
   },
-  "include": ["src/**/*", "src/assets/icons/.tsx"]
+  "include": ["src/**/*"]
 }
