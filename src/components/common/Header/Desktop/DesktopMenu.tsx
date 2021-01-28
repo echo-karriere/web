@@ -50,7 +50,7 @@ export function DesktopMenu({ mobileButtonClicked }: Props): JSX.Element {
   `);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6">
+    <div className="max-w-7xl mx-auto px-4 sm:px-0">
       <div className="flex justify-between items-center border-b-2 border-gray-100 pt-6 md:justify-start md:space-x-10">
         <div>
           <Link to="/">
@@ -89,44 +89,46 @@ export function DesktopMenu({ mobileButtonClicked }: Props): JSX.Element {
           </Menu.Button>
         </div>
         <nav className="hidden md:flex space-x-10 pl-8">
-          {navigation.map((item) => (
-            <MenuDropdown title={item.title} key={item.title}>
-              <div className="absolute -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0">
-                <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                  <Menu.Items>
-                    <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-                      {item.items.map((child) => (
-                        <MenuItem
-                          title={child.title}
-                          to={child.to}
-                          description={child.description}
-                          key={child.to}
-                        >
-                          {child.children}
-                        </MenuItem>
-                      ))}
-                    </div>
-                  </Menu.Items>
-                  {item.hasPosts && (
-                    <div className="px-5 py-5 bg-gray-50 sm:px-8 sm:py-8">
-                      <More
-                        title="Siste nytt"
-                        readMoreLink="/nyheter/"
-                        readMoreTitle="Les mer"
-                      >
-                        {allMdx.edges.map((edge: Edge) => (
-                          <MoreLink
-                            title={edge.node.frontmatter.title}
-                            to={edge.node.frontmatter.path}
-                            key={edge.node.frontmatter.path}
-                          />
+          {navigation.map((item, i) => (
+            <div key={item.title} className="relative">
+              <MenuDropdown title={item.title}>
+                <div className="absolute -ml-4 mt-3 transform px-2 w-screen max-w-sm sm:px-0 lg:ml-0 lg:left-1/2 md:-translate-x-1/2">
+                  <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
+                    <Menu.Items>
+                      <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                        {item.items.map((child) => (
+                          <MenuItem
+                            title={child.title}
+                            to={child.to}
+                            description={child.description}
+                            key={child.to}
+                          >
+                            {child.children}
+                          </MenuItem>
                         ))}
-                      </More>
-                    </div>
-                  )}
+                      </div>
+                    </Menu.Items>
+                    {item.hasPosts && (
+                      <div className="px-5 py-5 bg-gray-50 sm:px-8 sm:py-8">
+                        <More
+                          title="Siste nytt"
+                          readMoreLink="/nyheter/"
+                          readMoreTitle="Les mer"
+                        >
+                          {allMdx.edges.map((edge: Edge) => (
+                            <MoreLink
+                              title={edge.node.frontmatter.title}
+                              to={edge.node.frontmatter.path}
+                              key={edge.node.frontmatter.path}
+                            />
+                          ))}
+                        </More>
+                      </div>
+                    )}
+                  </div>
                 </div>
-              </div>
-            </MenuDropdown>
+              </MenuDropdown>
+            </div>
           ))}
         </nav>
       </div>
