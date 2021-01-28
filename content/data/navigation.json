@@ -58,6 +58,13 @@
         "mainMobile": true
       },
       {
+        "title": "Styret",
+        "to": "/om/styret/",
+        "description": "Om oss i styret",
+        "children": "UserGroupIcon",
+        "mainMobile": false
+      },
+      {
         "title": "Kontakt oss",
         "to": "/kontakt-oss/",
         "description": "Spørsmål, tilbakemelding eller vil du komme i kontakt med styret?",

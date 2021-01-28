@@ -7,6 +7,7 @@ import { LightBulbIcon } from "./LightBulbIcon";
 import { NewspaperIcon } from "./NewspaperIcon";
 import { OfficeBuildingIcon } from "./OfficeBuildingIcon";
 import { QuestionIcon } from "./QuestionIcon";
+import { UserGroupIcon } from "./UserGroupIcon";
 
 export * from "./NewspaperIcon";
 export * from "./LightBulbIcon";
@@ -28,4 +29,5 @@ export const icons = new Map([
   ["CalendarIcon", CalendarIcon],
   ["QuestionIcon", QuestionIcon],
   ["OfficeBuildingIcon", OfficeBuildingIcon],
+  ["UserGroupIcon", UserGroupIcon],
 ]);
