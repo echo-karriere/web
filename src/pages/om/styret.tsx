@@ -5,7 +5,7 @@ import { Container } from "../../components/common/Container";
 import { Layout } from "../../components/common/Layout";
 import { SEO } from "../../components/common/Seo";
 
-const Member = ({ name, position, sosials }: CommitteeProps): JSX.Element => (
+const Member = ({ name, position, socials }: CommitteeProps): JSX.Element => (
   <li>
     <div className="space-y-4">
       <div className="aspect-w-3 aspect-h-2">{headshots.get(name)}</div>
@@ -16,10 +16,10 @@ const Member = ({ name, position, sosials }: CommitteeProps): JSX.Element => (
           <p className="text-indigo-600">{position}</p>
         </div>
         <ul className="flex space-x-5">
-          {sosials.github && (
+          {socials.github && (
             <li>
               <a
-                href={`https://github.com/${sosials.github}`}
+                href={`https://github.com/${socials.github}`}
                 className="text-gray-400 hover:text-gray-500"
                 target="_blank"
                 rel="noreferrer noopener"
@@ -40,10 +40,10 @@ const Member = ({ name, position, sosials }: CommitteeProps): JSX.Element => (
               </a>
             </li>
           )}
-          {sosials.linkedin && (
+          {socials.linkedin && (
             <li>
               <a
-                href={`https://www.linkedin.com/in/${sosials.linkedin}`}
+                href={`https://www.linkedin.com/in/${socials.linkedin}`}
                 className="text-gray-400 hover:text-gray-500"
                 target="_blank"
                 rel="noreferrer noopener"
@@ -64,10 +64,10 @@ const Member = ({ name, position, sosials }: CommitteeProps): JSX.Element => (
               </a>
             </li>
           )}
-          {sosials.website && (
+          {socials.website && (
             <li>
               <a
-                href={sosials.website}
+                href={socials.website}
                 className="text-gray-400 hover:text-gray-500"
                 target="_blank"
                 rel="noreferrer noopener"
@@ -100,7 +100,7 @@ const Member = ({ name, position, sosials }: CommitteeProps): JSX.Element => (
 interface CommitteeProps {
   name: string;
   position: string;
-  sosials: {
+  socials: {
     github: string | null;
     linkedin: string | null;
     website: string | null;
@@ -116,7 +116,7 @@ export default function Committee(): JSX.Element {
             node {
               name
               position
-              sosials {
+              socials {
                 github
                 linkedin
                 website
