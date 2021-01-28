@@ -52,6 +52,10 @@
     "link": "https://www.capgemini.com/no-no/"
   },
   {
+    "name": "NSM",
+    "link": "https://nsm.no/"
+  },
+  {
     "name": "Kongsberg Gruppen",
     "link": "https://www.kongsberg.com/"
   },
@@ -74,5 +78,9 @@
   {
     "name": "Equinor",
     "link": "https://www.equinor.com/no.html"
+  },
+  {
+    "name": "Deloitte",
+    "link": "https://www2.deloitte.com/no/no.html"
   }
 ]

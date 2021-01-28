@@ -110,5 +110,21 @@
     "location": null,
     "type": null,
     "deadline": null
+  },
+  {
+    "name": " Åpen søknad",
+    "company": "Iterate",
+    "link": "https://www.poption.com/companies/iterate/postings/kANfK6",
+    "location": "Oslo",
+    "type": "full",
+    "deadline": null
+  },
+  {
+    "name": "Student: Nyutdannet utvikler med oppstart august 2021",
+    "company": "Netcompany",
+    "link": "https://jobs.smartrecruiters.com/Netcompany1/743999731779563-student-nyutdannet-utvikler-med-oppstart-august-2021",
+    "location": "Oslo",
+    "type": "full",
+    "deadline": "28.02.2021"
   }
 ]
