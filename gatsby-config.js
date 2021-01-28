@@ -43,6 +43,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/content/images/`,
+      },
+    },
+    {
       resolve: `@directus/gatsby-source-directus`,
       options: {
         url: process.env.API_URL,

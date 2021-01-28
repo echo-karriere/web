@@ -1,86 +1,128 @@
 [
   {
     "name": "Knowit",
-    "link": "https://www.knowit.no/"
+    "link": "https://www.knowit.no/",
+    "svg": false,
+    "icon": null
   },
   {
     "name": "Tripletex",
-    "link": "https://www.tripletex.no//"
+    "link": "https://www.tripletex.no//",
+    "svg": false,
+    "icon": "../images/tripletex.png"
   },
   {
     "name": "Kantega",
-    "link": "https://kantega.no/"
+    "link": "https://kantega.no/",
+    "svg": true,
+    "icon": "../images/kantega.svg"
   },
   {
     "name": "Miles",
-    "link": "https://www.miles.no/"
+    "link": "https://www.miles.no/",
+    "svg": false,
+    "icon": null
   },
   {
     "name": "Bouvet",
-    "link": "https://www.bouvet.no/"
+    "link": "https://www.bouvet.no/",
+    "svg": false,
+    "icon": null
   },
   {
     "name": "Simula UiB",
-    "link": "https://www.simula.no/"
+    "link": "https://www.simula.no/",
+    "svg": false,
+    "icon": null
   },
   {
     "name": "Netcompany",
-    "link": "https://www.netcompany.com/no/"
+    "link": "https://www.netcompany.com/no/",
+    "svg": false,
+    "icon": "../images/netcompany.png"
   },
   {
     "name": "Netlight",
-    "link": "https://www.netlight.com/"
+    "link": "https://www.netlight.com/",
+    "svg": false,
+    "icon": null
   },
   {
     "name": "Iterate",
-    "link": "https://www.iterate.no/"
+    "link": "https://www.iterate.no/",
+    "svg": false,
+    "icon": "../images/iterate.png"
   },
   {
     "name": "SPV",
-    "link": "https://www.spv.no/"
+    "link": "https://www.spv.no/",
+    "svg": true,
+    "icon": "../images/spv.svg"
   },
   {
     "name": "Gjensidige",
-    "link": "https://www.gjensidige.no/?"
+    "link": "https://www.gjensidige.no/?",
+    "svg": false,
+    "icon": null
   },
   {
     "name": "Netsecurity",
-    "link": "https://www.netsecurity.no/"
+    "link": "https://www.netsecurity.no/",
+    "svg": false,
+    "icon": null
   },
   {
     "name": "Capgemini",
-    "link": "https://www.capgemini.com/no-no/"
+    "link": "https://www.capgemini.com/no-no/",
+    "svg": false,
+    "icon": "../images/capgemini.png"
   },
   {
     "name": "NSM",
-    "link": "https://nsm.no/"
+    "link": "https://nsm.no/",
+    "svg": false,
+    "icon": null
   },
   {
     "name": "Kongsberg Gruppen",
-    "link": "https://www.kongsberg.com/"
+    "link": "https://www.kongsberg.com/",
+    "svg": false,
+    "icon": null
   },
   {
     "name": "DNB",
-    "link": "https://www.dnb.no/"
+    "link": "https://www.dnb.no/",
+    "svg": false,
+    "icon": "../images/dnb.png"
   },
   {
     "name": "Bekk",
-    "link": "https://www.bekk.no/"
+    "link": "https://www.bekk.no/",
+    "svg": true,
+    "icon": "../images/bekk.svg"
   },
   {
     "name": "Avo Consulting",
-    "link": "https://avoconsulting.co/"
+    "link": "https://avoconsulting.co/",
+    "svg": false,
+    "icon": null
   },
   {
     "name": "Vipps",
-    "link": "https://vipps.no/"
+    "link": "https://vipps.no/",
+    "svg": false,
+    "icon": null
   },
   {
     "name": "Equinor",
-    "link": "https://www.equinor.com/no.html"
+    "link": "https://www.equinor.com/no.html",
+    "svg": false,
+    "icon": "../images/equinor.png"
   },
   {
     "name": "Deloitte",
-    "link": "https://www2.deloitte.com/no/no.html"
+    "link": "https://www2.deloitte.com/no/no.html",
+    "svg": false,
+    "icon": null
   }
 ]
