@@ -1,4 +1,5 @@
 import { BekkLogo } from "./Bekk";
+import { CapgeminiLogo } from "./Capgemini";
 import { DNBLogo } from "./DNB";
 import { KantegaLogo } from "./Kantega";
 import { SPVLogo } from "./SPV";
@@ -10,4 +11,5 @@ export const logos = new Map([
   ["DNB", DNBLogo],
   ["Tripletex", TripletexLogo],
   ["Bekk", BekkLogo],
+  ["Capgemini", CapgeminiLogo],
 ]);
