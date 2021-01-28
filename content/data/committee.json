@@ -2,6 +2,7 @@
   {
     "name": "Sondre Eide Omland",
     "position": "Leder",
+    "headshot": null,
     "socials": {
       "github": null,
       "linkedin": null,
@@ -11,6 +12,7 @@
   {
     "name": "Endre Borgen Egge",
     "position": "Nestleder",
+    "headshot": null,
     "socials": {
       "github": null,
       "linkedin": null,
@@ -20,6 +22,7 @@
   {
     "name": "Marie Heggebakk",
     "position": "Økonomiansvarlig",
+    "headshot": "../images/marie.jpg",
     "socials": {
       "github": "heggebakk",
       "linkedin": "marieheggebakk",
@@ -29,6 +32,7 @@
   {
     "name": "Sondre Nilsen",
     "position": "Webansvarlig",
+    "headshot": "../images/sondreN.jpg",
     "socials": {
       "github": "sondr3",
       "linkedin": "sondr3",
@@ -38,6 +42,7 @@
   {
     "name": "Nikoline Liseth",
     "position": "Bedriftsansvarlig",
+    "headshot": null,
     "socials": {
       "github": null,
       "linkedin": null,
@@ -47,6 +52,7 @@
   {
     "name": "Kristine Enger",
     "position": "Bedriftsansvarlig",
+    "headshot": null,
     "socials": {
       "github": null,
       "linkedin": null,

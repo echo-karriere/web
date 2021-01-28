@@ -1,14 +1,21 @@
 import { graphql, useStaticQuery } from "gatsby";
+import Img, { FluidObject } from "gatsby-image";
 import React from "react";
-import { headshots } from "../../assets/headshots";
 import { Container } from "../../components/common/Container";
 import { Layout } from "../../components/common/Layout";
 import { SEO } from "../../components/common/Seo";
 
-const Member = ({ name, position, socials }: CommitteeProps): JSX.Element => (
+const Member = ({
+  name,
+  position,
+  headshot,
+  socials,
+}: CommitteeProps): JSX.Element => (
   <li>
     <div className="space-y-4">
-      <div className="aspect-w-3 aspect-h-2">{headshots.get(name)}</div>
+      <div className="aspect-w-3 aspect-h-2">
+        {headshot && <Img fluid={headshot.childImageSharp.fluid} />}
+      </div>
 
       <div className="space-y-2">
         <div className="text-lg leading-6 font-medium space-y-1">
@@ -100,6 +107,11 @@ const Member = ({ name, position, socials }: CommitteeProps): JSX.Element => (
 interface CommitteeProps {
   name: string;
   position: string;
+  headshot: {
+    childImageSharp: {
+      fluid: FluidObject;
+    };
+  } | null;
   socials: {
     github: string | null;
     linkedin: string | null;
@@ -116,6 +128,13 @@ export default function Committee(): JSX.Element {
             node {
               name
               position
+              headshot {
+                childImageSharp {
+                  fluid(maxHeight: 420, quality: 70) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
               socials {
                 github
                 linkedin
