@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ChangeEvent, ReactNode } from "react";
 import { JobProps, JobType } from "./Job";
 
 export interface FilterBy {
@@ -7,106 +7,115 @@ export interface FilterBy {
   company?: string;
 }
 
-interface JobCompanySelectFilter {
-  jobs: JobProps[];
+interface SelectFilter {
   filter: FilterBy;
   setFilter: (filter: FilterBy) => void;
 }
+
+interface SelectFilterJobs extends SelectFilter {
+  jobs: JobProps[];
+}
+
+interface SelectProps {
+  label: string;
+  title: string;
+  children: ReactNode;
+  onChange: (event: ChangeEvent<HTMLSelectElement>) => void;
+}
+
+const FilterSelect = ({
+  label,
+  title,
+  children,
+  onChange,
+}: SelectProps): JSX.Element => (
+  <div className="md:mb-2 max-w-sm">
+    <label htmlFor={label} className="block text-sm font-medium text-gray-700">
+      {title}
+    </label>
+    <select
+      id={label}
+      name="type"
+      className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+      onChange={onChange}
+    >
+      {children}
+    </select>
+  </div>
+);
 
 export const JobCompanySelect = ({
   jobs,
   filter,
   setFilter,
-}: JobCompanySelectFilter): JSX.Element => {
+}: SelectFilterJobs): JSX.Element => {
   const companies = [...new Set(jobs.map((j) => j.company))];
   const company = (company: string): Partial<FilterBy> => {
-    return company === "all" ? { company: undefined } : { company: company };
+    return { company: company === "all" ? undefined : company };
   };
   return (
-    <div>
-      <label htmlFor="type" className="block text-sm font-medium text-gray-700">
-        Selskap
-      </label>
-      <select
-        id="type"
-        name="type"
-        className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
-        onChange={(e) => setFilter({ ...filter, ...company(e.target.value) })}
-      >
-        <option value="all">Alle</option>
-        {companies.map((com) => (
-          <option key={com}>{com}</option>
-        ))}
-      </select>
-    </div>
+    <FilterSelect
+      title="Selskap"
+      label="selskap"
+      onChange={(e) => setFilter({ ...filter, ...company(e.target.value) })}
+    >
+      <option value="all">Alle</option>
+      {companies.map((com) => (
+        <option key={com}>{com}</option>
+      ))}
+    </FilterSelect>
   );
 };
-
-interface JobLocationSelectFilter {
-  jobs: JobProps[];
-  filter: FilterBy;
-  setFilter: (filter: FilterBy) => void;
-}
 
 export const JobLocationSelect = ({
   jobs,
   filter,
   setFilter,
-}: JobLocationSelectFilter): JSX.Element => {
+}: SelectFilterJobs): JSX.Element => {
   const locations = [...new Set(jobs.map((j) => j.location))].filter((e) => e);
   const location = (location: string): Partial<FilterBy> => {
-    return location === "all"
-      ? { location: undefined }
-      : { location: location };
+    return { location: location === "all" ? undefined : location };
   };
   return (
-    <div>
-      <label htmlFor="type" className="block text-sm font-medium text-gray-700">
-        Sted
-      </label>
-      <select
-        id="type"
-        name="type"
-        className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
-        onChange={(e) => setFilter({ ...filter, ...location(e.target.value) })}
-      >
-        <option value="all">Alle</option>
-        {locations.map((loc) => (
-          <option key={loc}>{loc}</option>
-        ))}
-      </select>
-    </div>
+    <FilterSelect
+      title="Sted"
+      label="location"
+      onChange={(e) => setFilter({ ...filter, ...location(e.target.value) })}
+    >
+      <option value="all">Alle</option>
+      {locations.map((loc) => (
+        <option key={loc}>{loc}</option>
+      ))}
+    </FilterSelect>
   );
 };
-
-interface JobTypeSelectFilter {
-  filter: FilterBy;
-  setFilter: (filter: FilterBy) => void;
-}
 
 export const JobTypeSelect = ({
   filter,
   setFilter,
-}: JobTypeSelectFilter): JSX.Element => {
+}: SelectFilter): JSX.Element => {
   const type = (type: string): Partial<FilterBy> => {
-    return type === "all" ? { type: undefined } : { type: type as JobType };
+    return { type: type === "all" ? undefined : (type as JobType) };
   };
   return (
-    <div>
-      <label htmlFor="type" className="block text-sm font-medium text-gray-700">
-        Jobbtype
-      </label>
-      <select
-        id="type"
-        name="type"
-        className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
-        onChange={(e) => setFilter({ ...filter, ...type(e.target.value) })}
-      >
-        <option value="all">Alle</option>
-        <option value="full">Fulltid</option>
-        <option value="part">Deltid</option>
-        <option value="summer">Sommerjobb</option>
-      </select>
-    </div>
+    <FilterSelect
+      title="Jobbtype"
+      label="type"
+      onChange={(e) => setFilter({ ...filter, ...type(e.target.value) })}
+    >
+      <option value="all">Alle</option>
+      <option value="full">Fulltid</option>
+      <option value="part">Deltid</option>
+      <option value="summer">Sommerjobb</option>
+    </FilterSelect>
   );
 };
+
+export const Selects = (props: SelectFilterJobs): JSX.Element => (
+  <div className="w-full md:w-72">
+    <h2 className="mb-2">Sorter</h2>
+    <JobTypeSelect {...props} />
+    <JobLocationSelect {...props} />
+    <JobCompanySelect {...props} />
+  </div>
+);

@@ -34,11 +34,9 @@ export const Job = ({
 }: JobProps & { filters: FilterBy }): JSX.Element => {
   const show = (): boolean => {
     let valid = true;
-    if (filters.type !== undefined) valid = type === filters.type;
-    if (filters.company !== undefined)
-      valid = valid && company === filters.company;
-    if (filters.location !== undefined)
-      valid = valid && location === filters.location;
+    if (filters.type) valid = type === filters.type;
+    if (filters.company) valid = valid && company === filters.company;
+    if (filters.location) valid = valid && location === filters.location;
     return valid;
   };
   return (
