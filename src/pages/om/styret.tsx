@@ -14,7 +14,12 @@ const Member = ({
   <li>
     <div className="space-y-4">
       <div className="aspect-w-3 aspect-h-2">
-        {headshot && <Img fixed={headshot.childImageSharp.fixed} />}
+        {headshot && (
+          <Img
+            className="object-cover shadow-lg rounded-lg max-h-96"
+            fluid={headshot.childImageSharp.fluid}
+          />
+        )}
       </div>
 
       <div className="space-y-2">
@@ -131,11 +136,8 @@ export default function Committee(): JSX.Element {
               position
               headshot {
                 childImageSharp {
-                  fluid(maxHeight: 420, quality: 70) {
+                  fluid(maxWidth: 380, maxHeight: 380, quality: 70) {
                     ...GatsbyImageSharpFluid
-                  }
-                  fixed(height: 420, quality: 70) {
-                    ...GatsbyImageSharpFixed
                   }
                 }
               }
