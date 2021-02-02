@@ -71,7 +71,7 @@ export const Attendees = ({ title }: AttendeesProps): JSX.Element => {
               svg
               icon {
                 childImageSharp {
-                  fluid(quality: 70) {
+                  fluid(maxWidth: 250, quality: 70) {
                     ...GatsbyImageSharpFluid
                   }
                 }

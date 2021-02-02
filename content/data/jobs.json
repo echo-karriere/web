@@ -126,5 +126,101 @@
     "location": "Oslo",
     "type": "full",
     "deadline": "28.02.2021"
+  },
+  {
+    "name": "Gjensidigedagen 19. mars 2021",
+    "company": "Gjensidige",
+    "link": "/jobb/gjensidigedagen/",
+    "location": "Oslo",
+    "type": null,
+    "deadline": "28.02.2021"
+  },
+  {
+    "name": "Internshipordning",
+    "company": "Gjensidige",
+    "link": "/jobb/gjensidige-internship/",
+    "location": "Oslo",
+    "type": "part",
+    "deadline": null
+  },
+  {
+    "name": "NSM - karriere",
+    "company": "NSM",
+    "link": "https://nsm.no/om-oss/ledige-stillinger/",
+    "location": "Oslo",
+    "type": null,
+    "deadline": null
+  },
+  {
+    "name": "Sommerjobb i kryptologi ved Nasjonal Sikkerhetsmyndighet",
+    "company": "NSM",
+    "link": "https://nsm.easycruit.com/vacancy/2620879/37729",
+    "location": "Oslo",
+    "type": "summer",
+    "deadline": "01.03.2021"
+  },
+  {
+    "name": "Deloitte - karriere",
+    "company": "Deloitte",
+    "link": "https://deloitte.recman.no/",
+    "location": null,
+    "type": null,
+    "deadline": null
+  },
+  {
+    "name": "Åpen søknad - Deloitte",
+    "company": "Deloitte",
+    "link": "https://deloitte.recman.no/job.php?job_id=644949",
+    "location": null,
+    "type": "full",
+    "deadline": null
+  },
+  {
+    "name": "Informasjon om sommerjobb 2022",
+    "company": "Netlight",
+    "link": "https://jobs.lever.co/netlight/95af2bda-a73f-4772-b6ae-f411c2c5ca4c",
+    "location": "Oslo",
+    "type": "summer",
+    "deadline": null
+  },
+  {
+    "name": "Nyutdannet teknologikonsulent",
+    "company": "Netlight",
+    "link": "https://jobs.lever.co/netlight/d6d333d2-aeab-4ca9-baeb-4dadb887eea9",
+    "location": "Oslo",
+    "type": "full",
+    "deadline": null
+  },
+  {
+    "name": "Engagement Search",
+    "company": "Netlight",
+    "link": "https://jobs.lever.co/netlight/841da2f2-8eb3-470b-ba5d-e00b695d7eb0",
+    "location": "Oslo",
+    "type": "full",
+    "deadline": null
+  },
+  {
+    "name": "Talent Search",
+    "company": "Netlight",
+    "link": "https://jobs.lever.co/netlight/e8ad2b91-c643-4fe7-adbb-8111de8843de",
+    "location": "Oslo",
+    "type": "full",
+    "deadline": null
+  },
+  {
+    "name": "https://www.poption.com/companies/iterate/postings/wRJfmgh",
+    "company": "Iterate",
+    "link": "https://www.poption.com/companies/iterate/postings/wRJfmg",
+    "location": "Oslo",
+    "type": null,
+    "deadline": "22.03.2021"
+  },
+  {
+    "name": "Interesseskjema - Vipps",
+    "company": "Vipps",
+    "link": "poption.events/9699",
+    "location": null,
+    "type": null,
+    "deadline": null
   }
 ]

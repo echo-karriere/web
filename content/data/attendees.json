@@ -45,7 +45,7 @@
     "name": "Netlight",
     "link": "https://www.netlight.com/",
     "svg": false,
-    "icon": null
+    "icon": "../images/netlight.png"
   },
   {
     "name": "Iterate",
@@ -61,9 +61,9 @@
   },
   {
     "name": "Gjensidige",
-    "link": "https://www.gjensidige.no/?",
-    "svg": false,
-    "icon": null
+    "link": "/bedrift/gjensidige/",
+    "svg": true,
+    "icon": "../images/gjensidige.svg"
   },
   {
     "name": "Netsecurity",
@@ -81,13 +81,7 @@
     "name": "NSM",
     "link": "https://nsm.no/",
     "svg": false,
-    "icon": null
-  },
-  {
-    "name": "Kongsberg Gruppen",
-    "link": "https://www.kongsberg.com/",
-    "svg": false,
-    "icon": null
+    "icon": "../images/nsm.png"
   },
   {
     "name": "DNB",
@@ -123,6 +117,6 @@
     "name": "Deloitte",
     "link": "https://www2.deloitte.com/no/no.html",
     "svg": false,
-    "icon": null
+    "icon": "../images/deloitte.jpg"
   }
 ]
