@@ -1,5 +1,5 @@
 import { graphql, useStaticQuery } from "gatsby";
-import Img, { FluidObject } from "gatsby-image";
+import Img, { FixedObject, FluidObject } from "gatsby-image";
 import React from "react";
 import { Container } from "../../components/common/Container";
 import { Layout } from "../../components/common/Layout";
@@ -14,7 +14,7 @@ const Member = ({
   <li>
     <div className="space-y-4">
       <div className="aspect-w-3 aspect-h-2">
-        {headshot && <Img fluid={headshot.childImageSharp.fluid} />}
+        {headshot && <Img fixed={headshot.childImageSharp.fixed} />}
       </div>
 
       <div className="space-y-2">
@@ -110,6 +110,7 @@ interface CommitteeProps {
   headshot: {
     childImageSharp: {
       fluid: FluidObject;
+      fixed: FixedObject;
     };
   } | null;
   socials: {
@@ -132,6 +133,9 @@ export default function Committee(): JSX.Element {
                 childImageSharp {
                   fluid(maxHeight: 420, quality: 70) {
                     ...GatsbyImageSharpFluid
+                  }
+                  fixed(height: 420, quality: 70) {
+                    ...GatsbyImageSharpFixed
                   }
                 }
               }

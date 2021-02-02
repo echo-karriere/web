@@ -2,20 +2,20 @@
   {
     "name": "Sondre Eide Omland",
     "position": "Leder",
-    "headshot": null,
+    "headshot": "../images/sondreO.jpg",
     "socials": {
       "github": null,
-      "linkedin": null,
+      "linkedin": "sondre-eide-omland-995705170",
       "website": null
     }
   },
   {
     "name": "Endre Borgen Egge",
     "position": "Nestleder",
-    "headshot": null,
+    "headshot": "../images/endre.jpg",
     "socials": {
       "github": null,
-      "linkedin": null,
+      "linkedin": "endre-borgen-egge-841009126",
       "website": null
     }
   },
@@ -26,7 +26,7 @@
     "socials": {
       "github": "heggebakk",
       "linkedin": "marieheggebakk",
-      "website": "https://heggebakk.no"
+      "website": null
     }
   },
   {
@@ -42,7 +42,7 @@
   {
     "name": "Nikoline Liseth",
     "position": "Bedriftsansvarlig",
-    "headshot": null,
+    "headshot": "../images/nikoline.jpg",
     "socials": {
       "github": null,
       "linkedin": null,
@@ -52,7 +52,7 @@
   {
     "name": "Kristine Enger",
     "position": "Bedriftsansvarlig",
-    "headshot": null,
+    "headshot": "../images/kristine.jpg",
     "socials": {
       "github": null,
       "linkedin": null,
