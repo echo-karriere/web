@@ -36,8 +36,10 @@ const Job = ({
   const show = (): boolean => {
     let valid = true;
     if (filters.type !== undefined) valid = type === filters.type;
-    if (filters.company !== undefined) valid = type === filters.company;
-    if (filters.location !== undefined) valid = type === filters.location;
+    if (filters.company !== undefined)
+      valid = valid && company === filters.company;
+    if (filters.location !== undefined)
+      valid = valid && location === filters.location;
     return valid;
   };
   return (
@@ -120,6 +122,78 @@ const Job = ({
   );
 };
 
+interface JobCompanySelectFilter {
+  jobs: JobProps[];
+  filter: FilterBy;
+  setFilter: (filter: FilterBy) => void;
+}
+
+const JobCompanySelect = ({
+  jobs,
+  filter,
+  setFilter,
+}: JobCompanySelectFilter): JSX.Element => {
+  const companies = [...new Set(jobs.map((j) => j.company))];
+  const company = (company: string): Partial<FilterBy> => {
+    return company === "all" ? { company: undefined } : { company: company };
+  };
+  return (
+    <div>
+      <label htmlFor="type" className="block text-sm font-medium text-gray-700">
+        Selskap
+      </label>
+      <select
+        id="type"
+        name="type"
+        className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+        onChange={(e) => setFilter({ ...filter, ...company(e.target.value) })}
+      >
+        <option value="all">Alle</option>
+        {companies.map((com) => (
+          <option key={com}>{com}</option>
+        ))}
+      </select>
+    </div>
+  );
+};
+
+interface JobLocationSelectFilter {
+  jobs: JobProps[];
+  filter: FilterBy;
+  setFilter: (filter: FilterBy) => void;
+}
+
+const JobLocationSelect = ({
+  jobs,
+  filter,
+  setFilter,
+}: JobLocationSelectFilter): JSX.Element => {
+  const locations = [...new Set(jobs.map((j) => j.location))].filter((e) => e);
+  const location = (location: string): Partial<FilterBy> => {
+    return location === "all"
+      ? { location: undefined }
+      : { location: location };
+  };
+  return (
+    <div>
+      <label htmlFor="type" className="block text-sm font-medium text-gray-700">
+        Sted
+      </label>
+      <select
+        id="type"
+        name="type"
+        className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+        onChange={(e) => setFilter({ ...filter, ...location(e.target.value) })}
+      >
+        <option value="all">Alle</option>
+        {locations.map((loc) => (
+          <option key={loc}>{loc}</option>
+        ))}
+      </select>
+    </div>
+  );
+};
+
 interface JobTypeSelectFilter {
   filter: FilterBy;
   setFilter: (filter: FilterBy) => void;
@@ -193,9 +267,19 @@ export const Jobs = (): JSX.Element => {
     <div className="py-8 xl:py-10 max-w-3xl lg:max-w-5xl xl:grid xl:grid-cols-3">
       <div className="xl:col-span-2 xl:border-r xl:border-gray-200">
         <div>
-          <aside className="mt-8 xl:hidden">
-            <h2 className="sr-only">Details</h2>
-            <p>Sorter</p>
+          <aside className="my-8 xl:hidden">
+            <h2 className="mb-2">Sorter</h2>
+            <JobTypeSelect filter={filter} setFilter={setFilter} />
+            <JobLocationSelect
+              jobs={jobs}
+              filter={filter}
+              setFilter={setFilter}
+            />
+            <JobCompanySelect
+              jobs={jobs}
+              filter={filter}
+              setFilter={setFilter}
+            />
           </aside>
           <div className="bg-white shadow overflow-hidden sm:rounded-md md:mr-8">
             <ul className="divide-y divide-gray-200">
@@ -218,6 +302,8 @@ export const Jobs = (): JSX.Element => {
       <aside className="hidden xl:block xl:pl-8">
         <h2 className="mb-2">Sorter</h2>
         <JobTypeSelect filter={filter} setFilter={setFilter} />
+        <JobLocationSelect jobs={jobs} filter={filter} setFilter={setFilter} />
+        <JobCompanySelect jobs={jobs} filter={filter} setFilter={setFilter} />
       </aside>
     </div>
   );
