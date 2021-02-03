@@ -40,7 +40,6 @@ const SVGLogo = ({ name, icon }: AttendeSVG): JSX.Element => (
 );
 
 const ImageLogo = ({ name, icon }: AttendeImage): JSX.Element => {
-  console.log(name, icon);
   if (icon) {
     return (
       <img
