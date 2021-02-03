@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode, useEffect, useState } from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import { shuffleArray } from "../../utils";
 import { FluidObject } from "gatsby-image";
@@ -95,12 +95,20 @@ export const Attendees = ({ title }: AttendeesProps): JSX.Element => {
     `,
   );
 
-  const images = data.images.edges;
-  const svg = data.svg.edges;
+  const images = data.images.edges.map(
+    ({ node }: { node: AttendeImage }) => node,
+  );
+  const svg = data.svg.edges.map(({ node }: { node: AttendeSVG }) => node);
+  const [attendees, setAttendees] = useState<(AttendeImage | AttendeSVG)[]>([
+    ...images,
+    ...svg,
+  ]);
 
-  console.log(images);
-  const attendees = [...images, ...svg];
-  shuffleArray(attendees);
+  useEffect(() => {
+    const copy = [...attendees];
+    shuffleArray(copy);
+    setAttendees(copy);
+  }, []);
 
   return (
     <div className="bg-white">
@@ -109,7 +117,7 @@ export const Attendees = ({ title }: AttendeesProps): JSX.Element => {
           {title}
         </p>
         <div className="mt-6 grid grid-cols-1 gap-0.5 md:grid-cols-3 lg:mt-8">
-          {attendees.map(({ node }: { node: AttendeSVG | AttendeImage }) => (
+          {attendees.map((node) => (
             <Attendee key={node.name} {...node}>
               {isSVGNode(node) ? (
                 <SVGLogo {...node} />
