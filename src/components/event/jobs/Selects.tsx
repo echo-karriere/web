@@ -49,7 +49,7 @@ export const JobCompanySelect = ({
   filter,
   setFilter,
 }: SelectFilterJobs): JSX.Element => {
-  const companies = [...new Set(jobs.map((j) => j.company))];
+  const companies = [...new Set(jobs.map((j) => j.company))].sort();
   const company = (company: string): Partial<FilterBy> => {
     return { company: company === "all" ? undefined : company };
   };
@@ -72,7 +72,9 @@ export const JobLocationSelect = ({
   filter,
   setFilter,
 }: SelectFilterJobs): JSX.Element => {
-  const locations = [...new Set(jobs.map((j) => j.location))].filter((e) => e);
+  const locations = [...new Set(jobs.map((j) => j.location))]
+    .filter((e) => e)
+    .sort();
   const location = (location: string): Partial<FilterBy> => {
     return { location: location === "all" ? undefined : location };
   };
