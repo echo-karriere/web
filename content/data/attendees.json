@@ -2,12 +2,12 @@
   {
     "name": "Knowit",
     "link": "https://www.knowit.no/",
-    "svg": false,
-    "icon": null
+    "svg": true,
+    "icon": "../images/knowit.svg"
   },
   {
     "name": "Tripletex",
-    "link": "https://www.tripletex.no//",
+    "link": "https://www.tripletex.no/",
     "svg": false,
     "icon": "../images/tripletex.png"
   },
@@ -20,14 +20,14 @@
   {
     "name": "Miles",
     "link": "https://www.miles.no/",
-    "svg": false,
-    "icon": null
+    "svg": true,
+    "icon": "../images/miles.svg"
   },
   {
     "name": "Bouvet",
     "link": "https://www.bouvet.no/",
     "svg": false,
-    "icon": null
+    "icon": "../images/bouvet.png"
   },
   {
     "name": "Simula UiB",
@@ -68,8 +68,8 @@
   {
     "name": "Netsecurity",
     "link": "https://www.netsecurity.no/",
-    "svg": false,
-    "icon": null
+    "svg": true,
+    "icon": "../images/netsecurity.svg"
   },
   {
     "name": "Capgemini",
