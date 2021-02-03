@@ -32,8 +32,8 @@
   {
     "name": "Simula UiB",
     "link": "https://www.simula.no/",
-    "svg": false,
-    "icon": null
+    "svg": true,
+    "icon": "../images/simula.svg"
   },
   {
     "name": "Netcompany",
