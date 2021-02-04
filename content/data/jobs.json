@@ -278,5 +278,13 @@
     "location": null,
     "type": "full",
     "deadline": null
+  },
+  {
+    "name": "Vipps - karriere",
+    "company": "Vipps",
+    "link": "https://www.poption.com/companies/vipps/events/BeEuVO",
+    "location": null,
+    "type": null,
+    "deadline": null
   }
 ]

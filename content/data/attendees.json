@@ -104,8 +104,8 @@
   {
     "name": "Vipps",
     "link": "https://vipps.no/",
-    "svg": false,
-    "icon": null
+    "svg": true,
+    "icon": "../images/vipps.svg"
   },
   {
     "name": "Equinor",
