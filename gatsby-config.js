@@ -22,6 +22,9 @@ module.exports = {
       },
     },
     `gatsby-transformer-json`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-remark-images`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -39,6 +42,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `data`,
         path: `${__dirname}/content/data/`,
       },
     },
@@ -72,9 +76,17 @@ module.exports = {
         extensions: [`.mdx`, `.md`],
         defaultLayouts: {
           pages: require.resolve("./src/templates/page.tsx"),
-          posts: require.resolve("./src/templates/page.tsx"),
+          posts: require.resolve("./src/templates/post.tsx"),
           default: require.resolve("./src/templates/page.tsx"),
         },
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+            },
+          },
+        ],
       },
     },
     `gatsby-plugin-react-helmet`,
@@ -92,8 +104,6 @@ module.exports = {
         icon: "./static/icon.png",
       },
     },
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {

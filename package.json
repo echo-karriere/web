@@ -24,6 +24,7 @@
     "gatsby-plugin-sharp": "2.13.4",
     "gatsby-plugin-sitemap": "2.11.0",
     "gatsby-plugin-typescript": "2.11.0",
+    "gatsby-remark-images": "3.11.0",
     "gatsby-source-filesystem": "2.10.0",
     "gatsby-transformer-json": "2.10.0",
     "gatsby-transformer-sharp": "2.11.0",
