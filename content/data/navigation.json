@@ -18,6 +18,13 @@
         "mainMobile": true
       },
       {
+        "title": "Timeplan",
+        "to": "/timeplan/",
+        "description": "Se timeplanen for hva som skjer på karrieredagen.",
+        "children": "ClockIcon",
+        "mainMobile": true
+      },
+      {
         "title": "Jobb",
         "to": "/jobb/",
         "description": "Se stillingsutlysninger fra deltakere",
@@ -35,13 +42,6 @@
         "to": "/for-bedrifter/",
         "description": "Hva er echo karriere og hvordan kan dere bidra?",
         "children": "OfficeBuildingIcon",
-        "mainMobile": true
-      },
-      {
-        "title": "Påmelding",
-        "to": "/for-bedrifter/pamelding/",
-        "description": "Meld dere på vår digitale karrieredag våren 2021.",
-        "children": "CalendarIcon",
         "mainMobile": true
       }
     ]
