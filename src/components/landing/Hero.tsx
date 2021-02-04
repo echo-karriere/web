@@ -70,14 +70,11 @@ export function Hero(): JSX.Element {
             </main>
           </div>
         </div>
-        <div
-          className="lg:absolute sm:inset-y-0 lg:right-0 lg:w-1/2"
-          style={{ bottom: 0 }}
-        >
+        <div className="lg:absolute sm:inset-y-0 lg:right-0 lg:w-1/2 bottom-0">
           <Img
             className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
             fluid={image.childImageSharp.fluid}
-            alt=""
+            alt="Image of Realfagsbygget in Bergen"
           />
         </div>
       </div>
