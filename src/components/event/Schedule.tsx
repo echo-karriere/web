@@ -7,7 +7,7 @@ interface ItemProps {
 
 const Item = ({ title, time }: ItemProps): JSX.Element => {
   return (
-    <div className="flex flex-col items-center justify-center p-2">
+    <div className="flex flex-col items-center justify-center p-1 md:p-2">
       <h4>{title}</h4>
       <p className="text-gray-600 font-bold">{time}</p>
     </div>
@@ -20,7 +20,7 @@ interface TDProps extends TdHTMLAttributes<HTMLTableDataCellElement> {
 }
 
 const Td = ({ children, bg, ...props }: TDProps): JSX.Element => (
-  <td className={`py-2 px-4 rounded transition-opacity ${bg}`} {...props}>
+  <td className={`md:py-2 md:px-4 rounded transition-opacity ${bg}`} {...props}>
     {children}
   </td>
 );

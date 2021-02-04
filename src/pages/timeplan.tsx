@@ -19,7 +19,7 @@ export default function FourOhFour(): JSX.Element {
           </p>
         </Content>
         <div className="relative py-4 bg-white overflow-hidden">
-          <div className="relative px-4 sm:px-6 lg:px-8">
+          <div className="relative md:px-4 sm:px-6 lg:px-8">
             <Schedule />
           </div>
         </div>
