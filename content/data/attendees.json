@@ -118,5 +118,11 @@
     "link": "https://www2.deloitte.com/no/no.html",
     "svg": false,
     "icon": "../images/deloitte.jpg"
+  },
+  {
+    "name": "Agens",
+    "link": "https://agens.no/",
+    "svg": true,
+    "icon": "../images/agens.svg"
   }
 ]
