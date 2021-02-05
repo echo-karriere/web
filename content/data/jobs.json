@@ -224,26 +224,10 @@
     "deadline": null
   },
   {
-    "name": "Senior IT Konsulent skyløsninger",
+    "name": "Netsecurity - karriere",
     "company": "Netsecurity",
-    "link": "https://www.netsecurity.no/karriere/vi-s%C3%B8ker-en-guru-p%C3%A5-azure-og-office-365",
-    "location": "Kristiansand",
-    "type": "full",
-    "deadline": null
-  },
-  {
-    "name": "Erfarne IT-konsulenter",
-    "company": "Netsecurity",
-    "link": "https://www.netsecurity.no/karriere/it-konsulenter",
+    "link": "https://www.netsecurity.no/karriere",
     "location": null,
-    "type": "full",
-    "deadline": null
-  },
-  {
-    "name": "Senior Sikkerhetskonsulent",
-    "company": "Netsecurity",
-    "link": "https://www.netsecurity.no/karriere/senior_sikkerhetskonsulent",
-    "location": "Oslo",
     "type": "full",
     "deadline": null
   },
@@ -283,6 +267,38 @@
     "name": "Vipps - karriere",
     "company": "Vipps",
     "link": "https://www.poption.com/companies/vipps/events/BeEuVO",
+    "location": null,
+    "type": null,
+    "deadline": null
+  },
+  {
+    "name": "Norges råeste sommerjobb",
+    "company": "Tripletex",
+    "link": "https://www.poption.com/companies/tripletex/postings/plGfl1O",
+    "location": "Oslo",
+    "type": "summer",
+    "deadline": "19.03.2021"
+  },
+  {
+    "name": "Android Developers",
+    "company": "Agens",
+    "link": "https://agens.no/join/android-developers",
+    "location": null,
+    "type": "full",
+    "deadline": null
+  },
+  {
+    "name": "iOS Developers",
+    "company": "Agens",
+    "link": "https://agens.no/join/ios-developer",
+    "location": null,
+    "type": null,
+    "deadline": null
+  },
+  {
+    "name": "Agens - karriere",
+    "company": "Agens",
+    "link": "https://agens.no/join",
     "location": null,
     "type": null,
     "deadline": null
