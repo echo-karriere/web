@@ -43,6 +43,13 @@
         "description": "Hva er echo karriere og hvordan kan dere bidra?",
         "children": "OfficeBuildingIcon",
         "mainMobile": true
+      },
+      {
+        "title": "Informasjon",
+        "to": "/for-bedrifter/informasjon/",
+        "description": "Alt du trenger å vite for å delta på karrieredagen 2021",
+        "children": "CalendarIcon",
+        "mainMobile": false
       }
     ]
   },
