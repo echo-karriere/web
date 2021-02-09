@@ -26,7 +26,6 @@ export function Footer(): JSX.Element {
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="xl:col-span-1">
             <img
-              className="h-10"
               height="32"
               width="32"
               src={query.logoImage.childImageSharp.fluid.base64}
