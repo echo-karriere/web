@@ -302,5 +302,13 @@
     "location": null,
     "type": null,
     "deadline": null
+  },
+  {
+    "name": "Utvikler med hjerte for fag",
+    "company": "Miles",
+    "link": "https://www.miles.no/bergen/utvikler-med-hjerte-for-fag/",
+    "location": "Bergen",
+    "type": "full",
+    "deadline": null
   }
 ]
