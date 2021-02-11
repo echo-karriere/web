@@ -8,6 +8,13 @@
         "to": "/for-studenter/",
         "description": "Hva er echo karriere og hva skjer?",
         "children": "AcademicIcon",
+        "mainMobile": false
+      },
+      {
+        "title": "Delta",
+        "to": "/live/",
+        "description": "Bli med på presentasjonene og standområdet!",
+        "children": "DesktopIcon",
         "mainMobile": true
       },
       {

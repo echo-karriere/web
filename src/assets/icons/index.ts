@@ -3,6 +3,7 @@ import { BookOpenIcon } from "./BookOpenIcon";
 import { BriefcaseIcon } from "./BriefcaseIcon";
 import { CalendarIcon } from "./CalendarIcon";
 import { ClockIcon } from "./ClockIcon";
+import { DesktopIcon } from "./DesktopIcon";
 import { InboxInIcon } from "./InboxInIcon";
 import { LightBulbIcon } from "./LightBulbIcon";
 import { NewspaperIcon } from "./NewspaperIcon";
@@ -20,6 +21,7 @@ export * from "./CalendarIcon";
 export * from "./QuestionIcon";
 export * from "./OfficeBuildingIcon";
 export * from "./ClockIcon";
+export * from "./DesktopIcon";
 
 export const icons = new Map([
   ["NewspaperIcon", NewspaperIcon],
@@ -33,4 +35,5 @@ export const icons = new Map([
   ["OfficeBuildingIcon", OfficeBuildingIcon],
   ["UserGroupIcon", UserGroupIcon],
   ["ClockIcon", ClockIcon],
+  ["DesktopIcon", DesktopIcon],
 ]);

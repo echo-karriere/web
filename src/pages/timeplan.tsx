@@ -20,7 +20,7 @@ interface Talk {
   time: string;
 }
 
-export default function FourOhFour(): JSX.Element {
+export default function SchedulePage(): JSX.Element {
   const data = useStaticQuery(graphql`
     query WorkshopsTalks {
       workshops: allWorkshopsJson {
