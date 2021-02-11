@@ -11,7 +11,7 @@ export function MenuDropdown({ title, children }: Props): JSX.Element {
   return (
     <div>
       <Menu>
-        {({ open }) => (
+        {({ open }: { open: boolean }) => (
           <>
             <MenuButton title={title} />
 

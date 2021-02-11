@@ -1,0 +1,24 @@
+[
+  {
+    "company": "Kantega",
+    "time": "11:30-13:30",
+    "title": "Testing i JavaScript",
+    "description": "I denne workshopen vil dere lære å bruke Jest, det mest utbredte testverktøyet for JavaScript i dag. Vi skal ta for oss testing av 'vanilla' JavaScript, samt testing av React-applikasjoner.",
+    "practical": "Dere må ha installert følgende på deres maskin før workshopen starter",
+    "practicals": [
+      "Visual Studio Code (eller en annen IDE dere er komfortabel med)",
+      "Git",
+      "Nodejs"
+    ],
+    "participants": 30
+  },
+  {
+    "company": "Equinor",
+    "time": "13:45-15:45",
+    "title": "Working with containers in Docker",
+    "description": "Vi går gjennom hvordan man kan bruke Docker til å sette opp en git-tjeneste bestående av et sett microservices. Last gjerne ned Docker på din egen maskin og følg med under workshopen",
+    "practical": null,
+    "practicals": ["Docker"],
+    "participants": 25
+  }
+]
