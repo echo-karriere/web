@@ -40,7 +40,7 @@ export default function Live(): JSX.Element {
                 frameBorder="0"
               ></iframe>
             </div>
-            <div className="py-8">
+            {/* <div className="py-8">
               <iframe
                 src="https://discord.com/widget?id=806510017624014848&theme=dark"
                 width="350"
@@ -49,7 +49,7 @@ export default function Live(): JSX.Element {
                 frameBorder="0"
                 sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
               ></iframe>
-            </div>
+            </div> */}
           </div>
         </div>
       </Container>
