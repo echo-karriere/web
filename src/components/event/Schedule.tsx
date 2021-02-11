@@ -34,7 +34,7 @@ export const Schedule = (): JSX.Element => {
       <tbody>
         <tr>
           <th />
-          <Td colSpan={4} rowSpan={4} bg="bg-c2">
+          <Td colSpan={3} rowSpan={4} bg="bg-c2">
             <Item
               title="Introduksjon og lynpresentasjoner"
               time="10:00-11:15"
@@ -54,9 +54,6 @@ export const Schedule = (): JSX.Element => {
           <th />
           <Td bg="bg-c1">
             <Item title="Bekk" time="11:20-11:50" />
-          </Td>
-          <Td rowSpan={4} bg="bg-c5">
-            <Item title="Workshop: Bouvet" time="11:30-13:30" />
           </Td>
           <Td rowSpan={4} bg="bg-c5">
             <Item title="Workshop: Kantega" time="11:30-13:30" />
