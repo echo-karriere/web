@@ -990,10 +990,10 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
-"@directus/gatsby-source-directus@0.2.9":
-  version "0.2.9"
-  resolved "https://registry.yarnpkg.com/@directus/gatsby-source-directus/-/gatsby-source-directus-0.2.9.tgz#aceb6602eedeb099dfd5b2ab974935f315e5d841"
-  integrity sha512-VFE0NsEBjUEJ8IYw9GhS+ZFpEBxUPUrsd+5plw9fBf/+Ezifxn7nOkKUa1up4BB4cCQr0Chkn7qkIcBB1iffSA==
+"@directus/gatsby-source-directus@0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@directus/gatsby-source-directus/-/gatsby-source-directus-0.3.0.tgz#acc27688beac628c9f9ef995b7dcff3c5d15b1b5"
+  integrity sha512-aYlx3szFtcyLL+IYE2GpiUPzB62kHuei35Ulf2HaMBSjH/jAtIqDDi92SQ6zzuPN4RJsi3Pr9qrd04APGuL99w==
   dependencies:
     "@directus/sdk-js" "^6.2.0"
     colors "^1.4.0"
