@@ -14,6 +14,17 @@ export default function Live(): JSX.Element {
             Her kan du bli med på workshops, presentasjonene og komme deg inn i
             standområdet når det åpner! Vi sees der.
           </p>
+          <p>
+            Dere kan se presentasjonene{" "}
+            <a href="https://www.bigmarker.com/echo-karriere/echo-karriere-digital-karrieredag">
+              her
+            </a>{" "}
+            og bli med på workshops{" "}
+            <a href="https://www.bigmarker.com/echo-karriere/echo-karriere-workshops">
+              her
+            </a>
+            .
+          </p>
         </Content>
 
         <div className="relative py-4 bg-white overflow-hidden">
