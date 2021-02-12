@@ -1009,10 +1009,10 @@
     axios "^0.19.0"
     base-64 "^0.1.0"
 
-"@echo-karriere/clubhouse-lint@0.2.1":
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/@echo-karriere/clubhouse-lint/-/clubhouse-lint-0.2.1.tgz#bbfd2961ad39b4314b20353507cb7585d26f93f9"
-  integrity sha512-l/wJM/pkbefbtKAnHQN20DK6MmspwBaVr/hzndXENVITNcowQTuHsuTaADVrf4fEf23vowG6xpJ3HB6aN/oWHw==
+"@echo-karriere/clubhouse-lint@0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@echo-karriere/clubhouse-lint/-/clubhouse-lint-0.3.0.tgz#d12dc9418e0b644a1a072a4f31e7987104028db4"
+  integrity sha512-PLuVMPRJy2plHY+OIvSm4n9eLBq7DbGvRLt6MBMEV9PsLdrJ61vcV7vo1RvFLGn2PBIR/XDmBhkjUEkD7Rh86Q==
 
 "@endemolshinegroup/cosmiconfig-typescript-loader@3.0.2":
   version "3.0.2"
