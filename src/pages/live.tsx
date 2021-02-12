@@ -26,9 +26,19 @@ export default function Live(): JSX.Element {
             .
           </p>
         </Content>
-
         <div className="relative py-4 bg-white overflow-hidden">
           <div className="relative md:px-4 sm:px-6 lg:px-8 max-w-3xl">
+            <div>
+              <iframe
+                src="https://discord.com/widget?id=806510017624014848&theme=dark"
+                width="350"
+                height="500"
+                allowTransparency={true}
+                frameBorder="0"
+                sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+              ></iframe>
+            </div>
+
             <div className="py-8">
               <iframe
                 className="max-w-sm md:max-w-md lg:max-w-2xl"
@@ -51,16 +61,6 @@ export default function Live(): JSX.Element {
                 frameBorder="0"
               ></iframe>
             </div>
-            {/* <div className="py-8">
-              <iframe
-                src="https://discord.com/widget?id=806510017624014848&theme=dark"
-                width="350"
-                height="500"
-                allowTransparency={true}
-                frameBorder="0"
-                sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-              ></iframe>
-            </div> */}
           </div>
         </div>
       </Container>
