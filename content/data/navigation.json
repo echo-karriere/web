@@ -11,32 +11,25 @@
         "mainMobile": false
       },
       {
-        "title": "Delta",
-        "to": "/live/",
-        "description": "Bli med på presentasjonene og standområdet!",
-        "children": "DesktopIcon",
-        "mainMobile": true
+        "title": "Jobb",
+        "to": "/jobb/",
+        "description": "Se stillingsutlysninger fra deltakere",
+        "children": "BriefcaseIcon",
+        "mainMobile": false
       },
       {
         "title": "Karrieredagen 2021",
         "to": "/karrieredagen-2021/",
-        "description": "Hvem deltar og hva skjer på dagen?",
+        "description": "Hvem deltok og hva skjedde på dagen?",
         "children": "LightBulbIcon",
         "mainMobile": true
       },
       {
         "title": "Timeplan",
         "to": "/timeplan/",
-        "description": "Se timeplanen for hva som skjer på karrieredagen.",
+        "description": "Se timeplanen for hva som skjedde på karrieredagen.",
         "children": "ClockIcon",
         "mainMobile": true
-      },
-      {
-        "title": "Jobb",
-        "to": "/jobb/",
-        "description": "Se stillingsutlysninger fra deltakere",
-        "children": "BriefcaseIcon",
-        "mainMobile": false
       }
     ]
   },
@@ -50,13 +43,6 @@
         "description": "Hva er echo karriere og hvordan kan dere bidra?",
         "children": "OfficeBuildingIcon",
         "mainMobile": true
-      },
-      {
-        "title": "Informasjon",
-        "to": "/for-bedrifter/informasjon/",
-        "description": "Alt du trenger å vite for å delta på karrieredagen 2021",
-        "children": "CalendarIcon",
-        "mainMobile": false
       }
     ]
   },
