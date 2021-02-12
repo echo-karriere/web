@@ -990,18 +990,19 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
-"@directus/gatsby-source-directus@0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@directus/gatsby-source-directus/-/gatsby-source-directus-0.3.0.tgz#acc27688beac628c9f9ef995b7dcff3c5d15b1b5"
-  integrity sha512-aYlx3szFtcyLL+IYE2GpiUPzB62kHuei35Ulf2HaMBSjH/jAtIqDDi92SQ6zzuPN4RJsi3Pr9qrd04APGuL99w==
+"@directus/gatsby-source-directus@2.3.0":
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/@directus/gatsby-source-directus/-/gatsby-source-directus-2.3.0.tgz#d5b30dfbb4fa82c7676f16ee227d4876fbc0f701"
+  integrity sha512-GSjTdPwk0XvroEoKJcpxba8cU0m9Jcd/C1qfzUyNubsmLNlNt4+EUhR+CAFgxiVVGOJ2XQl7twfaWR/iLh0UmQ==
   dependencies:
-    "@directus/sdk-js" "^6.2.0"
+    "@directus/sdk-js" "^6.0.0"
+    array-flat-polyfill "^1.0.1"
     colors "^1.4.0"
     gatsby-node-helpers "^0.3.0"
-    gatsby-source-filesystem "^2.3.23"
+    gatsby-source-filesystem "^2.1.43"
     pluralize "^8.0.0"
 
-"@directus/sdk-js@^6.2.0":
+"@directus/sdk-js@^6.0.0":
   version "6.3.0"
   resolved "https://registry.yarnpkg.com/@directus/sdk-js/-/sdk-js-6.3.0.tgz#0f9c4a4c895bbd534604c6f4160736105ce7cdb1"
   integrity sha512-wUDrjaJJS9++7QTfgAF636aEoAL0k8VhjfpQNbbgXGcm1jU29Z9UqIn5kn9PHIrfR/+1NbZj/M/W+I0lIFTcdA==
@@ -2565,6 +2566,11 @@ array-find-index@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/array-find-index/-/array-find-index-1.0.2.tgz#df010aa1287e164bbda6f9723b0a96a1ec4187a1"
   integrity sha1-3wEKoSh+Fku9pvlyOwqWoexBh6E=
+
+array-flat-polyfill@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/array-flat-polyfill/-/array-flat-polyfill-1.0.1.tgz#1e3a4255be619dfbffbfd1d635c1cf357cd034e7"
+  integrity sha512-hfJmKupmQN0lwi0xG6FQ5U8Rd97RnIERplymOv/qpq8AoNKPPAnxJadjFA23FNWm88wykh9HmpLJUUwUtNU/iw==
 
 array-flatten@1.1.1:
   version "1.1.1"
@@ -6927,7 +6933,7 @@ gatsby-remark-images@3.11.0:
     unist-util-select "^1.5.0"
     unist-util-visit-parents "^2.1.2"
 
-gatsby-source-filesystem@2.11.0, gatsby-source-filesystem@^2.3.23:
+gatsby-source-filesystem@2.11.0, gatsby-source-filesystem@^2.1.43:
   version "2.11.0"
   resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.11.0.tgz#3fff5398796b17eb960e83d0eaa99e578b6e4ef1"
   integrity sha512-SLKksyfRvdMHyF0kb3YCr4ME6RW4Pje9zo1RVAJ1sqaBFDch0YUZzTE51QO586JSkrN00UeE8lU++ODXlm425g==
