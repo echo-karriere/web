@@ -107,24 +107,24 @@ export function DesktopMenu({ mobileButtonClicked }: Props): JSX.Element {
                           </MenuItem>
                         ))}
                       </div>
+                      {item.hasPosts && (
+                        <div className="px-5 py-5 bg-gray-50 sm:px-8 sm:py-8">
+                          <More
+                            title="Siste nytt"
+                            readMoreLink="/nyheter/"
+                            readMoreTitle="Les mer"
+                          >
+                            {allMdx.edges.map((edge: Edge) => (
+                              <MoreLink
+                                title={edge.node.frontmatter.title}
+                                to={edge.node.frontmatter.path}
+                                key={edge.node.frontmatter.path}
+                              />
+                            ))}
+                          </More>
+                        </div>
+                      )}
                     </Menu.Items>
-                    {item.hasPosts && (
-                      <div className="px-5 py-5 bg-gray-50 sm:px-8 sm:py-8">
-                        <More
-                          title="Siste nytt"
-                          readMoreLink="/nyheter/"
-                          readMoreTitle="Les mer"
-                        >
-                          {allMdx.edges.map((edge: Edge) => (
-                            <MoreLink
-                              title={edge.node.frontmatter.title}
-                              to={edge.node.frontmatter.path}
-                              key={edge.node.frontmatter.path}
-                            />
-                          ))}
-                        </More>
-                      </div>
-                    )}
                   </div>
                 </div>
               </MenuDropdown>
