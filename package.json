@@ -43,7 +43,8 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "lint:ts": "eslint .",
-    "lint:style": "prettier --check src"
+    "lint:style": "prettier --check src",
+    "postinstall": "husky install"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -53,7 +54,7 @@
     "not ie >= 8"
   ],
   "devDependencies": {
-    "@echo-karriere/clubhouse-lint": "0.2.1",
+    "@echo-karriere/clubhouse-lint": "0.3.0",
     "@types/node": "14.14.25",
     "@types/react": "17.0.1",
     "@types/react-dom": "17.0.0",
@@ -69,12 +70,6 @@
     "lint-staged": "10.5.4",
     "prettier": "2.2.1",
     "typescript": "4.1.3"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "clubhouse-lint"
-    }
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
