@@ -36,7 +36,7 @@
     "tailwindcss": "2.0.3",
     "typeface-bitter": "1.1.13",
     "typeface-cambo": "1.1.13",
-    "yup": "0.32.8"
+    "yup": "0.32.9"
   },
   "scripts": {
     "develop": "gatsby develop",
