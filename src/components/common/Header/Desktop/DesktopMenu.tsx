@@ -6,6 +6,7 @@ import { MenuDropdown } from ".";
 import { MenuItem } from "./MenuItem";
 import { More, MoreLink } from "./More";
 import { useNavigationData } from "../../../../queries";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 interface Props {
   mobileButtonClicked: () => void;
@@ -26,10 +27,13 @@ export function DesktopMenu({ mobileButtonClicked }: Props): JSX.Element {
     query DesktopLogo {
       file(name: { eq: "echo-karriere" }) {
         childImageSharp {
-          fixed(width: 160, height: 70, quality: 70) {
-            base64
-            srcSet
-          }
+          gatsbyImageData(
+            width: 160
+            height: 70
+            quality: 70
+            placeholder: BLURRED
+            layout: FIXED
+          )
         }
       }
       allMdx(
@@ -55,12 +59,9 @@ export function DesktopMenu({ mobileButtonClicked }: Props): JSX.Element {
         <div>
           <Link to="/">
             <span className="sr-only">echo karriere</span>
-            <img
-              width="160"
-              height="70"
+            <GatsbyImage
               className="w-auto"
-              src={file.childImageSharp.fixed.base64}
-              srcSet={file.childImageSharp.fixed.srcSet}
+              image={file.childImageSharp.gatsbyImageData}
               alt="echo karriere logo"
             />
           </Link>
