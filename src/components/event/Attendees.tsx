@@ -1,7 +1,7 @@
 import React, { ReactNode, useEffect, useState } from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import { shuffleArray } from "../../utils";
-import { FluidObject } from "gatsby-image";
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 
 interface AttendeesProps {
   title: string;
@@ -21,7 +21,7 @@ interface AttendeSVG extends AttendeeProps {
 }
 
 interface AttendeImage extends AttendeeProps {
-  icon: { childImageSharp: { fluid: FluidObject } } | null;
+  icon: { childImageSharp: { gatsbyImageData: IGatsbyImageData } } | null;
 }
 
 const Attendee = ({ link, children }: AttendeeProps): JSX.Element => (
@@ -42,10 +42,9 @@ const SVGLogo = ({ name, icon }: AttendeSVG): JSX.Element => (
 const ImageLogo = ({ name, icon }: AttendeImage): JSX.Element => {
   if (icon) {
     return (
-      <img
-        className="w-full"
-        src={icon.childImageSharp.fluid.src}
-        srcSet={icon.childImageSharp.fluid.srcSet}
+      <GatsbyImage
+        imgStyle={{ height: "unset" }}
+        image={icon.childImageSharp.gatsbyImageData}
         alt={name}
       />
     );
@@ -70,9 +69,7 @@ export const Attendees = ({ title }: AttendeesProps): JSX.Element => {
               svg
               icon {
                 childImageSharp {
-                  fluid(maxWidth: 250, quality: 70) {
-                    ...GatsbyImageSharpFluid
-                  }
+                  gatsbyImageData(width: 220, quality: 70, layout: CONSTRAINED)
                 }
               }
             }

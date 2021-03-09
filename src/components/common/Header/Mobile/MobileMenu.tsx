@@ -4,6 +4,7 @@ import { graphql, Link, useStaticQuery } from "gatsby";
 import { BigMobileLink } from "./BigMobileLink";
 
 import { useNavigationData } from "../../../../queries";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 interface Props {
   mobileOpen: boolean;
@@ -19,11 +20,12 @@ export function MobileMenu({
     query LogoQuery {
       logo: file(name: { eq: "echo-karriere-logo" }) {
         childImageSharp {
-          fixed(width: 64, height: 64) {
-            src
-            srcSet
-            base64
-          }
+          gatsbyImageData(
+            width: 64
+            height: 64
+            placeholder: BLURRED
+            layout: FIXED
+          )
         }
       }
     }
@@ -44,10 +46,9 @@ export function MobileMenu({
           <div className="pt-5 pb-6 px-5">
             <div className="flex items-center justify-between">
               <div>
-                <img
+                <GatsbyImage
                   className="h-10 w-auto"
-                  src={query.logo.childImageSharp.fixed.base64}
-                  srcSet={query.logo.childImageSharp.fixed.srcSet}
+                  image={query.logo.childImageSharp.gatsbyImageData}
                   alt="echo karriere logo"
                 />
               </div>

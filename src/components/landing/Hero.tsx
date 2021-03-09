@@ -1,6 +1,6 @@
 import React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 export function Hero(): JSX.Element {
   const { apiLanding: data, realfag: image } = useStaticQuery(graphql`
@@ -12,9 +12,7 @@ export function Hero(): JSX.Element {
       }
       realfag: file(name: { eq: "realfagbygget-utside" }) {
         childImageSharp {
-          fluid(maxWidth: 1024, quality: 70) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(quality: 70, layout: FULL_WIDTH)
         }
       }
     }
@@ -71,9 +69,9 @@ export function Hero(): JSX.Element {
           </div>
         </div>
         <div className="lg:absolute sm:inset-y-0 lg:right-0 lg:w-1/2 bottom-0">
-          <Img
+          <GatsbyImage
+            image={image.childImageSharp.gatsbyImageData}
             className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-            fluid={image.childImageSharp.fluid}
             alt="Image of Realfagsbygget in Bergen"
           />
         </div>

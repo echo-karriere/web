@@ -2,6 +2,7 @@ import React from "react";
 import { graphql, Link, useStaticQuery } from "gatsby";
 
 import { useNavigationData, useSiteMetadata } from "../../queries";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 export function Footer(): JSX.Element {
   const metadata = useSiteMetadata();
@@ -10,11 +11,12 @@ export function Footer(): JSX.Element {
     query FooterLogoQuery {
       logoImage: file(name: { eq: "echo-karriere-logo" }) {
         childImageSharp {
-          fluid(maxHeight: 32, maxWidth: 32) {
-            src
-            srcSet
-            base64
-          }
+          gatsbyImageData(
+            height: 32
+            width: 32
+            placeholder: BLURRED
+            layout: CONSTRAINED
+          )
         }
       }
     }
@@ -25,11 +27,8 @@ export function Footer(): JSX.Element {
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="xl:col-span-1">
-            <img
-              height="32"
-              width="32"
-              src={query.logoImage.childImageSharp.fluid.base64}
-              srcSet={query.logoImage.childImageSharp.fluid.srcSet}
+            <GatsbyImage
+              image={query.logoImage.childImageSharp.gatsbyImageData}
               alt="echo karriere logo"
             />
             <p className="mt-8 text-gray-600 text-lg">{metadata.description}</p>
