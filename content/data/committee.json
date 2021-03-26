@@ -58,5 +58,15 @@
       "linkedin": null,
       "website": null
     }
+  },
+  {
+    "name": "Kristin Loka Øydna",
+    "position": "Styremedlem",
+    "headshot": "../images/kristin.jpg",
+    "socials": {
+      "github": null,
+      "linkedin": null,
+      "website": null
+    }
   }
 ]
