@@ -1,15 +1,15 @@
 import React from "react";
-import { InterestForm } from "../../components/forms/InterestForm";
-import { Layout } from "../../components/common/Layout";
-import { SEO } from "../../components/common/Seo";
-import { Container } from "../../components/common/Container";
+import { InterestForm } from "../../components";
+import { Layout } from "../../components";
+import { SEO } from "../../components";
+import { Container } from "../../components";
 
 export default function InterestPage(): JSX.Element {
   return (
     <Layout>
       <SEO
-        title="Interesseskjema"
-        description="Vis interesse for å delta på echo karriere sin karrieredag"
+        title="Arrangementstypeskjema"
+        description="Gi tilbakemelding på om årets arrangement bør holdes fysisk eller digitalt."
       />
       <Container>
         <InterestForm />

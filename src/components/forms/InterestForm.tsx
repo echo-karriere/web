@@ -10,7 +10,7 @@ type FormData = {
   person: string;
   email: string;
   phone: number;
-  day: "none" | "day1" | "day2";
+  type: "both" | "digital" | "physical" | "none";
   banquet: "yes" | "no";
   other: string;
   confirmation: boolean;
@@ -32,17 +32,10 @@ yup.setLocale({
 
 const interestSchema = yup.object().shape({
   company: yup.string().required(),
-  person: yup.string().required(),
-  email: yup.string().email().required(),
-  phone: yup.number().integer().required(),
-  day: yup.mixed().oneOf(["N/A", "17", "18"]).required(),
-  extra: yup
-    .mixed()
-    .oneOf(["workshop", "talk", "lightningtalk", "presentation", "interview"])
-    .notRequired(),
+  type: yup.mixed().oneOf(["both", "digital", "physical", "none"]).required(),
+  extra: yup.mixed().oneOf(["workshop", "talk", "lightningtalk"]).notRequired(),
   banquet: yup.mixed().oneOf(["yes", "no", "maybe"]).notRequired(),
   other: yup.string().notRequired(),
-  confirmation: yup.boolean().oneOf([true], " Du må bekrefte").required(),
 });
 
 export function InterestForm(): JSX.Element {
@@ -82,7 +75,7 @@ export function InterestForm(): JSX.Element {
             <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl">
               Takk!
             </h1>
-            <h2>Du hører fra oss så snart som mulig.</h2>
+            <h2>Ditt svar er registrert.</h2>
           </div>
         </div>
       </div>
@@ -109,11 +102,18 @@ export function InterestForm(): JSX.Element {
       <div className="relative max-w-xl mx-auto">
         <div className="text-center">
           <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-            Interesseskjema
+            Skjema for ønsket arrangementstype
           </h2>
           <p className="mt-4 text-lg leading-6 text-gray-500">
-            Fyll ut dette skjemaet dersom dere har vil delta på fremtidige
-            arrangementer og bli kontaktet av oss.
+            Vi har startet planleggningen av karrieredagen{" "}
+            <strong>16. og 17. september 2021</strong>. På grunn av dagens
+            situasjon ønsker vi å vite om dere ønsker at vi holder karrieredagen
+            fysisk eller digital.
+          </p>
+          <p className="mt-4 text-lg leading-6 text-gray-500">
+            Påmeldingen for karrieredagen vi skje <strong>10. mai 2021</strong>.
+            Informasjon om påmelding og vilkår vil på forhånd bli sendt ut på
+            mail.
           </p>
         </div>
         <div className="mt-12">
@@ -125,7 +125,7 @@ export function InterestForm(): JSX.Element {
               <div className="pt-8">
                 <div>
                   <h3 className="text-lg leading-6 font-medium text-gray-900">
-                    Bedrift
+                    Bedriftsinformasjon
                   </h3>
                   <p className="mt-1 text-sm text-gray-500">
                     Informasjon om din bedrift.
@@ -137,7 +137,7 @@ export function InterestForm(): JSX.Element {
                       htmlFor="comp_id"
                       className="block text-sm font-medium text-gray-700"
                     >
-                      Navn
+                      Bedriftsnavn
                       {errors.company && (
                         <span className="text-red-500 text-xs float-right">
                           {errors.company.message}
@@ -160,113 +160,38 @@ export function InterestForm(): JSX.Element {
               <div className="pt-8">
                 <div>
                   <h3 className="text-lg leading-6 font-medium text-gray-900">
-                    Kontaktperson
+                    Arrangementsønsker
                   </h3>
                   <p className="mt-1 text-sm text-gray-500">
-                    Hvem skal vi kontakte i fremtiden?
-                  </p>
-                </div>
-                <div className="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-3">
-                  <div className="sm:col-span-3">
-                    <label
-                      htmlFor="pers_id"
-                      className="block text-sm font-medium text-gray-700"
-                    >
-                      Navn
-                      {errors.person && (
-                        <span className="text-red-500 text-xs float-right">
-                          {errors.person.message}
-                        </span>
-                      )}
-                    </label>
-                    <div className="mt-1">
-                      <input
-                        type="text"
-                        name="person"
-                        id="pers_id"
-                        autoComplete="full-name"
-                        ref={register({ required: true })}
-                        className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="sm:col-span-3">
-                    <label
-                      htmlFor="email_id"
-                      className="block text-sm font-medium text-gray-700"
-                    >
-                      Epost
-                      {errors.email && (
-                        <span className="text-red-500 text-xs float-right">
-                          {errors.email.message}
-                        </span>
-                      )}
-                    </label>
-                    <div className="mt-1">
-                      <input
-                        id="email_id"
-                        name="email"
-                        type="email"
-                        autoComplete="email"
-                        ref={register({ required: true })}
-                        className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="sm:col-span-3">
-                    <label
-                      htmlFor="num_id"
-                      className="block text-sm font-medium text-gray-700"
-                    >
-                      Telefonnummer
-                      {errors.phone && (
-                        <span className="text-red-500 text-xs float-right">
-                          {errors.phone.message}
-                        </span>
-                      )}
-                    </label>
-                    <div className="mt-1">
-                      <input
-                        id="num_id"
-                        name="phone"
-                        type="tel"
-                        autoComplete="phone"
-                        ref={register({ required: true })}
-                        className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="pt-8">
-                <div>
-                  <h3 className="text-lg leading-6 font-medium text-gray-900">
-                    Ønsker
-                  </h3>
-                  <p className="mt-1 text-sm text-gray-500">
-                    Meld konkret interesse for aktiviter på selve dagen.
+                    Velg ønsket arrangementstype og eventuelle tanker om å holde
+                    noe ekstra.
                   </p>
                 </div>
                 <div className="mt-6">
                   <fieldset>
                     <legend className="text-base font-medium text-gray-900">
-                      Hvilken dag ønsker dere å delta på?
+                      Hva slags arrangement ser dere for dere at dere kan delta
+                      på?
                     </legend>
                     <div className="mt-4 space-y-4">
                       <div>
                         <div className="mt-1">
                           <select
                             id="day_id"
-                            name="day"
+                            name="type"
                             className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
-                            ref={register}
+                            ref={register({ required: true })}
                           >
-                            <option value="N/A">Ingen preferanse</option>
-                            <option value="17">Dag 1 (17. september)</option>
-                            <option value="18">Dag 2 (18. september)</option>
+                            <option value="both">
+                              Kan delta både fysisk og digital
+                            </option>
+                            <option value="physical">
+                              Kan kun delta dersom det blir fysisk
+                            </option>
+                            <option value="digital">
+                              Kan kun delta dersom det blir digitalt
+                            </option>
+                            <option value="N/A">Kan ikke delta</option>
                           </select>
                         </div>
                       </div>
@@ -274,7 +199,8 @@ export function InterestForm(): JSX.Element {
                   </fieldset>
                   <fieldset className="mt-6">
                     <legend className="text-base font-medium text-gray-900">
-                      Ønsker dere å delta/arrangere noe på karrieredagen?
+                      Kan dere se for dere at dere ønsker å arrangere noe på
+                      karrieredagen?
                     </legend>
                     <div className="mt-4 space-y-4">
                       <div className="relative flex items-start">
@@ -295,8 +221,8 @@ export function InterestForm(): JSX.Element {
                             Workshop
                           </label>
                           <p className="text-gray-500">
-                            Arranger en praktisk workshop med et begrenset
-                            antall deltakere.
+                            En praktisk workshop med et begrenset antall
+                            deltakere.
                           </p>
                         </div>
                       </div>
@@ -318,8 +244,7 @@ export function InterestForm(): JSX.Element {
                             Foredrag
                           </label>
                           <p className="text-gray-500">
-                            Hold et lengre foredrag (presentasjon, 40-60
-                            minutter).
+                            Et lengre foredrag (presentasjon, 40-60 minutter).
                           </p>
                         </div>
                       </div>
@@ -341,53 +266,7 @@ export function InterestForm(): JSX.Element {
                             Lynforedrag
                           </label>
                           <p className="text-gray-500">
-                            Hold et kortere foredrag (15-20 minutter).
-                          </p>
-                        </div>
-                      </div>
-                      <div className="relative flex items-start">
-                        <div className="flex items-center h-5">
-                          <input
-                            type="checkbox"
-                            id="extra_pres"
-                            name="presentation"
-                            ref={register}
-                            className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
-                          />
-                        </div>
-                        <div className="ml-3 text-sm">
-                          <label
-                            htmlFor="extra_pres"
-                            className="font-medium text-gray-700"
-                          >
-                            Lynpresentasjon
-                          </label>
-                          <p className="text-gray-500">
-                            Vil dere delta på lynpresentasjonene på begynnelsen
-                            av dagen?
-                          </p>
-                        </div>
-                      </div>
-                      <div className="relative flex items-start">
-                        <div className="flex items-center h-5">
-                          <input
-                            type="checkbox"
-                            id="extra_view"
-                            name="interview"
-                            ref={register}
-                            className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
-                          />
-                        </div>
-                        <div className="ml-3 text-sm">
-                          <label
-                            htmlFor="extra_pres"
-                            className="font-medium text-gray-700"
-                          >
-                            Lynintervju
-                          </label>
-                          <p className="text-gray-500">
-                            Vil dere ha mulighet til å gjennomføre lynintervju
-                            på selve dagen?
+                            Et kortere foredrag (15 minutter).
                           </p>
                         </div>
                       </div>
@@ -401,7 +280,8 @@ export function InterestForm(): JSX.Element {
                         Bankett
                       </legend>
                       <p className="text-sm text-gray-500">
-                        Ønsker dere å delta på vår bankett på kvelden siste dag?
+                        Ved en fysisk karrieredag, er dere interessert i å delta
+                        på bankett?
                       </p>
                     </div>
                     <div className="mt-4 space-y-4">
@@ -485,7 +365,7 @@ export function InterestForm(): JSX.Element {
                             cols={25}
                             ref={register}
                             className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
-                          ></textarea>
+                          />
                         </div>
                         <p className="mt-2 text-sm text-gray-500">
                           Om det skulle være noe mer, skriv det gjerne her!
@@ -496,48 +376,13 @@ export function InterestForm(): JSX.Element {
                 </div>
               </div>
 
-              <div className="pt-8">
-                <fieldset>
-                  <legend className="text-base font-medium text-gray-900">
-                    Til slutt...
-                  </legend>
-                  <div className="mt-4 space-y-4">
-                    <div className="relative flex items-start">
-                      <div className="flex items-center h-5">
-                        <input
-                          type="checkbox"
-                          id="conf_id"
-                          name="confirmation"
-                          ref={register({ required: true })}
-                          className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
-                        />
-                      </div>
-                      <div className="ml-3 text-sm">
-                        <label
-                          htmlFor="conf_id"
-                          className="font-medium text-gray-700"
-                        >
-                          Vi vil med dette melde vår <strong>interesse</strong>{" "}
-                          for <em>echo karriere</em> 2021.
-                          {errors.confirmation && (
-                            <span className="text-red-500 text-xs float-right">
-                              Du må bekrefte
-                            </span>
-                          )}
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                </fieldset>
-              </div>
-
               <div className="pt-5">
                 <div className="mt-4 sm:col-span-2">
                   <button
                     className="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-c8 hover:bg-c7 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-c6"
                     type="submit"
                   >
-                    Meld interesse
+                    Send inn
                   </button>
                 </div>
               </div>
