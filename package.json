@@ -5,7 +5,7 @@
   "dependencies": {
     "@directus/gatsby-source-directus": "0.3.0",
     "@headlessui/react": "0.3.1",
-    "@hookform/resolvers": "1.3.5",
+    "@hookform/resolvers": "1.3.6",
     "@mdx-js/mdx": "1.6.22",
     "@mdx-js/react": "1.6.22",
     "@tailwindcss/forms": "0.2.1",
