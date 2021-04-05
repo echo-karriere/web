@@ -1,5 +1,5 @@
 import React from "react";
-import { Menu, Transition } from "@headlessui/react";
+import { Transition } from "@headlessui/react";
 import { graphql, Link, useStaticQuery } from "gatsby";
 import { BigMobileLink } from "./BigMobileLink";
 
@@ -33,6 +33,7 @@ export function MobileMenu({
 
   return (
     <Transition
+      as={React.Fragment}
       show={mobileOpen}
       enter="duration-200 ease-out"
       enterFrom="opacity-0 scale-95"
@@ -53,7 +54,7 @@ export function MobileMenu({
                 />
               </div>
               <div className="-mr-2">
-                <Menu.Button
+                <button
                   onClick={mobileButtonClicked}
                   className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none"
                 >
@@ -73,7 +74,7 @@ export function MobileMenu({
                       d="M6 18L18 6M6 6l12 12"
                     />
                   </svg>
-                </Menu.Button>
+                </button>
               </div>
             </div>
             <div className="mt-6">

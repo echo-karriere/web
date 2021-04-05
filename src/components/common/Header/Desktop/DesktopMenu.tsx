@@ -67,7 +67,7 @@ export function DesktopMenu({ mobileButtonClicked }: Props): JSX.Element {
           </Link>
         </div>
         <div className="-mr-2 -my-2 md:hidden">
-          <Menu.Button
+          <button
             onClick={mobileButtonClicked}
             className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none"
           >
@@ -87,7 +87,7 @@ export function DesktopMenu({ mobileButtonClicked }: Props): JSX.Element {
                 d="M4 6h16M4 12h16M4 18h16"
               />
             </svg>
-          </Menu.Button>
+          </button>
         </div>
         <nav className="hidden md:flex space-x-10 pl-8">
           {navigation.map((item) => (
