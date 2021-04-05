@@ -51,7 +51,7 @@ export function InterestForm(): JSX.Element {
       setSubmitted(true);
     } else {
       axios
-        .post("https://formcarry.com/s/DTkwrilmrEEd", data, {
+        .post("https://formcarry.com/s/NnAXW6UPoF", data, {
           headers: { Accept: "application/json" },
         })
         .then((res) => {
@@ -100,9 +100,9 @@ export function InterestForm(): JSX.Element {
   return (
     <div className="bg-white py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24">
       <div className="relative max-w-xl mx-auto">
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-            Skjema for ønsket arrangementstype
+        <div>
+          <h2 className="text-center text-3xl font-bold text-gray-900 sm:text-4xl">
+            Ønsket arrangementstype
           </h2>
           <p className="mt-4 text-lg leading-6 text-gray-500">
             Vi har startet planleggningen av karrieredagen{" "}
@@ -113,7 +113,7 @@ export function InterestForm(): JSX.Element {
           <p className="mt-4 text-lg leading-6 text-gray-500">
             Påmeldingen for karrieredagen vi skje <strong>10. mai 2021</strong>.
             Informasjon om påmelding og vilkår vil på forhånd bli sendt ut på
-            mail.
+            mail og blir lagt ut på våre nettsider.
           </p>
         </div>
         <div className="mt-12">
@@ -160,7 +160,7 @@ export function InterestForm(): JSX.Element {
               <div className="pt-8">
                 <div>
                   <h3 className="text-lg leading-6 font-medium text-gray-900">
-                    Arrangementsønsker
+                    Ønsker
                   </h3>
                   <p className="mt-1 text-sm text-gray-500">
                     Velg ønsket arrangementstype og eventuelle tanker om å holde
@@ -191,7 +191,7 @@ export function InterestForm(): JSX.Element {
                             <option value="digital">
                               Kan kun delta dersom det blir digitalt
                             </option>
-                            <option value="N/A">Kan ikke delta</option>
+                            <option value="none">Kan ikke delta</option>
                           </select>
                         </div>
                       </div>
