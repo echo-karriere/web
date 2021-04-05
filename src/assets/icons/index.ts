@@ -10,6 +10,7 @@ import { NewspaperIcon } from "./NewspaperIcon";
 import { OfficeBuildingIcon } from "./OfficeBuildingIcon";
 import { QuestionIcon } from "./QuestionIcon";
 import { UserGroupIcon } from "./UserGroupIcon";
+import { PencilAltIcon } from "./PencilAltIcon";
 
 export * from "./NewspaperIcon";
 export * from "./LightBulbIcon";
@@ -22,6 +23,7 @@ export * from "./QuestionIcon";
 export * from "./OfficeBuildingIcon";
 export * from "./ClockIcon";
 export * from "./DesktopIcon";
+export * from "./PencilAltIcon";
 
 export const icons = new Map([
   ["NewspaperIcon", NewspaperIcon],
@@ -36,4 +38,5 @@ export const icons = new Map([
   ["UserGroupIcon", UserGroupIcon],
   ["ClockIcon", ClockIcon],
   ["DesktopIcon", DesktopIcon],
+  ["PencilAltIcon", PencilAltIcon],
 ]);
