@@ -43,6 +43,13 @@
         "description": "Hva er echo karriere og hvordan kan dere bidra?",
         "children": "OfficeBuildingIcon",
         "mainMobile": true
+      },
+      {
+        "title": "Arrangementsønske",
+        "to": "/for-bedrifter/ønsker",
+        "description": "Gi oss tilbakemelding på hva slags arrangementstype dere ønsker til høsten.",
+        "children": "PencilAltIcon",
+        "mainMobile": true
       }
     ]
   },
