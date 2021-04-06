@@ -1,27 +1,11 @@
 [
   {
-    "name": "Architect Greenhouse Graduate 2021",
-    "company": "DNB",
-    "link": "https://jobb.dnb.no/job/Oslo-Architect-Greenhouse-Graduate-2021-0191/642947101/",
-    "location": null,
-    "type": "full",
-    "deadline": "31.05.2021"
-  },
-  {
     "name": "Nyutdannet utvikler",
     "company": "Tripletex",
     "link": "https://jobs.academicwork.no/annonse/nyutdannet-utvikler-2021/15044486",
     "location": "Oslo",
     "type": "full",
     "deadline": null
-  },
-  {
-    "name": "Sommerjobb 2021 - Systemutvikler",
-    "company": "SPV",
-    "link": "https://web103.reachmee.com/ext/I021/1799/job?site=6&lang=NO&validator=ccd1798ae14ecca4dfb3e4f13b961aa2&ihelper=web103.reachmee.com%2Fext%2FI021%2F1799%2Fmain%3Fsite%3D6&job_id=23",
-    "location": "Bergen",
-    "type": "summer",
-    "deadline": "31.03.2021"
   },
   {
     "name": "Åpen søknad",
@@ -48,41 +32,9 @@
     "deadline": null
   },
   {
-    "name": "Graduate 2021 Cloud – Bergen",
-    "company": "Capgemini",
-    "link": "https://www.capgemini.com/no-no/jobs/graduate-2021-cloud-bergen/",
-    "location": "Bergen",
-    "type": "full",
-    "deadline": "28.09.2021"
-  },
-  {
-    "name": "Graduate Cloud – Oslo",
-    "company": "Capgemini",
-    "link": "https://www.capgemini.com/no-no/jobs/graduate-cloud-oslo/",
-    "location": "Oslo",
-    "type": "full",
-    "deadline": null
-  },
-  {
     "name": "Software Engineer – Oslo",
     "company": "Capgemini",
     "link": "https://www.capgemini.com/no-no/jobs/software-engineer-oslo/",
-    "location": "Oslo",
-    "type": "full",
-    "deadline": null
-  },
-  {
-    "name": "Graduate Cybersecurity – Stavanger",
-    "company": "Capgemini",
-    "link": "https://www.capgemini.com/no-no/jobs/graduate-cybersecurity-stavanger/",
-    "location": "Stavanger",
-    "type": "full",
-    "deadline": null
-  },
-  {
-    "name": "Graduate 2021 – Cybersecurity",
-    "company": "Capgemini",
-    "link": "https://www.capgemini.com/no-no/jobs/graduate-2021-cybersecurity/",
     "location": "Oslo",
     "type": "full",
     "deadline": null
@@ -120,22 +72,6 @@
     "deadline": null
   },
   {
-    "name": "Student: Nyutdannet utvikler med oppstart august 2021",
-    "company": "Netcompany",
-    "link": "https://jobs.smartrecruiters.com/Netcompany1/743999731779563-student-nyutdannet-utvikler-med-oppstart-august-2021",
-    "location": "Oslo",
-    "type": "full",
-    "deadline": "28.02.2021"
-  },
-  {
-    "name": "Gjensidigedagen 19. mars 2021",
-    "company": "Gjensidige",
-    "link": "/jobb/gjensidigedagen/",
-    "location": "Oslo",
-    "type": null,
-    "deadline": "28.02.2021"
-  },
-  {
     "name": "Internshipordning",
     "company": "Gjensidige",
     "link": "/jobb/gjensidige-internship/",
@@ -152,27 +88,11 @@
     "deadline": null
   },
   {
-    "name": "Sommerjobb i kryptologi ved Nasjonal Sikkerhetsmyndighet",
-    "company": "NSM",
-    "link": "https://nsm.easycruit.com/vacancy/2620879/37729",
-    "location": "Oslo",
-    "type": "summer",
-    "deadline": "01.03.2021"
-  },
-  {
     "name": "Deloitte - karriere",
     "company": "Deloitte",
     "link": "https://deloitte.recman.no/",
     "location": null,
     "type": null,
-    "deadline": null
-  },
-  {
-    "name": "Åpen søknad - Deloitte",
-    "company": "Deloitte",
-    "link": "https://deloitte.recman.no/job.php?job_id=644949",
-    "location": null,
-    "type": "full",
     "deadline": null
   },
   {
@@ -208,22 +128,6 @@
     "deadline": null
   },
   {
-    "name": "Studentakselerator 2021",
-    "company": "Iterate",
-    "link": "https://www.poption.com/companies/iterate/postings/wRJfmg",
-    "location": "Oslo",
-    "type": null,
-    "deadline": "22.03.2021"
-  },
-  {
-    "name": "Interesseskjema - Vipps",
-    "company": "Vipps",
-    "link": "https://www.poption.com/companies/vipps/events/BeEuVO",
-    "location": null,
-    "type": null,
-    "deadline": null
-  },
-  {
     "name": "Netsecurity - karriere",
     "company": "Netsecurity",
     "link": "https://www.netsecurity.no/karriere",
@@ -240,44 +144,12 @@
     "deadline": null
   },
   {
-    "name": "Sommerjobb hos Bouvet Bergen",
-    "company": "Bouvet",
-    "link": "https://www.bouvet.no/bli-en-av-oss/ledige-stillinger/sommerjobb-hos-bouvet-bergen-367",
-    "location": "Bergen",
-    "type": "summer",
-    "deadline": "19.02.2021"
-  },
-  {
-    "name": "Nyutdannet systemutvikler",
-    "company": "Bouvet",
-    "link": "https://www.bouvet.no/bli-en-av-oss/ledige-stillinger/nyutdannet-systemutvikler-bergen-359",
-    "location": "Bergen",
-    "type": "full",
-    "deadline": "26.02.2021"
-  },
-  {
     "name": "Miles - karriere",
     "company": "Miles",
     "link": "https://www.miles.no/",
     "location": null,
     "type": "full",
     "deadline": null
-  },
-  {
-    "name": "Vipps - karriere",
-    "company": "Vipps",
-    "link": "https://www.poption.com/companies/vipps/events/BeEuVO",
-    "location": null,
-    "type": null,
-    "deadline": null
-  },
-  {
-    "name": "Norges råeste sommerjobb",
-    "company": "Tripletex",
-    "link": "https://www.poption.com/companies/tripletex/postings/plGfl1",
-    "location": "Oslo",
-    "type": "summer",
-    "deadline": "19.03.2021"
   },
   {
     "name": "Android Developers",

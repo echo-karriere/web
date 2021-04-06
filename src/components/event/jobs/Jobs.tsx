@@ -15,7 +15,6 @@ export const Jobs = (): JSX.Element => {
             link
             location
             type
-            deadline
           }
         }
       }
