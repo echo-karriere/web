@@ -2,9 +2,6 @@ name: pipeline
 
 on:
   push:
-    branches:
-      - main
-      - production
   pull_request:
   workflow_dispatch:
 
