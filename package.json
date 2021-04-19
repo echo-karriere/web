@@ -24,7 +24,7 @@
     "gatsby-plugin-sharp": "3.3.0",
     "gatsby-plugin-sitemap": "3.3.0",
     "gatsby-plugin-typescript": "3.3.0",
-    "gatsby-remark-images": "4.2.0",
+    "gatsby-remark-images": "5.0.0",
     "gatsby-source-filesystem": "3.3.0",
     "gatsby-transformer-json": "3.3.0",
     "gatsby-transformer-sharp": "3.3.0",
