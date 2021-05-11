@@ -22,7 +22,7 @@
     "gatsby-plugin-react-helmet": "4.4.0",
     "gatsby-plugin-robots-txt": "1.5.6",
     "gatsby-plugin-sharp": "3.4.2",
-    "gatsby-plugin-sitemap": "3.3.0",
+    "gatsby-plugin-sitemap": "4.0.0",
     "gatsby-plugin-typescript": "3.4.0",
     "gatsby-remark-images": "5.1.0",
     "gatsby-source-filesystem": "3.4.0",
