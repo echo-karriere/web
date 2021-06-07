@@ -1,7 +1,4 @@
-import { Content } from "../components/common/Content";
-
-import { Layout } from "../components/common/Layout";
-import { SEO } from "../components/common/Seo";
+import { Content, Layout, SEO } from "../components";
 
 export default function FourOhFour(): JSX.Element {
   return (

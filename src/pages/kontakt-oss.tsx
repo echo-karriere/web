@@ -1,7 +1,4 @@
-import { Layout } from "../components/common/Layout";
-import { SEO } from "../components/common/Seo";
-import { Container } from "../components/common/Container";
-import { ContactUs } from "../components/forms/ContactUs";
+import { ContactUs, Container, Layout, SEO } from "../components";
 
 export default function Index(): JSX.Element {
   return (

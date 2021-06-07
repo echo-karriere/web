@@ -1,7 +1,4 @@
-import { Layout } from "../../components/common/Layout";
-import { SEO } from "../../components/common/Seo";
-import { Container } from "../../components/common/Container";
-import { CommitteeApplication } from "../../components/forms/CommiteeApplicationForm";
+import { CommitteeApplication, Container, Layout, SEO } from "../../components";
 
 export default function Index(): JSX.Element {
   return (

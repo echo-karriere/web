@@ -1,11 +1,10 @@
 import { graphql, useStaticQuery } from "gatsby";
 
-import { Notification } from "../common/Notification";
-import { Hero } from "./Hero";
-
 import aboutUrl from "../../assets/about.svg";
 import hiringUrl from "../../assets/hiring.svg";
 import studentsUrl from "../../assets/students.svg";
+import { Notification } from "../common/Notification";
+import { Hero } from "./Hero";
 
 export function Intro(): JSX.Element {
   const { apiLanding: data } = useStaticQuery(graphql`

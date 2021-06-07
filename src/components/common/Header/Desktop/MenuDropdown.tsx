@@ -1,6 +1,7 @@
 import { Menu, Transition } from "@headlessui/react";
-import { MenuButton } from "./MenuButton";
 import { ReactNode } from "react";
+
+import { MenuButton } from "./MenuButton";
 
 interface Props {
   title: string;

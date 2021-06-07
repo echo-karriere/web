@@ -1,7 +1,8 @@
-import { ReactNode, useEffect, useState } from "react";
 import { graphql, useStaticQuery } from "gatsby";
-import { shuffleArray } from "../../utils";
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
+import { ReactNode, useEffect, useState } from "react";
+
+import { shuffleArray } from "../../utils";
 
 interface AttendeesProps {
   title: string;
@@ -104,7 +105,7 @@ export const Attendees = ({ title }: AttendeesProps): JSX.Element => {
     const copy = [...attendees];
     shuffleArray(copy);
     setAttendees(copy);
-  }, []);
+  }, [attendees]);
 
   return (
     <div className="bg-white">

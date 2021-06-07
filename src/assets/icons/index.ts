@@ -8,22 +8,22 @@ import { InboxInIcon } from "./InboxInIcon";
 import { LightBulbIcon } from "./LightBulbIcon";
 import { NewspaperIcon } from "./NewspaperIcon";
 import { OfficeBuildingIcon } from "./OfficeBuildingIcon";
+import { PencilAltIcon } from "./PencilAltIcon";
 import { QuestionIcon } from "./QuestionIcon";
 import { UserGroupIcon } from "./UserGroupIcon";
-import { PencilAltIcon } from "./PencilAltIcon";
 
-export * from "./NewspaperIcon";
-export * from "./LightBulbIcon";
-export * from "./BriefcaseIcon";
-export * from "./BookOpenIcon";
-export * from "./InboxInIcon";
 export * from "./AcademicIcon";
+export * from "./BookOpenIcon";
+export * from "./BriefcaseIcon";
 export * from "./CalendarIcon";
-export * from "./QuestionIcon";
-export * from "./OfficeBuildingIcon";
 export * from "./ClockIcon";
 export * from "./DesktopIcon";
+export * from "./InboxInIcon";
+export * from "./LightBulbIcon";
+export * from "./NewspaperIcon";
+export * from "./OfficeBuildingIcon";
 export * from "./PencilAltIcon";
+export * from "./QuestionIcon";
 
 export const icons = new Map([
   ["NewspaperIcon", NewspaperIcon],

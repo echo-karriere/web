@@ -1,8 +1,13 @@
 module.exports = {
   parser: "@typescript-eslint/parser", // Specifies the ESLint parser
+  plugins: ["@typescript-eslint", "react", "react-hooks", "simple-import-sort"],
   extends: [
     "eslint:recommended",
     "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
     "plugin:@typescript-eslint/recommended",
     "prettier",
   ],
@@ -16,7 +21,6 @@ module.exports = {
     node: true,
     es6: true,
   },
-  plugins: ["@typescript-eslint", "react"],
   parserOptions: {
     project: "./tsconfig.json",
     ecmaFeatures: {
@@ -28,6 +32,12 @@ module.exports = {
   rules: {
     "react/prop-types": "off", // Disable prop-types as we use TypeScript for type checking
     "react/react-in-jsx-scope": "off", // Not needed for React 17+
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "sort-imports": "off",
+    "import/order": "off",
   },
   overrides: [
     // Override some TypeScript rules just for .js files

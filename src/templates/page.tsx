@@ -1,8 +1,6 @@
 import { MDXRenderer } from "gatsby-plugin-mdx";
-import { SEO } from "../components/common/Seo";
-import { Layout } from "../components/common/Layout";
-import { Container } from "../components/common/Container";
-import { Content } from "../components/common/Content";
+
+import { Container, Content, Layout, SEO } from "../components";
 
 interface PageData {
   pageContext: {

@@ -1,11 +1,11 @@
 import { Menu } from "@headlessui/react";
 import { graphql, Link, useStaticQuery } from "gatsby";
-import { MenuDropdown } from ".";
+import { GatsbyImage } from "gatsby-plugin-image";
 
+import { useNavigationData } from "../../../../queries";
+import { MenuDropdown } from ".";
 import { MenuItem } from "./MenuItem";
 import { More, MoreLink } from "./More";
-import { useNavigationData } from "../../../../queries";
-import { GatsbyImage } from "gatsby-plugin-image";
 
 interface Props {
   mobileButtonClicked: () => void;

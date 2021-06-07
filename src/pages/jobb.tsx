@@ -1,7 +1,4 @@
-import { Layout } from "../components/common/Layout";
-import { SEO } from "../components/common/Seo";
-import { Container } from "../components/common/Container";
-import { Jobs } from "../components/event";
+import { Container, Jobs, Layout, SEO } from "../components";
 
 export default function News(): JSX.Element {
   return (

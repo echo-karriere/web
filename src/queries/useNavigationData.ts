@@ -1,6 +1,7 @@
 import { graphql, useStaticQuery } from "gatsby";
+
 import { icons } from "../assets/icons";
-import { MenuItemProps } from "../components/common/Header/Desktop";
+import { MenuItemProps } from "../components";
 
 interface Response {
   allNavigationJson: {
@@ -39,7 +40,7 @@ export const useNavigationData = (): MenuItem[] => {
     }
   `);
 
-  const nav = data.allNavigationJson.edges.map(({ node }) => {
+  return data.allNavigationJson.edges.map(({ node }) => {
     return {
       ...node,
       items: node.items.map((item) => {
@@ -50,6 +51,4 @@ export const useNavigationData = (): MenuItem[] => {
       }),
     };
   });
-
-  return nav;
 };

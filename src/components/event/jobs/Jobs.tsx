@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
 import { graphql, useStaticQuery } from "gatsby";
+import { useEffect, useState } from "react";
+
 import { shuffleArray } from "../../../utils";
 import { FilterBy, Job, JobProps } from ".";
 import { Selects } from "./Selects";
@@ -32,7 +33,7 @@ export const Jobs = (): JSX.Element => {
   useEffect(() => {
     shuffleArray(jobs);
     setJobs(jobs);
-  }, []);
+  }, [jobs]);
 
   return (
     <div className="py-8 xl:py-10 max-w-3xl lg:max-w-5xl xl:grid xl:grid-cols-3">

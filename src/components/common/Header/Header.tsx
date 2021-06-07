@@ -1,5 +1,6 @@
-import { useState } from "react";
 import { Menu } from "@headlessui/react";
+import { useState } from "react";
+
 import { DesktopMenu } from "./Desktop";
 import { MobileMenu } from "./Mobile";
 

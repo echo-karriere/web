@@ -1,5 +1,5 @@
-import { Link } from "gatsby";
 import { Menu } from "@headlessui/react";
+import { Link } from "gatsby";
 import { ReactNode } from "react";
 
 export interface MenuItemProps {

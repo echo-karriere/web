@@ -1,8 +1,9 @@
-import { useState } from "react";
-import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
 import * as yup from "yup";
+
 import { isDev } from "../../config";
 
 type FormData = {
@@ -125,7 +126,7 @@ export function ContactUs(): JSX.Element {
                   type="text"
                   name="name"
                   id="name_id"
-                  autoComplete="full-name"
+                  autoComplete="name"
                   className="py-3 px-4 block w-full shadow-sm focus:ring-c6 focus:border-c6 border-gray-300 rounded-md"
                   ref={register({ required: true })}
                 />

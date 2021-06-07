@@ -1,7 +1,6 @@
 import { graphql, Link, useStaticQuery } from "gatsby";
-import { Layout } from "../components/common/Layout";
-import { SEO } from "../components/common/Seo";
-import { Container } from "../components/common/Container";
+
+import { Container, Layout, SEO } from "../components";
 
 interface Edge {
   node: {

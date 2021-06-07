@@ -1,10 +1,10 @@
 import { Transition } from "@headlessui/react";
 import { graphql, Link, useStaticQuery } from "gatsby";
-import { BigMobileLink } from "./BigMobileLink";
-
-import { useNavigationData } from "../../../../queries";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { Fragment } from "react";
+
+import { useNavigationData } from "../../../../queries";
+import { BigMobileLink } from "./BigMobileLink";
 
 interface Props {
   mobileOpen: boolean;
