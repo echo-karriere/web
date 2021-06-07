@@ -15,13 +15,13 @@ interface AttendeeProps {
   children: ReactNode;
 }
 
-interface AttendeSVG extends AttendeeProps {
+interface AttendeeSVG extends AttendeeProps {
   icon: {
     publicURL: string;
   };
 }
 
-interface AttendeImage extends AttendeeProps {
+interface AttendeeImage extends AttendeeProps {
   icon: { childImageSharp: { gatsbyImageData: IGatsbyImageData } } | null;
 }
 
@@ -36,11 +36,11 @@ const Attendee = ({ link, children }: AttendeeProps): JSX.Element => (
   </a>
 );
 
-const SVGLogo = ({ name, icon }: AttendeSVG): JSX.Element => (
+const SVGLogo = ({ name, icon }: AttendeeSVG): JSX.Element => (
   <img src={icon.publicURL} alt={name} />
 );
 
-const ImageLogo = ({ name, icon }: AttendeImage): JSX.Element => {
+const ImageLogo = ({ name, icon }: AttendeeImage): JSX.Element => {
   if (icon) {
     return (
       <GatsbyImage
@@ -54,7 +54,7 @@ const ImageLogo = ({ name, icon }: AttendeImage): JSX.Element => {
   }
 };
 
-const isSVGNode = (node: AttendeeProps): node is AttendeSVG => {
+const isSVGNode = (node: AttendeeProps): node is AttendeeSVG => {
   return node.svg;
 };
 
@@ -93,10 +93,10 @@ export const Attendees = ({ title }: AttendeesProps): JSX.Element => {
   );
 
   const images = data.images.edges.map(
-    ({ node }: { node: AttendeImage }) => node,
+    ({ node }: { node: AttendeeImage }) => node,
   );
-  const svg = data.svg.edges.map(({ node }: { node: AttendeSVG }) => node);
-  const [attendees, setAttendees] = useState<(AttendeImage | AttendeSVG)[]>([
+  const svg = data.svg.edges.map(({ node }: { node: AttendeeSVG }) => node);
+  const [attendees, setAttendees] = useState<(AttendeeImage | AttendeeSVG)[]>([
     ...images,
     ...svg,
   ]);

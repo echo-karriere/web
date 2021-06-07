@@ -4,7 +4,7 @@ import { Container, Layout, SEO } from "../components";
 
 interface Edge {
   node: {
-    frontmatter: {
+    frontMatter: {
       title: string;
       path: string;
       date: string;
@@ -55,15 +55,15 @@ export default function News(): JSX.Element {
             </div>
             <div className="mt-6 pt-10 grid gap-16 lg:grid-cols-2 lg:gap-x-5 lg:gap-y-12">
               {query.allMdx.edges.map((edge: Edge) => (
-                <div key={edge.node.frontmatter.path}>
+                <div key={edge.node.frontMatter.path}>
                   <p className="text-sm text-gray-500">
-                    <time dateTime={edge.node.frontmatter.date}>
-                      {edge.node.frontmatter.prettyDate}
+                    <time dateTime={edge.node.frontMatter.date}>
+                      {edge.node.frontMatter.prettyDate}
                     </time>
                   </p>
-                  <Link to={edge.node.frontmatter.path} className="mt-2 block">
+                  <Link to={edge.node.frontMatter.path} className="mt-2 block">
                     <p className="text-xl font-semibold text-gray-900">
-                      {edge.node.frontmatter.title}
+                      {edge.node.frontMatter.title}
                     </p>
                     <p className="mt-3 text-base text-gray-500">
                       {edge.node.excerpt}
@@ -71,7 +71,7 @@ export default function News(): JSX.Element {
                   </Link>
                   <div className="mt-3">
                     <Link
-                      to={edge.node.frontmatter.path}
+                      to={edge.node.frontMatter.path}
                       className="text-base font-semibold text-c6 hover:text-c5"
                     >
                       Les mer

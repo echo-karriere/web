@@ -4,7 +4,7 @@ import { Container, Content, Layout, SEO } from "../components";
 
 interface PageData {
   pageContext: {
-    frontmatter: {
+    frontMatter: {
       title: string;
       description: string;
     };
@@ -13,12 +13,12 @@ interface PageData {
 }
 
 export default function PageTemplate({ pageContext }: PageData): JSX.Element {
-  const { frontmatter, body } = pageContext;
+  const { frontMatter, body } = pageContext;
   return (
     <Layout>
-      <SEO title={frontmatter.title} description={frontmatter.description} />
+      <SEO title={frontMatter.title} description={frontMatter.description} />
       <Container>
-        <Content title={frontmatter.title}>
+        <Content title={frontMatter.title}>
           <MDXRenderer>{body}</MDXRenderer>
         </Content>
       </Container>
