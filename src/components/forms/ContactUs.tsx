@@ -36,7 +36,11 @@ export function ContactUs(): JSX.Element {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState(false);
 
-  const { register, errors, handleSubmit } = useForm<FormData>({
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormData>({
     resolver: yupResolver(interestSchema),
   });
 
@@ -124,11 +128,10 @@ export function ContactUs(): JSX.Element {
               <div className="mt-1">
                 <input
                   type="text"
-                  name="name"
                   id="name_id"
                   autoComplete="name"
                   className="py-3 px-4 block w-full shadow-sm focus:ring-c6 focus:border-c6 border-gray-300 rounded-md"
-                  ref={register({ required: true })}
+                  {...register("name", { required: true })}
                 />
               </div>
             </div>
@@ -147,11 +150,10 @@ export function ContactUs(): JSX.Element {
               </label>
               <input
                 type="email"
-                name="email"
                 id="email_id"
                 autoComplete="email"
                 className="py-3 px-4 block w-full shadow-sm focus:ring-c6 focus:border-c6 border-gray-300 rounded-md"
-                ref={register({ required: true })}
+                {...register("email", { required: true })}
               />
             </div>
 
@@ -169,11 +171,10 @@ export function ContactUs(): JSX.Element {
               </label>
               <textarea
                 id="message"
-                name="message"
                 rows={4}
                 cols={25}
                 className="py-3 px-4 block w-full shadow-sm focus:ring-c6 focus:border-c6 border-gray-300 rounded-md"
-                ref={register}
+                {...register("message", { required: true })}
               />
             </div>
             <div className="mt-4 sm:col-span-2">

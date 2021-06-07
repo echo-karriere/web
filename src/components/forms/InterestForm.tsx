@@ -43,7 +43,12 @@ export function InterestForm(): JSX.Element {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState(false);
 
-  const { register, errors, handleSubmit } = useForm<FormData>({
+  const {
+    register,
+    handleSubmit,
+
+    formState: { errors },
+  } = useForm<FormData>({
     resolver: yupResolver(interestSchema),
   });
   const submitForm = (data: FormData) => {
@@ -148,10 +153,9 @@ export function InterestForm(): JSX.Element {
                     <div className="mt-1">
                       <input
                         type="text"
-                        name="company"
+                        {...register("company", { required: true })}
                         id="comp_id"
                         className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
-                        ref={register({ required: true })}
                       />
                     </div>
                   </div>
@@ -179,9 +183,8 @@ export function InterestForm(): JSX.Element {
                         <div className="mt-1">
                           <select
                             id="day_id"
-                            name="type"
+                            {...register("type", { required: true })}
                             className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
-                            ref={register({ required: true })}
                           >
                             <option value="both">
                               Kan delta både fysisk og digital
@@ -209,8 +212,7 @@ export function InterestForm(): JSX.Element {
                           <input
                             type="checkbox"
                             id="extra_work"
-                            name="workshop"
-                            ref={register}
+                            {...register("workshop")}
                             className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
                           />
                         </div>
@@ -232,8 +234,7 @@ export function InterestForm(): JSX.Element {
                           <input
                             type="checkbox"
                             id="extra_talk"
-                            name="talk"
-                            ref={register}
+                            {...register("talk")}
                             className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
                           />
                         </div>
@@ -254,8 +255,7 @@ export function InterestForm(): JSX.Element {
                           <input
                             type="checkbox"
                             id="extra_speed"
-                            name="lightningtalk"
-                            ref={register}
+                            {...register("lightningtalk")}
                             className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
                           />
                         </div>
@@ -290,9 +290,8 @@ export function InterestForm(): JSX.Element {
                         <input
                           type="radio"
                           id="banquet_yes"
-                          name="banquet"
+                          {...register("banquet", { required: true })}
                           value="yes"
-                          ref={register({ required: true })}
                           className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
                         />
                         <label
@@ -306,9 +305,8 @@ export function InterestForm(): JSX.Element {
                         <input
                           type="radio"
                           id="banquet_no"
-                          name="banquet"
+                          {...register("banquet", { required: true })}
                           value="no"
-                          ref={register({ required: true })}
                           className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
                         />
                         <label
@@ -322,9 +320,8 @@ export function InterestForm(): JSX.Element {
                         <input
                           type="radio"
                           id="banquet_maybe"
-                          name="banquet"
+                          {...register("banquet", { required: true })}
                           value="maybe"
-                          ref={register({ required: true })}
                           className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
                         />
                         <label
@@ -361,10 +358,9 @@ export function InterestForm(): JSX.Element {
                         <div className="mt-1">
                           <textarea
                             id="other"
-                            name="other"
+                            {...register("other")}
                             rows={4}
                             cols={25}
-                            ref={register}
                             className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
                           />
                         </div>
