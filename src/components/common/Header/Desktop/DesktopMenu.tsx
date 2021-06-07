@@ -1,4 +1,3 @@
-import React from "react";
 import { Menu } from "@headlessui/react";
 import { graphql, Link, useStaticQuery } from "gatsby";
 import { MenuDropdown } from ".";

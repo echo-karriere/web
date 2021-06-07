@@ -1,10 +1,10 @@
-import React from "react";
 import { Link as GatsbyLink } from "gatsby";
+import { ReactNode } from "react";
 
 interface Link {
   title: string;
   to: string;
-  icon: React.ReactNode;
+  icon: ReactNode;
 }
 
 interface Links {

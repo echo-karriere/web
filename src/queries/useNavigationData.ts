@@ -1,4 +1,4 @@
-import { useStaticQuery, graphql } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
 import { icons } from "../assets/icons";
 import { MenuItemProps } from "../components/common/Header/Desktop";
 

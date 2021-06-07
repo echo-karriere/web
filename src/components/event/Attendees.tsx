@@ -1,4 +1,4 @@
-import React, { ReactNode, useEffect, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import { shuffleArray } from "../../utils";
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";

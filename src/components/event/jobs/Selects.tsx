@@ -1,4 +1,4 @@
-import React, { ChangeEvent, ReactNode } from "react";
+import { ChangeEvent, ReactNode } from "react";
 import { JobProps, JobType } from "./Job";
 
 export interface FilterBy {

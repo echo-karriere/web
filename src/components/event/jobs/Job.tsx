@@ -1,4 +1,3 @@
-import React from "react";
 import { FilterBy } from "./Selects";
 
 export type JobType = "full" | "part" | "summer";

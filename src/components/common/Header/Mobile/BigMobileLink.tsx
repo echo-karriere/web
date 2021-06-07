@@ -1,10 +1,10 @@
 import { Link } from "gatsby";
-import React from "react";
+import { ReactNode } from "react";
 
 interface Props {
   title: string;
   to: string;
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 export const BigMobileLink = ({ title, to, children }: Props): JSX.Element => {

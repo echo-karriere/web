@@ -1,4 +1,3 @@
-import React from "react";
 import { Layout } from "../../components/common/Layout";
 import { SEO } from "../../components/common/Seo";
 import { Container } from "../../components/common/Container";

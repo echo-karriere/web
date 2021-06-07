@@ -1,4 +1,3 @@
-import React from "react";
 import { Content } from "../components/common/Content";
 
 import { Layout } from "../components/common/Layout";

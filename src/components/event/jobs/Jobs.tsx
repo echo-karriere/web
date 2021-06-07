@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import { shuffleArray } from "../../../utils";
-import { JobProps, FilterBy, Job } from ".";
+import { FilterBy, Job, JobProps } from ".";
 import { Selects } from "./Selects";
 
 export const Jobs = (): JSX.Element => {

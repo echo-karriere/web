@@ -1,9 +1,9 @@
-import React from "react";
+import { ReactNode } from "react";
 
 interface Props {
   title: string;
   subtitle?: string;
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 export const Content = ({

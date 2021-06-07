@@ -42,7 +42,7 @@
     "develop": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "lint:ts": "eslint .",
+    "lint:ts": "eslint --cache .",
     "lint:style": "prettier --check src",
     "postinstall": "husky install"
   },

@@ -1,12 +1,12 @@
-import React from "react";
 import { Link } from "gatsby";
 import { Menu } from "@headlessui/react";
+import { ReactNode } from "react";
 
 export interface MenuItemProps {
   title: string;
   description: string;
   to: string;
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 export function MenuItem({

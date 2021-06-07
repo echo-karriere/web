@@ -1,5 +1,4 @@
-import React from "react";
-import { useStaticQuery, graphql, Link } from "gatsby";
+import { graphql, Link, useStaticQuery } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 
 export function Hero(): JSX.Element {

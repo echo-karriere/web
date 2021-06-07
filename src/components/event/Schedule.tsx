@@ -1,4 +1,4 @@
-import React, { ReactNode, TdHTMLAttributes } from "react";
+import { ReactNode, TdHTMLAttributes } from "react";
 
 interface ItemProps {
   title: string;

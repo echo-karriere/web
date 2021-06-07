@@ -1,5 +1,3 @@
-import React from "react";
-
 export const InboxInIcon = (
   <svg
     className="flex-shrink-0 h-6 w-6 text-c8"

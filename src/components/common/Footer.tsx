@@ -1,4 +1,3 @@
-import React from "react";
 import { graphql, Link, useStaticQuery } from "gatsby";
 
 import { useNavigationData, useSiteMetadata } from "../../queries";

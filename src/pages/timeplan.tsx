@@ -1,7 +1,6 @@
-import { graphql, useStaticQuery } from "gatsby";
-import React from "react";
-import { Link } from "gatsby";
-import { Layout, SEO, Container, Content, Schedule } from "../components";
+import { graphql, Link, useStaticQuery } from "gatsby";
+
+import { Container, Content, Layout, Schedule, SEO } from "../components";
 
 interface Workshop {
   company: string;

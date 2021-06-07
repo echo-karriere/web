@@ -1,10 +1,10 @@
-import React from "react";
 import { Menu, Transition } from "@headlessui/react";
 import { MenuButton } from "./MenuButton";
+import { ReactNode } from "react";
 
 interface Props {
   title: string;
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 export function MenuDropdown({ title, children }: Props): JSX.Element {

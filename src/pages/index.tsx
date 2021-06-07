@@ -1,7 +1,6 @@
-import React from "react";
-import { Layout } from "../components/common/Layout";
-import { Intro } from "../components/landing/Intro";
-import { SEO } from "../components/common/Seo";
+import { Layout } from "../components";
+import { Intro } from "../components";
+import { SEO } from "../components";
 
 export default function Index(): JSX.Element {
   return (

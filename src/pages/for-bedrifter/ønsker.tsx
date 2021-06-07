@@ -1,8 +1,4 @@
-import React from "react";
-import { InterestForm } from "../../components";
-import { Layout } from "../../components";
-import { SEO } from "../../components";
-import { Container } from "../../components";
+import { Container, InterestForm, Layout, SEO } from "../../components";
 
 export default function InterestPage(): JSX.Element {
   return (

@@ -1,5 +1,5 @@
-import React from "react";
 import { Link } from "gatsby";
+import { ReactNode } from "react";
 
 interface ReadMoreProps {
   to: string;
@@ -33,7 +33,7 @@ export function MoreLink({ to, title }: MoreLinkProps): JSX.Element {
 
 interface MoreProps {
   title: string;
-  children: React.ReactNode;
+  children: ReactNode;
   readMoreLink: string;
   readMoreTitle: string;
 }

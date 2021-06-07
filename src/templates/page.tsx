@@ -1,4 +1,3 @@
-import React from "react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { SEO } from "../components/common/Seo";
 import { Layout } from "../components/common/Layout";

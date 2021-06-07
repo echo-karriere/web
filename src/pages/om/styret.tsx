@@ -1,9 +1,7 @@
 import { graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
-import React from "react";
-import { Container } from "../../components";
-import { Layout } from "../../components";
-import { SEO } from "../../components";
+
+import { Container, Layout, SEO } from "../../components";
 
 const Member = ({
   name,

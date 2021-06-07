@@ -1,10 +1,10 @@
-import React from "react";
 import { Transition } from "@headlessui/react";
 import { graphql, Link, useStaticQuery } from "gatsby";
 import { BigMobileLink } from "./BigMobileLink";
 
 import { useNavigationData } from "../../../../queries";
 import { GatsbyImage } from "gatsby-plugin-image";
+import { Fragment } from "react";
 
 interface Props {
   mobileOpen: boolean;
@@ -33,7 +33,7 @@ export function MobileMenu({
 
   return (
     <Transition
-      as={React.Fragment}
+      as={Fragment}
       show={mobileOpen}
       enter="duration-200 ease-out"
       enterFrom="opacity-0 scale-95"

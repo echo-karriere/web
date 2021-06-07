@@ -1,5 +1,3 @@
-import React from "react";
-
 export const DesktopIcon = (
   <svg
     className="flex-shrink-0 h-6 w-6 text-c8"

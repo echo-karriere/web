@@ -1,5 +1,4 @@
-import React from "react";
-import { useStaticQuery, graphql, Link } from "gatsby";
+import { graphql, Link, useStaticQuery } from "gatsby";
 import { Layout } from "../components/common/Layout";
 import { SEO } from "../components/common/Seo";
 import { Container } from "../components/common/Container";
