@@ -98,22 +98,3 @@ const buildPages = async (graphql, actions) => {
     });
   });
 };
-
-/* We are using (S)CSS-modules, and therefore the order doesn't matter, which is
- * why we enable the `ignoreOrder` option. If we however wrote regular old CSS
- * this would mean that we have conflicting definitions of classes in our styles.
- */
-module.exports.onCreateWebpackConfig = ({ stage, actions, getConfig }) => {
-  if (stage === "build-javascript") {
-    const config = getConfig();
-    const miniCssExtractPlugin = config.plugins.find(
-      (plugin) => plugin.constructor.name === "MiniCssExtractPlugin",
-    );
-
-    if (miniCssExtractPlugin) {
-      miniCssExtractPlugin.options.ignoreOrder = true;
-    }
-
-    actions.replaceWebpackConfig(config);
-  }
-};
