@@ -1,10 +1,9 @@
 import { yupResolver } from "@hookform/resolvers/yup";
-import axios from "axios";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 
-import { isDev } from "../../config";
+import { FormError, FormSubmitted, sendFormSubmission } from "./index";
 
 type FormData = {
   company: string;
@@ -15,6 +14,7 @@ type FormData = {
   banquet: "yes" | "no";
   other: string;
   confirmation: boolean;
+  [key: string]: unknown;
 };
 
 yup.setLocale({
@@ -46,62 +46,21 @@ export function InterestForm(): JSX.Element {
   const {
     register,
     handleSubmit,
-
     formState: { errors },
   } = useForm<FormData>({
     resolver: yupResolver(interestSchema),
   });
-  const submitForm = (data: FormData) => {
-    if (isDev) {
-      console.log(JSON.stringify(data, null, 2));
-      setSubmitted(true);
-    } else {
-      axios
-        .post("https://formcarry.com/s/NnAXW6UPoF", data, {
-          headers: { Accept: "application/json" },
-        })
-        .then((res) => {
-          if (res.status === 200) {
-            setSubmitted(res.status === 200);
-          } else {
-            setError(true);
-          }
-        })
-        .catch(() => {
-          setError(true);
-        });
-    }
-  };
 
-  if (submitted) {
-    return (
-      <div className="bg-white py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24 h-96 flex flex-col justify-center items-center">
-        <div className="relative max-w-xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-              Takk!
-            </h1>
-            <h2>Ditt svar er registrert.</h2>
-          </div>
-        </div>
-      </div>
+  const submitForm = (data: FormData) =>
+    sendFormSubmission(
+      data,
+      "https://formcarry.com/s/NnAXW6UPoF",
+      setSubmitted,
+      setError,
     );
-  }
 
-  if (error) {
-    return (
-      <div className="bg-white py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24 h-96 flex flex-col justify-center items-center">
-        <div className="relative max-w-xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-              Noe gikk galt :(
-            </h1>
-            <h2>Prøv igjen senere</h2>
-          </div>
-        </div>
-      </div>
-    );
-  }
+  if (submitted) return <FormSubmitted body="Ditt svar er registrert." />;
+  if (error) return <FormError />;
 
   return (
     <div className="bg-white py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24">
