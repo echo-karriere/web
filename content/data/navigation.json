@@ -45,9 +45,9 @@
         "mainMobile": true
       },
       {
-        "title": "Arrangementsønske",
-        "to": "/for-bedrifter/ønsker",
-        "description": "Gi oss tilbakemelding på hva slags arrangementstype dere ønsker til høsten.",
+        "title": "Påmelding",
+        "to": "/for-bedrifter/pamelding/",
+        "description": "Meld dere på echo karriere høsten 2021",
         "children": "PencilAltIcon",
         "mainMobile": true
       }
