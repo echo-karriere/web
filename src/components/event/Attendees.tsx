@@ -105,7 +105,8 @@ export const Attendees = ({ title }: AttendeesProps): JSX.Element => {
     const copy = [...attendees];
     shuffleArray(copy);
     setAttendees(copy);
-  }, [attendees]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div className="bg-white">
