@@ -198,13 +198,13 @@ export function RegistrationForm(): JSX.Element {
                       )}
                       <p className="mt-1 text-sm text-gray-500">
                         Merk at vi trenger hele domenet, inkludert{" "}
-                        <code className="text-sm">http://</code>.
+                        <code className="text-sm">https://</code>.
                       </p>
                     </label>
                     <div className="mt-1">
                       <input
                         type="text"
-                        placeholder="http://www.nettside.no"
+                        placeholder="https://www.nettside.no"
                         {...register("website", { required: true })}
                         id="website"
                         className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
