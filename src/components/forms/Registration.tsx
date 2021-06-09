@@ -53,8 +53,7 @@ const registrationShape = yup.object().shape({
     })
     .test("size", "Et eller flere av bildene er for store", (val) => {
       if (val === null) return true;
-      for (let i = 0; i < val.length; i++) {
-        const file = val[i];
+      for (const file of val) {
         if (file && file.size <= 10_000_000) return true;
       }
       return false;
