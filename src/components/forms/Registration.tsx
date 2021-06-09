@@ -5,9 +5,10 @@ import * as yup from "yup";
 
 import { FormError, FormSubmitted, sendFormSubmission } from ".";
 
-type FormData = {
+type RegistrationFormData = {
   company: string;
   website: string;
+  logo: FileList;
   contactPerson: string;
   contactEmail: string;
   contactPhone: number;
@@ -30,10 +31,11 @@ yup.setLocale({
   mixed: {
     required: "Du må fylle ut dette feltet",
     oneOf: "Du må velge et alternativ",
-    notType: "Feltet må være et gyldig nummer",
+    notType: "Feltet er ikke i riktig format",
   },
   string: {
     email: "Feltet må være en gyldig epost-adresse",
+    url: "Feltet må være en adresse for en nettside",
   },
   number: {
     integer: "Feltet må være et gyldig nummer",
@@ -42,14 +44,29 @@ yup.setLocale({
 
 const registrationShape = yup.object().shape({
   company: yup.string().required(),
-  website: yup.string().required(),
+  website: yup.string().url().required(),
+  logo: yup
+    .mixed()
+    .nullable()
+    .test("hasLogo", "Du må laste opp en logo", (val) => {
+      return val === null || val.length !== 0;
+    })
+    .test("size", "Et eller flere av bildene er for store", (val) => {
+      if (val === null) return true;
+      for (let i = 0; i < val.length; i++) {
+        const file = val[i];
+        if (file && file.size <= 10_000_000) return true;
+      }
+      return false;
+    })
+    .required("Du må laste opp en logo"),
   contactPerson: yup.string().required(),
-  contactEmail: yup.string().required(),
+  contactEmail: yup.string().email().required(),
   contactPhone: yup.number().required(),
   invoiceAddress: yup.string().required(),
   invoiceOrg: yup.string().required(),
   invoicePerson: yup.string().required(),
-  invoiceEmail: yup.string().required(),
+  invoiceEmail: yup.string().email().required(),
   day: yup.mixed().oneOf(["16", "17"]).required(),
   package: yup.mixed().oneOf(["small", "large"]).required(),
   workshop: yup.boolean().notRequired(),
@@ -61,6 +78,20 @@ const registrationShape = yup.object().shape({
   confirmation: yup.boolean().required(),
 });
 
+const formFieldsToFormData = (data: RegistrationFormData): FormData => {
+  const form = new FormData();
+
+  for (const [key, val] of Object.entries(data)) {
+    form.set(key, `${val}`);
+  }
+  form.delete("logo");
+  Object.entries(data.logo).forEach(([, val], i) => {
+    form.set(`logo-${i}`, val);
+  });
+
+  return form;
+};
+
 export function RegistrationForm(): JSX.Element {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState(false);
@@ -70,13 +101,13 @@ export function RegistrationForm(): JSX.Element {
     handleSubmit,
     watch,
     formState: { errors },
-  } = useForm<FormData>({
+  } = useForm<RegistrationFormData>({
     resolver: yupResolver(registrationShape),
   });
 
-  const submitForm = (data: FormData) =>
+  const submitForm = (data: RegistrationFormData) =>
     sendFormSubmission(
-      data,
+      formFieldsToFormData(data),
       "https://formcarry.com/s/aWffGqXVsGC",
       setSubmitted,
       setError,
@@ -105,6 +136,7 @@ export function RegistrationForm(): JSX.Element {
           <form
             className="space-y-8 divide-y divide-gray-200"
             onSubmit={handleSubmit(submitForm)}
+            encType="multipart/form-data"
           >
             <div className="space-y-8 divide-y divide-gray-200">
               <div className="pt-8">
@@ -149,13 +181,46 @@ export function RegistrationForm(): JSX.Element {
                           {errors.website.message}
                         </span>
                       )}
+                      <p className="mt-1 text-sm text-gray-500">
+                        Merk at vi trenger hele domenet, inkludert{" "}
+                        <code className="text-sm">http://</code>.
+                      </p>
                     </label>
                     <div className="mt-1">
                       <input
                         type="text"
+                        placeholder="http://www.nettside.no"
                         {...register("website", { required: true })}
                         id="website"
                         className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                      />
+                    </div>
+                  </div>
+                  <div className="sm:col-span-3">
+                    <label
+                      htmlFor="logo"
+                      className="block text-sm font-medium text-gray-700"
+                    >
+                      Logo
+                      {errors.logo && (
+                        <span className="text-red-500 text-xs float-right">
+                          {errors.logo.message}
+                        </span>
+                      )}
+                    </label>
+                    <p className="mt-1 text-sm text-gray-500">
+                      Helst en logo i filformatet SVG, men dersom det ikke er
+                      tilgjengelig er andre bildeformater også godkjent. Om dere
+                      vil kan flere logoer lastes opp.
+                    </p>
+                    <div className="mt-1">
+                      <input
+                        type="file"
+                        accept="image/*,.svg"
+                        {...register("logo", { required: true })}
+                        id="logo"
+                        className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                        multiple
                       />
                     </div>
                   </div>
@@ -625,18 +690,18 @@ export function RegistrationForm(): JSX.Element {
                   <p className="mt-1 text-sm text-gray-500">
                     Med dette bekrefter dere blant annet følgende, samt
                     vilkårene som fremkommer av invitasjonen:
-                    <ul className="list-disc list-inside pt-2">
-                      <li className="italic">
-                        Vi deltar på obligatorisk generalprøve dersom
-                        karrieredagen avholdes digitalt
-                      </li>
-                      <li className="italic">
-                        Ved arrangering av workshop og eller foredrag at dere
-                        vil gi tilbakemelding til echo karriere på tema for
-                        workshop innen fristen 2. september
-                      </li>
-                    </ul>
                   </p>
+                  <ul className="list-disc list-inside pt-2">
+                    <li className="italic">
+                      Vi deltar på obligatorisk generalprøve dersom
+                      karrieredagen avholdes digitalt
+                    </li>
+                    <li className="italic">
+                      Ved arrangering av workshop og eller foredrag at dere vil
+                      gi tilbakemelding til echo karriere på tema for workshop
+                      innen fristen 2. september
+                    </li>
+                  </ul>
                 </div>
                 <div>
                   <fieldset>
