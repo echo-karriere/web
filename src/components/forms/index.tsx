@@ -14,7 +14,7 @@ interface SubmittedProps {
 
 export const FormSubmitted = ({
   title = "Takk!",
-  body = "Du hører fra oss så snart som mulig.",
+  body = "Dere hører fra oss så snart som mulig.",
 }: SubmittedProps): JSX.Element => (
   <div className="bg-white py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24 h-96 flex flex-col justify-center items-center">
     <div className="relative max-w-xl mx-auto">
@@ -48,7 +48,11 @@ export function sendFormSubmission<T>(
   setError: (val: boolean) => void,
 ): void {
   if (isDev) {
-    console.log(JSON.stringify(data, null, 2));
+    if (data instanceof FormData) {
+      console.log(JSON.stringify(Object.fromEntries(data), null, 2));
+    } else {
+      console.log(JSON.stringify(data, null, 2));
+    }
     setSubmitted(true);
   } else {
     axios

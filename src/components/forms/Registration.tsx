@@ -29,8 +29,8 @@ type RegistrationFormData = {
 
 yup.setLocale({
   mixed: {
-    required: "Du må fylle ut dette feltet",
-    oneOf: "Du må velge et alternativ",
+    required: "Dere må fylle ut dette feltet",
+    oneOf: "Dere må velge et alternativ",
     notType: "Feltet er ikke i riktig format",
   },
   string: {
@@ -43,12 +43,12 @@ yup.setLocale({
 });
 
 const registrationShape = yup.object().shape({
-  company: yup.string().required(),
-  website: yup.string().url().required(),
+  company: yup.string().required("Dette er et nødvendig felt"),
+  website: yup.string().url().required("Dette er et nødvendig felt"),
   logo: yup
     .mixed()
     .nullable()
-    .test("hasLogo", "Du må laste opp en logo", (val) => {
+    .test("hasLogo", "Dere må laste opp en logo", (val) => {
       return val === null || val.length !== 0;
     })
     .test("size", "Et eller flere av bildene er for store", (val) => {
@@ -59,7 +59,7 @@ const registrationShape = yup.object().shape({
       }
       return false;
     })
-    .required("Du må laste opp en logo"),
+    .required("Dere må laste opp en logo"),
   contactPerson: yup.string().required(),
   contactEmail: yup.string().email().required(),
   contactPhone: yup.number().required(),
@@ -67,15 +67,28 @@ const registrationShape = yup.object().shape({
   invoiceOrg: yup.string().required(),
   invoicePerson: yup.string().required(),
   invoiceEmail: yup.string().email().required(),
-  day: yup.mixed().oneOf(["16", "17"]).required(),
-  package: yup.mixed().oneOf(["small", "large"]).required(),
+  day: yup
+    .mixed()
+    .oneOf(["16", "17"])
+    .required("Dere må velge en dag for deltakelse"),
+  package: yup
+    .mixed()
+    .oneOf(["small", "large"])
+    .required("Dere må velge en grunnpakke"),
   workshop: yup.boolean().notRequired(),
   workshopTitle: yup.string().notRequired(),
   talk: yup.boolean().notRequired(),
   talkTitle: yup.string().notRequired(),
-  banquet: yup.mixed().oneOf(["yes", "no"]).notRequired(),
+  banquet: yup.mixed().oneOf(["yes", "no"]).required(),
   other: yup.string().notRequired(),
-  confirmation: yup.boolean().required(),
+  confirmation: yup
+    .boolean()
+    .test(
+      "confirm",
+      "Dere må bekrefte å ha lest vilkårene",
+      (val) => val === null || Boolean(val),
+    )
+    .required(),
 });
 
 const formFieldsToFormData = (data: RegistrationFormData): FormData => {
@@ -94,6 +107,7 @@ const formFieldsToFormData = (data: RegistrationFormData): FormData => {
 
 export function RegistrationForm(): JSX.Element {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState(false);
 
   const {
@@ -105,18 +119,20 @@ export function RegistrationForm(): JSX.Element {
     resolver: yupResolver(registrationShape),
   });
 
-  const submitForm = (data: RegistrationFormData) =>
+  const submitForm = (data: RegistrationFormData) => {
+    setIsSubmitting(true);
     sendFormSubmission(
       formFieldsToFormData(data),
       "https://formcarry.com/s/aWffGqXVsGC",
       setSubmitted,
       setError,
     );
+  };
 
   const watchWorkshop = watch("workshop");
   const watchTalk = watch("talk");
 
-  if (submitted) return <FormSubmitted body="Ditt svar er registrert." />;
+  if (submitted) return <FormSubmitted body="Din bedrift er nå påmeldt." />;
   if (error) return <FormError />;
 
   return (
@@ -686,6 +702,11 @@ export function RegistrationForm(): JSX.Element {
                 <div>
                   <h3 className="text-lg leading-6 font-medium text-gray-900">
                     Bekreftelse
+                    {errors.confirmation && (
+                      <span className="text-red-500 text-xs float-right">
+                        {errors.confirmation.message}
+                      </span>
+                    )}
                   </h3>
                   <p className="mt-1 text-sm text-gray-500">
                     Med dette bekrefter dere blant annet følgende, samt
@@ -736,7 +757,7 @@ export function RegistrationForm(): JSX.Element {
                     className="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-c8 hover:bg-c7 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-c6"
                     type="submit"
                   >
-                    Send inn
+                    {isSubmitting ? "Sender din respons..." : "Send inn"}
                   </button>
                 </div>
               </div>
