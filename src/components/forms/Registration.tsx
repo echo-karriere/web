@@ -10,7 +10,7 @@ type RegistrationFormData = {
   website: string;
   logo: FileList;
   contactPerson: string;
-  contactEmail: string;
+  email: string;
   contactPhone: number;
   invoiceAddress: string;
   invoiceOrg: string;
@@ -60,7 +60,7 @@ const registrationShape = yup.object().shape({
     })
     .required("Dere må laste opp en logo"),
   contactPerson: yup.string().required(),
-  contactEmail: yup.string().email().required(),
+  email: yup.string().email().required(),
   contactPhone: yup.number().required(),
   invoiceAddress: yup.string().required(),
   invoiceOrg: yup.string().required(),
@@ -280,13 +280,13 @@ export function RegistrationForm(): JSX.Element {
                   </div>
                   <div className="sm:col-span-3">
                     <label
-                      htmlFor="contact_email"
+                      htmlFor="email"
                       className="block text-sm font-medium text-gray-700"
                     >
                       Epost
-                      {errors.contactEmail && (
+                      {errors.email && (
                         <span className="text-red-500 text-xs float-right">
-                          {errors.contactEmail.message}
+                          {errors.email.message}
                         </span>
                       )}
                     </label>
@@ -294,8 +294,8 @@ export function RegistrationForm(): JSX.Element {
                       <input
                         type="text"
                         autoComplete="on"
-                        {...register("contactEmail", { required: true })}
-                        id="contact_email"
+                        {...register("email", { required: true })}
+                        id="email"
                         className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
                       />
                     </div>
