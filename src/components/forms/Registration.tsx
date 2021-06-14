@@ -43,8 +43,8 @@ yup.setLocale({
 });
 
 const registrationShape = yup.object().shape({
-  company: yup.string().required("Dette er et nødvendig felt"),
-  website: yup.string().url().required("Dette er et nødvendig felt"),
+  company: yup.string().required(),
+  website: yup.string().url().required(),
   logo: yup
     .mixed()
     .nullable()
@@ -131,7 +131,7 @@ export function RegistrationForm(): JSX.Element {
   const watchWorkshop = watch("workshop");
   const watchTalk = watch("talk");
 
-  if (submitted) return <FormSubmitted body="Din bedrift er nå påmeldt." />;
+  if (submitted) return <FormSubmitted body="Din bedrift er nå registrert." />;
   if (error) return <FormError />;
 
   return (
@@ -144,7 +144,11 @@ export function RegistrationForm(): JSX.Element {
           <p className="mt-4 text-lg leading-6 text-gray-500">
             Høstens arrangement er <strong>16. og 17. september 2021</strong>,
             og nytt for i år er at påmeldingen går gjennom nettsiden vår. Sørg
-            for at alle punktene er lest og forstått.
+            for at alle punktene her lest og forstått samt innholdet i{" "}
+            <a href="/files/invitation.pdf" className="underline">
+              invitasjonen
+            </a>
+            .
           </p>
         </div>
         <div className="mt-12">
