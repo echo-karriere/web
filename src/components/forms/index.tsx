@@ -46,27 +46,27 @@ export function sendFormSubmission<T>(
   setSubmitted: (val: boolean) => void,
   setError: (val: boolean) => void,
 ): void {
-  // if (isDev) {
-  //   if (data instanceof FormData) {
-  //     console.log(JSON.stringify(Object.fromEntries(data), null, 2));
-  //   } else {
-  //     console.log(JSON.stringify(data, null, 2));
-  //   }
-  //   setSubmitted(true);
-  // } else {
-  axios
-    .post(formUrl, data, {
-      headers: { Accept: "application/json" },
-    })
-    .then((res) => {
-      if (res.status === 200) {
-        setSubmitted(res.status === 200);
-      } else {
+  if (isDev) {
+    if (data instanceof FormData) {
+      console.log(JSON.stringify(Object.fromEntries(data), null, 2));
+    } else {
+      console.log(JSON.stringify(data, null, 2));
+    }
+    setSubmitted(true);
+  } else {
+    axios
+      .post(formUrl, data, {
+        headers: { Accept: "application/json" },
+      })
+      .then((res) => {
+        if (res.status === 200) {
+          setSubmitted(res.status === 200);
+        } else {
+          setError(true);
+        }
+      })
+      .catch(() => {
         setError(true);
-      }
-    })
-    .catch(() => {
-      setError(true);
-    });
-  // }
+      });
+  }
 }
