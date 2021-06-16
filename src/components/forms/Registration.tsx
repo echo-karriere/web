@@ -131,7 +131,7 @@ export function RegistrationForm(): JSX.Element {
   const watchWorkshop = watch("workshop");
   const watchTalk = watch("talk");
 
-  if (submitted) return <FormSubmitted body="Din bedrift er nå registrert." />;
+  if (submitted) return <FormSubmitted body="Din bedrift er nå registrert, dere mottar en epost med bekreftelse straks. Om den ikke dukker opp med en gang sjekk søppelkurven." />
   if (error) return <FormError />;
 
   return (
