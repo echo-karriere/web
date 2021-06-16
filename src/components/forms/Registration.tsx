@@ -131,7 +131,10 @@ export function RegistrationForm(): JSX.Element {
   const watchWorkshop = watch("workshop");
   const watchTalk = watch("talk");
 
-  if (submitted) return <FormSubmitted body="Din bedrift er nå registrert, dere mottar en epost med bekreftelse straks. Om den ikke dukker opp med en gang sjekk søppelkurven." />
+  if (submitted)
+    return (
+      <FormSubmitted body="Din bedrift er nå registrert, dere mottar en epost med bekreftelse straks. Om den ikke dukker opp med en gang sjekk søppelkurven." />
+    );
   if (error) return <FormError />;
 
   return (
@@ -230,7 +233,9 @@ export function RegistrationForm(): JSX.Element {
                     <p className="mt-1 text-sm text-gray-500">
                       Helst en logo i filformatet SVG, men dersom det ikke er
                       tilgjengelig er andre bildeformater også godkjent. Om dere
-                      vil kan flere logoer lastes opp.
+                      vil kan flere logoer lastes opp. Vil bli brukt på vår
+                      nettside for å vise hvilke bedrifter som deltar/på
+                      jobboversikten.
                     </p>
                     <div className="mt-1">
                       <input
