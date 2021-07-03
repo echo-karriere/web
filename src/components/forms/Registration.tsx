@@ -538,6 +538,10 @@ export function RegistrationForm(): JSX.Element {
                     Kan dere se for dere at dere ønsker å arrangere noe på
                     karrieredagen?
                   </legend>
+                  <p className="text-sm text-gray-500">
+                    <span className="text-red-600">NB: </span>Merk at vi er
+                    fullbooket for workshops og foredrag 16. september.
+                  </p>
                   <div className="mt-4 space-y-4">
                     <div className="relative flex items-start">
                       <div className="flex items-center h-5">
