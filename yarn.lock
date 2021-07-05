@@ -2195,10 +2195,10 @@
   resolved "https://registry.yarnpkg.com/@types/yoga-layout/-/yoga-layout-1.9.2.tgz#efaf9e991a7390dc081a0b679185979a83a9639a"
   integrity sha512-S9q47ByT2pPvD65IvrWp7qppVMpk9WGMbVq9wbWZOHg6tnXSD4vyhao6nOSBwwfDdV2p3Kx9evA9vI+XWTfDvw==
 
-"@types/yup@0.29.11":
-  version "0.29.11"
-  resolved "https://registry.yarnpkg.com/@types/yup/-/yup-0.29.11.tgz#d654a112973f5e004bf8438122bd7e56a8e5cd7e"
-  integrity sha512-9cwk3c87qQKZrT251EDoibiYRILjCmxBvvcb4meofCmx1vdnNcR9gyildy5vOHASpOKMsn42CugxUvcwK5eu1g==
+"@types/yup@0.29.12":
+  version "0.29.12"
+  resolved "https://registry.yarnpkg.com/@types/yup/-/yup-0.29.12.tgz#59c9577bea11d2b3d78717ea7591caacad6dfa1b"
+  integrity sha512-fA7bXyBzWEAgOwX2SD/5/iaZY/4In0EvJEzFmBWzaGNF4vxr8d5iOFUMFBpL4cMEmlSx2wW9ginJNnoZjE/vOg==
 
 "@typescript-eslint/eslint-plugin@4.28.1", "@typescript-eslint/eslint-plugin@^4.15.2":
   version "4.28.1"
