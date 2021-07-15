@@ -10,7 +10,7 @@
     "@mdx-js/react": "1.6.22",
     "@tailwindcss/forms": "0.3.3",
     "@tailwindcss/typography": "0.4.1",
-    "autoprefixer": "10.2.6",
+    "autoprefixer": "10.3.1",
     "axios": "0.21.1",
     "gatsby": "3.9.1",
     "gatsby-plugin-catch-links": "3.9.0",
