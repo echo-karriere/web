@@ -1346,10 +1346,10 @@
   resolved "https://registry.yarnpkg.com/@headlessui/react/-/react-1.4.0.tgz#c6d424d8ab10ac925e4423d7f3cbab02c30d736a"
   integrity sha512-C+FmBVF6YGvqcEI5fa2dfVbEaXr2RGR6Kw1E5HXIISIZEfsrH/yuCgsjWw5nlRF9vbCxmQ/EKs64GAdKeb8gCw==
 
-"@hookform/resolvers@2.6.1":
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/@hookform/resolvers/-/resolvers-2.6.1.tgz#d41296521ccebba71f671e105b75cf36071fa293"
-  integrity sha512-7tml6bUUzdkk7tYb5LBk4i6ctV/1Rs4U5qVxrNBXZd8ZhxvsELI0TyYrnCK0XSlCo8Htlat8TOzxSZcKWOH5KQ==
+"@hookform/resolvers@2.7.0":
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/@hookform/resolvers/-/resolvers-2.7.0.tgz#f34577899294738541ef0905a50eb23b3ff43bb1"
+  integrity sha512-uWKw0hSFiljLmNe4FR/k6bZ/dp7xvZG9CAXFUM24E7CunGhU5Ltvu6KUrkNDOKsoIrpc01pQsQ1Sjim1P6FaAg==
 
 "@humanwhocodes/config-array@^0.5.0":
   version "0.5.0"
