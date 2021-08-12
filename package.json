@@ -12,7 +12,7 @@
     "@tailwindcss/typography": "0.4.1",
     "autoprefixer": "10.3.1",
     "axios": "0.21.1",
-    "gatsby": "3.11.0",
+    "gatsby": "3.11.1",
     "gatsby-plugin-catch-links": "3.11.0",
     "gatsby-plugin-google-analytics": "3.11.0",
     "gatsby-plugin-image": "1.11.0",
