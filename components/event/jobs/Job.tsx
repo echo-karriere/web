@@ -40,12 +40,7 @@ export const Job = ({
   };
   return (
     <li className={show() ? "" : "hidden"}>
-      <a
-        href={link}
-        className="block hover:bg-gray-50"
-        target="_blank"
-        rel="noreferrer noopener"
-      >
+      <a href={link} className="block hover:bg-gray-50" target="_blank" rel="noreferrer noopener">
         <div className="px-4 py-4 sm:px-6">
           <div className="flex items-center justify-between">
             <p className="text-sm font-medium text-c6 truncate">{name}</p>

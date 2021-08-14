@@ -23,8 +23,11 @@
     "build": "next build",
     "postbuild": "next-sitemap",
     "start": "next start",
-    "lint:ts": "eslint --cache .",
-    "lint:style": "prettier --check src",
+    "type-check": "tsc",
+    "format": "prettier --check components lib pages",
+    "format:fix": "prettier --write components lib pages",
+    "lint": "eslint --cache components lib pages",
+    "lint:fix": "eslint --cache --fix components lib pages",
     "postinstall": "husky install"
   },
   "devDependencies": {

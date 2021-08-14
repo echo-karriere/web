@@ -27,18 +27,12 @@ const Td = ({ children, bg, ...props }: TDProps): JSX.Element => (
 
 export const Schedule = (): JSX.Element => {
   return (
-    <table
-      className="table-fixed border-separate"
-      style={{ borderSpacing: "2px" }}
-    >
+    <table className="table-fixed border-separate" style={{ borderSpacing: "2px" }}>
       <tbody>
         <tr>
           <th />
           <Td colSpan={3} rowSpan={4} bg="bg-c2">
-            <Item
-              title="Introduksjon og lynpresentasjoner"
-              time="10:00-11:15"
-            />
+            <Item title="Introduksjon og lynpresentasjoner" time="10:00-11:15" />
           </Td>
         </tr>
         <tr>

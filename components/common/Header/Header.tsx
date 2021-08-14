@@ -12,10 +12,7 @@ export function Header(): JSX.Element {
     <div className="relative bg-white z-50">
       <Menu>
         <DesktopMenu mobileButtonClicked={mobileButtonClicked} />
-        <MobileMenu
-          mobileOpen={mobileOpen}
-          mobileButtonClicked={mobileButtonClicked}
-        />
+        <MobileMenu mobileOpen={mobileOpen} mobileButtonClicked={mobileButtonClicked} />
       </Menu>
     </div>
   );

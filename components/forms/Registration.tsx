@@ -66,14 +66,8 @@ const registrationShape = yup.object().shape({
   invoiceOrg: yup.string().required(),
   invoicePerson: yup.string().required(),
   invoiceEmail: yup.string().email().required(),
-  day: yup
-    .mixed()
-    .oneOf(["16", "17"])
-    .required("Dere må velge en dag for deltakelse"),
-  package: yup
-    .mixed()
-    .oneOf(["small", "large"])
-    .required("Dere må velge en grunnpakke"),
+  day: yup.mixed().oneOf(["16", "17"]).required("Dere må velge en dag for deltakelse"),
+  package: yup.mixed().oneOf(["small", "large"]).required("Dere må velge en grunnpakke"),
   workshop: yup.boolean().notRequired(),
   workshopTitle: yup.string().notRequired(),
   talk: yup.boolean().notRequired(),
@@ -82,11 +76,7 @@ const registrationShape = yup.object().shape({
   other: yup.string().notRequired(),
   confirmation: yup
     .boolean()
-    .test(
-      "confirm",
-      "Dere må bekrefte å ha lest vilkårene",
-      (val) => val === null || Boolean(val),
-    )
+    .test("confirm", "Dere må bekrefte å ha lest vilkårene", (val) => val === null || Boolean(val))
     .required(),
 });
 
@@ -120,12 +110,7 @@ export function RegistrationForm(): JSX.Element {
 
   const submitForm = (data: RegistrationFormData) => {
     setIsSubmitting(true);
-    sendFormSubmission(
-      formFieldsToFormData(data),
-      "https://formcarry.com/s/aWffGqXVsGC",
-      setSubmitted,
-      setError,
-    );
+    sendFormSubmission(formFieldsToFormData(data), "https://formcarry.com/s/aWffGqXVsGC", setSubmitted, setError);
   };
 
   const watchWorkshop = watch("workshop");
@@ -141,13 +126,10 @@ export function RegistrationForm(): JSX.Element {
     <div className="bg-white py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24">
       <div className="relative max-w-xl mx-auto">
         <div>
-          <h2 className="text-center text-3xl font-bold text-gray-900 sm:text-4xl">
-            Påmelding echo karriere 2021
-          </h2>
+          <h2 className="text-center text-3xl font-bold text-gray-900 sm:text-4xl">Påmelding echo karriere 2021</h2>
           <p className="mt-4 text-lg leading-6 text-gray-500">
-            Høstens arrangement er <strong>16. og 17. september 2021</strong>,
-            og nytt for i år er at påmeldingen går gjennom nettsiden vår. Sørg
-            for at alle punktene her lest og forstått samt innholdet i{" "}
+            Høstens arrangement er <strong>16. og 17. september 2021</strong>, og nytt for i år er at påmeldingen går
+            gjennom nettsiden vår. Sørg for at alle punktene her lest og forstått samt innholdet i{" "}
             <a href="/files/invitation.pdf" className="underline">
               invitasjonen
             </a>
@@ -163,24 +145,15 @@ export function RegistrationForm(): JSX.Element {
             <div className="space-y-8 divide-y divide-gray-200">
               <div className="pt-8">
                 <div>
-                  <h3 className="text-lg leading-6 font-medium text-gray-900">
-                    Bedriftsinformasjon
-                  </h3>
-                  <p className="mt-1 text-sm text-gray-500">
-                    Informasjon om din bedrift.
-                  </p>
+                  <h3 className="text-lg leading-6 font-medium text-gray-900">Bedriftsinformasjon</h3>
+                  <p className="mt-1 text-sm text-gray-500">Informasjon om din bedrift.</p>
                 </div>
                 <div className="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-3">
                   <div className="sm:col-span-3">
-                    <label
-                      htmlFor="comp_id"
-                      className="block text-sm font-medium text-gray-700"
-                    >
+                    <label htmlFor="comp_id" className="block text-sm font-medium text-gray-700">
                       Bedriftsnavn
                       {errors.company && (
-                        <span className="text-red-500 text-xs float-right">
-                          {errors.company.message}
-                        </span>
+                        <span className="text-red-500 text-xs float-right">{errors.company.message}</span>
                       )}
                     </label>
                     <div className="mt-1">
@@ -193,19 +166,13 @@ export function RegistrationForm(): JSX.Element {
                     </div>
                   </div>
                   <div className="sm:col-span-3">
-                    <label
-                      htmlFor="website"
-                      className="block text-sm font-medium text-gray-700"
-                    >
+                    <label htmlFor="website" className="block text-sm font-medium text-gray-700">
                       Nettside
                       {errors.website && (
-                        <span className="text-red-500 text-xs float-right">
-                          {errors.website.message}
-                        </span>
+                        <span className="text-red-500 text-xs float-right">{errors.website.message}</span>
                       )}
                       <p className="mt-1 text-sm text-gray-500">
-                        Merk at vi trenger hele domenet, inkludert{" "}
-                        <code className="text-sm">https://</code>.
+                        Merk at vi trenger hele domenet, inkludert <code className="text-sm">https://</code>.
                       </p>
                     </label>
                     <div className="mt-1">
@@ -219,23 +186,14 @@ export function RegistrationForm(): JSX.Element {
                     </div>
                   </div>
                   <div className="sm:col-span-3">
-                    <label
-                      htmlFor="logo"
-                      className="block text-sm font-medium text-gray-700"
-                    >
+                    <label htmlFor="logo" className="block text-sm font-medium text-gray-700">
                       Logo
-                      {errors.logo && (
-                        <span className="text-red-500 text-xs float-right">
-                          {errors.logo.message}
-                        </span>
-                      )}
+                      {errors.logo && <span className="text-red-500 text-xs float-right">{errors.logo.message}</span>}
                     </label>
                     <p className="mt-1 text-sm text-gray-500">
-                      Helst en logo i filformatet SVG, men dersom det ikke er
-                      tilgjengelig er andre bildeformater også godkjent. Om dere
-                      vil kan flere logoer lastes opp. Vil bli brukt på vår
-                      nettside for å vise hvilke bedrifter som deltar/på
-                      jobboversikten.
+                      Helst en logo i filformatet SVG, men dersom det ikke er tilgjengelig er andre bildeformater også
+                      godkjent. Om dere vil kan flere logoer lastes opp. Vil bli brukt på vår nettside for å vise hvilke
+                      bedrifter som deltar/på jobboversikten.
                     </p>
                     <div className="mt-1">
                       <input
@@ -253,24 +211,15 @@ export function RegistrationForm(): JSX.Element {
 
               <div className="pt-8">
                 <div>
-                  <h3 className="text-lg leading-6 font-medium text-gray-900">
-                    Kontaktinformasjon
-                  </h3>
-                  <p className="mt-1 text-sm text-gray-500">
-                    Hvem skal brukes som kontaktperson fra deres bedrift?
-                  </p>
+                  <h3 className="text-lg leading-6 font-medium text-gray-900">Kontaktinformasjon</h3>
+                  <p className="mt-1 text-sm text-gray-500">Hvem skal brukes som kontaktperson fra deres bedrift?</p>
                 </div>
                 <div className="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-3">
                   <div className="sm:col-span-3">
-                    <label
-                      htmlFor="contact_person"
-                      className="block text-sm font-medium text-gray-700"
-                    >
+                    <label htmlFor="contact_person" className="block text-sm font-medium text-gray-700">
                       Navn
                       {errors.contactPerson && (
-                        <span className="text-red-500 text-xs float-right">
-                          {errors.contactPerson.message}
-                        </span>
+                        <span className="text-red-500 text-xs float-right">{errors.contactPerson.message}</span>
                       )}
                     </label>
                     <div className="mt-1">
@@ -284,16 +233,9 @@ export function RegistrationForm(): JSX.Element {
                     </div>
                   </div>
                   <div className="sm:col-span-3">
-                    <label
-                      htmlFor="email"
-                      className="block text-sm font-medium text-gray-700"
-                    >
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-700">
                       Epost
-                      {errors.email && (
-                        <span className="text-red-500 text-xs float-right">
-                          {errors.email.message}
-                        </span>
-                      )}
+                      {errors.email && <span className="text-red-500 text-xs float-right">{errors.email.message}</span>}
                     </label>
                     <div className="mt-1">
                       <input
@@ -306,15 +248,10 @@ export function RegistrationForm(): JSX.Element {
                     </div>
                   </div>
                   <div className="sm:col-span-3">
-                    <label
-                      htmlFor="contact_phone"
-                      className="block text-sm font-medium text-gray-700"
-                    >
+                    <label htmlFor="contact_phone" className="block text-sm font-medium text-gray-700">
                       Telefon
                       {errors.contactPhone && (
-                        <span className="text-red-500 text-xs float-right">
-                          {errors.contactPhone.message}
-                        </span>
+                        <span className="text-red-500 text-xs float-right">{errors.contactPhone.message}</span>
                       )}
                     </label>
                     <div className="mt-1">
@@ -332,24 +269,17 @@ export function RegistrationForm(): JSX.Element {
 
               <div className="pt-8">
                 <div>
-                  <h3 className="text-lg leading-6 font-medium text-gray-900">
-                    Fakturainformasjon
-                  </h3>
+                  <h3 className="text-lg leading-6 font-medium text-gray-900">Fakturainformasjon</h3>
                   <p className="mt-1 text-sm text-gray-500">
                     Informasjon for å kunne sende faktura til bedriften deres.
                   </p>
                 </div>
                 <div className="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-3">
                   <div className="sm:col-span-3">
-                    <label
-                      htmlFor="invoice_email"
-                      className="block text-sm font-medium text-gray-700"
-                    >
+                    <label htmlFor="invoice_email" className="block text-sm font-medium text-gray-700">
                       Epost for mottakelse av faktura
                       {errors.invoiceEmail && (
-                        <span className="text-red-500 text-xs float-right">
-                          {errors.invoiceEmail.message}
-                        </span>
+                        <span className="text-red-500 text-xs float-right">{errors.invoiceEmail.message}</span>
                       )}
                     </label>
                     <div className="mt-1">
@@ -363,15 +293,10 @@ export function RegistrationForm(): JSX.Element {
                     </div>
                   </div>
                   <div className="sm:col-span-3">
-                    <label
-                      htmlFor="invoice_org"
-                      className="block text-sm font-medium text-gray-700"
-                    >
+                    <label htmlFor="invoice_org" className="block text-sm font-medium text-gray-700">
                       Organisasjonsnummer
                       {errors.invoiceOrg && (
-                        <span className="text-red-500 text-xs float-right">
-                          {errors.invoiceOrg.message}
-                        </span>
+                        <span className="text-red-500 text-xs float-right">{errors.invoiceOrg.message}</span>
                       )}
                     </label>
                     <div className="mt-1">
@@ -384,15 +309,10 @@ export function RegistrationForm(): JSX.Element {
                     </div>
                   </div>
                   <div className="sm:col-span-3">
-                    <label
-                      htmlFor="invoice_person"
-                      className="block text-sm font-medium text-gray-700"
-                    >
+                    <label htmlFor="invoice_person" className="block text-sm font-medium text-gray-700">
                       Kontaktperson for faktura
                       {errors.invoicePerson && (
-                        <span className="text-red-500 text-xs float-right">
-                          {errors.invoicePerson.message}
-                        </span>
+                        <span className="text-red-500 text-xs float-right">{errors.invoicePerson.message}</span>
                       )}
                     </label>
                     <div className="mt-1">
@@ -406,15 +326,10 @@ export function RegistrationForm(): JSX.Element {
                     </div>
                   </div>
                   <div className="sm:col-span-3">
-                    <label
-                      htmlFor="invoice_address"
-                      className="block text-sm font-medium text-gray-700"
-                    >
+                    <label htmlFor="invoice_address" className="block text-sm font-medium text-gray-700">
                       Fakturaadresse
                       {errors.invoiceAddress && (
-                        <span className="text-red-500 text-xs float-right">
-                          {errors.invoiceAddress.message}
-                        </span>
+                        <span className="text-red-500 text-xs float-right">{errors.invoiceAddress.message}</span>
                       )}
                     </label>
                     <div className="mt-1">
@@ -432,9 +347,7 @@ export function RegistrationForm(): JSX.Element {
 
               <div className="pt-8">
                 <div>
-                  <h3 className="text-lg leading-6 font-medium text-gray-900">
-                    Karrieredagen
-                  </h3>
+                  <h3 className="text-lg leading-6 font-medium text-gray-900">Karrieredagen</h3>
                   <p className="mt-1 text-sm text-gray-500">
                     Velg ønsket dag, pakke og eventuelle ekstra på selve dagen.
                   </p>
@@ -443,15 +356,9 @@ export function RegistrationForm(): JSX.Element {
                   <div>
                     <legend className="text-base font-medium text-gray-900">
                       Dato for deltakelse
-                      {errors.day && (
-                        <span className="text-red-500 text-xs float-right">
-                          {errors.day.message}
-                        </span>
-                      )}
+                      {errors.day && <span className="text-red-500 text-xs float-right">{errors.day.message}</span>}
                     </legend>
-                    <p className="text-sm text-gray-500">
-                      Hvilken dag vil dere delta på?
-                    </p>
+                    <p className="text-sm text-gray-500">Hvilken dag vil dere delta på?</p>
                   </div>
                   <div className="mt-4 space-y-4">
                     <div className="flex items-center">
@@ -462,10 +369,7 @@ export function RegistrationForm(): JSX.Element {
                         value="16"
                         className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
                       />
-                      <label
-                        htmlFor="sep_16"
-                        className="ml-3 block text-sm font-medium text-gray-700"
-                      >
+                      <label htmlFor="sep_16" className="ml-3 block text-sm font-medium text-gray-700">
                         16. september
                       </label>
                     </div>
@@ -477,10 +381,7 @@ export function RegistrationForm(): JSX.Element {
                         value="17"
                         className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
                       />
-                      <label
-                        htmlFor="sep_17"
-                        className="ml-3 block text-sm font-medium text-gray-700"
-                      >
+                      <label htmlFor="sep_17" className="ml-3 block text-sm font-medium text-gray-700">
                         17. september
                       </label>
                     </div>
@@ -491,14 +392,10 @@ export function RegistrationForm(): JSX.Element {
                     <legend className="text-base font-medium text-gray-900">
                       Hvilken pakke vil dere ha?
                       {errors.package && (
-                        <span className="text-red-500 text-xs float-right">
-                          {errors.package.message}
-                        </span>
+                        <span className="text-red-500 text-xs float-right">{errors.package.message}</span>
                       )}
                     </legend>
-                    <p className="text-sm text-gray-500">
-                      Se invitasjonen for mer informasjon.
-                    </p>
+                    <p className="text-sm text-gray-500">Se invitasjonen for mer informasjon.</p>
                   </div>
                   <div className="mt-4 space-y-4">
                     <div className="flex items-center">
@@ -509,10 +406,7 @@ export function RegistrationForm(): JSX.Element {
                         value="small"
                         className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
                       />
-                      <label
-                        htmlFor="package_small"
-                        className="ml-3 block text-sm font-medium text-gray-700"
-                      >
+                      <label htmlFor="package_small" className="ml-3 block text-sm font-medium text-gray-700">
                         Grunnpakke Liten
                       </label>
                     </div>
@@ -524,10 +418,7 @@ export function RegistrationForm(): JSX.Element {
                         value="large"
                         className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
                       />
-                      <label
-                        htmlFor="package_large"
-                        className="ml-3 block text-sm font-medium text-gray-700"
-                      >
+                      <label htmlFor="package_large" className="ml-3 block text-sm font-medium text-gray-700">
                         Grunnpakke Stor
                       </label>
                     </div>
@@ -535,12 +426,11 @@ export function RegistrationForm(): JSX.Element {
                 </fieldset>
                 <fieldset className="mt-6">
                   <legend className="text-base font-medium text-gray-900">
-                    Kan dere se for dere at dere ønsker å arrangere noe på
-                    karrieredagen?
+                    Kan dere se for dere at dere ønsker å arrangere noe på karrieredagen?
                   </legend>
                   <p className="text-sm text-gray-500">
-                    <span className="text-red-600">NB: </span>Merk at vi er
-                    fullbooket for workshops og foredrag 16. september.
+                    <span className="text-red-600">NB: </span>Merk at vi er fullbooket for workshops og foredrag 16.
+                    september.
                   </p>
                   <div className="mt-4 space-y-4">
                     <div className="relative flex items-start">
@@ -553,24 +443,15 @@ export function RegistrationForm(): JSX.Element {
                         />
                       </div>
                       <div className="ml-3 text-sm">
-                        <label
-                          htmlFor="extra_work"
-                          className="font-medium text-gray-700"
-                        >
+                        <label htmlFor="extra_work" className="font-medium text-gray-700">
                           Workshop
                         </label>
-                        <p className="text-gray-500">
-                          En praktisk workshop med et begrenset antall
-                          deltakere.
-                        </p>
+                        <p className="text-gray-500">En praktisk workshop med et begrenset antall deltakere.</p>
                       </div>
                     </div>
                     {watchWorkshop && (
                       <div className="sm:col-span-3">
-                        <label
-                          htmlFor="workshop_title"
-                          className="block text-sm font-medium text-gray-700"
-                        >
+                        <label htmlFor="workshop_title" className="block text-sm font-medium text-gray-700">
                           Tema for workshop (ikke obligatorisk)
                         </label>
                         <div className="mt-1">
@@ -593,23 +474,15 @@ export function RegistrationForm(): JSX.Element {
                         />
                       </div>
                       <div className="ml-3 text-sm">
-                        <label
-                          htmlFor="extra_talk"
-                          className="font-medium text-gray-700"
-                        >
+                        <label htmlFor="extra_talk" className="font-medium text-gray-700">
                           Foredrag
                         </label>
-                        <p className="text-gray-500">
-                          Presentasjon, 20 minutter.
-                        </p>
+                        <p className="text-gray-500">Presentasjon, 20 minutter.</p>
                       </div>
                     </div>
                     {watchTalk && (
                       <div className="sm:col-span-3">
-                        <label
-                          htmlFor="talk_title"
-                          className="block text-sm font-medium text-gray-700"
-                        >
+                        <label htmlFor="talk_title" className="block text-sm font-medium text-gray-700">
                           Tema for foredrag (ikke obligatorisk)
                         </label>
                         <div className="mt-1">
@@ -629,14 +502,10 @@ export function RegistrationForm(): JSX.Element {
                     <legend className="text-base font-medium text-gray-900">
                       Bankett
                       {errors.banquet && (
-                        <span className="text-red-500 text-xs float-right">
-                          {errors.banquet.message}
-                        </span>
+                        <span className="text-red-500 text-xs float-right">{errors.banquet.message}</span>
                       )}
                     </legend>
-                    <p className="text-sm text-gray-500">
-                      Vil dere delta på en bankett? Se invitasjon for mer.
-                    </p>
+                    <p className="text-sm text-gray-500">Vil dere delta på en bankett? Se invitasjon for mer.</p>
                   </div>
                   <div className="mt-4 space-y-4">
                     <div className="flex items-center">
@@ -647,10 +516,7 @@ export function RegistrationForm(): JSX.Element {
                         value="yes"
                         className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
                       />
-                      <label
-                        htmlFor="banquet_yes"
-                        className="ml-3 block text-sm font-medium text-gray-700"
-                      >
+                      <label htmlFor="banquet_yes" className="ml-3 block text-sm font-medium text-gray-700">
                         Ja
                       </label>
                     </div>
@@ -662,10 +528,7 @@ export function RegistrationForm(): JSX.Element {
                         value="no"
                         className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
                       />
-                      <label
-                        htmlFor="banquet_no"
-                        className="ml-3 block text-sm font-medium text-gray-700"
-                      >
+                      <label htmlFor="banquet_no" className="ml-3 block text-sm font-medium text-gray-700">
                         Nei
                       </label>
                     </div>
@@ -675,21 +538,14 @@ export function RegistrationForm(): JSX.Element {
 
               <div className="pt-8">
                 <div>
-                  <h3 className="text-lg leading-6 font-medium text-gray-900">
-                    Annet
-                  </h3>
-                  <p className="mt-1 text-sm text-gray-500">
-                    Har dere noe annet på hjertet?
-                  </p>
+                  <h3 className="text-lg leading-6 font-medium text-gray-900">Annet</h3>
+                  <p className="mt-1 text-sm text-gray-500">Har dere noe annet på hjertet?</p>
                 </div>
                 <div>
                   <fieldset>
                     <div className="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-3">
                       <div className="sm:col-span-3">
-                        <label
-                          htmlFor="about"
-                          className="block text-sm font-medium text-gray-700"
-                        >
+                        <label htmlFor="about" className="block text-sm font-medium text-gray-700">
                           Melding
                         </label>
                         <div className="mt-1">
@@ -701,9 +557,7 @@ export function RegistrationForm(): JSX.Element {
                             className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
                           />
                         </div>
-                        <p className="mt-2 text-sm text-gray-500">
-                          Om det skulle være noe mer, skriv det gjerne her!
-                        </p>
+                        <p className="mt-2 text-sm text-gray-500">Om det skulle være noe mer, skriv det gjerne her!</p>
                       </div>
                     </div>
                   </fieldset>
@@ -715,24 +569,19 @@ export function RegistrationForm(): JSX.Element {
                   <h3 className="text-lg leading-6 font-medium text-gray-900">
                     Bekreftelse
                     {errors.confirmation && (
-                      <span className="text-red-500 text-xs float-right">
-                        {errors.confirmation.message}
-                      </span>
+                      <span className="text-red-500 text-xs float-right">{errors.confirmation.message}</span>
                     )}
                   </h3>
                   <p className="mt-1 text-sm text-gray-500">
-                    Med dette bekrefter dere blant annet følgende, samt
-                    vilkårene som fremkommer av invitasjonen:
+                    Med dette bekrefter dere blant annet følgende, samt vilkårene som fremkommer av invitasjonen:
                   </p>
                   <ul className="list-disc list-inside pt-2">
                     <li className="italic">
-                      Vi deltar på obligatorisk generalprøve dersom
-                      karrieredagen avholdes digitalt
+                      Vi deltar på obligatorisk generalprøve dersom karrieredagen avholdes digitalt
                     </li>
                     <li className="italic">
-                      Ved arrangering av workshop og eller foredrag at dere vil
-                      gi tilbakemelding til echo karriere på tema for workshop
-                      innen fristen 2. september
+                      Ved arrangering av workshop og eller foredrag at dere vil gi tilbakemelding til echo karriere på
+                      tema for workshop innen fristen 2. september
                     </li>
                   </ul>
                 </div>
@@ -749,12 +598,8 @@ export function RegistrationForm(): JSX.Element {
                           />
                         </div>
                         <div className="ml-3 text-sm">
-                          <label
-                            htmlFor="confirmation"
-                            className="block text-sm font-medium text-gray-700"
-                          >
-                            Vi bekrefter at vi har lest vilkårene og aksepterer
-                            vilkårene for kontrakten.
+                          <label htmlFor="confirmation" className="block text-sm font-medium text-gray-700">
+                            Vi bekrefter at vi har lest vilkårene og aksepterer vilkårene for kontrakten.
                           </label>
                         </div>
                       </div>

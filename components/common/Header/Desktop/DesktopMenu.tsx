@@ -7,19 +7,10 @@ import { navigation } from "@/data";
 import logo from "../../../../public/logo.png";
 import { MenuDropdown } from ".";
 import { MenuItem } from "./MenuItem";
-import { More, MoreLink } from "./More";
+import { More } from "./More";
 
 interface Props {
   mobileButtonClicked: () => void;
-}
-
-interface Edge {
-  node: {
-    frontmatter: {
-      title: string;
-      path: string;
-    };
-  };
 }
 
 export function DesktopMenu({ mobileButtonClicked }: Props): JSX.Element {

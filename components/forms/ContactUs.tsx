@@ -44,12 +44,7 @@ export function ContactUs(): JSX.Element {
   });
 
   const submitForm = (data: FormData) =>
-    sendFormSubmission(
-      data,
-      "https://formcarry.com/s/i4fH6eGjGEzY",
-      setSubmitted,
-      setError,
-    );
+    sendFormSubmission(data, "https://formcarry.com/s/i4fH6eGjGEzY", setSubmitted, setError);
 
   if (submitted) return <FormSubmitted />;
   if (error) return <FormError />;
@@ -58,30 +53,17 @@ export function ContactUs(): JSX.Element {
     <div className="bg-white py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24">
       <div className="relative max-w-xl mx-auto">
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-            Kontakt oss
-          </h2>
+          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">Kontakt oss</h2>
           <p className="mt-4 text-lg leading-6 text-gray-500">
-            Send oss gjerne en melding dersom dere har spørsmål eller vil gjerne
-            komme i kontakt.
+            Send oss gjerne en melding dersom dere har spørsmål eller vil gjerne komme i kontakt.
           </p>
         </div>
         <div className="mt-12">
-          <form
-            className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
-            onSubmit={handleSubmit(submitForm)}
-          >
+          <form className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8" onSubmit={handleSubmit(submitForm)}>
             <div className="sm:col-span-2">
-              <label
-                htmlFor="name_id"
-                className="block text-sm font-medium text-gray-700"
-              >
+              <label htmlFor="name_id" className="block text-sm font-medium text-gray-700">
                 Navn
-                {errors.name && (
-                  <span className="text-red-600 text-sm float-right">
-                    {errors.name.message}
-                  </span>
-                )}
+                {errors.name && <span className="text-red-600 text-sm float-right">{errors.name.message}</span>}
               </label>
               <div className="mt-1">
                 <input
@@ -95,16 +77,9 @@ export function ContactUs(): JSX.Element {
             </div>
 
             <div className="sm:col-span-2">
-              <label
-                htmlFor="email_id"
-                className="block text-sm font-medium text-gray-700"
-              >
+              <label htmlFor="email_id" className="block text-sm font-medium text-gray-700">
                 Epost
-                {errors.email && (
-                  <span className="text-red-600 text-sm float-right">
-                    {errors.email.message}
-                  </span>
-                )}
+                {errors.email && <span className="text-red-600 text-sm float-right">{errors.email.message}</span>}
               </label>
               <input
                 type="email"
@@ -116,16 +91,9 @@ export function ContactUs(): JSX.Element {
             </div>
 
             <div className="sm:col-span-2">
-              <label
-                htmlFor="message"
-                className="block text-sm font-medium text-gray-700"
-              >
+              <label htmlFor="message" className="block text-sm font-medium text-gray-700">
                 Melding
-                {errors.message && (
-                  <span className="text-red-600 text-sm float-right">
-                    {errors.message.message}
-                  </span>
-                )}
+                {errors.message && <span className="text-red-600 text-sm float-right">{errors.message.message}</span>}
               </label>
               <textarea
                 id="message"
