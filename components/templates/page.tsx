@@ -1,6 +1,4 @@
-import { MDXRenderer } from "gatsby-plugin-mdx";
-
-import { Container, Content, Layout, SEO } from "../components";
+import { Container, Content, Layout, SEO } from "@/components";
 
 interface PageData {
   pageContext: {
@@ -18,9 +16,7 @@ export default function PageTemplate({ pageContext }: PageData): JSX.Element {
     <Layout>
       <SEO title={frontmatter.title} description={frontmatter.description} />
       <Container>
-        <Content title={frontmatter.title}>
-          <MDXRenderer>{body}</MDXRenderer>
-        </Content>
+        <Content title={frontmatter.title}>{body}</Content>
       </Container>
     </Layout>
   );

@@ -38,38 +38,21 @@ export function CommitteeApplication(): JSX.Element {
   });
 
   const submitForm = (data: FormData) =>
-    sendFormSubmission(
-      data,
-      "https://formcarry.com/s/Ho75s7HESzsQ",
-      setSubmitted,
-      setError,
-    );
+    sendFormSubmission(data, "https://formcarry.com/s/Ho75s7HESzsQ", setSubmitted, setError);
 
   if (submitted) return <FormSubmitted title="Takk for din søknad!" />;
   if (error) return <FormError />;
 
   return (
     <div className="py-16 px-4 overflow-hidden sm:bx-6 lg:px-8 lg:py24 lg:max-w-xl">
-      <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-        Bli styremedlem
-      </h2>
+      <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">Bli styremedlem</h2>
       <p>Send inn din søknad her, så hører du fra oss så fort som mulig.</p>
       <div className="mt-12">
-        <form
-          className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
-          onSubmit={handleSubmit(submitForm)}
-        >
+        <form className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8" onSubmit={handleSubmit(submitForm)}>
           <div className="sm:col-span-2">
-            <label
-              className="block text-sm font-medium text-gray-700"
-              htmlFor="name_id"
-            >
+            <label className="block text-sm font-medium text-gray-700" htmlFor="name_id">
               Navn
-              {errors.name && (
-                <span className="text-red-600 text-sm float-right">
-                  {errors.name.message}
-                </span>
-              )}
+              {errors.name && <span className="text-red-600 text-sm float-right">{errors.name.message}</span>}
             </label>
             <div className="mt-1">
               <input
@@ -83,16 +66,9 @@ export function CommitteeApplication(): JSX.Element {
           </div>
 
           <div className="sm:col-span-2">
-            <label
-              className="block text-sm font-medium text-gray-700"
-              htmlFor="email_id"
-            >
+            <label className="block text-sm font-medium text-gray-700" htmlFor="email_id">
               Epost
-              {errors.email && (
-                <span className="text-red-600 text-sm float-right">
-                  {errors.email.message}
-                </span>
-              )}
+              {errors.email && <span className="text-red-600 text-sm float-right">{errors.email.message}</span>}
             </label>
             <div className="mt-1">
               <input
@@ -106,15 +82,10 @@ export function CommitteeApplication(): JSX.Element {
           </div>
 
           <div className="sm:col-span-2">
-            <label
-              className="block text-sm font-medium text-gray-700"
-              htmlFor="application"
-            >
+            <label className="block text-sm font-medium text-gray-700" htmlFor="application">
               Søknadstekst
               {errors.application && (
-                <span className="text-red-600 text-sm float-right">
-                  {errors.application.message}
-                </span>
+                <span className="text-red-600 text-sm float-right">{errors.application.message}</span>
               )}
             </label>
             <textarea
