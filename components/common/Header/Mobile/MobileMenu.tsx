@@ -56,9 +56,7 @@ export function MobileMenu({ mobileOpen, mobileButtonClicked }: Props): JSX.Elem
                   return item.items
                     .filter((child) => child.mainMobile)
                     .map((child) => (
-                      <BigMobileLink title={child.title} to={child.to} key={child.to}>
-                        {child.children}
-                      </BigMobileLink>
+                      <BigMobileLink title={child.title} to={child.to} key={child.to} Icon={child.Icon} />
                     ));
                 })}
               </nav>
