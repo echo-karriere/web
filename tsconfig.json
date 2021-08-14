@@ -27,8 +27,8 @@
       "@/icons": ["./components/assets/icons"],
       "@/lib/*": ["./lib/*"],
       "@/utils": ["./utils"]
-    },
+    }
   },
-  "exclude": ["node_modules"],
+  "exclude": ["node_modules", "src"],
   "include": ["**/*.ts", "**/*.tsx"]
 }
