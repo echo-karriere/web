@@ -1,4 +1,3 @@
-import { graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 import { ReactNode, useEffect, useState } from "react";
 
@@ -59,47 +58,9 @@ const isSVGNode = (node: AttendeeProps): node is AttendeeSVG => {
 };
 
 export const Attendees = ({ title }: AttendeesProps): JSX.Element => {
-  const data = useStaticQuery(
-    graphql`
-      query Attendees {
-        images: allAttendeesJson(filter: { svg: { eq: false } }) {
-          edges {
-            node {
-              name
-              link
-              svg
-              icon {
-                childImageSharp {
-                  gatsbyImageData(width: 220, quality: 70, layout: CONSTRAINED)
-                }
-              }
-            }
-          }
-        }
-        svg: allAttendeesJson(filter: { svg: { eq: true } }) {
-          edges {
-            node {
-              name
-              link
-              svg
-              icon {
-                publicURL
-              }
-            }
-          }
-        }
-      }
-    `,
+  const [attendees, setAttendees] = useState<(AttendeeImage | AttendeeSVG)[]>(
+    [],
   );
-
-  const images = data.images.edges.map(
-    ({ node }: { node: AttendeeImage }) => node,
-  );
-  const svg = data.svg.edges.map(({ node }: { node: AttendeeSVG }) => node);
-  const [attendees, setAttendees] = useState<(AttendeeImage | AttendeeSVG)[]>([
-    ...images,
-    ...svg,
-  ]);
 
   useEffect(() => {
     const copy = [...attendees];
@@ -114,6 +75,11 @@ export const Attendees = ({ title }: AttendeesProps): JSX.Element => {
         <p className="text-center text-base font-semibold uppercase text-gray-600 tracking-wider">
           {title}
         </p>
+        {attendees.length === 0 && (
+          <p className="text-center text-base uppercase text-gray-600 tracking-wider">
+            Mer informasjon kommer
+          </p>
+        )}
         <div className="mt-6 grid grid-cols-1 gap-0.5 md:grid-cols-3 lg:mt-8">
           {attendees.map((node) => (
             <Attendee key={node.name} {...node}>

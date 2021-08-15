@@ -1,4 +1,3 @@
-import { graphql, useStaticQuery } from "gatsby";
 import { useEffect, useState } from "react";
 
 import { shuffleArray } from "../../../utils";
@@ -6,24 +5,7 @@ import { FilterBy, Job, JobProps } from ".";
 import { Selects } from "./Selects";
 
 export const Jobs = (): JSX.Element => {
-  const data = useStaticQuery(graphql`
-    query Jobs {
-      allJobsJson {
-        edges {
-          node {
-            name
-            company
-            link
-            location
-            type
-          }
-        }
-      }
-    }
-  `);
-  const [jobs, setJobs] = useState<JobProps[]>(
-    data.allJobsJson.edges.map(({ node }: { node: JobProps }) => node),
-  );
+  const [jobs, setJobs] = useState<JobProps[]>([]);
   const [filter, setFilter] = useState<FilterBy>({
     type: undefined,
     location: undefined,
@@ -43,6 +25,7 @@ export const Jobs = (): JSX.Element => {
           <aside className="my-8 flex flex-col items-center justify-center xl:hidden">
             <Selects jobs={jobs} filter={filter} setFilter={setFilter} />
           </aside>
+          {jobs.length === 0 && <p>Mer informasjon kommer</p>}
           <div className="bg-white shadow overflow-hidden sm:rounded-md md:mr-8">
             <ul className="divide-y divide-gray-200">
               {jobs.map((node) => (
