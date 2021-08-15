@@ -6,7 +6,7 @@
       {
         "title": "For studenter",
         "to": "/for-studenter/",
-        "description": "Hva er echo karriere og hva skjer?",
+        "description": "Hva er echo karriere?",
         "children": "AcademicIcon",
         "mainMobile": false
       },
@@ -20,14 +20,14 @@
       {
         "title": "Karrieredagen 2021",
         "to": "/karrieredagen-2021/",
-        "description": "Hvem deltok og hva skjedde på dagen?",
+        "description": "Hvem, hva og hvor for echo karriere 2021",
         "children": "LightBulbIcon",
         "mainMobile": true
       },
       {
         "title": "Timeplan",
         "to": "/timeplan/",
-        "description": "Se timeplanen for hva som skjedde på karrieredagen.",
+        "description": "Se timeplanen for hva som skjer på karrieredagene.",
         "children": "ClockIcon",
         "mainMobile": true
       }
