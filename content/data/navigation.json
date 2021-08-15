@@ -45,9 +45,9 @@
         "mainMobile": true
       },
       {
-        "title": "Påmelding",
-        "to": "/for-bedrifter/pamelding/",
-        "description": "Meld dere på echo karriere høsten 2021",
+        "title": "Send stillingsannonser",
+        "to": "/for-bedrifter/annonser/",
+        "description": "Stillingene din bedrift vil ha på våre nettsider",
         "children": "PencilAltIcon",
         "mainMobile": true
       }
