@@ -269,7 +269,10 @@ export function JobRegistrationForm(): JSX.Element {
                     <div className="mt-1">
                       <input
                         type="date"
-                        {...register("deadline", { required: true })}
+                        value={new Date().toISOString().split("T")[0]}
+                        min="2021-08-01"
+                        max="2022-12-12"
+                        {...register("deadline")}
                         id="title"
                         className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
                       />
