@@ -46,7 +46,7 @@
       },
       {
         "title": "Send stillingsannonser",
-        "to": "/for-bedrifter/annonser/",
+        "to": "/for-bedrifter/stillinger/",
         "description": "Stillingene din bedrift vil ha på våre nettsider",
         "children": "PencilAltIcon",
         "mainMobile": true

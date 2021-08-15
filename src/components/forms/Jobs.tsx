@@ -57,7 +57,7 @@ export function JobRegistrationForm(): JSX.Element {
 
   const submitForm = (data: JobRegistrationData) => {
     setIsSubmitting(true);
-    sendFormSubmission(
+    sendFormSubmission<JobRegistrationData>(
       data,
       "https://formcarry.com/s/ZYdgMndvu0x",
       setSubmitted,
