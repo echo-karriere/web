@@ -137,7 +137,7 @@ const esbuildCwd = (type: ContentType): string => {
 };
 
 export const renderMDX = async (slug: string, type: ContentType): Promise<MdxContent> => {
-  const itemPath = contentPathByPath(slug, "page");
+  const itemPath = contentPathByPath(slug, type);
   const { code, frontmatter } = await readAndBundleMdx(itemPath, type);
 
   return {
