@@ -2,7 +2,7 @@
   {
     "name": "Sondre Eide Omland",
     "position": "Leder",
-    "headshot": "../images/sondreO.jpg",
+    "headshot": "/images/styret/sondreO.jpg",
     "socials": {
       "github": null,
       "linkedin": "sondre-eide-omland-995705170",
@@ -12,7 +12,7 @@
   {
     "name": "Endre Borgen Egge",
     "position": "Nestleder",
-    "headshot": "../images/endre.jpg",
+    "headshot": "/images/styret/endre.jpg",
     "socials": {
       "github": null,
       "linkedin": "endre-borgen-egge-841009126",
@@ -22,7 +22,7 @@
   {
     "name": "Marie Heggebakk",
     "position": "Økonomiansvarlig",
-    "headshot": "../images/marie.jpg",
+    "headshot": "/images/styret/marie.jpg",
     "socials": {
       "github": "heggebakk",
       "linkedin": "marieheggebakk",
@@ -32,7 +32,7 @@
   {
     "name": "Sondre Nilsen",
     "position": "Webansvarlig",
-    "headshot": "../images/sondreN.jpg",
+    "headshot": "/images/styret/sondreN.jpg",
     "socials": {
       "github": "sondr3",
       "linkedin": "sondr3",
@@ -42,7 +42,7 @@
   {
     "name": "Nikoline Liseth",
     "position": "Bedriftsansvarlig",
-    "headshot": "../images/nikoline.jpg",
+    "headshot": "/images/styret/nikoline.jpg",
     "socials": {
       "github": null,
       "linkedin": "nikoline-liseth-b82b1b194",
@@ -52,7 +52,7 @@
   {
     "name": "Kristine Enger",
     "position": "Bedriftsansvarlig",
-    "headshot": "../images/kristine.jpg",
+    "headshot": "/images/styret/kristine.jpg",
     "socials": {
       "github": null,
       "linkedin": null,
@@ -62,7 +62,7 @@
   {
     "name": "Kristin Loka Øydna",
     "position": "Styremedlem",
-    "headshot": "../images/kristin.jpg",
+    "headshot": "/images/styret/kristin.jpg",
     "socials": {
       "github": null,
       "linkedin": null,
