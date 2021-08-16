@@ -11,7 +11,7 @@ export function Intro(): JSX.Element {
     <>
       {/* <Notification message="" url="" /> */}
       <Hero />
-      <div className="py-16 bg-gray-50 overflow-hidden lg:py-24">
+      <div className="pb-16 bg-gray-50 overflow-hidden">
         <div className="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
           <div className="relative">
             <h2 className="text-center text-3xl leading-8 font-extrabold text-gray-900 sm:text-4xl">
@@ -100,7 +100,7 @@ export function Intro(): JSX.Element {
               </div>
             </div>
 
-            <div className="mt-10 -mx-4 relative lg:mt-0" aria-hidden="true">
+            <div className="mt-10 mx-auto relative lg:mt-0" aria-hidden="true">
               <Image
                 className="relative mx-auto"
                 height={370}
@@ -190,7 +190,7 @@ export function Intro(): JSX.Element {
                 </div>
               </div>
 
-              <div className="mt-10 -mx-4 relative lg:mt-0 lg:col-start-1">
+              <div className="mt-10 mx-auto relative lg:mt-0 lg:col-start-1">
                 <Image
                   className="relative mx-auto"
                   height={350}
@@ -303,7 +303,7 @@ export function Intro(): JSX.Element {
               </div>
             </div>
 
-            <div className="mt-10 -mx-4 relative lg:mt-0" aria-hidden="true">
+            <div className="mt-10 mx-auto relative lg:mt-0" aria-hidden="true">
               <Image
                 className="relative mx-auto"
                 width={490}
