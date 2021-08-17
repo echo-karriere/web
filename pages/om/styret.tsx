@@ -122,7 +122,7 @@ export default function Committee({ data }: { data: CommitteeMember[] }): JSX.El
   );
 }
 
-export const getStaticProps: GetStaticProps = async (_context) => {
+export const getStaticProps: GetStaticProps = async () => {
   const committee = await fs.readFile(COMMITTEE_DATA);
   const data = JSON.parse(committee.toString());
 

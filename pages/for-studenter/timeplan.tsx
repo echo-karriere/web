@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { Container, Content, Layout, Schedule } from "@/components";
+import { Container, Content, Layout } from "@/components";
 
 interface Workshop {
   company: string;
