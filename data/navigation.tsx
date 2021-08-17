@@ -18,14 +18,12 @@ interface MenuChild {
 
 interface MenuItem {
   title: string;
-  hasPosts: boolean;
   items: (MenuItemProps & MenuChild)[];
 }
 
 export const navigation: Array<MenuItem> = [
   {
     title: "For studenter",
-    hasPosts: false,
     items: [
       {
         title: "For studenter",
@@ -59,7 +57,6 @@ export const navigation: Array<MenuItem> = [
   },
   {
     title: "For bedrifter",
-    hasPosts: false,
     items: [
       {
         title: "For bedrifter",
@@ -79,7 +76,6 @@ export const navigation: Array<MenuItem> = [
   },
   {
     title: "echo karriere",
-    hasPosts: true,
     items: [
       {
         title: "Om oss",
