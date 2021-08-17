@@ -43,7 +43,7 @@ export const navigation: Array<MenuItem> = [
       },
       {
         title: "Karrieredagen 2021",
-        to: "/karrieredagen-2021/",
+        to: "/for-studenter/informasjon/",
         description: "Hvem, hva og hvor for echo karriere 2021",
         Icon: LightBulbIcon,
         mainMobile: true,
