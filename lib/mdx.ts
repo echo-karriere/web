@@ -59,8 +59,8 @@ const readAndBundleMdx = async <T>(slug: string, type: ContentType): Promise<{ c
 };
 
 export const allContentByType = async <T extends Content>(type: ContentType): Promise<(T & { path: string })[]> => {
-  const path = CONTENT_MAP[type];
-  const content = await fs.readdir(path);
+  const contentPath = CONTENT_MAP[type];
+  const content = await fs.readdir(contentPath);
 
   const out = [];
 
@@ -135,13 +135,11 @@ export const getNews = async (): Promise<NewsItem[]> => {
   const items = await allContentByType<NewsContent>("news");
   items.sort((a, b) => b.date.getTime() - a.date.getTime());
 
-  const news = items.map((i) => ({
+  return items.map((i) => ({
     title: i.title,
     path: `/nyheter/${i.date.getFullYear()}/${i.slug}`,
     date: i.date.toISOString(),
     prettyDate: i.date.toLocaleDateString("no-NB", { day: "2-digit", month: "long", year: "numeric" }),
     excerpt: i.description,
   }));
-
-  return news;
 };
