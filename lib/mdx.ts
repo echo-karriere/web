@@ -3,6 +3,8 @@ import { bundleMDX } from "mdx-bundler";
 import path from "path";
 import { remarkMdxImages } from "remark-mdx-images";
 
+import { Content, NewsContent, NewsItem } from "@/lib/types";
+
 const CONTENT_PATH = path.join(path.resolve("."), "content");
 export const NEWS_PATH = path.join(CONTENT_PATH, "news");
 export const PAGES_PATH = path.join(CONTENT_PATH, "pages");
@@ -18,45 +20,16 @@ const CONTENT_MAP = {
   companies: COMPANY_PATH,
 };
 
-export interface FrontMatter {
-  title: string;
-  description?: string;
-  draft?: boolean;
-  published?: boolean;
-}
-
-export interface MdxContent {
+export interface MdxContent<T> {
   mdx: string;
-  frontMatter: FrontMatter;
+  frontMatter: T;
 }
-
-export const findNewsFromSlug = async (slug: string): Promise<string> => {
-  const posts = await allContentByType("news");
-  const combined = postPathsToSlugs(posts);
-  const post = combined.find((p) => p.slug == slug);
-
-  if (post === undefined) {
-    throw new Error("Could not find news");
-  }
-
-  return post.path;
-};
-
-export const postPathsToSlugs = (posts: string[]): Array<{ path: string; slug: string }> => {
-  const slugs = posts.map((p) => p.replace(/\.mdx$/, "").replace(/\d{4}-\d{2}-\d{2}-/, "")).map((slug) => slug);
-  const combined = posts.map((p, i) => ({ slug: slugs[i], path: p }));
-
-  return combined;
-};
 
 export const pagePathsToSlug = (pages: string[]): string[] => {
   return pages.map((p) => removeMDXExtension(p));
 };
 
-const readAndBundleMdx = async (
-  slug: string,
-  type: ContentType,
-): Promise<{ code: string; frontmatter: FrontMatter }> => {
+const readAndBundleMdx = async <T>(slug: string, type: ContentType): Promise<{ code: string; frontmatter: T }> => {
   const file = path.parse(slug).name;
   const content = await fs.readFile(slug);
   const { code, frontmatter } = await bundleMDX(content.toString(), {
@@ -81,28 +54,29 @@ const readAndBundleMdx = async (
 
   return {
     code,
-    frontmatter: frontmatter as FrontMatter,
+    frontmatter: frontmatter as T,
   };
 };
 
-export const allContentByType = async (type: ContentType): Promise<string[]> => {
+export const allContentByType = async <T extends Content>(type: ContentType): Promise<(T & { path: string })[]> => {
   const path = CONTENT_MAP[type];
   const content = await fs.readdir(path);
 
-  const paths = [];
+  const out = [];
 
   for (const p of content) {
+    if (p.startsWith(".")) continue;
     const itemPath = contentPathByPath(p, type);
-    const { frontmatter } = await readAndBundleMdx(itemPath, type);
+    const { frontmatter } = await readAndBundleMdx<T>(itemPath, type);
 
     if (!frontmatter.published) {
       continue;
     } else {
-      paths.push(p);
+      out.push({ ...frontmatter, path: p });
     }
   }
 
-  return paths;
+  return out;
 };
 
 const removeMDXExtension = (filePath: string): string => {
@@ -136,12 +110,38 @@ const esbuildCwd = (type: ContentType): string => {
   }
 };
 
-export const renderMDX = async (slug: string, type: ContentType): Promise<MdxContent> => {
+export const renderMDX = async <T extends Content>(slug: string, type: ContentType): Promise<MdxContent<T>> => {
   const itemPath = contentPathByPath(slug, type);
   const { code, frontmatter } = await readAndBundleMdx(itemPath, type);
 
   return {
     mdx: code,
-    frontMatter: frontmatter as FrontMatter,
+    frontMatter: frontmatter as T,
   };
+};
+
+export const renderNewsItem = async (slug: string[]): Promise<MdxContent<NewsContent>> => {
+  const items = await allContentByType<NewsContent>("news");
+  const item = items.find((i) => i.slug === slug[1]);
+
+  if (item === undefined) {
+    throw new Error("Could not find news item");
+  }
+
+  return renderMDX(item.path, "news");
+};
+
+export const getNews = async (): Promise<NewsItem[]> => {
+  const items = await allContentByType<NewsContent>("news");
+  items.sort((a, b) => b.date.getTime() - a.date.getTime());
+
+  const news = items.map((i) => ({
+    title: i.title,
+    path: `/nyheter/${i.date.getFullYear()}/${i.slug}`,
+    date: i.date.toISOString(),
+    prettyDate: i.date.toLocaleDateString("no-NB", { day: "2-digit", month: "long", year: "numeric" }),
+    excerpt: i.description,
+  }));
+
+  return news;
 };
