@@ -1,6 +1,6 @@
 import { getMDXComponent } from "mdx-bundler/client";
 import { GetStaticPaths, GetStaticProps } from "next";
-import React, { useMemo } from "react";
+import { useMemo } from "react";
 
 import { components, Container, Content, Layout } from "@/components";
 import { allContentByType, MdxContent, pagePathsToSlug, renderMDX } from "@/lib/mdx";
