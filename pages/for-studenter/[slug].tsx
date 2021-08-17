@@ -4,8 +4,9 @@ import React, { useMemo } from "react";
 
 import { components, Container, Content, Layout } from "@/components";
 import { allContentByType, MdxContent, pagePathsToSlug, renderMDX } from "@/lib/mdx";
+import { Content as C } from "@/lib/types";
 
-export default function Page({ mdx, frontMatter }: MdxContent): JSX.Element {
+export default function Page({ mdx, frontMatter }: MdxContent<C>): JSX.Element {
   const Component = useMemo(() => getMDXComponent(mdx), [mdx]);
 
   return (
@@ -33,7 +34,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = await allContentByType("students");
-  const pages = pagePathsToSlug(paths);
+  const pages = pagePathsToSlug(paths.map((p) => p.path));
 
   return {
     paths: pages.map((p) => ({ params: { slug: p } })),
