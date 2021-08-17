@@ -1,31 +1,17 @@
 import { Menu } from "@headlessui/react";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 
 import { navigation } from "@/data";
-import { NewsItem } from "@/lib/types";
 
 import logo from "../../../../public/logo.png";
-import { MenuDropdown, MenuItem, More, MoreLink } from ".";
+import { MenuDropdown, MenuItem } from ".";
 
 interface Props {
   mobileButtonClicked: () => void;
 }
 
 export function DesktopMenu({ mobileButtonClicked }: Props): JSX.Element {
-  const [news, setNews] = useState<NewsItem[]>([]);
-
-  useEffect(() => {
-    const fetchNews = async () => {
-      const res = await fetch("/api/nyheter/latest");
-      const data: NewsItem[] = await res.json();
-      setNews(data.slice(0, 3));
-    };
-
-    fetchNews();
-  }, []);
-
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-0">
       <div className="flex justify-between items-center border-b-2 border-gray-100 pt-6 md:justify-start md:space-x-10">
@@ -72,15 +58,6 @@ export function DesktopMenu({ mobileButtonClicked }: Props): JSX.Element {
                           />
                         ))}
                       </div>
-                      {item.hasPosts && (
-                        <div className="px-5 py-5 bg-gray-50 sm:px-8 sm:py-8">
-                          <More title="Siste nytt" readMoreLink="/nyheter/" readMoreTitle="Les mer">
-                            {news.map((edge) => (
-                              <MoreLink title={edge.title} to={edge.path} key={edge.path} />
-                            ))}
-                          </More>
-                        </div>
-                      )}
                     </Menu.Items>
                   </div>
                 </div>
