@@ -42,8 +42,8 @@ const FilterSelect = ({ label, title, children, onChange }: SelectProps): JSX.El
 
 export const JobCompanySelect = ({ jobs, filter, setFilter }: SelectFilterJobs): JSX.Element => {
   const companies = [...new Set(jobs.map((j) => j.company))].sort();
-  const company = (company: string): Partial<FilterBy> => {
-    return { company: company === "all" ? undefined : company };
+  const company = (comp: string): Partial<FilterBy> => {
+    return { company: comp === "all" ? undefined : comp };
   };
   return (
     <FilterSelect
@@ -61,8 +61,8 @@ export const JobCompanySelect = ({ jobs, filter, setFilter }: SelectFilterJobs):
 
 export const JobLocationSelect = ({ jobs, filter, setFilter }: SelectFilterJobs): JSX.Element => {
   const locations = [...new Set(jobs.map((j) => j.location))].filter((e) => e).sort();
-  const location = (location: string): Partial<FilterBy> => {
-    return { location: location === "all" ? undefined : location };
+  const location = (loc: string): Partial<FilterBy> => {
+    return { location: loc === "all" ? undefined : loc };
   };
   return (
     <FilterSelect title="Sted" label="location" onChange={(e) => setFilter({ ...filter, ...location(e.target.value) })}>
@@ -75,8 +75,8 @@ export const JobLocationSelect = ({ jobs, filter, setFilter }: SelectFilterJobs)
 };
 
 export const JobTypeSelect = ({ filter, setFilter }: SelectFilter): JSX.Element => {
-  const type = (type: string): Partial<FilterBy> => {
-    return { type: type === "all" ? undefined : (type as JobType) };
+  const type = (t: string): Partial<FilterBy> => {
+    return { type: t === "all" ? undefined : (t as JobType) };
   };
   return (
     <FilterSelect title="Jobbtype" label="type" onChange={(e) => setFilter({ ...filter, ...type(e.target.value) })}>
