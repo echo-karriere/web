@@ -7,8 +7,6 @@ on:
 
 jobs:
   pipeline:
-    env:
-      CI: true
     name: pipeline
     runs-on: ubuntu-latest
 
@@ -27,8 +25,6 @@ jobs:
         with:
           path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
       - uses: actions/cache@v2
         with:
           path: ${{ github.workspace }}/.next/cache
@@ -44,8 +40,3 @@ jobs:
 
       - name: Build
         run: yarn build
-        env:
-          API_URL: ${{ secrets.API_URL }}
-          API_PROJECT: ${{ secrets.API_PROJECT }}
-          API_EMAIL: ${{ secrets.API_EMAIL }}
-          API_PASSWORD: ${{ secrets.API_PASSWORD }}
