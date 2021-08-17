@@ -1,4 +1,5 @@
 import { yupResolver } from "@hookform/resolvers/yup";
+import Link from "next/link";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
@@ -130,9 +131,9 @@ export function RegistrationForm(): JSX.Element {
           <p className="mt-4 text-lg leading-6 text-gray-500">
             Høstens arrangement er <strong>16. og 17. september 2021</strong>, og nytt for i år er at påmeldingen går
             gjennom nettsiden vår. Sørg for at alle punktene her lest og forstått samt innholdet i{" "}
-            <a href="/files/invitation.pdf" className="underline">
-              invitasjonen
-            </a>
+            <Link href="/files/invitation.pdf">
+              <a className="underline">invitasjonen</a>
+            </Link>
             .
           </p>
         </div>

@@ -41,10 +41,7 @@ export function Hero(): JSX.Element {
                   </div>
                   <div className="mt-3 sm:mt-0 sm:ml-3">
                     <Link href="/om/">
-                      <a
-                        href="/om/"
-                        className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-black bg-c1 hover:bg-c2 md:py-4 md:text-lg md:px-10"
-                      >
+                      <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-black bg-c1 hover:bg-c2 md:py-4 md:text-lg md:px-10">
                         Om oss
                       </a>
                     </Link>
