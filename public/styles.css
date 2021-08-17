@@ -1,0 +1,7 @@
+.unset {
+  min-height: unset !important;
+  max-height: 80px !important;
+  min-width: unset !important;
+  width: unset !important;
+  height: unset !important;
+}

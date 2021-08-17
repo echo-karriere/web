@@ -1,6 +1,7 @@
 import "tailwindcss/tailwind.css";
 import "typeface-bitter";
 import "typeface-cambo";
+import "../public/styles.css";
 
 import { AppProps } from "next/app";
 import Head from "next/head";
