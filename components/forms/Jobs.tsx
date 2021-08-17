@@ -57,12 +57,7 @@ export function JobRegistrationForm(): JSX.Element {
 
   const submitForm = (data: JobRegistrationData) => {
     setIsSubmitting(true);
-    sendFormSubmission<JobRegistrationData>(
-      data,
-      "https://formcarry.com/s/ZYdgMndvu0x",
-      setSubmitted,
-      setError,
-    );
+    sendFormSubmission<JobRegistrationData>(data, "https://formcarry.com/s/ZYdgMndvu0x", setSubmitted, setError);
   };
 
   const resetForm = () => {
@@ -77,9 +72,7 @@ export function JobRegistrationForm(): JSX.Element {
       <div className="bg-white py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24 h-96 flex flex-col justify-center items-center">
         <div className="relative max-w-xl mx-auto">
           <div className="text-center">
-            <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-              Takk!
-            </h1>
+            <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl">Takk!</h1>
             <h2>Vi vil legge ut annonsen straks!</h2>
             <div className="py-6">
               <button
@@ -99,37 +92,24 @@ export function JobRegistrationForm(): JSX.Element {
     <div className="bg-white py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24">
       <div className="relative max-w-xl mx-auto">
         <div>
-          <h2 className="text-center text-3xl font-bold text-gray-900 sm:text-4xl">
-            Send inn dine stillinger
-          </h2>
+          <h2 className="text-center text-3xl font-bold text-gray-900 sm:text-4xl">Send inn dine stillinger</h2>
           <p className="mt-4 text-lg leading-6 text-gray-500">
-            For å enkelt få stillingsannonser inn på jobboversikten kan dere
-            bruke denne formen.
+            For å enkelt få stillingsannonser inn på jobboversikten kan dere bruke denne formen.
           </p>
         </div>
         <div className="mt-12">
-          <form
-            className="space-y-8 divide-y divide-gray-200"
-            onSubmit={handleSubmit(submitForm)}
-          >
+          <form className="space-y-8 divide-y divide-gray-200" onSubmit={handleSubmit(submitForm)}>
             <div className="space-y-8 divide-y divide-gray-200">
               <div className="pt-8">
                 <div>
-                  <h3 className="text-lg leading-6 font-medium text-gray-900">
-                    Stillingsopplysninger
-                  </h3>
+                  <h3 className="text-lg leading-6 font-medium text-gray-900">Stillingsopplysninger</h3>
                 </div>
                 <div className="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-3">
                   <div className="sm:col-span-3">
-                    <label
-                      htmlFor="company"
-                      className="block text-sm font-medium text-gray-700"
-                    >
+                    <label htmlFor="company" className="block text-sm font-medium text-gray-700">
                       Bedrift
                       {errors.company && (
-                        <span className="text-red-500 text-xs float-right">
-                          {errors.company.message}
-                        </span>
+                        <span className="text-red-500 text-xs float-right">{errors.company.message}</span>
                       )}
                     </label>
                     <div className="mt-1">
@@ -142,15 +122,10 @@ export function JobRegistrationForm(): JSX.Element {
                     </div>
                   </div>
                   <div className="sm:col-span-3">
-                    <label
-                      htmlFor="location"
-                      className="block text-sm font-medium text-gray-700"
-                    >
+                    <label htmlFor="location" className="block text-sm font-medium text-gray-700">
                       Sted
                       {errors.location && (
-                        <span className="text-red-500 text-xs float-right">
-                          {errors.location.message}
-                        </span>
+                        <span className="text-red-500 text-xs float-right">{errors.location.message}</span>
                       )}
                     </label>
                     <div className="mt-1">
@@ -163,16 +138,9 @@ export function JobRegistrationForm(): JSX.Element {
                     </div>
                   </div>
                   <div className="sm:col-span-3">
-                    <label
-                      htmlFor="title"
-                      className="block text-sm font-medium text-gray-700"
-                    >
+                    <label htmlFor="title" className="block text-sm font-medium text-gray-700">
                       Stillingstittel
-                      {errors.title && (
-                        <span className="text-red-500 text-xs float-right">
-                          {errors.title.message}
-                        </span>
-                      )}
+                      {errors.title && <span className="text-red-500 text-xs float-right">{errors.title.message}</span>}
                     </label>
                     <div className="mt-1">
                       <input
@@ -184,20 +152,13 @@ export function JobRegistrationForm(): JSX.Element {
                     </div>
                   </div>
                   <div className="sm:col-span-3">
-                    <label
-                      htmlFor="description"
-                      className="block text-sm font-medium text-gray-700"
-                    >
+                    <label htmlFor="description" className="block text-sm font-medium text-gray-700">
                       Beskrivelse
                       {errors.description && (
-                        <span className="text-red-500 text-xs float-right">
-                          {errors.description.message}
-                        </span>
+                        <span className="text-red-500 text-xs float-right">{errors.description.message}</span>
                       )}
                     </label>
-                    <p className="mt-1 text-sm text-gray-500">
-                      Et par linjer med beskrivelse av stillingen.
-                    </p>
+                    <p className="mt-1 text-sm text-gray-500">Et par linjer med beskrivelse av stillingen.</p>
                     <div className="mt-1">
                       <textarea
                         rows={4}
@@ -209,16 +170,9 @@ export function JobRegistrationForm(): JSX.Element {
                     </div>
                   </div>
                   <div className="sm:col-span-3">
-                    <label
-                      htmlFor="link"
-                      className="block text-sm font-medium text-gray-700"
-                    >
+                    <label htmlFor="link" className="block text-sm font-medium text-gray-700">
                       Lenke til stilling
-                      {errors.link && (
-                        <span className="text-red-500 text-xs float-right">
-                          {errors.link.message}
-                        </span>
-                      )}
+                      {errors.link && <span className="text-red-500 text-xs float-right">{errors.link.message}</span>}
                     </label>
                     <div className="mt-1">
                       <input
@@ -230,16 +184,9 @@ export function JobRegistrationForm(): JSX.Element {
                     </div>
                   </div>
                   <div className="sm:col-span-3">
-                    <label
-                      htmlFor="type"
-                      className="block text-sm font-medium text-gray-700"
-                    >
+                    <label htmlFor="type" className="block text-sm font-medium text-gray-700">
                       Stillingstype
-                      {errors.type && (
-                        <span className="text-red-500 text-xs float-right">
-                          {errors.type.message}
-                        </span>
-                      )}
+                      {errors.type && <span className="text-red-500 text-xs float-right">{errors.type.message}</span>}
                     </label>
                     <div className="mt-1">
                       <select
@@ -255,17 +202,15 @@ export function JobRegistrationForm(): JSX.Element {
                     </div>
                   </div>
                   <div className="sm:col-span-3">
-                    <label
-                      htmlFor="deadline"
-                      className="block text-sm font-medium text-gray-700"
-                    >
+                    <label htmlFor="deadline" className="block text-sm font-medium text-gray-700">
                       Siste frist
                       {errors.deadline && (
-                        <span className="text-red-500 text-xs float-right">
-                          {errors.deadline.message}
-                        </span>
+                        <span className="text-red-500 text-xs float-right">{errors.deadline.message}</span>
                       )}
                     </label>
+                    <p className="mt-1 text-sm text-gray-500">
+                      Dersom det er en fulltidsstilling kan du ignorere sluttfristen.
+                    </p>
                     <div className="mt-1">
                       <input
                         type="date"

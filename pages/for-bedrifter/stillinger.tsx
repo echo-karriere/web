@@ -1,13 +1,8 @@
-import { Container, Layout, SEO } from "../../components";
-import { JobRegistrationForm } from "../../components/forms";
+import { Container, JobRegistrationForm, Layout } from "@/components";
 
 export default function Index(): JSX.Element {
   return (
-    <Layout>
-      <SEO
-        title="Jobber"
-        description="Send inn ledige stillinger som skal vises på nettsiden"
-      />
+    <Layout title="Jobber" description="Send inn ledige stillinger som skal vises på nettsiden">
       <Container>
         <JobRegistrationForm />
       </Container>
