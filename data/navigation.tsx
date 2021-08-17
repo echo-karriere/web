@@ -36,7 +36,7 @@ export const navigation: Array<MenuItem> = [
       },
       {
         title: "Jobb",
-        to: "/jobb/",
+        to: "/for-studenter/jobb/",
         description: "Se stillingsutlysninger fra deltakere",
         Icon: BriefcaseIcon,
         mainMobile: false,
