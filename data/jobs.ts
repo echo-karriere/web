@@ -103,3 +103,6 @@ export const JOBS: Array<JobProps> = [
     deadline: "01.10.2021",
   },
 ];
+
+export const JOB_LOCATIONS: Array<string> = [...new Set(JOBS.flatMap((it) => (it.location ? [it.location] : [])))];
+export const JOB_COMPANIES: Array<string> = [...new Set(JOBS.map((it) => it.company))];

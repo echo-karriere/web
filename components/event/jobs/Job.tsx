@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { FilterBy } from "./Selects";
+import { ActiveFilter } from "./index";
 
 export type JobType = "full" | "part" | "summer" | "other";
 
@@ -37,14 +37,27 @@ export const Job = ({
   type,
   deadline,
   link,
-  filters,
-}: JobProps & { filters: FilterBy }): JSX.Element | null => {
+  activeFilters,
+}: JobProps & { activeFilters: Array<ActiveFilter> }): JSX.Element | null => {
   const show = (): boolean => {
-    let valid = true;
-    if (filters.type) valid = type === filters.type;
-    if (filters.company) valid = valid && company === filters.company;
-    if (filters.location) valid = valid && location === filters.location;
-    return valid;
+    const size = activeFilters.length === 0;
+    if (size) return true;
+
+    const hasType = activeFilters.some((it) => it.type === "type");
+    const validType = hasType && activeFilters.some((it) => it.value === type);
+
+    const hasCompany = activeFilters.some((it) => it.type === "companies");
+    const validCompany = hasCompany && activeFilters.some((it) => it.label === company);
+
+    const hasLocation = activeFilters.some((it) => it.type === "location");
+    const validLocation = hasLocation && activeFilters.some((it) => it.label === location);
+
+    if (hasType && hasCompany && hasLocation) return validType && validCompany && validLocation;
+    if (hasType && hasCompany) return validType && validCompany;
+    if (hasType && hasLocation) return validType && validLocation;
+    if (hasCompany && hasLocation) return validCompany && validLocation;
+
+    return validType || validCompany || validLocation;
   };
 
   if (!show()) return null;
