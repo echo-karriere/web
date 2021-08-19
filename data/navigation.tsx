@@ -26,20 +26,6 @@ export const navigation: Array<MenuItem> = [
     title: "For studenter",
     items: [
       {
-        title: "For studenter",
-        to: "/for-studenter/",
-        description: "Hva er echo karriere og hva skjer?",
-        Icon: AcademicIcon,
-        mainMobile: false,
-      },
-      {
-        title: "Jobb",
-        to: "/for-studenter/jobb/",
-        description: "Se stillingsutlysninger fra deltakere",
-        Icon: BriefcaseIcon,
-        mainMobile: false,
-      },
-      {
         title: "Karrieredagen 2021",
         to: "/for-studenter/informasjon/",
         description: "Hvem, hva og hvor for echo karriere 2021",
@@ -47,11 +33,26 @@ export const navigation: Array<MenuItem> = [
         mainMobile: true,
       },
       {
+        title: "Jobb",
+        to: "/for-studenter/jobb/",
+        description: "Se stillingsutlysninger fra deltakere",
+        Icon: BriefcaseIcon,
+        mainMobile: true,
+      },
+
+      {
         title: "Timeplan",
         to: "/for-studenter/timeplan/",
         description: "Se timeplanen for hva som skjer på karrieredagene.",
         Icon: ClockIcon,
-        mainMobile: true,
+        mainMobile: false,
+      },
+      {
+        title: "For studenter",
+        to: "/for-studenter/",
+        description: "Hva er echo karriere og hva skjer?",
+        Icon: AcademicIcon,
+        mainMobile: false,
       },
     ],
   },
