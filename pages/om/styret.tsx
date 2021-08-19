@@ -9,7 +9,7 @@ import { CommitteeMember } from "@/lib/types";
 const Member = ({ name, position, headshot, socials }: CommitteeMember): JSX.Element => (
   <li>
     <div className="space-y-4">
-      <div className="aspect-w-3 aspect-h-2">
+      <div>
         {headshot && (
           <Image
             alt={`Headshot of ${name}`}
