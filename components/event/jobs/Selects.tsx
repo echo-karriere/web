@@ -3,7 +3,7 @@ import { XIcon } from "@heroicons/react/outline";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import { Dispatch, Fragment, SetStateAction, useState } from "react";
 
-import { ActiveFilter, Filter, JobFilter, jobSortOptions } from "./index";
+import { ActiveFilter, Filter, JobFilter, SortOption } from "./index";
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
@@ -14,9 +14,18 @@ interface Props {
   setActiveFilters: Dispatch<SetStateAction<Array<ActiveFilter>>>;
   filters: Array<JobFilter>;
   setFilters: Dispatch<SetStateAction<Array<JobFilter>>>;
+  order: Array<SortOption>;
+  setOrder: Dispatch<SetStateAction<Array<SortOption>>>;
 }
 
-export const Selects = ({ activeFilters, setActiveFilters, filters, setFilters }: Props): JSX.Element => {
+export const Selects = ({
+  activeFilters,
+  setActiveFilters,
+  filters,
+  setFilters,
+  order,
+  setOrder,
+}: Props): JSX.Element => {
   const [open, setOpen] = useState(false);
 
   const filterActive = (type: Filter): boolean => activeFilters.some((it) => it.type === type);
@@ -42,6 +51,14 @@ export const Selects = ({ activeFilters, setActiveFilters, filters, setFilters }
     }
 
     setFilters(newFilters);
+  };
+
+  const onOrderSelect = (name: string) => {
+    const newOrder = [...order];
+    for (const order of newOrder) {
+      order.current = order.name === name;
+    }
+    setOrder(newOrder);
   };
 
   return (
@@ -163,19 +180,22 @@ export const Selects = ({ activeFilters, setActiveFilters, filters, setFilters }
               >
                 <Menu.Items className="origin-top-left absolute left-0 mt-2 w-40 rounded-md shadow-2xl bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
                   <div className="py-1">
-                    {jobSortOptions.map((option) => (
+                    {order.map((option) => (
                       <Menu.Item key={option.name}>
                         {({ active }) => (
-                          <a
-                            href={option.href}
+                          <div
+                            role="button"
+                            tabIndex={0}
+                            onKeyPress={() => onOrderSelect(option.name)}
+                            onClick={() => onOrderSelect(option.name)}
                             className={classNames(
                               option.current ? "font-medium text-gray-900" : "text-gray-500",
                               active ? "bg-gray-100" : "",
-                              "block px-4 py-2 text-sm",
+                              "block px-4 py-2 text-sm cursor-pointer",
                             )}
                           >
                             {option.name}
-                          </a>
+                          </div>
                         )}
                       </Menu.Item>
                     ))}
