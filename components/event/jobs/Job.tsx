@@ -12,7 +12,7 @@ export interface JobProps {
   description: string;
   location: string | null;
   type: JobType;
-  deadline: string | null;
+  deadline: Date | null;
 }
 
 export const jobType = (type: JobType): string => {
@@ -76,7 +76,9 @@ export const Job = ({
         </h3>
         <div className="flex flex justify-between">
           <p className="text-sm font-bold text-gray-900">Frist</p>
-          <p className="text-sm text-gray-600">{deadline ?? "N/A"}</p>
+          <p className="text-sm text-gray-600">
+            {deadline?.toLocaleDateString("no-NB", { day: "2-digit", month: "2-digit", year: "numeric" }) ?? "N/A"}
+          </p>
         </div>
         <div className="flex flex justify-between">
           <p className="text-sm font-bold text-gray-900">Sted</p>

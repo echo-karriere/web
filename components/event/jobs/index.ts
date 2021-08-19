@@ -4,15 +4,17 @@ export * from "./Job";
 export * from "./Jobs";
 export * from "./Selects";
 
-interface SortOption {
+export type SortType = "none" | "date";
+
+export interface SortOption {
   name: string;
-  href: string;
+  type: SortType;
   current: boolean;
 }
 
 export const jobSortOptions: Array<SortOption> = [
-  { name: "Ingen", href: "#", current: true },
-  { name: "Frist", href: "#", current: false },
+  { name: "Ingen", type: "none", current: true },
+  { name: "Frist", type: "date", current: false },
 ];
 
 export interface JobFilterOption {

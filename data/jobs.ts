@@ -12,7 +12,7 @@ export const JOBS: Array<JobProps> = [
       "Would you like to start your career in a place where you can impact society as a part of a world-class team? TietoEVRY is the leading digital services and software company in the Nordics. We create digital advantages for businesses and societies. Whether you want to become a strategist, coder, analyst, or a future-enthusiast, you will find your place here.",
     location: null,
     type: "full",
-    deadline: "08.09.2021",
+    deadline: new Date(Date.parse("2021-09-08")),
   },
   {
     name: "Nyutdannet utvikler 2022",
@@ -34,7 +34,7 @@ export const JOBS: Array<JobProps> = [
       "Ønsker du en smakebit på hvordan det er å være med på å levere morgendagens løsninger i det digitale landskapet? Som summer intern i Netcompany får du mulighet til nettopp dette! Du vil jobbe på et reelt prosjekt for en av våre kunder i team sammen med andre sommerstudenter og konsulenter fra Netcompany.",
     location: "Oslo",
     type: "summer",
-    deadline: "15.10.21",
+    deadline: new Date(Date.parse("2021-10-15")),
   },
   {
     name: "Talent Network 2022",
@@ -45,7 +45,7 @@ export const JOBS: Array<JobProps> = [
       "Er du morgendagens teknolog og ønsker å utfordre deg selv, lære og bygge nettverk? Nå kan du få en unik mulighet. Netcompany ønsker å invitere 10 studenter fra Norge ned til et slott utenfor København. Her vil du møte teknologistudenter fra de ulike landene hvor vi har kontor for en faglig og sosial nettverkssamling!",
     location: "København",
     type: "other",
-    deadline: "01.12.21",
+    deadline: new Date(Date.parse("2021-12-01")),
   },
   {
     name: "Sommerjobb IT/Tech 2022",
@@ -56,7 +56,7 @@ export const JOBS: Array<JobProps> = [
       "Vil du tilbringe neste sommer på Norges beste arbeidsplass? En sommer som gir deg et innblikk i konsulentverdenen, prosjektarbeid, nytt nettverk, samt mye sosialt og moro rundt omkring i Oslo by, sammen med en fantastisk gjeng. Høres det interessant ut?",
     location: "Oslo",
     type: "summer",
-    deadline: "20.10.2021",
+    deadline: new Date(Date.parse("2021-10-20")),
   },
   {
     name: "Nyutdannet IT/tech 2022",
@@ -67,7 +67,7 @@ export const JOBS: Array<JobProps> = [
       "Få en rakettstart på arbeidslivet hos Norges beste arbeidsplass! Synes du de fleste graduate-programmer fremstår som nesten helt like? For å gjøre det litt enklere for deg å velge, tenkte vi å fortelle om de to tingene som skiller oss ut fra de aller fleste, ja - kanskje alle.",
     location: "Oslo",
     type: "full",
-    deadline: "01.10.2021",
+    deadline: new Date(Date.parse("2021-10-01")),
   },
   {
     name: "Konsulent design",
@@ -78,7 +78,7 @@ export const JOBS: Array<JobProps> = [
       "Få en rakettstart på arbeidslivet hos Norges beste arbeidsplass! Synes du de fleste graduate-programmer fremstår som nesten helt like? For å gjøre det litt enklere for deg å velge, tenkte vi å fortelle om de to tingene som skiller oss ut fra de aller fleste, ja - kanskje alle.",
     location: "Oslo",
     type: "full",
-    deadline: "01.10.2021",
+    deadline: new Date(Date.parse("2021-10-01")),
   },
   {
     name: "Nyutdannet Cyber Security 2022",
@@ -89,7 +89,7 @@ export const JOBS: Array<JobProps> = [
       "Få en rakettstart på arbeidslivet hos Norges beste arbeidsplass! Synes du de fleste graduate-programmer fremstår som nesten helt like? For å gjøre det litt enklere for deg å velge, tenkte vi å fortelle om de to tingene som skiller oss ut fra de aller fleste, ja - kanskje alle.",
     location: "Oslo",
     type: "full",
-    deadline: "27.09.2021",
+    deadline: new Date(Date.parse("2021-09-27")),
   },
   {
     name: "Nyutdannet 2022 - Forretningsrådgivning",
@@ -100,7 +100,7 @@ export const JOBS: Array<JobProps> = [
       "Få en rakettstart på arbeidslivet hos Norges beste arbeidsplass! Synes du de fleste graduate-programmer fremstår som nesten helt like? For å gjøre det litt enklere for deg å velge, tenkte vi å fortelle om de to tingene som skiller oss ut fra de aller fleste, ja - kanskje alle.",
     location: "Oslo",
     type: "full",
-    deadline: "01.10.2021",
+    deadline: new Date(Date.parse("2021-10-01")),
   },
 ];
 
