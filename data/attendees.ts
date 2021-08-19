@@ -30,6 +30,61 @@ export interface Attendee {
   logo: StaticImageData;
 }
 
+export type ATTENDEE_NAMES =
+  | "appear"
+  | "atea"
+  | "bekk"
+  | "bouvet"
+  | "capgemini"
+  | "deloitte"
+  | "dnb"
+  | "easee"
+  | "equinor"
+  | "finn"
+  | "gjensidige"
+  | "kantega"
+  | "knowit"
+  | "kongsberg"
+  | "netcompany"
+  | "netlight"
+  | "nsm"
+  | "patient"
+  | "politet"
+  | "pwc"
+  | "simula"
+  | "sopraSteria"
+  | "stacc"
+  | "tietoEvry"
+  | "tripletex";
+
+export const ATTENDEE_LOGOS: Record<ATTENDEE_NAMES, StaticImageData> = {
+  appear: appear,
+  atea: atea,
+  bekk: bekk,
+  bouvet: bouvet,
+  capgemini: capgemini,
+  deloitte: deloitte,
+  dnb: dnb,
+  easee: easee,
+  equinor: equinor,
+  finn: finn,
+  gjensidige: gjensidige,
+  kantega: kantega,
+  knowit: knowit,
+  kongsberg: kongsberg,
+  netcompany: netcompany,
+  netlight: netlight,
+  nsm: nsm,
+  patient: patient,
+  politet: politet,
+  pwc: pwc,
+  simula: simula,
+  sopraSteria: sopra,
+  stacc: stacc,
+  tietoEvry: tieto,
+  tripletex: tripletex,
+};
+
 export const ATTENDEES: Array<Attendee> = [
   {
     company: "Capgemini",
