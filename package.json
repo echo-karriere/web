@@ -6,6 +6,7 @@
     "@headlessui/react": "1.4.0",
     "@heroicons/react": "1.0.4",
     "@hookform/resolvers": "2.7.1",
+    "@tailwindcss/aspect-ratio": "0.2.1",
     "axios": "0.21.1",
     "esbuild": "0.12.20",
     "mdx-bundler": "6.0.1",
