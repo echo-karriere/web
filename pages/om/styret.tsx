@@ -1,10 +1,7 @@
-import { promises as fs } from "fs";
-import { GetStaticProps } from "next";
 import Image from "next/image";
 
 import { Container, Layout } from "@/components";
-import { COMMITTEE_DATA } from "@/lib/index";
-import { CommitteeMember } from "@/lib/types";
+import { COMMITTEE_MEMBERS, CommitteeMember } from "@/data";
 
 const Member = ({ name, position, headshot, socials }: CommitteeMember): JSX.Element => (
   <li>
@@ -98,7 +95,7 @@ const Member = ({ name, position, headshot, socials }: CommitteeMember): JSX.Ele
   </li>
 );
 
-export default function Committee({ data }: { data: CommitteeMember[] }): JSX.Element {
+export default function Committee(): JSX.Element {
   return (
     <Layout title="Styret" description="Om styret.">
       <Container>
@@ -110,7 +107,7 @@ export default function Committee({ data }: { data: CommitteeMember[] }): JSX.El
                 <p className="text-xl text-gray-500">echo karriere drives av frivillige studenter.</p>
               </div>
               <ul className="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8">
-                {data.map((member) => (
+                {COMMITTEE_MEMBERS.map((member) => (
                   <Member key={member.name} {...member} />
                 ))}
               </ul>
@@ -121,12 +118,3 @@ export default function Committee({ data }: { data: CommitteeMember[] }): JSX.El
     </Layout>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  const committee = await fs.readFile(COMMITTEE_DATA);
-  const data = JSON.parse(committee.toString());
-
-  return {
-    props: { data },
-  };
-};
