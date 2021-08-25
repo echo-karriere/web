@@ -9,8 +9,8 @@ module.exports = {
     "plugin:import/warnings",
     "plugin:import/typescript",
     "plugin:@typescript-eslint/recommended",
-    "prettier",
     "next",
+    "prettier",
   ],
   settings: {
     react: {
