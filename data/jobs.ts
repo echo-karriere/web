@@ -102,6 +102,28 @@ export const JOBS: Array<JobProps> = [
     type: "full",
     deadline: new Date(Date.parse("2021-10-01")),
   },
+  {
+    name: "Sommerjobb 2022",
+    company: "Bouvet",
+    link: "https://www.poption.com/companies/bouvet/postings",
+    logo: ATTENDEE_LOGOS.bouvet,
+    description:
+      "Bouvet er et skandinavisk konsulentselskap, som gjennom rådgivning, utvikling, design og forvaltning, bidrar til å maksimere effekter i krysningspunktet mellom moderne teknologi og digital kommunikasjon. Flotte ord - ingen overflødige.",
+    location: null,
+    type: "summer",
+    deadline: new Date(Date.parse("2021-10-01")),
+  },
+  {
+    name: "Nyutdannet 2022",
+    company: "Bouvet",
+    link: "https://www.poption.com/companies/bouvet/postings",
+    logo: ATTENDEE_LOGOS.bouvet,
+    description:
+      "Bouvet er et skandinavisk konsulentselskap, som gjennom rådgivning, utvikling, design og forvaltning, bidrar til å maksimere effekter i krysningspunktet mellom moderne teknologi og digital kommunikasjon. Flotte ord - ingen overflødige.",
+    location: null,
+    type: "full",
+    deadline: new Date(Date.parse("2021-10-01")),
+  },
 ];
 
 export const JOB_LOCATIONS: Array<string> = [...new Set(JOBS.flatMap((it) => (it.location ? [it.location] : [])))];
