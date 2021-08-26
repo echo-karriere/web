@@ -3,8 +3,7 @@
 [![Powered by Vercel](https://raw.githubusercontent.com/echo-karriere/web/develop/.github/powered-by-vercel.svg)](https://vercel.com?utm_source=echo-karriere-website&utm_campaign=oss)
 
 This is the front-end (aka website) for _echo karriere_; a career day for IT
-students in and around Bergen. It is written using a symphony of modern tools,
-most notably React, Gatsby, (S)CSS-modules and hosted using Vercel.
+students in and around Bergen. It is written in NextJS using TailwindCSS.
 
 ## Setup
 
@@ -12,8 +11,7 @@ Install all dependencies by running `yarn`.
 
 ## Running
 
-To develop run `yarn develop`. To fetch the queries from our remote API-server
-you need to have an API user, ask your friendly responsible developer: @sondr3.
+To develop run `yarn dev`.
 
 ## License
 
