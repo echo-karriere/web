@@ -10,7 +10,7 @@ export interface JobProps {
   logo: StaticImageData;
   link: string;
   description: string;
-  location: string | null;
+  location: string | string[];
   type: JobType;
   deadline: Date | null;
 }
@@ -26,6 +26,14 @@ export const jobType = (type: JobType): string => {
     case "other":
       return "Annet";
   }
+};
+
+const jobLocation = (location: string | string[]): string => {
+  if (Array.isArray(location)) {
+    return location.join(", ");
+  }
+
+  return location;
 };
 
 export const Job = ({
@@ -50,7 +58,12 @@ export const Job = ({
     const validCompany = hasCompany && activeFilters.some((it) => it.label === company);
 
     const hasLocation = activeFilters.some((it) => it.type === "location");
-    const validLocation = hasLocation && activeFilters.some((it) => it.label === location);
+    const validLocation =
+      hasLocation &&
+      activeFilters.some((it) => {
+        if (Array.isArray(location)) return location.some((loc) => it.label === loc);
+        else return it.label === location;
+      });
 
     if (hasType && hasCompany && hasLocation) return validType && validCompany && validLocation;
     if (hasType && hasCompany) return validType && validCompany;
@@ -68,23 +81,23 @@ export const Job = ({
         <Image src={logo} alt={company} className="w-full h-full object-contain sm:w-full sm:h-full" />
       </div>
       <div className="flex-1 p-4 space-y-2 flex flex-col">
-        <h3 className="flex min-w-0 text-sm font-medium text-lg text-gray-900 mx-auto max-w-xs">
+        <h3 className="flex min-w-0 font-medium text-lg text-gray-900 mx-auto max-w-xs">
           <a href={link} className="inline-block md:truncate">
             <span aria-hidden="true" className="absolute inset-0" />
             {name}
           </a>
         </h3>
-        <div className="flex flex justify-between">
+        <div className="flex justify-between">
           <p className="text-sm font-bold text-gray-900">Frist</p>
           <p className="text-sm text-gray-600">
             {deadline?.toLocaleDateString("no-NB", { day: "2-digit", month: "2-digit", year: "numeric" }) ?? "N/A"}
           </p>
         </div>
-        <div className="flex flex justify-between">
+        <div className="flex justify-between">
           <p className="text-sm font-bold text-gray-900">Sted</p>
-          <p className="text-sm text-gray-600">{location ?? "Flere"}</p>
+          <p className="text-sm text-gray-600 truncate pl-6">{jobLocation(location)}</p>
         </div>
-        <div className="flex flex justify-between">
+        <div className="flex justify-between">
           <p className="text-sm font-bold text-gray-900">Stilling</p>
           <p className="text-sm text-gray-600">{jobType(type)}</p>
         </div>

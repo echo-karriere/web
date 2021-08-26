@@ -10,7 +10,7 @@ export const JOBS: Array<JobProps> = [
     logo: ATTENDEE_LOGOS.tietoEvry,
     description:
       "Would you like to start your career in a place where you can impact society as a part of a world-class team? TietoEVRY is the leading digital services and software company in the Nordics. We create digital advantages for businesses and societies. Whether you want to become a strategist, coder, analyst, or a future-enthusiast, you will find your place here.",
-    location: null,
+    location: ["Bergen", "Oslo", "Trondheim", "Stavanger"],
     type: "full",
     deadline: new Date(Date.parse("2021-09-08")),
   },
@@ -109,7 +109,7 @@ export const JOBS: Array<JobProps> = [
     logo: ATTENDEE_LOGOS.bouvet,
     description:
       "Bouvet er et skandinavisk konsulentselskap, som gjennom rådgivning, utvikling, design og forvaltning, bidrar til å maksimere effekter i krysningspunktet mellom moderne teknologi og digital kommunikasjon. Flotte ord - ingen overflødige.",
-    location: null,
+    location: ["Oslo", "Bergen", "Stavanger"],
     type: "summer",
     deadline: new Date(Date.parse("2021-10-01")),
   },
@@ -120,11 +120,13 @@ export const JOBS: Array<JobProps> = [
     logo: ATTENDEE_LOGOS.bouvet,
     description:
       "Bouvet er et skandinavisk konsulentselskap, som gjennom rådgivning, utvikling, design og forvaltning, bidrar til å maksimere effekter i krysningspunktet mellom moderne teknologi og digital kommunikasjon. Flotte ord - ingen overflødige.",
-    location: null,
+    location: ["Oslo", "Bergen", "Stavanger"],
     type: "full",
     deadline: new Date(Date.parse("2021-10-01")),
   },
 ];
 
-export const JOB_LOCATIONS: Array<string> = [...new Set(JOBS.flatMap((it) => (it.location ? [it.location] : [])))];
+export const JOB_LOCATIONS: Array<string> = [
+  ...new Set(JOBS.flatMap((it) => (Array.isArray(it.location) ? [...it.location] : [it.location]))),
+];
 export const JOB_COMPANIES: Array<string> = [...new Set(JOBS.map((it) => it.company))];
