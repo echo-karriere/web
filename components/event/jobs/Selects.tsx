@@ -26,7 +26,7 @@ export const Selects = ({
   order,
   setOrder,
 }: Props): JSX.Element => {
-  const [open, setOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const filterActive = (type: Filter): boolean => activeFilters.some((it) => it.type === type);
   const filterCount = (type: Filter): number => {
@@ -55,8 +55,8 @@ export const Selects = ({
 
   const onOrderSelect = (name: string) => {
     const newOrder = [...order];
-    for (const order of newOrder) {
-      order.current = order.name === name;
+    for (const next of newOrder) {
+      next.current = next.name === name;
     }
     setOrder(newOrder);
   };
@@ -64,8 +64,8 @@ export const Selects = ({
   return (
     <div className="bg-white pb-4">
       {/* Mobile filter dialog */}
-      <Transition.Root show={open} as={Fragment}>
-        <Dialog as="div" className="fixed inset-0 flex z-40 sm:hidden" onClose={setOpen}>
+      <Transition.Root show={menuOpen} as={Fragment}>
+        <Dialog as="div" className="fixed inset-0 flex z-40 sm:hidden" onClose={setMenuOpen}>
           <Transition.Child
             as={Fragment}
             enter="transition-opacity ease-linear duration-300"
@@ -93,7 +93,7 @@ export const Selects = ({
                 <button
                   type="button"
                   className="-mr-2 w-10 h-10 bg-white p-2 rounded-md flex items-center justify-center text-gray-400"
-                  onClick={() => setOpen(false)}
+                  onClick={() => setMenuOpen(false)}
                 >
                   <span className="sr-only">Close menu</span>
                   <XIcon className="h-6 w-6" aria-hidden="true" />
@@ -207,7 +207,7 @@ export const Selects = ({
             <button
               type="button"
               className="inline-block text-sm font-medium text-gray-700 hover:text-gray-900 sm:hidden"
-              onClick={() => setOpen(true)}
+              onClick={() => setMenuOpen(true)}
             >
               Filtre
             </button>

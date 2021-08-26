@@ -95,7 +95,7 @@ export const COMMITTEE_MEMBERS: Array<CommitteeMember> = [
     headshot: victoria,
     socials: {
       github: null,
-      linkedin: "http://www.linkedin.com/in/victoria-valner-63b3a2194",
+      linkedin: "https://www.linkedin.com/in/victoria-valner-63b3a2194",
       website: null,
     },
   },
