@@ -15,9 +15,7 @@ import kongsberg from "../public/logos/kongsberg.jpg";
 import netcompany from "../public/logos/netcompany.png";
 import netlight from "../public/logos/netlight.svg";
 import nsm from "../public/logos/nsm.png";
-import patient from "../public/logos/patient-sky.svg";
 import politet from "../public/logos/politiet-ikt.jpg";
-import pwc from "../public/logos/pwc.svg";
 import simula from "../public/logos/simula-uib.svg";
 import sopra from "../public/logos/sopra-steria.png";
 import stacc from "../public/logos/stacc.png";
@@ -48,9 +46,7 @@ export type ATTENDEE_NAMES =
   | "netcompany"
   | "netlight"
   | "nsm"
-  | "patient"
   | "politet"
-  | "pwc"
   | "simula"
   | "sopraSteria"
   | "stacc"
@@ -75,9 +71,7 @@ export const ATTENDEE_LOGOS: Record<ATTENDEE_NAMES, StaticImageData> = {
   netcompany: netcompany,
   netlight: netlight,
   nsm: nsm,
-  patient: patient,
   politet: politet,
-  pwc: pwc,
   simula: simula,
   sopraSteria: sopra,
   stacc: stacc,
@@ -115,11 +109,6 @@ export const ATTENDEES: Array<Attendee> = [
     company: "Netcompany AS",
     website: "https://www.netcompany.com/no/Karriere",
     logo: netcompany,
-  },
-  {
-    company: "PwC",
-    website: "https://www.pwc.no/",
-    logo: pwc,
   },
   {
     company: "Sopra Steria",
@@ -180,11 +169,6 @@ export const ATTENDEES: Array<Attendee> = [
     company: "DNB",
     website: "https://m.dnb.no/",
     logo: dnb,
-  },
-  {
-    company: "PatientSky",
-    website: "https://www.patientsky.no/",
-    logo: patient,
   },
   {
     company: "Equinor",
