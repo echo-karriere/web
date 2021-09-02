@@ -11,7 +11,7 @@ export function Intro(): JSX.Element {
     <>
       <Notification message="echo karriere søker styremedlemmer" url="/nyheter/2021/bli-styremedlem/" />
       <Hero />
-      <div className="pb-16 bg-gray-50 overflow-hidden">
+      <div className="py-16 lg:py-24 bg-gray-50 overflow-hidden">
         <div className="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
           <div className="relative">
             <h2 className="text-center text-3xl leading-8 font-extrabold text-gray-900 sm:text-4xl">

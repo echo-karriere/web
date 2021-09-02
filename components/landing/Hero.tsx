@@ -8,7 +8,7 @@ export function Hero(): JSX.Element {
     <>
       <div className="relative bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+          <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28">
             <svg
               className="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2"
               fill="currentColor"
@@ -25,10 +25,11 @@ export function Hero(): JSX.Element {
                 <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
                   <span className="text-c8 inline">echo karriere</span>
                   <br />
-                  <span className="block text-c10 xl:inline">16. og 17. september 2021</span>
+                  <span className="block text-c10 xl:inline">17. september 2021</span>
                 </h1>
                 <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                  Nok en gang er det karrieredag i Bergen med bedrifter fra hele landet for alle IT-studenter i området.
+                  Nok en gang er det karrieredag i Bergen med bedrifter fra hele landet for alle IT-studenter i
+                  Bergensområdet.
                 </p>
                 <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                   <div className="rounded-md shadow">
