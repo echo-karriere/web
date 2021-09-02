@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { Container, Content, Layout } from "@/components";
+import { Container, Content, Layout, Schedule } from "@/components";
 
 interface Workshop {
   company: string;
@@ -34,7 +34,9 @@ export default function SchedulePage(): JSX.Element {
           </p>
         </Content>
         <div className="relative py-4 bg-white overflow-hidden">
-          <div className="relative md:px-4 sm:px-6 lg:px-8"></div>
+          <div className="relative md:px-4 sm:px-6 lg:px-8">
+            <Schedule />
+          </div>
         </div>
         <div className="relative py-4 bg-white overflow-hidden">
           <div className="relative md:px-4 sm:px-6 lg:px-8 max-w-3xl">

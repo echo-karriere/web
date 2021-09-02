@@ -14,7 +14,7 @@ const Item = ({ title, time }: ItemProps): JSX.Element => {
   );
 };
 
-interface TDProps extends TdHTMLAttributes<HTMLTableDataCellElement> {
+interface TDProps extends TdHTMLAttributes<HTMLTableCellElement> {
   children: ReactNode;
   bg: string;
 }
@@ -31,7 +31,7 @@ export const Schedule = (): JSX.Element => {
       <tbody>
         <tr>
           <th />
-          <Td colSpan={3} rowSpan={4} bg="bg-c2">
+          <Td colSpan={5} rowSpan={4} bg="bg-c2">
             <Item title="Introduksjon og lynpresentasjoner" time="10:00-11:15" />
           </Td>
         </tr>
@@ -47,59 +47,101 @@ export const Schedule = (): JSX.Element => {
         <tr>
           <th />
           <Td bg="bg-c1">
-            <Item title="Bekk" time="11:20-11:50" />
+            <Item title="Bouvet" time="11:30-11:50" />
           </Td>
-          <Td rowSpan={4} bg="bg-c5">
-            <Item title="Workshop: Kantega" time="11:30-13:30" />
+          <Td rowSpan={3} bg="bg-c5">
+            <Item title="Workshop: Knowit" time="11:30-13:00" />
           </Td>
-          <Td rowSpan={7} bg="bg-c2">
+          <Td rowSpan={3} bg="bg-c5">
+            <Item title="Workshop: Stacc" time="11:30-13:00" />
+          </Td>
+          <Td rowSpan={3} bg="bg-c5">
+            <Item title="Workshop: DNB" time="11:30-13:00" />
+          </Td>
+          <Td rowSpan={9} bg="bg-c2">
             <Item title="Standrom åpner" time="11:15-16:00" />
           </Td>
         </tr>
         <tr>
           <th />
           <Td colSpan={1} bg="bg-c1">
-            <Item title="Knowit" time="12:00-12:30" />
+            <Item title="AppearTV" time="12:00-12:20" />
           </Td>
         </tr>
         <tr>
           <th />
           <Td bg="bg-c1">
-            <Item title="Tripletex" time="12:40-13:10" />
+            <Item title="Kongsberg Gruppen" time="12:30-12:50" />
           </Td>
         </tr>
         <tr>
           <th />
           <Td bg="bg-c1">
-            <Item title="Capgemini" time="13:20-13:50" />
+            <Item title="Tripletex" time="13:00-13:20" />
+          </Td>
+          <Td bg="bg-c3">
+            <Item title="Pause" time="13:00-13:30" />
+          </Td>
+          <Td bg="bg-c3">
+            <Item title="Pause" time="13:00-13:30" />
+          </Td>
+          <Td bg="bg-c3">
+            <Item title="Pause" time="13:00-13:30" />
           </Td>
         </tr>
         <tr>
           <th />
           <Td bg="bg-c1">
-            <Item title="Iterate" time="14:00-14:30" />
+            <Item title="Tieto Evry" time="13:30-13:50" />
           </Td>
           <Td rowSpan={3} bg="bg-c5">
-            <Item title="Workshop: Equinor" time="13:45-15:45" />
+            <Item title="Workshop: Finn" time="13:30-15:00" />
+          </Td>
+          <Td rowSpan={3} bg="bg-c5">
+            <Item title="Workshop: Kantega" time="13:30-15:00" />
+          </Td>
+          <Td rowSpan={3} bg="bg-c5">
+            <Item title="Workshop: Capgemini" time="13:30-15:00" />
           </Td>
           <td></td>
         </tr>
         <tr>
           <th />
           <Td bg="bg-c1">
-            <Item title="Bouvet" time="14:40-15:10" />
+            <Item title="Bekk" time="14:00-14:20" />
           </Td>
         </tr>
         <tr>
           <th />
           <Td bg="bg-c1">
-            <Item title="NSM" time="15:20-15:50" />
+            <Item title="Stacc" time="14:30-14:50" />
           </Td>
         </tr>
         <tr>
           <th />
-          <Td colSpan={4} bg="bg-c4">
-            <Item title="Karrieredag over" time="16:00" />
+          <Td bg="bg-c1">
+            <Item title="DNB" time="15:00-15:20" />
+          </Td>
+          <Td rowSpan={2} bg="bg-c3">
+            <Item title="Workshops ferdig" time="" />
+          </Td>
+          <Td rowSpan={2} bg="bg-c3">
+            <Item title="Workshops ferdig" time="" />
+          </Td>
+          <Td rowSpan={2} bg="bg-c3">
+            <Item title="Workshops ferdig" time="" />
+          </Td>
+        </tr>
+        <tr>
+          <th />
+          <Td bg="bg-c1">
+            <Item title="Knowit" time="15:30-15:50" />
+          </Td>
+        </tr>
+        <tr>
+          <th />
+          <Td colSpan={5} bg="bg-c4">
+            <Item title="echo karriere over" time="16:00" />
           </Td>
         </tr>
       </tbody>
