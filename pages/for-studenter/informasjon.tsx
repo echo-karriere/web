@@ -8,9 +8,10 @@ export default function Page(): JSX.Element {
       <Container>
         <Content title="echo karriere 2021">
           <p>
-            Høstens arrangement blir forhåpentligvis fysisk på Høyteknologisenteret, 16-17. september. Her vil det komme
-            mer informasjon om deltakere, timeplan, stillinger og alt du trenger å vite for å delta. Se også oversikten
-            over ledige og utlyste stillinger <Link href="/for-studenter/jobb/">her</Link> samt{" "}
+            Grunnet smittesituasjonen blir echo karriere 2021 et digital arrangement, 17. september. Karrieredagen vil
+            gå på plattformen <a href="https://www.gather.town/">Gather</a>, hvor det vil bli holdt lynforedrag,
+            workshopper, foredrag og en full digital karrieredag med stands og kaffe. Se også oversikten over ledige og
+            utlyste stillinger <Link href="/for-studenter/jobb/">her</Link> samt{" "}
             <Link href="/for-studenter/timeplan">timeplanen</Link>.
           </p>
         </Content>
