@@ -30,7 +30,7 @@ export default function SchedulePage(): JSX.Element {
           <p>
             Vil du vite hva som skjer hvor og når? Se en oversikt over timeplanen her, og klikk deg inn på det som
             skjer! Husk også å se på <Link href="/jobb/">jobbene</Link> og{" "}
-            <Link href="/karrieredagen-2021">bedriftene som deltar.</Link>
+            <Link href="/for-studenter/informasjon/">bedriftene som deltar.</Link>
           </p>
         </Content>
         <div className="relative py-4 bg-white overflow-hidden">
