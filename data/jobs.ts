@@ -124,6 +124,60 @@ export const JOBS: Array<JobProps> = [
     type: "full",
     deadline: new Date(Date.parse("2021-10-01")),
   },
+  {
+    name: "Graduates 2022 - Analytics",
+    company: "Atea AS",
+    link: "https://www.atea.no/karriere/alle-ledige-stillinger/?id=713&name=ATEA+GRADUATE+PROGRAM+2022+NORGE!+Onsker+du+a+kickstarte+din+karriere+innen+analytics",
+    logo: ATTENDEE_LOGOS.atea,
+    description:
+      "Atea søker graduates innen Analytics. Brenner du for BI, data, analyse og maskinlæring? Bygg din karriere sammen med Atea! Oppstart August 2022.",
+    location: ["Bergen", "Oslo", "Stavanger", "Trondheim"],
+    type: "full",
+    deadline: new Date(Date.parse("2021-09-22")),
+  },
+  {
+    name: "Graduates 2022 - IT-sikkerhet og nettverk",
+    company: "Atea AS",
+    link: "https://www.atea.no/karriere/alle-ledige-stillinger/?id=715&name=ATEA+GRADUATE+PROGRAM+2022+NORGE!+Onsker+du+a+kickstarte+din+karriere+innen+IT-sikkerhet+og+nettverk",
+    logo: ATTENDEE_LOGOS.atea,
+    description:
+      "Atea søker graduates innen IT-sikkerhet og nettverk. Bygg din karriere sammen med Atea! Oppstart August 2022.",
+    location: ["Bergen", "Oslo", "Stavanger", "Trondheim"],
+    type: "full",
+    deadline: new Date(Date.parse("2021-09-22")),
+  },
+  {
+    name: "Graduates 2022 - Skytjenester og digital samhandling",
+    company: "Atea AS",
+    link: "https://www.atea.no/karriere/alle-ledige-stillinger/?id=714&name=ATEA+GRADUATE+PROGRAM+2022+NORGE!+Onsker+du+a+kickstarte+din+karriere+innen+skytjenester+og+digital+samhandling",
+    logo: ATTENDEE_LOGOS.atea,
+    description:
+      "Atea søker graduates innen skytjenester og digital samhandling. Bygg din karriere sammen med Atea! Oppstart August 2022.",
+    location: ["Bergen", "Oslo", "Stavanger", "Trondheim"],
+    type: "full",
+    deadline: new Date(Date.parse("2021-09-22")),
+  },
+  {
+    name: "Graduates 2022 - Prosjektledelse",
+    company: "Atea AS",
+    link: "https://www.atea.no/karriere/alle-ledige-stillinger/?id=712&name=ATEA+GRADUATE+PROGRAM+2022+NORGE!+Onsker+du+a+kickstarte+din+karriere+innen+prosjektledelse",
+    logo: ATTENDEE_LOGOS.atea,
+    description: "Atea søker graduates innen prosjektledelse. Bygg din karriere sammen med Atea! Oppstart August 2022.",
+    location: ["Bergen", "Oslo", "Stavanger", "Trondheim"],
+    type: "full",
+    deadline: new Date(Date.parse("2021-09-22")),
+  },
+  {
+    name: "Utvikler",
+    company: "Tripletex",
+    link: "https://www.finn.no/job/fulltime/ad.html?finnkode=230979561",
+    logo: ATTENDEE_LOGOS.tripletex,
+    description:
+      "Nyutdannet innen IT våren 2022? Tripletex er det mest fremtidsrettede økonomisystemet i bransjen og søker etter nyutdannede innen informasjons -og datateknologi, samt innen database og sikkerhet. Er dette deg? Vi er en gjeng med engasjerte og nysgjerrige mennesker som leter etter de gode løsningene - og som ikke er redd for en utfordring! Vi er i sterk vekst og på jakt etter de rette folka! Er du klar for en utfordring?",
+    location: ["Oslo"],
+    type: "full",
+    deadline: new Date(Date.parse("2021-09-22")),
+  },
 ];
 
 export const JOB_LOCATIONS: Array<string> = [
