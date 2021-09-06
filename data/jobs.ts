@@ -189,6 +189,26 @@ export const JOBS: Array<JobProps> = [
     type: "part",
     deadline: null,
   },
+  {
+    name: "Sommerjobb som utvikler",
+    company: "Finn",
+    link: "https://www.finn.no/job/fulltime/ad.html?finnkode=230473562",
+    logo: ATTENDEE_LOGOS.finn,
+    description: "Vil du ha sommerjobb som utvikler hos FINN.no?",
+    location: ["Oslo"],
+    type: "summer",
+    deadline: new Date(Date.parse("2021-09-30")),
+  },
+  {
+    name: "Fast jobb som utvikler etter studie?",
+    company: "Finn",
+    link: "https://www.finn.no/job/fulltime/ad.html?finnkode=230472444",
+    logo: ATTENDEE_LOGOS.finn,
+    description: "Vil du bli med i FINN.no sitt Graduate program? ",
+    location: ["Oslo"],
+    type: "full",
+    deadline: new Date(Date.parse("2021-09-30")),
+  },
 ];
 
 export const JOB_LOCATIONS: Array<string> = [
