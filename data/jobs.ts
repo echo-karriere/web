@@ -178,6 +178,17 @@ export const JOBS: Array<JobProps> = [
     type: "full",
     deadline: new Date(Date.parse("2021-09-22")),
   },
+  {
+    name: "Systemutvikler",
+    company: "Stacc",
+    link: "https://grabacoffee.io/stacc",
+    logo: ATTENDEE_LOGOS.stacc,
+    description:
+      "Stacc er en unik kombinasjon av 25 års erfaring og en start-up. Folkene våre har lang og bred erfaring i strategi, forretningsutvikling og teknologi innen den finansielle sektoren. Samtidig er vi stadig nysgjerrig og søker alltid utvikling og endring. Vi er i sterk vekst og opplever stor etterspørsel etter våre tjenester og løsninger, har hovedkontor i Bergen og er for tiden 115 ansatte. Hurtighet, presisjon og kunnskap skal kjennetegne Stacc. Kort fortalt hjelper vi selskaper innen bank, finans og forsikringsbransjen med å lage nye kule tjenester som forandrer hverdagen for folk. Vi ser etter deg som: Har høyere utdanning innen IT Er teknologidrevet Stå-på-vilje og som går en ekstra mil for å få ting til Liker nye initiativer og har kreative innfallsvinkler til kjente og ukjente problemstillinger Synes du dette høres interessant ut, vil vi gjerne høre fra deg!",
+    location: ["Bergen"],
+    type: "part",
+    deadline: null,
+  },
 ];
 
 export const JOB_LOCATIONS: Array<string> = [
