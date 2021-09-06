@@ -82,7 +82,7 @@ export const Job = ({
       </div>
       <div className="flex-1 p-4 space-y-2 flex flex-col">
         <h3 className="flex min-w-0 font-medium text-lg text-gray-900 mx-auto max-w-xs">
-          <a href={link} className="inline-block md:truncate">
+          <a href={link} target="_blank" rel="noreferrer" className="inline-block md:truncate">
             <span aria-hidden="true" className="absolute inset-0" />
             {name}
           </a>
