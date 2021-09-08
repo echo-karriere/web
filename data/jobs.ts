@@ -345,5 +345,5 @@ export const JOBS: Array<JobProps> = [
 
 export const JOB_LOCATIONS: Array<string> = [
   ...new Set(JOBS.flatMap((it) => (Array.isArray(it.location) ? [...it.location] : [it.location]))),
-];
-export const JOB_COMPANIES: Array<string> = [...new Set(JOBS.map((it) => it.company))];
+].sort();
+export const JOB_COMPANIES: Array<string> = [...new Set(JOBS.map((it) => it.company))].sort();
