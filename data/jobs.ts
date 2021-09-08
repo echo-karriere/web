@@ -229,7 +229,7 @@ export const JOBS: Array<JobProps> = [
       "I Bergens største fagmiljø innen utvikling setter vi tverrfaglighet og samarbeid høyt. Hos oss får du jobbe med eksperter innen UX, merkevare, stategisk rådgiving og en rekke andre fagfelt. Vi får stadig mer å gjøre, og søker nå flere utviklere som er ferdigutdannet i 2022.",
     location: ["Bergen"],
     type: "full",
-    deadline: new Date(Date.parse("2021-11-31")),
+    deadline: new Date(Date.parse("2021-11-01")),
   },
   {
     name: "Sommerjobb for utviklere!",
