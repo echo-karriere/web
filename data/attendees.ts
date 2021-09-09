@@ -16,6 +16,7 @@ import netcompany from "../content/images/logos/netcompany.png";
 import netlight from "../content/images/logos/netlight.svg";
 import nsm from "../content/images/logos/nsm.png";
 import politet from "../content/images/logos/politiet-ikt.jpg";
+import pwc from "../content/images/logos/pwc.svg";
 import simula from "../content/images/logos/simula-uib.svg";
 import sopra from "../content/images/logos/sopra-steria.png";
 import stacc from "../content/images/logos/stacc.png";
@@ -47,6 +48,7 @@ export type ATTENDEE_NAMES =
   | "netlight"
   | "nsm"
   | "politet"
+  | "pwc"
   | "simula"
   | "sopraSteria"
   | "stacc"
@@ -77,6 +79,7 @@ export const ATTENDEE_LOGOS: Record<ATTENDEE_NAMES, StaticImageData> = {
   stacc: stacc,
   tietoEvry: tieto,
   tripletex: tripletex,
+  pwc: pwc,
 };
 
 export const ATTENDEES: Array<Attendee> = [
@@ -194,5 +197,10 @@ export const ATTENDEES: Array<Attendee> = [
     company: "Nasjonal sikkerhetsmyndighet",
     website: "https://nsm.no/",
     logo: nsm,
+  },
+  {
+    company: "PwC",
+    website: "https://www.pwc.no/",
+    logo: pwc,
   },
 ];
