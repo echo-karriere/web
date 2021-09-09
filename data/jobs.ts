@@ -176,7 +176,7 @@ export const JOBS: Array<JobProps> = [
       "Nyutdannet innen IT våren 2022? Tripletex er det mest fremtidsrettede økonomisystemet i bransjen og søker etter nyutdannede innen informasjons -og datateknologi, samt innen database og sikkerhet. Er dette deg? Vi er en gjeng med engasjerte og nysgjerrige mennesker som leter etter de gode løsningene - og som ikke er redd for en utfordring! Vi er i sterk vekst og på jakt etter de rette folka! Er du klar for en utfordring?",
     location: ["Oslo"],
     type: "full",
-    deadline: new Date(Date.parse("2021-09-22")),
+    deadline: new Date(Date.parse("2021-10-30")),
   },
   {
     name: "Systemutvikler",
@@ -262,7 +262,7 @@ export const JOBS: Array<JobProps> = [
       "Capgemini tilbyr et internship til deg som ønsker å prøve deg som utvikler. Her får du jobbe innenfor Practicen, som er alt fra front-end, back-end, .NET, Java, Cloud, ERP, CRM, SAP og Cyber Security. Dette gir deg en unik mulighet til å få oppleve arbeidshverdagen til en utvikler i Capgemini.",
     location: ["Bergen"],
     type: "summer",
-    deadline: new Date(Date.parse("2021-12-10")),
+    deadline: new Date(Date.parse("2021-10-15")),
   },
   {
     name: "Graduate 2022 - Test",
@@ -340,6 +340,17 @@ export const JOBS: Array<JobProps> = [
     location: ["Bergen"],
     type: "full",
     deadline: new Date(Date.parse("2021-10-01")),
+  },
+  {
+    name: "Corporate Graduate",
+    company: "DNB",
+    link: "https://jobb.dnb.no/job/Oslo-DNB-Corporate-Graduate-0191/705991101/",
+    logo: ATTENDEE_LOGOS.dnb,
+    description:
+      "As a graduate in DNB you will be part of a great team of ambitious and likeminded young professionals, and work closely on a daily basis with more experienced colleagues.",
+    location: ["Oslo"],
+    type: "full",
+    deadline: new Date(Date.parse("2021-10-03")),
   },
 ];
 
