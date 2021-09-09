@@ -27,7 +27,12 @@ function classNames(...classes: string[]): string {
   return classes.filter(Boolean).join(" ");
 }
 
-const TABS = [
+interface Tab {
+  name: string;
+  current: boolean;
+}
+
+const TABS: Tab[] = [
   { name: "Timeplan", current: true },
   { name: "Standoversikt", current: false },
 ];
@@ -37,10 +42,10 @@ export default function SchedulePage(): JSX.Element {
   const talks: Talk[] = [];
   const [tabs, setTabs] = useState([...TABS]);
 
-  const changeTabs = () => {
+  const changeTabs = (tab: Tab) => {
     const active = tabs.find((tab) => tab.current) ?? tabs[0];
+    if (active.name === tab.name) return;
     const copy = [...tabs];
-    console.log(tabs);
     if (active.name === "Timeplan") {
       copy[1].current = true;
       copy[0].current = false;
@@ -63,11 +68,11 @@ export default function SchedulePage(): JSX.Element {
         </Content>
         <div className="sm:block md:pl-10 max-w-4xl">
           <div className="border-b border-gray-200">
-            <nav className="-mb-px flex justify-around" aria-label="Tabs">
+            <nav className="-mb-px flex justify-center md:justify-around" aria-label="Tabs">
               {tabs.map((tab) => (
                 <button
                   key={tab.name}
-                  onClick={() => changeTabs()}
+                  onClick={() => changeTabs(tab)}
                   className={classNames(
                     tab.current
                       ? "border-indigo-500 text-indigo-600"
