@@ -352,6 +352,17 @@ export const JOBS: Array<JobProps> = [
     type: "full",
     deadline: new Date(Date.parse("2021-10-03")),
   },
+  {
+    name: "Postdoctoral Fellow",
+    company: "Simula UiB",
+    link: "https://www.simula.no/about/job/post-doctoral-position-coding-and-information-theory",
+    logo: ATTENDEE_LOGOS.simula,
+    description:
+      "A post-doctoral position in the area of information-theoretic security and cryptography is available at the Information Theory Section of Simula UiB, Bergen, Norway. The position is two years, with the possibility of extension. Simula UiB is a research center owned by Simula Research Laboratory and the University of Bergen. The goal of Simula UiB is to increase the security expertise in Norway through research and education.",
+    location: ["Bergen"],
+    type: "full",
+    deadline: new Date(Date.parse("2021-09-15")),
+  },
 ];
 
 export const JOB_LOCATIONS: Array<string> = [
