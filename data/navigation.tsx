@@ -41,9 +41,9 @@ export const navigation: Array<MenuItem> = [
       },
 
       {
-        title: "Timeplan",
+        title: "Timeplan og oversikt",
         to: "/for-studenter/timeplan/",
-        description: "Se timeplanen for hva som skjer på karrieredagene.",
+        description: "Se timeplanen og standoversikt for karrieredagen.",
         Icon: ClockIcon,
         mainMobile: false,
       },
