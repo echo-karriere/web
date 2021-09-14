@@ -62,7 +62,7 @@ export default function SchedulePage(): JSX.Element {
         <Content title="Timeplan digital karrieredag 2021">
           <p>
             Vil du vite hva som skjer hvor og når? Se en oversikt over timeplanen og standoversikten her, og klikk deg
-            inn på det som skjer! Husk også å se på <Link href="/jobb/">jobbene</Link> og{" "}
+            inn på det som skjer! Husk også å se på <Link href="/for-studenter/jobb/">jobbene</Link> og{" "}
             <Link href="/for-studenter/informasjon/">bedriftene som deltar.</Link>
           </p>
         </Content>
