@@ -363,6 +363,17 @@ export const JOBS: Array<JobProps> = [
     type: "full",
     deadline: new Date(Date.parse("2021-09-15")),
   },
+  {
+    name: "Summer Intern 2022",
+    company: "Netlight AS",
+    link: "https://jobs.lever.co/netlight/a6dba4ae-352b-4dae-898f-145956e9164b",
+    logo: ATTENDEE_LOGOS.netlight,
+    description:
+      "Test ut tilværelsen som konsulent i Netlight sommeren 2022! Som en Netlighter blir du gitt ansvar fra første sekund og du får muligheten til å være med å forme hvilket selskap Netlight skal være i fremtiden.",
+    location: ["Oslo"],
+    type: "summer",
+    deadline: new Date(Date.parse("2021-10-02")),
+  },
 ];
 
 export const JOB_LOCATIONS: Array<string> = [
