@@ -160,8 +160,8 @@ export const Schedule = (): JSX.Element => {
           <Td bg="bg-c1">
             <Item title="DNB" time="15:00-15:20" />
           </Td>
-          <Td bg="bg-c3">
-            <Item title="Ingen foredrag" time="" />
+          <Td bg="bg-c1">
+            <Item title="PWC Norge" time="15:00-15:20" />
           </Td>
         </tr>
         <tr>
