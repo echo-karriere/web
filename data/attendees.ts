@@ -1,4 +1,3 @@
-import appear from "../content/images/logos/appear.png";
 import atea from "../content/images/logos/atea.svg";
 import bekk from "../content/images/logos/bekk.svg";
 import bouvet from "../content/images/logos/bouvet.png";
@@ -30,7 +29,6 @@ export interface Attendee {
 }
 
 export type ATTENDEE_NAMES =
-  | "appear"
   | "atea"
   | "bekk"
   | "bouvet"
@@ -56,7 +54,6 @@ export type ATTENDEE_NAMES =
   | "tripletex";
 
 export const ATTENDEE_LOGOS: Record<ATTENDEE_NAMES, StaticImageData> = {
-  appear: appear,
   atea: atea,
   bekk: bekk,
   bouvet: bouvet,
@@ -122,11 +119,6 @@ export const ATTENDEES: Array<Attendee> = [
     company: "Knowit",
     website: "https://www.knowit.no",
     logo: knowit,
-  },
-  {
-    company: "Appear AS",
-    website: "https://www.appeartv.com/",
-    logo: appear,
   },
   {
     company: "Simula UiB AS",
