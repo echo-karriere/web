@@ -374,6 +374,39 @@ export const JOBS: Array<JobProps> = [
     type: "summer",
     deadline: new Date(Date.parse("2021-10-02")),
   },
+  {
+    name: "Sommerjobb i Politiets IKT-tjenester",
+    company: "Politiets IKT-tjenester",
+    link: "https://85340.webcruiter.no/Main2/Recruit/Public/4423585345?link_source_id=",
+    logo: ATTENDEE_LOGOS.politet,
+    description:
+      "Er du student innen teknologi- og designfag, og har fullført minst 2 år av utdannelsen din? Har du lyst til å være med å digitalisere politiet - i team med andre studenter? Da kan en sommerjobb i Politiets IKT-tjenester være svaret for deg. ",
+    location: ["Oslo"],
+    type: "summer",
+    deadline: new Date(Date.parse("2022-02-01")),
+  },
+  {
+    name: "Utvikler",
+    company: "Politiets IKT-tjenester",
+    link: "https://85340.webcruiter.no/Main2/Recruit/Public/4418572225?link_source_id=",
+    logo: ATTENDEE_LOGOS.politet,
+    description:
+      "Vil du videreutvikle kritiske løsninger som bekjemper kriminalitet og terror? Politiets produktteam jobber etter smidige prinsipper med CI/CD som mål. ",
+    location: ["Oslo"],
+    type: "full",
+    deadline: new Date(Date.parse("2021-09-30")),
+  },
+  {
+    name: "Åpen søknad",
+    company: "Easee",
+    link: "https://karriere.easee.no/jobs/1327691-easee-3-studenter",
+    logo: ATTENDEE_LOGOS.easee,
+    description:
+      "Ønsker du å være med oss å forme fremtidens strømnett- og fremtidens bedriftskultur? Er du ferdig våren 2022 og ønsker å starte karrieren i et selskap hvor menneskene er i fokus. Her kan du legge inn åpen søknad til alle avdelingene i Easee. Vi ser også etter studenter som ønsker å knytte opp teori med praktisk erfaring og er på jakt etter deltidsjobb/sommerjobb, eller ønsker å skrive bachelor- eller masteroppgave i samarbeid med oss i Easee.",
+    location: ["Oslo", "Stavanger"],
+    type: "other",
+    deadline: null,
+  },
 ];
 
 export const JOB_LOCATIONS: Array<string> = [
