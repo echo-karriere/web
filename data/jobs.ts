@@ -397,15 +397,26 @@ export const JOBS: Array<JobProps> = [
     deadline: new Date(Date.parse("2021-09-30")),
   },
   {
-    name: "Åpen søknad",
+    name: "Easee ❤ studenter",
     company: "Easee",
     link: "https://karriere.easee.no/jobs/1327691-easee-3-studenter",
     logo: ATTENDEE_LOGOS.easee,
     description:
       "Ønsker du å være med oss å forme fremtidens strømnett- og fremtidens bedriftskultur? Er du ferdig våren 2022 og ønsker å starte karrieren i et selskap hvor menneskene er i fokus. Her kan du legge inn åpen søknad til alle avdelingene i Easee. Vi ser også etter studenter som ønsker å knytte opp teori med praktisk erfaring og er på jakt etter deltidsjobb/sommerjobb, eller ønsker å skrive bachelor- eller masteroppgave i samarbeid med oss i Easee.",
-    location: ["Oslo", "Stavanger"],
+    location: ["Oslo", "Sandnes"],
     type: "other",
     deadline: null,
+  },
+  {
+    name: "Internship",
+    company: "Kongsberg Gruppen",
+    link: "https://www.kongsberg.com/careers/vacancies/summer-internship-2022/",
+    logo: ATTENDEE_LOGOS.kongsberg,
+    description:
+      "Throughout the summer internship we promise close supervision from our experienced co-workers whilst working on challenging and innovating tasks and attaining relevant work experience. Our Summer Student Programme is primarily intended for those of you undertaking degrees in science and technology across several of our locations. You will also benefit from unique networking opportunities through social activities after work hours.",
+    location: ["Oslo", "Kongsberg", "Bergen", "Trondheim"],
+    type: "summer",
+    deadline: new Date(Date.parse("2022-02-28")),
   },
 ];
 
