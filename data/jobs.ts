@@ -440,6 +440,28 @@ export const JOBS: Array<JobProps> = [
     type: "summer",
     deadline: new Date(Date.parse("2021-10-03")),
   },
+  {
+    name: "DNB Greenhouse 2022",
+    company: "DNB",
+    link: "https://jobb.dnb.no/job/Oslo-DNB-Greenhouse-2022-unique-job-opportunity-for-newly-graduated-IT-master-students%21-0191/714207201/",
+    logo: ATTENDEE_LOGOS.dnb,
+    description:
+      "DNB Greenhouse is our graduate program for recent graduates with a degree within IT or engineering. The program is an important part of our aim to build relevant skills for the future, and a workforce where newbies and experienced professionals with diverse backgrounds work together to create great, innovative solutions.",
+    location: "Oslo",
+    type: "full",
+    deadline: new Date(Date.parse("2021-10-03")),
+  },
+  {
+    name: "Junioranalytiker",
+    company: "DNB",
+    link: "https://career2.successfactors.eu/sfcareer/jobreqcareer?jobId=2125&amp;company=zalarishrP7",
+    logo: ATTENDEE_LOGOS.dnb,
+    description:
+      "I Junioranalytikerprogrammet roterer du innenfor våre kundedivisjoner for å utvikle deg i rollen som kredittanalytiker. Du vil få utfordrende oppgaver innenfor analyse, jobbe i kundeteam og lære mye om våre ulike industrier. Det første året består av både faglige og sosiale samlinger sammen med andre junioranalytikere.",
+    location: "Oslo",
+    type: "full",
+    deadline: new Date(Date.parse("2021-09-30")),
+  },
 ];
 
 export const JOB_LOCATIONS: Array<string> = [
