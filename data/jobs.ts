@@ -418,6 +418,28 @@ export const JOBS: Array<JobProps> = [
     type: "summer",
     deadline: new Date(Date.parse("2022-02-28")),
   },
+  {
+    name: "Software Developer",
+    company: "Easee",
+    link: "https://karriere.easee.no/jobs/1086856-software-developer",
+    logo: ATTENDEE_LOGOS.easee,
+    description:
+      "Shape the future of Electricity, by developing innovative, user-friendly, and scalable web solutions at Easee.",
+    location: ["Oslo", "Sandnes"],
+    type: "full",
+    deadline: null,
+  },
+  {
+    name: "Spennende sommerjobb i tverrfaglig team",
+    company: "Kantega",
+    link: "https://jobb.kantega.no/o/spennende-sommerjobb-i-tverrfaglig-team",
+    logo: ATTENDEE_LOGOS.easee,
+    description:
+      "Vi søker deg som har lyst på spennende arbeidsoppgaver og gode jobbmuligheter etterpå! Du får jobbe med ekte prosjekter, for ordentlige kunder, med reelle ønsker og behov. Kanskje vil du eksperimentere med ny teknologi. Kanskje vil du lære mer om AI, Google Design Sprint eller noe helt annet. Uansett hjelper vi deg og teamet i gang, med tett oppfølging fra våre erfarne mentorer på prosess, design og utvikling.",
+    location: ["Oslo", "Trondheim", "Bergen"],
+    type: "summer",
+    deadline: new Date(Date.parse("2021-10-03")),
+  },
 ];
 
 export const JOB_LOCATIONS: Array<string> = [
