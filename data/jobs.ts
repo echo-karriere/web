@@ -462,6 +462,29 @@ export const JOBS: Array<JobProps> = [
     type: "full",
     deadline: new Date(Date.parse("2021-09-30")),
   },
+
+  {
+    name: "Summer Internship 2022",
+    company: "PwC Norge",
+    link: "https://web103.reachmee.com/ext/I021/1897/job?site=6&lang=NO&validator=0a04282befbcfa667971445e5c723da4&ref=https%3A%2F%2Fwww.pwc.no%2F&ihelper=http%3A%2F%2Fweb103.reachmee.com%2Fext%2FI021%2F1897%2Fmain%3Fsite%3D6&job_id=20",
+    logo: ATTENDEE_LOGOS.pwc,
+    description:
+      "Som summer intern hos oss får du prøve deg på spennende prosjekter ute hos kunde og internt i PwC. Vi er opptatt av at du skal få med deg relevant erfaring, få mulighet til å fordype deg i oppgaver innenfor ditt fagfelt, men også at du skal få prøve deg på områder du ikke har like mye kjennskap til. For å gi deg en god base for sommeren, starter oppholdet hos oss med en ukes kurs sammen med resten av summer internsene.",
+    location: "Norge",
+    type: "summer",
+    deadline: new Date(Date.parse("2021-09-19")),
+  },
+  {
+    name: "Nyutdannet 2022",
+    company: "PwC Norge",
+    link: "https://web103.reachmee.com/ext/I021/1897/job?site=6&lang=NO&validator=0a04282befbcfa667971445e5c723da4&ref=https%3A%2F%2Fwww.pwc.no%2F&ihelper=http%3A%2F%2Fweb103.reachmee.com%2Fext%2FI021%2F1897%2Fmain%3Fsite%3D6&job_id=54",
+    logo: ATTENDEE_LOGOS.pwc,
+    description:
+      "Som nyutdannet i PwC, får du mange muligheter til å utvikle deg både faglig og personlig. Vi har et stimulerende og utviklende, tverrfaglig kompetansemiljø, hvor økonomer, designere, ingeniører, teknologer og samfunnsvitere jobber sammen for å løse fremtidens utfordringer. Vi tror at mennesker må utvikles for å trives og du vil derfor raskt bli koblet på en stor variasjon av kundeoppdrag og oppgaver.",
+    location: "Norge",
+    type: "full",
+    deadline: new Date(Date.parse("2021-10-11")),
+  },
 ];
 
 export const JOB_LOCATIONS: Array<string> = [
