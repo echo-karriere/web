@@ -102,8 +102,8 @@ export const Schedule = (): JSX.Element => {
         </tr>
         <tr>
           <th />
-          <Td colSpan={1} bg="bg-c1">
-            <Item title="Politiet" time="12:30-12:50" />
+          <Td colSpan={1} bg="bg-c3">
+            <Item title="Ingen" time="" />
           </Td>
           <Td bg="bg-c1">
             <Item title="Tripletex" time="12:30-12:50" />
