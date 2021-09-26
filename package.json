@@ -59,7 +59,7 @@
     "husky": "7.0.2",
     "lint-staged": "11.1.2",
     "next-sitemap": "1.6.168",
-    "postcss": "8.3.6",
+    "postcss": "8.3.8",
     "prettier": "2.4.1",
     "prettier-eslint": "13.0.0",
     "tailwindcss": "2.2.15",
