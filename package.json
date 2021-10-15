@@ -19,7 +19,7 @@
     "sharp": "0.29.1",
     "typeface-bitter": "1.1.13",
     "typeface-cambo": "1.1.13",
-    "yup": "0.32.9"
+    "yup": "0.32.11"
   },
   "scripts": {
     "dev": "next dev",
