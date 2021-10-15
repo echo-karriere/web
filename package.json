@@ -7,7 +7,7 @@
     "@heroicons/react": "1.0.4",
     "@hookform/resolvers": "2.8.2",
     "@tailwindcss/aspect-ratio": "0.3.0",
-    "axios": "0.22.0",
+    "axios": "0.23.0",
     "esbuild": "0.13.4",
     "mdx-bundler": "6.0.2",
     "next": "11.1.2",
