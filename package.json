@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@headlessui/react": "1.4.1",
-    "@heroicons/react": "1.0.4",
+    "@heroicons/react": "1.0.5",
     "@hookform/resolvers": "2.8.2",
     "@tailwindcss/aspect-ratio": "0.3.0",
     "axios": "0.23.0",
