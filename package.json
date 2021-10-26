@@ -45,8 +45,8 @@
     "@typescript-eslint/eslint-plugin": "5.2.0",
     "@typescript-eslint/parser": "5.2.0",
     "autoprefixer": "10.3.7",
-    "eslint": "8.1.0",
-    "eslint-config-next": "11.1.2",
+    "eslint": "7",
+    "eslint-config-next": "12.0.0",
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-import": "2.25.2",
     "eslint-plugin-jsx-a11y": "6.4.1",
@@ -64,10 +64,6 @@
     "prettier-eslint": "13.0.0",
     "tailwindcss": "2.2.17",
     "typescript": "4.4.4"
-  },
-  "resolutions": {
-    "eslint-plugin-import": "2.25.2",
-    "eslint-plugin-react": "7.26.1"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
