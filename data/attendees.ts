@@ -1,4 +1,5 @@
 import atea from "../content/images/logos/atea.svg";
+import avo from "../content/images/logos/avo.png";
 import bekk from "../content/images/logos/bekk.svg";
 import bouvet from "../content/images/logos/bouvet.png";
 import capgemini from "../content/images/logos/capgemini.png";
@@ -51,7 +52,8 @@ export type ATTENDEE_NAMES =
   | "sopraSteria"
   | "stacc"
   | "tietoEvry"
-  | "tripletex";
+  | "tripletex"
+  | "avo";
 
 export const ATTENDEE_LOGOS: Record<ATTENDEE_NAMES, StaticImageData> = {
   atea: atea,
@@ -77,6 +79,7 @@ export const ATTENDEE_LOGOS: Record<ATTENDEE_NAMES, StaticImageData> = {
   tietoEvry: tieto,
   tripletex: tripletex,
   pwc: pwc,
+  avo: avo,
 };
 
 export const ATTENDEES: Array<Attendee> = [
