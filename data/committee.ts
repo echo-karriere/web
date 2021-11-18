@@ -94,7 +94,7 @@ export const COMMITTEE_MEMBERS: Array<CommitteeMember> = [
     position: "Bedriftsansvarlig",
     headshot: hedda,
     socials: {
-      mail: null,
+      mail: "hedda.rodder@echokarriere.no",
       github: null,
       linkedin: "hedda-langøy-rødder-668b85146",
       website: null,
@@ -105,7 +105,7 @@ export const COMMITTEE_MEMBERS: Array<CommitteeMember> = [
     position: "PR-ansvarlig",
     headshot: solveig,
     socials: {
-      mail: null,
+      mail: "solveig.noto@echokarriere.no",
       github: null,
       linkedin: "solveig-ødegaard-notø-793b56210",
       website: null,
@@ -127,7 +127,7 @@ export const COMMITTEE_MEMBERS: Array<CommitteeMember> = [
     position: "Styremedlem",
     headshot: kristin,
     socials: {
-      mail: null,
+      mail: "kristin.oydna@echokarriere.no",
       github: null,
       linkedin: "kristin-loka-øydna-13819a196",
       website: null,
