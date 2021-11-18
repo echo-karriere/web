@@ -78,7 +78,7 @@ export const Job = ({
   return (
     <div className="group relative bg-white border border-gray-200 rounded-lg flex flex-col overflow-hidden">
       <div className="aspect-w-3 aspect-h-4 group-hover:opacity-75 flex justify-center items-center p-2 h-24 md:h-36">
-        <Image src={logo} alt={company} className="w-full h-full object-contain sm:w-full sm:h-full" />
+        <Image src={logo} alt={company} className="unset w-full h-full object-contain sm:w-full sm:h-full" />
       </div>
       <div className="flex-1 p-4 space-y-2 flex flex-col line-clamp-6 hover:line-clamp-none">
         <h3 className="flex min-w-0 font-medium text-lg text-gray-900 mx-auto max-w-xs">

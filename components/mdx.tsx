@@ -1,10 +1,12 @@
 import { ComponentMap } from "mdx-bundler/client";
 import Link from "next/link";
-import React from "react";
+import { ComponentPropsWithoutRef } from "react";
 
-const CustomLink = ({ as, href, ...rest }: { as?: string; href: string; [key: string]: unknown }): JSX.Element => {
+type LinkProps = ComponentPropsWithoutRef<"a">;
+
+const CustomLink = ({ href, ...rest }: LinkProps): JSX.Element => {
   return (
-    <Link as={as} href={href}>
+    <Link href={href as string}>
       {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
       <a {...rest} />
     </Link>
@@ -12,5 +14,5 @@ const CustomLink = ({ as, href, ...rest }: { as?: string; href: string; [key: st
 };
 
 export const components: ComponentMap = {
-  a: CustomLink as React.ComponentType<Record<string, unknown>>,
+  a: CustomLink,
 };

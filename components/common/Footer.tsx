@@ -17,7 +17,7 @@ export function Footer(): JSX.Element {
             <div className="mt-8 flex">
               <a
                 href="https://www.facebook.com/echokarriere"
-                className="text-gray-400 hover:text-gray-500"
+                className="text-gray-400 hover:text-blue-500"
                 target="_blank"
                 rel="noreferrer noopener"
               >
@@ -32,7 +32,7 @@ export function Footer(): JSX.Element {
               </a>
               <a
                 href="https://github.com/echo-karriere/"
-                className="ml-6 text-gray-400 hover:text-gray-500"
+                className="ml-6 text-gray-400 hover:text-gray-900"
                 target="_blank"
                 rel="noreferrer noopener"
               >
@@ -47,7 +47,7 @@ export function Footer(): JSX.Element {
               </a>
               <a
                 href="https://www.linkedin.com/company/echo-karriere"
-                className="ml-6 text-gray-400 hover:text-gray-500"
+                className="ml-6 text-gray-400 hover:text-blue-500"
                 target="_blank"
                 rel="noreferrer noopener"
               >
@@ -62,10 +62,10 @@ export function Footer(): JSX.Element {
               </a>
             </div>
             <div>
-              <h4 className="text-sm font-semibold tracking-wider text-gray-600 uppercase mt-8">Powered by</h4>
+              <h4 className="text-sm font-semibold tracking-wider text-gray-500 uppercase mt-8">Powered by</h4>
               <a
                 href="https://vercel.com?utm_source=echo-karriere-website&utm_campaign=oss"
-                className="text-gray-500 hover:text-gray-600"
+                className="text-gray-500 hover:text-gray-900"
               >
                 <svg
                   className="h-8 w-32 mt-4"
@@ -98,7 +98,7 @@ export function Footer(): JSX.Element {
           </div>
         </div>
         <div className="mt-12 border-t border-gray-200 pt-4">
-          <p className="text-base text-gray-500 xl:text-center">© 2021 echo karriere</p>
+          <p className="text-base text-gray-500 xl:text-center">© {new Date().getFullYear()} echo karriere</p>
         </div>
       </div>
     </footer>
