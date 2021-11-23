@@ -24,10 +24,10 @@ const Member = ({ name, position, headshot, socials }: CommitteeMember): JSX.Ele
           <p className="text-indigo-600">{position}</p>
         </div>
         <ul className="flex space-x-5">
-          {socials.mail && (
+          {socials.email && (
             <li>
               <a
-                href={`mailto:${socials.mail}`}
+                href={`mailto:${socials.email}`}
                 className="text-gray-400 hover:text-red-500"
                 target="_blank"
                 rel="noreferrer noopener"

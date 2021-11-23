@@ -15,7 +15,7 @@ export interface CommitteeMember {
   position: string;
   headshot: StaticImageData;
   socials: {
-    mail: string | null;
+    email: string | null;
     github: string | null;
     linkedin: string | null;
     website: string | null;
@@ -28,7 +28,7 @@ export const COMMITTEE_MEMBERS: Array<CommitteeMember> = [
     position: "Leder",
     headshot: endre,
     socials: {
-      mail: "endre.egge@echokarriere.no",
+      email: "endre.egge@echokarriere.no",
       github: null,
       linkedin: "endre-borgen-egge-841009126",
       website: null,
@@ -39,7 +39,7 @@ export const COMMITTEE_MEMBERS: Array<CommitteeMember> = [
     position: "Nestleder",
     headshot: nikoline,
     socials: {
-      mail: "nikoline.liseth@echokarriere.no",
+      email: "nikoline.liseth@echokarriere.no",
       github: null,
       linkedin: "nikoline-liseth-b82b1b194",
       website: null,
@@ -50,7 +50,7 @@ export const COMMITTEE_MEMBERS: Array<CommitteeMember> = [
     position: "Økonomiansvarlig",
     headshot: victoria,
     socials: {
-      mail: "victoria.valner@echokarriere.no",
+      email: "victoria.valner@echokarriere.no",
       github: null,
       linkedin: "victoria-valner-63b3a2194",
       website: null,
@@ -61,7 +61,7 @@ export const COMMITTEE_MEMBERS: Array<CommitteeMember> = [
     position: "Nestøkonomiansvarlig",
     headshot: cecilie,
     socials: {
-      mail: "cecilie.tveter@echokarriere.no",
+      email: "cecilie.tveter@echokarriere.no",
       github: null,
       linkedin: "ceciliedanbolttveter",
       website: null,
@@ -72,7 +72,7 @@ export const COMMITTEE_MEMBERS: Array<CommitteeMember> = [
     position: "Webansvarlig",
     headshot: sebastian,
     socials: {
-      mail: "sebastian.helgesen@echokarriere.no",
+      email: "sebastian.helgesen@echokarriere.no",
       github: null,
       linkedin: "shelgesen",
       website: null,
@@ -83,7 +83,7 @@ export const COMMITTEE_MEMBERS: Array<CommitteeMember> = [
     position: "Bedriftsansvarlig",
     headshot: elin,
     socials: {
-      mail: "elin.veila@echokarriere.no",
+      email: "elin.veila@echokarriere.no",
       github: null,
       linkedin: null,
       website: null,
@@ -94,7 +94,7 @@ export const COMMITTEE_MEMBERS: Array<CommitteeMember> = [
     position: "Bedriftsansvarlig",
     headshot: hedda,
     socials: {
-      mail: "hedda.rodder@echokarriere.no",
+      email: "hedda.rodder@echokarriere.no",
       github: null,
       linkedin: "hedda-langøy-rødder-668b85146",
       website: null,
@@ -105,7 +105,7 @@ export const COMMITTEE_MEMBERS: Array<CommitteeMember> = [
     position: "PR-ansvarlig",
     headshot: solveig,
     socials: {
-      mail: "solveig.noto@echokarriere.no",
+      email: "solveig.noto@echokarriere.no",
       github: null,
       linkedin: "solveig-ødegaard-notø-793b56210",
       website: null,
@@ -116,7 +116,7 @@ export const COMMITTEE_MEMBERS: Array<CommitteeMember> = [
     position: "Frivilligansvarlig",
     headshot: mathias,
     socials: {
-      mail: "mathias.larsen@echokarriere.no",
+      email: "mathias.larsen@echokarriere.no",
       github: null,
       linkedin: null,
       website: null,
@@ -127,7 +127,7 @@ export const COMMITTEE_MEMBERS: Array<CommitteeMember> = [
     position: "Styremedlem",
     headshot: kristin,
     socials: {
-      mail: "kristin.oydna@echokarriere.no",
+      email: "kristin.oydna@echokarriere.no",
       github: null,
       linkedin: "kristin-loka-øydna-13819a196",
       website: null,
@@ -138,7 +138,7 @@ export const COMMITTEE_MEMBERS: Array<CommitteeMember> = [
     position: "Styremedlem",
     headshot: safiya,
     socials: {
-      mail: "safiya.mahamood@echokarriere.no",
+      email: "safiya.mahamood@echokarriere.no",
       github: null,
       linkedin: null,
       website: null,
