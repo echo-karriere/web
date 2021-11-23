@@ -48,17 +48,6 @@ export const JOBS: Array<JobProps> = [
     deadline: new Date(Date.parse("2022-02-01")),
   },
   {
-    name: "Easee ❤ studenter",
-    company: "Easee",
-    link: "https://karriere.easee.no/jobs/1327691-easee-3-studenter",
-    logo: ATTENDEE_LOGOS.easee,
-    description:
-      "Ønsker du å være med oss å forme fremtidens strømnett- og fremtidens bedriftskultur? Er du ferdig våren 2022 og ønsker å starte karrieren i et selskap hvor menneskene er i fokus. Her kan du legge inn åpen søknad til alle avdelingene i Easee. Vi ser også etter studenter som ønsker å knytte opp teori med praktisk erfaring og er på jakt etter deltidsjobb/sommerjobb, eller ønsker å skrive bachelor- eller masteroppgave i samarbeid med oss i Easee.",
-    location: ["Oslo", "Sandnes"],
-    type: "other",
-    deadline: null,
-  },
-  {
     name: "Internship",
     company: "Kongsberg Gruppen",
     link: "https://www.kongsberg.com/careers/vacancies/summer-internship-2022/",
@@ -68,17 +57,6 @@ export const JOBS: Array<JobProps> = [
     location: ["Oslo", "Kongsberg", "Bergen", "Trondheim"],
     type: "summer",
     deadline: new Date(Date.parse("2022-02-28")),
-  },
-  {
-    name: "Software Developer",
-    company: "Easee",
-    link: "https://karriere.easee.no/jobs/1086856-software-developer",
-    logo: ATTENDEE_LOGOS.easee,
-    description:
-      "Shape the future of Electricity, by developing innovative, user-friendly, and scalable web solutions at Easee.",
-    location: ["Oslo", "Sandnes"],
-    type: "full",
-    deadline: null,
   },
   {
     name: "Consultant (Graduate 2022)",
