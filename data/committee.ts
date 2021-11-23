@@ -129,7 +129,7 @@ export const COMMITTEE_MEMBERS: Array<CommitteeMember> = [
     socials: {
       email: "kristin.oydna@echokarriere.no",
       github: null,
-      linkedin: "kristin-loka-øydna-13819a196",
+      linkedin: null,
       website: null,
     },
   },
