@@ -9,7 +9,7 @@
     "@tailwindcss/aspect-ratio": "0.3.0",
     "axios": "0.24.0",
     "esbuild": "0.13.15",
-    "mdx-bundler": "7.0.0",
+    "mdx-bundler": "8.0.0",
     "next": "12.0.4",
     "next-seo": "4.28.1",
     "react": "17.0.2",
