@@ -5,7 +5,7 @@
   "dependencies": {
     "@headlessui/react": "1.4.2",
     "@heroicons/react": "1.0.5",
-    "@hookform/resolvers": "2.8.3",
+    "@hookform/resolvers": "2.8.4",
     "@tailwindcss/aspect-ratio": "0.3.0",
     "axios": "0.24.0",
     "esbuild": "0.14.0",
