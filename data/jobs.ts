@@ -65,9 +65,9 @@ export const JOBS: Array<JobProps> = [
     logo: ATTENDEE_LOGOS.avo,
     description:
       "Avo er et oppstartsselskap; men vi er et oppstartsselskap med muskler. På bare fem år har vi vokst fra å være en håndfull mennesker til å bli nesten 100 ansatte. Dette har vi klart fordi vi er annerledes, og det har vi tenkt til å fortsette med å være. Kall oss gjerne en slags rebell i konsulentbransjen.  Har du Avo-faktor og et ønske om å skape episke løsninger med oss? Søk da vel!",
-    location: ["Oslo", "Bergen"],
+    location: ["Bergen"],
     type: "full",
-    deadline: new Date(Date.parse("2021-12-08")),
+    deadline: new Date(Date.parse("2022-01-12")),
   },
   {
     name: "Consultant - Developer (Graduate 2022)",
@@ -76,9 +76,9 @@ export const JOBS: Array<JobProps> = [
     logo: ATTENDEE_LOGOS.avo,
     description:
       "Avo er et oppstartsselskap; men vi er et oppstartsselskap med muskler. På bare fem år har vi vokst fra å være en håndfull mennesker til å bli nesten 100 ansatte. Dette har vi klart fordi vi er annerledes, og det har vi tenkt til å fortsette med å være. Kall oss gjerne en slags rebell i konsulentbransjen.  Har du Avo-faktor og et ønske om å skape episke løsninger med oss? Søk da vel!",
-    location: ["Oslo", "Bergen"],
+    location: ["Bergen"],
     type: "full",
-    deadline: new Date(Date.parse("2021-12-08")),
+    deadline: new Date(Date.parse("2022-01-12")),
   },
 ];
 
