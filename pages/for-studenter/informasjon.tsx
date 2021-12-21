@@ -2,9 +2,12 @@ import Link from "next/link";
 
 import { Attendees, Container, Content, Layout } from "@/components";
 
+import { Notification } from "../../components/common/NotificationNoLink";
+
 export default function Page(): JSX.Element {
   return (
     <Layout title="echo karriere 2021" description="Hva skjer på echo karriere høsten 2021?">
+      <Notification message="Informasjonen på denne siden gjelder for karrieredagen 2021!" url="#" />
       <Container>
         <Content title="echo karriere 2021">
           <p>

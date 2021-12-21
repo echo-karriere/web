@@ -4,6 +4,7 @@ import { useState } from "react";
 
 import { Container, Content, Layout, Schedule } from "@/components";
 
+import { Notification } from "../../components/common/NotificationNoLink";
 import stands from "../../public/images/standrom.jpg";
 
 // interface Workshop {
@@ -56,6 +57,7 @@ export default function SchedulePage(): JSX.Element {
 
   return (
     <Layout title="Timeplan digital karrieredag 2021" description="Hva er planen for karrieredagen 2021?">
+      <Notification message="Informasjonen på denne siden gjelder for karrieredagen 2021!" url="#" />
       <Container>
         <Content title="Timeplan digital karrieredag 2021">
           <p>
