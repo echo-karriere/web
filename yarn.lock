@@ -65,9 +65,9 @@
     "@babel/helper-validator-identifier" "^7.14.9"
     to-fast-properties "^2.0.0"
 
-"@corex/deepmerge@^2.6.34":
+"@corex/deepmerge@^2.6.148":
   version "2.6.148"
-  resolved "https://registry.npmjs.org/@corex/deepmerge/-/deepmerge-2.6.148.tgz"
+  resolved "https://registry.yarnpkg.com/@corex/deepmerge/-/deepmerge-2.6.148.tgz#8fa825d53ffd1cbcafce1b6a830eefd3dcc09dd5"
   integrity sha512-6QMz0/2h5C3ua51iAnXMPWFbb1QOU1UvSM4bKBw5mzdT+WtLgjbETBBIQZ+Sh9WvEcGwlAt/DEdRpIC3XlDBMA==
 
 "@echo-karriere/clubhouse-lint@0.3.0":
@@ -2831,13 +2831,6 @@ markdown-extensions@^1.0.0:
   resolved "https://registry.npmjs.org/markdown-extensions/-/markdown-extensions-1.1.1.tgz"
   integrity sha512-WWC0ZuMzCyDHYCasEGs4IPvLyTGftYwh6wIEOULOF0HXcqZlhwRzrK0w2VUlxWA98xnvb/jszw4ZSkJ6ADpM6Q==
 
-matcher@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.npmjs.org/matcher/-/matcher-4.0.0.tgz"
-  integrity sha512-S6x5wmcDmsDRRU/c2dkccDwQPXoFczc5+HpQ2lON8pnvHlnvHAHj5WlLVvw6n6vNyHuVugYrFohYxbS+pvFpKQ==
-  dependencies:
-    escape-string-regexp "^4.0.0"
-
 mdast-util-definitions@^5.0.0:
   version "5.1.0"
   resolved "https://registry.npmjs.org/mdast-util-definitions/-/mdast-util-definitions-5.1.0.tgz"
@@ -3363,13 +3356,12 @@ next-seo@4.28.1:
   resolved "https://registry.npmjs.org/next-seo/-/next-seo-4.28.1.tgz"
   integrity sha512-WZgwdM+UhpNF3A37zFllzmPhnOVJ9vYeYlc0n3Z/kYfz/QQgy8NEdncNNggS9dU4JD8xriaCcyknhy5OsrFsJw==
 
-next-sitemap@1.6.203:
-  version "1.6.203"
-  resolved "https://registry.npmjs.org/next-sitemap/-/next-sitemap-1.6.203.tgz"
-  integrity sha512-WigcoqIUNbXQa2GnwOiCOydGx/XHCS4kRtIPNEsc8DGX2XvJtbAJKRxcidZZ2KihTAtwwCu1XQ4Hbof4mJbvLg==
+next-sitemap@1.9.9:
+  version "1.9.9"
+  resolved "https://registry.yarnpkg.com/next-sitemap/-/next-sitemap-1.9.9.tgz#f36a5315da01836cbd93c6ad9d6730d320c94540"
+  integrity sha512-Tl7otSmXq/k+FDH5FAJGCH1bOMxs6ddRmuPVurgQTrz+pFWzMQ7KIPSP96wiY5vZ5npFjPTPJP2wlCwOqQB1Dw==
   dependencies:
-    "@corex/deepmerge" "^2.6.34"
-    matcher "^4.0.0"
+    "@corex/deepmerge" "^2.6.148"
     minimist "^1.2.5"
 
 next@12.0.8:
