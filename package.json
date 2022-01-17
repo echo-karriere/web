@@ -3,7 +3,7 @@
   "version": "3.0.0",
   "private": true,
   "dependencies": {
-    "@headlessui/react": "1.4.2",
+    "@headlessui/react": "1.4.3",
     "@heroicons/react": "1.0.5",
     "@hookform/resolvers": "2.8.5",
     "@tailwindcss/aspect-ratio": "0.4.0",
