@@ -8,7 +8,7 @@
     "@hookform/resolvers": "2.8.8",
     "@tailwindcss/aspect-ratio": "0.4.0",
     "axios": "0.25.0",
-    "esbuild": "0.14.13",
+    "esbuild": "0.14.14",
     "mdx-bundler": "7.0.0",
     "next": "12.0.8",
     "next-seo": "4.29.0",
