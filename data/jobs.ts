@@ -15,39 +15,6 @@ export const JOBS: Array<JobProps> = [
     deadline: null,
   },
   {
-    name: "Talent Network 2022",
-    company: "Netcompany",
-    link: "https://jobs.smartrecruiters.com/Netcompany1/743999766926422-talent-network-2022",
-    logo: ATTENDEE_LOGOS.netcompany,
-    description:
-      "Er du morgendagens teknolog og ønsker å utfordre deg selv, lære og bygge nettverk? Nå kan du få en unik mulighet. Netcompany ønsker å invitere 10 studenter fra Norge ned til et slott utenfor København. Her vil du møte teknologistudenter fra de ulike landene hvor vi har kontor for en faglig og sosial nettverkssamling!",
-    location: "København",
-    type: "other",
-    deadline: new Date(Date.parse("2021-12-01")),
-  },
-  {
-    name: "Systemutvikler",
-    company: "Stacc",
-    link: "https://grabacoffee.io/stacc",
-    logo: ATTENDEE_LOGOS.stacc,
-    description:
-      "Stacc er en unik kombinasjon av 25 års erfaring og en start-up. Folkene våre har lang og bred erfaring i strategi, forretningsutvikling og teknologi innen den finansielle sektoren. Samtidig er vi stadig nysgjerrig og søker alltid utvikling og endring. Vi er i sterk vekst og opplever stor etterspørsel etter våre tjenester og løsninger, har hovedkontor i Bergen og er for tiden 115 ansatte.",
-    location: ["Bergen"],
-    type: "part",
-    deadline: null,
-  },
-  {
-    name: "Sommerjobb i Politiets IKT-tjenester",
-    company: "Politiets IKT-tjenester",
-    link: "https://85340.webcruiter.no/Main2/Recruit/Public/4423585345?link_source_id=",
-    logo: ATTENDEE_LOGOS.politet,
-    description:
-      "Er du student innen teknologi- og designfag, og har fullført minst 2 år av utdannelsen din? Har du lyst til å være med å digitalisere politiet - i team med andre studenter? Da kan en sommerjobb i Politiets IKT-tjenester være svaret for deg. ",
-    location: ["Oslo"],
-    type: "summer",
-    deadline: new Date(Date.parse("2022-02-01")),
-  },
-  {
     name: "Internship",
     company: "Kongsberg Gruppen",
     link: "https://www.kongsberg.com/careers/vacancies/summer-internship-2022/",

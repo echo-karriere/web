@@ -2,7 +2,6 @@ import cecilie from "../content/images/styret/cecilie.jpg";
 import elin from "../content/images/styret/elin.jpg";
 import endre from "../content/images/styret/endre.jpg";
 import hedda from "../content/images/styret/hedda.jpg";
-import kristin from "../content/images/styret/kristin.jpg";
 import mathias from "../content/images/styret/mathias.jpg";
 import nikoline from "../content/images/styret/nikoline.jpg";
 import safiya from "../content/images/styret/safiya.jpg";
@@ -123,24 +122,13 @@ export const COMMITTEE_MEMBERS: Array<CommitteeMember> = [
     },
   },
   {
-    name: "Kristin Loka Øydna",
-    position: "Styremedlem",
-    headshot: kristin,
-    socials: {
-      email: "kristin.oydna@echokarriere.no",
-      github: null,
-      linkedin: null,
-      website: null,
-    },
-  },
-  {
     name: "Safiya Adan Mahamood",
     position: "Styremedlem",
     headshot: safiya,
     socials: {
       email: "safiya.mahamood@echokarriere.no",
       github: null,
-      linkedin: null,
+      linkedin: "safiya-mahamood-b70460231",
       website: null,
     },
   },
