@@ -39,7 +39,7 @@
     "@tailwindcss/line-clamp": "0.3.1",
     "@tailwindcss/typography": "0.4.1",
     "@types/node": "16.11.26",
-    "@types/react": "17.0.39",
+    "@types/react": "17.0.40",
     "@types/react-dom": "17.0.13",
     "@types/yup": "0.29.13",
     "@typescript-eslint/eslint-plugin": "5.14.0",
