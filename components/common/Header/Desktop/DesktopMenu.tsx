@@ -14,7 +14,7 @@ interface Props {
 export function DesktopMenu({ mobileButtonClicked }: Props): JSX.Element {
   return (
     <>
-      <div className="bg-blue-500 h-4" />
+      <div className="bg-blue-600 h-4" />
       <div className="bg-yellow-300 h-4" />
       <div className="max-w-7xl mx-auto px-4 sm:px-0">
         <div className="flex justify-between items-center border-b-2 border-gray-100 pt-6 md:justify-start md:space-x-10">

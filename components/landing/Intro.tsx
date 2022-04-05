@@ -3,13 +3,16 @@ import Image from "next/image";
 import aboutUrl from "../assets/about.svg";
 import hiringUrl from "../assets/hiring.svg";
 import studentsUrl from "../assets/students.svg";
-// import { Notification } from "../common/Notification";
+import { Notification } from "../common/Notification";
 import { Hero } from "./Hero";
 
 export function Intro(): JSX.Element {
   return (
     <>
-      {/* <Notification message="echo karriere 2021 skjer nå!" url="http://bit.ly/echokarriere" /> */}
+      <Notification
+        message="Delta på spørreundersøkelse, og vær med i trekningen av et gavekort på 500 kroner!"
+        url="https://forms.gle/g1WPcwY4bg6cgfuy7"
+      />
       <Hero />
       <div className="py-16 lg:py-24 bg-gray-50 overflow-hidden">
         <div className="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
