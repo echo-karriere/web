@@ -37,7 +37,7 @@
     "@echo-karriere/clubhouse-lint": "0.3.0",
     "@tailwindcss/forms": "0.5.0",
     "@tailwindcss/line-clamp": "0.3.1",
-    "@tailwindcss/typography": "0.4.1",
+    "@tailwindcss/typography": "0.5.2",
     "@types/node": "16.11.26",
     "@types/react": "17.0.43",
     "@types/react-dom": "17.0.14",
