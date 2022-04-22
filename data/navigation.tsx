@@ -67,6 +67,13 @@ export const navigation: Array<MenuItem> = [
         mainMobile: true,
       },
       {
+        title: "Påmelding 2022",
+        to: "/for-bedrifter/pamelding/",
+        description: "Meld bedriften på echo karriere 2022",
+        Icon: InboxInIcon,
+        mainMobile: true,
+      },
+      {
         title: "Send stillingsannonser",
         to: "/for-bedrifter/stillinger/",
         description: "Stillingene din bedrift vil ha på våre nettsider",
