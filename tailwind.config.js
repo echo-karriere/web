@@ -1,4 +1,5 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
+const colors = require("tailwindcss/colors");
 
 module.exports = {
   mode: "jit",
@@ -18,6 +19,8 @@ module.exports = {
         c6: "#049fb2",
         c7: "#0090a5",
         c8: "#008195",
+        fuchsia: colors.fuchsia,
+        orange: colors.orange,
       },
       fontFamily: {
         sans: ["Bitter", ...defaultTheme.fontFamily.sans],
