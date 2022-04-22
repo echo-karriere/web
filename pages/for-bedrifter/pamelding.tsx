@@ -1,4 +1,4 @@
-import { Container, Layout, RegistrationForm } from "@/components";
+import { Container, Layout } from "@/components";
 
 export default function Index(): JSX.Element {
   return (
