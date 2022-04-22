@@ -17,7 +17,7 @@ type RegistrationFormData = {
   invoiceOrg: string;
   invoicePerson: string;
   invoiceEmail: string;
-  day: "16" | "17";
+  day: "8" | "9";
   package: "small" | "large";
   workshop: boolean;
   workshopTitle?: string;
@@ -67,7 +67,7 @@ const registrationShape = yup.object().shape({
   invoiceOrg: yup.string().required(),
   invoicePerson: yup.string().required(),
   invoiceEmail: yup.string().email().required(),
-  day: yup.mixed().oneOf(["16", "17"]).required("Dere må velge en dag for deltakelse"),
+  day: yup.mixed().oneOf(["8", "9"]).required("Dere må velge en dag for deltakelse"),
   package: yup.mixed().oneOf(["small", "large"]).required("Dere må velge en grunnpakke"),
   workshop: yup.boolean().notRequired(),
   workshopTitle: yup.string().notRequired(),
@@ -111,7 +111,7 @@ export function RegistrationForm(): JSX.Element {
 
   const submitForm = (data: RegistrationFormData) => {
     setIsSubmitting(true);
-    sendFormSubmission(formFieldsToFormData(data), "https://formcarry.com/s/aWffGqXVsGC", setSubmitted, setError);
+    sendFormSubmission(formFieldsToFormData(data), "https://formcarry.com/s/UDFKqaUK5-M", setSubmitted, setError);
   };
 
   const watchWorkshop = watch("workshop");
@@ -129,7 +129,7 @@ export function RegistrationForm(): JSX.Element {
         <div>
           <h2 className="text-center text-3xl font-bold text-gray-900 sm:text-4xl">Påmelding echo karriere 2021</h2>
           <p className="mt-4 text-lg leading-6 text-gray-500">
-            Høstens arrangement er <strong>16. og 17. september 2021</strong>, og nytt for i år er at påmeldingen går
+            Høstens arrangement er <strong>8. og 9. september 2021</strong>, og nytt for i år er at påmeldingen går
             gjennom nettsiden vår. Sørg for at alle punktene her lest og forstått samt innholdet i{" "}
             <Link href="/files/invitation.pdf">
               <a className="underline">invitasjonen</a>
@@ -365,25 +365,25 @@ export function RegistrationForm(): JSX.Element {
                     <div className="flex items-center">
                       <input
                         type="radio"
-                        id="sep_16"
+                        id="sep_8"
                         {...register("day", { required: true })}
-                        value="16"
+                        value="8"
                         className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
                       />
-                      <label htmlFor="sep_16" className="ml-3 block text-sm font-medium text-gray-700">
-                        16. september
+                      <label htmlFor="sep_8" className="ml-3 block text-sm font-medium text-gray-700">
+                        8. september
                       </label>
                     </div>
                     <div className="flex items-center">
                       <input
                         type="radio"
-                        id="sep_17"
+                        id="sep_9"
                         {...register("day", { required: true })}
-                        value="17"
+                        value="9"
                         className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
                       />
-                      <label htmlFor="sep_17" className="ml-3 block text-sm font-medium text-gray-700">
-                        17. september
+                      <label htmlFor="sep_9" className="ml-3 block text-sm font-medium text-gray-700">
+                        9. september
                       </label>
                     </div>
                   </div>
@@ -429,10 +429,6 @@ export function RegistrationForm(): JSX.Element {
                   <legend className="text-base font-medium text-gray-900">
                     Kan dere se for dere at dere ønsker å arrangere noe på karrieredagen?
                   </legend>
-                  <p className="text-sm text-gray-500">
-                    <span className="text-red-600">NB: </span>Merk at vi er fullbooket for workshops og foredrag 16.
-                    september.
-                  </p>
                   <div className="mt-4 space-y-4">
                     <div className="relative flex items-start">
                       <div className="flex items-center h-5">
