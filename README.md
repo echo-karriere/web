@@ -1,4 +1,4 @@
-# echo karriere ![pipeline](https://github.com/echo-karriere/web/workflows/pipeline/badge.svg)
+# echo karriere ![pipeline](https://github.com/echo-karriere/web/workflows/pipeline/badge.svg) [![Better Uptime Badge](https://betteruptime.com/status-badges/v1/monitor/dpfd.svg)](https://betteruptime.com/?utm_source=status_badge)
 
 [![Powered by Vercel](https://raw.githubusercontent.com/echo-karriere/web/develop/.github/powered-by-vercel.svg)](https://vercel.com?utm_source=echo-karriere-website&utm_campaign=oss)
 
