@@ -1,9 +1,7 @@
 import cecilie from "../content/images/styret/cecilie.jpg";
 import elin from "../content/images/styret/elin.jpg";
 import endre from "../content/images/styret/endre.jpg";
-import hedda from "../content/images/styret/hedda.jpg";
 import mathias from "../content/images/styret/mathias.jpg";
-import nikoline from "../content/images/styret/nikoline.jpg";
 import safiya from "../content/images/styret/safiya.jpg";
 import sebastian from "../content/images/styret/sebastian.jpg";
 import solveig from "../content/images/styret/solveig.jpg";
@@ -30,17 +28,6 @@ export const COMMITTEE_MEMBERS: Array<CommitteeMember> = [
       email: "endre.egge@echokarriere.no",
       github: null,
       linkedin: "endre-borgen-egge-841009126",
-      website: null,
-    },
-  },
-  {
-    name: "Nikoline Liseth",
-    position: "Nestleder",
-    headshot: nikoline,
-    socials: {
-      email: "nikoline.liseth@echokarriere.no",
-      github: null,
-      linkedin: "nikoline-liseth-b82b1b194",
       website: null,
     },
   },
@@ -85,17 +72,6 @@ export const COMMITTEE_MEMBERS: Array<CommitteeMember> = [
       email: "elin.veila@echokarriere.no",
       github: null,
       linkedin: null,
-      website: null,
-    },
-  },
-  {
-    name: "Hedda Langøy Rødder",
-    position: "Bedriftsansvarlig",
-    headshot: hedda,
-    socials: {
-      email: "hedda.rodder@echokarriere.no",
-      github: null,
-      linkedin: "hedda-langøy-rødder-668b85146",
       website: null,
     },
   },
