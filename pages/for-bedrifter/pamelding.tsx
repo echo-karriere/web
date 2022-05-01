@@ -13,7 +13,7 @@ export default function Index(): JSX.Element {
                 under:
                 <br />
                 <br />
-                <strong>Påmeldingen åpner 2. mai ca. klokken 12:00*</strong>
+                <strong>Påmeldingen åpner 3. mai ca. klokken 12:00*</strong>
                 <br />
                 <small className="text-red-500">*Endringer i tidspunkt kan forekomme</small>
               </p>
