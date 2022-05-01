@@ -32,8 +32,7 @@ export function Footer(): JSX.Element {
               </a>
               <a
                 href="https://www.instagram.com/echokarriere/"
-                // gradiant hover, matching the instagram logo
-                className="ml-6 text-gray-400 hover:text-yellow-500"
+                className="ml-6 text-gray-400 bg-gradient-to-r rounded hover:text-white hover:from-yellow-500 via-red-500 to-pink-500"
                 target="_blank"
                 rel="noreferrer noopener"
               >
