@@ -13,6 +13,7 @@ type JobRegistrationData = {
   type: "full" | "part" | "summer" | "other";
   description: string;
   deadline: Date;
+  email: string;
 };
 
 yup.setLocale({
@@ -38,6 +39,7 @@ const registrationShape = yup.object().shape({
   description: yup.string().required(),
   type: yup.string().oneOf(["full", "part", "summer", "other"]),
   deadline: yup.date().required(),
+  email: yup.string().email().required(),
 });
 
 export function JobRegistrationForm(): JSX.Element {
@@ -221,6 +223,26 @@ export function JobRegistrationForm(): JSX.Element {
                         id="title"
                         className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
                       />
+                    </div>
+                    <div className="sm:col-span-3 mt-6">
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                        Epost
+                        {errors.email && (
+                          <span className="text-red-500 text-xs float-right">{errors.email.message}</span>
+                        )}
+                      </label>
+                      <p className="mt-1 text-sm text-gray-500">
+                        Hvis vi har behov for å kontakte deg, så gjør vi det via e-post.
+                      </p>
+                      <div className="mt-1">
+                        <input
+                          type="text"
+                          autoComplete="on"
+                          {...register("email", { required: true })}
+                          id="email"
+                          className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>

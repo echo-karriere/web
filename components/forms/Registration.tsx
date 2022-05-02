@@ -17,8 +17,8 @@ type RegistrationFormData = {
   invoiceOrg: string;
   invoicePerson: string;
   invoiceEmail: string;
-  day: "8" | "9";
-  package: "small" | "large";
+  day: "8" | "9" | "both";
+  package: "yes";
   workshop: boolean;
   workshopTitle?: string;
   talk: boolean;
@@ -67,8 +67,8 @@ const registrationShape = yup.object().shape({
   invoiceOrg: yup.string().required(),
   invoicePerson: yup.string().required(),
   invoiceEmail: yup.string().email().required(),
-  day: yup.mixed().oneOf(["8", "9"]).required("Dere må velge en dag for deltakelse"),
-  package: yup.mixed().oneOf(["small", "large"]).required("Dere må velge en grunnpakke"),
+  day: yup.mixed().oneOf(["8", "9", "both"]).required("Dere må velge en dag for deltakelse"),
+  package: yup.mixed().oneOf(["yes"]).required("Grunnpakken er obligatorisk, og må velges."),
   workshop: yup.boolean().notRequired(),
   workshopTitle: yup.string().notRequired(),
   talk: yup.boolean().notRequired(),
@@ -129,10 +129,12 @@ export function RegistrationForm(): JSX.Element {
         <div>
           <h2 className="text-center text-3xl font-bold text-gray-900 sm:text-4xl">Påmelding echo karriere 2022</h2>
           <p className="mt-4 text-lg leading-6 text-gray-500">
-            Høstens arrangement er <strong>8. og 9. september 2022</strong>, og påmelding skal gjøres via våre
-            nettsider. Sørg for at alle punktene her lest og forstått samt innholdet i{" "}
+            Høstens arrangement er <strong>8. og 9. september 2022</strong>, og påmelding skal gjøres via våre skjemaet
+            under. Sørg for at alle punktene er lest og forstått samt innholdet i{" "}
             <Link href="/files/invitation.pdf">
-              <a className="underline">invitasjonen</a>
+              <a target="_blank" className="underline">
+                invitasjonen
+              </a>
             </Link>
             .
           </p>
@@ -386,47 +388,47 @@ export function RegistrationForm(): JSX.Element {
                         9. september
                       </label>
                     </div>
+                    <div className="flex items-center">
+                      <input
+                        type="radio"
+                        id="both"
+                        {...register("day", { required: true })}
+                        value="both"
+                        className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
+                      />
+                      <label htmlFor="both" className="ml-3 block text-sm font-medium text-gray-700">
+                        Begge
+                      </label>
+                    </div>
                   </div>
                 </fieldset>
                 <fieldset className="mt-6">
                   <div>
                     <legend className="text-base font-medium text-gray-900">
-                      Hvilken pakke vil dere ha?
+                      Hvilken pakkeløsninger vil dere ha?
                       {errors.package && (
                         <span className="text-red-500 text-xs float-right">{errors.package.message}</span>
                       )}
                     </legend>
-                    <p className="text-sm text-gray-500">Se invitasjonen for mer informasjon.</p>
+                    <p className="text-sm text-gray-500">Grunnpakken er obligatorisk</p>
                   </div>
                   <div className="mt-4 space-y-4">
                     <div className="flex items-center">
                       <input
                         type="radio"
-                        id="package_small"
+                        id="package_yes"
                         {...register("package", { required: true })}
-                        value="small"
+                        value="yes"
                         className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
                       />
-                      <label htmlFor="package_small" className="ml-3 block text-sm font-medium text-gray-700">
-                        Grunnpakke Liten
-                      </label>
-                    </div>
-                    <div className="flex items-center">
-                      <input
-                        type="radio"
-                        id="package_large"
-                        {...register("package", { required: true })}
-                        value="large"
-                        className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
-                      />
-                      <label htmlFor="package_large" className="ml-3 block text-sm font-medium text-gray-700">
-                        Grunnpakke Stor
+                      <label htmlFor="package_yes" className="ml-3 block text-sm font-medium text-gray-700">
+                        Grunnpakke
                       </label>
                     </div>
                   </div>
                 </fieldset>
                 <fieldset className="mt-6">
-                  <legend className="text-base font-medium text-gray-900">
+                  <legend className="text-base text-gray-900">
                     Kan dere se for dere at dere ønsker å arrangere noe på karrieredagen?
                   </legend>
                   <div className="mt-4 space-y-4">
@@ -572,15 +574,14 @@ export function RegistrationForm(): JSX.Element {
                   <p className="mt-1 text-sm text-gray-500">
                     Med dette bekrefter dere blant annet følgende, samt vilkårene som fremkommer av invitasjonen:
                   </p>
-                  <ul className="list-disc list-inside pt-2">
-                    <li className="italic">
-                      Vi deltar på obligatorisk generalprøve dersom karrieredagen avholdes digitalt
-                    </li>
-                    <li className="italic">
-                      Ved arrangering av workshop og eller foredrag at dere vil gi tilbakemelding til echo karriere på
-                      tema for workshop innen fristen 2. september
-                    </li>
-                  </ul>
+                  <p className="italic pt-2">
+                    Ettersom det er begrenset antall plasser, vil vi praktisere bindende påmelding. Dersom
+                    betalingsfristen ikke overholdes, vil deres plass på arrangementet automatisk falle bort. Dersom
+                    dere ikke møter, eller avbestiller etter at påmelding og betaling har skjedd, vil ikke innbetalt
+                    forskudd refunderes. Det samme gjelder dersom dere ikke overholder obligatoriske frister for
+                    tilbakemelding. Vi er avhengig av at bedriftene overholder sin del, slik at vi sammen får til et
+                    velfungerende arrangement.
+                  </p>
                 </div>
                 <div>
                   <fieldset>
