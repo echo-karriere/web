@@ -138,11 +138,6 @@ export function RegistrationForm(): JSX.Element {
             </Link>
             .
           </p>
-          <br />
-          <p className="text-red-500">
-            DET GJENNOMFØRES FOR ØYEBLIKKET EN TEST AV PÅMELDINGSSYSTEMET. INGEN PÅMELDINGER SOM BLIR GJORT I KVELD VIL
-            BLI REGISTRERT. KOM TILBAKE I MORGEN KL.12:00.
-          </p>
         </div>
         <div className="mt-12">
           <form
@@ -586,11 +581,6 @@ export function RegistrationForm(): JSX.Element {
                     forskudd refunderes. Det samme gjelder dersom dere ikke overholder obligatoriske frister for
                     tilbakemelding. Vi er avhengig av at bedriftene overholder sin del, slik at vi sammen får til et
                     velfungerende arrangement.
-                  </p>
-                  <br />
-                  <p className="text-red-500">
-                    DET GJENNOMFØRES FOR ØYEBLIKKET EN TEST AV PÅMELDINGSSYSTEMET. INGEN PÅMELDINGER SOM BLIR GJORT I
-                    KVELD VIL BLI REGISTRERT. KOM TILBAKE I MORGEN KL.12:00.
                   </p>
                 </div>
                 <div>
