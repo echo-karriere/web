@@ -370,7 +370,7 @@ export function RegistrationForm(): JSX.Element {
                         className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
                       />
                       <label htmlFor="sep_9" className="ml-3 block text-sm font-medium text-gray-700">
-                        bare 9. september
+                        Bare 9. september
                       </label>
                     </div>
                     <div className="flex items-center">
@@ -460,9 +460,9 @@ export function RegistrationForm(): JSX.Element {
                       </div>
                       <div className="ml-3 text-sm">
                         <label htmlFor="extra_talk" className="font-medium text-gray-700">
-                          Foredrag
+                          Konseptpresentasjon
                         </label>
-                        <p className="text-gray-500">Presentasjon, 20 minutter.</p>
+                        <p className="text-gray-500">Utvidet presentasjon av bedriften på 20 minutter.</p>
                       </div>
                     </div>
                   </div>
