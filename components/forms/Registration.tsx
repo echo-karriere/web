@@ -17,12 +17,11 @@ type RegistrationFormData = {
   invoiceOrg: string;
   invoicePerson: string;
   invoiceEmail: string;
-  day: "8" | "9" | "both";
+  day: "9" | "both";
   package: "yes";
   workshop: boolean;
   workshopTitle?: string;
   talk: boolean;
-  talkTitle?: string;
   banquet: "yes" | "no";
   other: string;
   confirmation: boolean;
@@ -67,12 +66,11 @@ const registrationShape = yup.object().shape({
   invoiceOrg: yup.string().required(),
   invoicePerson: yup.string().required(),
   invoiceEmail: yup.string().email().required(),
-  day: yup.mixed().oneOf(["8", "9", "both"]).required("Dere må velge en dag for deltakelse"),
+  day: yup.mixed().oneOf(["9", "both"]).required("Dere må velge en dag for deltakelse"),
   package: yup.mixed().oneOf(["yes"]).required("Grunnpakken er obligatorisk, og må velges."),
   workshop: yup.boolean().notRequired(),
   workshopTitle: yup.string().notRequired(),
   talk: yup.boolean().notRequired(),
-  talkTitle: yup.string().notRequired(),
   banquet: yup.mixed().oneOf(["yes", "no"]).required(),
   other: yup.string().notRequired(),
   confirmation: yup
@@ -115,11 +113,10 @@ export function RegistrationForm(): JSX.Element {
   };
 
   const watchWorkshop = watch("workshop");
-  const watchTalk = watch("talk");
 
   if (submitted)
     return (
-      <FormSubmitted body="Din bedrift er nå registrert, dere mottar en epost med bekreftelse straks. Om den ikke dukker opp med en gang sjekk søppelkurven." />
+      <FormSubmitted body="Din bedrift er nå registrert, dere mottar en epost fra noreply@echokarriere.no med bekreftelse straks. Om den ikke dukker opp med en gang sjekk søppelkurven." />
     );
   if (error) return <FormError />;
 
@@ -361,21 +358,9 @@ export function RegistrationForm(): JSX.Element {
                       Dato for deltakelse
                       {errors.day && <span className="text-red-500 text-xs float-right">{errors.day.message}</span>}
                     </legend>
-                    <p className="text-sm text-gray-500">Hvilken dag vil dere delta på?</p>
+                    <p className="text-sm text-gray-500">Når ønsker dere å delta?</p>
                   </div>
                   <div className="mt-4 space-y-4">
-                    <div className="flex items-center">
-                      <input
-                        type="radio"
-                        id="sep_8"
-                        {...register("day", { required: true })}
-                        value="8"
-                        className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
-                      />
-                      <label htmlFor="sep_8" className="ml-3 block text-sm font-medium text-gray-700">
-                        8. september
-                      </label>
-                    </div>
                     <div className="flex items-center">
                       <input
                         type="radio"
@@ -385,7 +370,7 @@ export function RegistrationForm(): JSX.Element {
                         className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
                       />
                       <label htmlFor="sep_9" className="ml-3 block text-sm font-medium text-gray-700">
-                        9. september
+                        bare 9. september
                       </label>
                     </div>
                     <div className="flex items-center">
@@ -397,7 +382,7 @@ export function RegistrationForm(): JSX.Element {
                         className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
                       />
                       <label htmlFor="both" className="ml-3 block text-sm font-medium text-gray-700">
-                        Begge
+                        8. og 9. september
                       </label>
                     </div>
                   </div>
@@ -451,7 +436,8 @@ export function RegistrationForm(): JSX.Element {
                     {watchWorkshop && (
                       <div className="sm:col-span-3">
                         <label htmlFor="workshop_title" className="block text-sm font-medium text-gray-700">
-                          Tema for workshop (ikke obligatorisk)
+                          Tema for workshop (ikke obligatorisk før 15. august. Dere vil også motta en liste med ønsket
+                          tema fra studentene senere.)
                         </label>
                         <div className="mt-1">
                           <input
@@ -479,21 +465,6 @@ export function RegistrationForm(): JSX.Element {
                         <p className="text-gray-500">Presentasjon, 20 minutter.</p>
                       </div>
                     </div>
-                    {watchTalk && (
-                      <div className="sm:col-span-3">
-                        <label htmlFor="talk_title" className="block text-sm font-medium text-gray-700">
-                          Tema for foredrag (ikke obligatorisk)
-                        </label>
-                        <div className="mt-1">
-                          <input
-                            type="text"
-                            {...register("talkTitle")}
-                            id="talk_title"
-                            className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
-                          />
-                        </div>
-                      </div>
-                    )}
                   </div>
                 </fieldset>
                 <fieldset className="mt-6">
