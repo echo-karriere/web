@@ -11,7 +11,7 @@ export default function Index(): JSX.Element {
               <p className="mt-4 text-lg leading-6 text-gray-500">
                 Vi avventer informasjon fra en tredjepart, og inntill videre må vi avvente påmelding. Vi estimerer at vi
                 er klare for å motta påmeldinger fra idag kl. 15:00 (+- 1 time). Står bedriften oppført på vår mail
-                liste, vil dere uansett bli kontaktet på e-post når vi åpner påmeldingssjemaet. Vi beklager ulempene.
+                liste, vil dere uansett bli kontaktet på e-post når vi åpner påmeldingsskjemaet. Vi beklager ulempene.
               </p>
             </div>
           </div>
