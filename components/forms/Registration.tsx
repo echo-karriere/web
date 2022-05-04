@@ -589,6 +589,13 @@ export function RegistrationForm(): JSX.Element {
               </div>
             </div>
           </form>
+          <p className="pt-6">
+            Opplever dere problemer med påmeldingsskjemaet? kontakt webansvarlig på{" "}
+            <a className="underline" href="mailto:sebastian.helgesen@echokarriere.no">
+              e-post
+            </a>
+            .
+          </p>
         </div>
       </div>
     </div>
