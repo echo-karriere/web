@@ -6,6 +6,7 @@ export default function Index(): JSX.Element {
       title="Påmelding 2022"
       description="Ønsker du og din bedrift å delta på echo karriere i september? Påmeldingen er nå åpen! En fantastisk mulighet til å vise frem bedriften for IT-studenter i Bergensområdet."
     >
+      <meta property="og:image" content="../public/cover.png" />
       <Container>
         <RegistrationForm />
       </Container>
