@@ -136,7 +136,7 @@ export function RegistrationForm(): JSX.Element {
             .
           </p>
         </div>
-        <div className="mt-12">
+        <div className="mt-6">
           <form
             className="space-y-8 divide-y divide-gray-200"
             onSubmit={handleSubmit(submitForm)}
