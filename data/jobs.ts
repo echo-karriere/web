@@ -21,7 +21,7 @@ export const JOBS: Array<JobProps> = [
     logo: JOB_LOGOS.tietoevry,
     description:
       "We are now recruiting graduates for the fall of 2022 in Norway who want to be a part of shaping the future today! Become a part of our team consisting of 24,000 experts globally, helping businesses and societies meet their full potential – while you are also reaching yours.",
-    location: ["Oslo", "Bergen", "Trondheim", "Stavanger"],
+    location: ["Oslo", "Bergen", "Trondheim", "Stavanger", "Kristiansand", "Fornebu", "Brumunddal"],
     type: "full",
     deadline: new Date(Date.parse("2022-06-23")),
   },
