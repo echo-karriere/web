@@ -12,7 +12,7 @@ export const JOBS: Array<JobProps> = [
       "As a Support Technician you will contribute to customer satisfaction by assisting end-users in the daily operation of our services. You will be joining a global team, that supports customers in all continents and oceans.",
     location: "Bergen",
     type: "full",
-    deadline: null,
+    deadline: new Date(Date.parse("2022-05-12")),
   },
   {
     name: "Graduate 2022",

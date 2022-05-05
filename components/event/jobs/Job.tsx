@@ -73,6 +73,9 @@ export const Job = ({
     return validType || validCompany || validLocation;
   };
 
+  // remove from list if deadline is passed
+  if (deadline && deadline < new Date()) return null;
+
   if (!show()) return null;
 
   return (
