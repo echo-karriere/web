@@ -1,16 +1,16 @@
 import { JobProps } from "@/components";
 
-import { ATTENDEE_LOGOS } from "./attendees";
+import { JOB_LOGOS } from "./jobads";
 
 export const JOBS: Array<JobProps> = [
   {
-    name: "Nyutdannet utvikler 2022",
-    company: "Netcompany",
-    link: "https://jobs.smartrecruiters.com/Netcompany1/743999761881466-nyutdannet-utvikler-2022",
-    logo: ATTENDEE_LOGOS.netcompany,
+    name: "IT Support Engineer",
+    company: "Marin IT AS",
+    link: "	https://www.linkedin.com/jobs/view/3040848919",
+    logo: JOB_LOGOS.marinit,
     description:
-      "Vil du være med å utgjøre en forskjell ved å utvikle fremtidens IT-løsninger? Vi i Netcompany ser etter deg som ønsker å jobbe med å utvikle samfunnsnyttige løsninger for kunder slik som Folkehelseinstituttet, DNB, Barnevernet og OBOS.",
-    location: "Oslo",
+      "As a Support Technician you will contribute to customer satisfaction by assisting end-users in the daily operation of our services. You will be joining a global team, that supports customers in all continents and oceans.",
+    location: "Bergen",
     type: "full",
     deadline: null,
   },
