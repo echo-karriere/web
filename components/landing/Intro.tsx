@@ -1,3 +1,4 @@
+import { Notification } from "components/common/Notification";
 import Image from "next/image";
 
 import aboutUrl from "../assets/about.svg";
@@ -8,6 +9,10 @@ import { Hero } from "./Hero";
 export function Intro(): JSX.Element {
   return (
     <>
+      <Notification
+        message="Vi tar nå imot påmeldinger til echo karriere 2022 fra bedrifter!"
+        url="https://www.echokarriere.no/for-bedrifter/pamelding/"
+      />
       <Hero />
       <div className="py-16 lg:py-24 bg-gray-50 overflow-hidden">
         <div className="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
