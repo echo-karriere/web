@@ -12,7 +12,7 @@ export const JOBS: Array<JobProps> = [
       "As a Support Technician you will contribute to customer satisfaction by assisting end-users in the daily operation of our services. You will be joining a global team, that supports customers in all continents and oceans.",
     location: "Bergen",
     type: "full",
-    deadline: new Date(Date.parse("2022-05-12")),
+    deadline: new Date(Date.parse("2022-05-13")),
   },
   {
     name: "Graduate 2022",
@@ -23,7 +23,7 @@ export const JOBS: Array<JobProps> = [
       "We are now recruiting graduates for the fall of 2022 in Norway who want to be a part of shaping the future today! Become a part of our team consisting of 24,000 experts globally, helping businesses and societies meet their full potential – while you are also reaching yours.",
     location: ["Oslo", "Bergen", "Trondheim", "Stavanger", "Kristiansand", "Fornebu", "Brumunddal"],
     type: "full",
-    deadline: new Date(Date.parse("2022-06-23")),
+    deadline: new Date(Date.parse("2022-06-24")),
   },
 ];
 
