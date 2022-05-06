@@ -1,5 +1,5 @@
-import marinit from "../content/images/logos/jobads/marinit.jpg";
-import tietoevry from "../content/images/logos/jobads/tietoevry.jpg";
+import marinit from "../content/images/logos/jobads/marinit.png";
+import tietoevry from "../content/images/logos/jobads/tietoevry.png";
 
 export interface Jobads {
   company: string;
