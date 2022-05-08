@@ -24,6 +24,7 @@ type RegistrationFormData = {
   talk: boolean;
   banquet: "yes" | "no";
   other: string;
+  found: string;
   confirmation: boolean;
 };
 
@@ -73,6 +74,7 @@ const registrationShape = yup.object().shape({
   talk: yup.boolean().notRequired(),
   banquet: yup.mixed().oneOf(["yes", "no"]).required(),
   other: yup.string().notRequired(),
+  found: yup.string().notRequired(),
   confirmation: yup
     .boolean()
     .test("confirm", "Dere må bekrefte å ha lest vilkårene", (val) => val === null || Boolean(val))
@@ -515,7 +517,7 @@ export function RegistrationForm(): JSX.Element {
                   <fieldset>
                     <div className="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-3">
                       <div className="sm:col-span-3">
-                        <label htmlFor="about" className="block text-sm font-medium text-gray-700">
+                        <label htmlFor="other" className="block text-sm font-medium text-gray-700">
                           Melding
                         </label>
                         <div className="mt-1">
@@ -528,6 +530,31 @@ export function RegistrationForm(): JSX.Element {
                           />
                         </div>
                         <p className="mt-2 text-sm text-gray-500">Om det skulle være noe mer, skriv det gjerne her!</p>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+                <div>
+                  <fieldset>
+                    <div className="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-3">
+                      <div className="sm:col-span-3">
+                        <label htmlFor="found" className="block text-sm font-medium text-gray-700">
+                          Hvordan fant dere påmeldingen til karrieredagen?
+                        </label>
+
+                        <div className="mt-1">
+                          <textarea
+                            id="found"
+                            {...register("found")}
+                            rows={4}
+                            cols={25}
+                            className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                          />
+                        </div>
+                        <p className="mt-2 text-sm text-gray-500">
+                          Valgfritt å svare på, men vi setter stor pris om dere velger å gjøre det. Dette hjelper oss
+                          med å forbedre påmeldingsopplevelsen.
+                        </p>
                       </div>
                     </div>
                   </fieldset>
