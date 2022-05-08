@@ -3,13 +3,35 @@ import "typeface-bitter";
 import "typeface-cambo";
 import "../public/styles.css";
 
+import ProgressBar from "@badrap/bar-of-progress";
 import { AppProps } from "next/app";
 import Head from "next/head";
+import { useRouter } from "next/router";
 import { DefaultSeo } from "next-seo";
+import { useEffect } from "react";
 
 import { defaultSEOConfig } from "@/utils";
 
+const progress = new ProgressBar({
+  size: 5,
+  color: "#1870d5",
+  className: "bar-of-progress",
+  delay: 100,
+});
+
 const App = ({ Component, pageProps }: AppProps): JSX.Element => {
+  const router = useRouter();
+  useEffect(() => {
+    router.events.on("routeChangeStart", progress.start);
+    router.events.on("routeChangeComplete", progress.finish);
+    router.events.on("routeChangeError", progress.finish);
+
+    return () => {
+      router.events.off("routeChangeStart", progress.start);
+      router.events.off("routeChangeComplete", progress.finish);
+      router.events.off("routeChangeError", progress.finish);
+    };
+  }, [router]);
   return (
     <>
       <Head>
