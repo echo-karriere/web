@@ -113,7 +113,12 @@ export function Footer(): JSX.Element {
           </div>
         </div>
         <div className="mt-12 border-t border-gray-200 pt-4">
-          <p className="text-base text-gray-500 xl:text-center">© {new Date().getFullYear()} echo karriere</p>
+          <p className="text-base text-gray-500 xl:text-center">
+            © {new Date().getFullYear()} echo karriere &#x25CF;{" "}
+            <a className="underline" href="/files/personvern.pdf">
+              Personvernerklæring
+            </a>
+          </p>
         </div>
       </div>
     </footer>
