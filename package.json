@@ -3,7 +3,7 @@
   "version": "3.0.0",
   "private": true,
   "dependencies": {
-    "@badrap/bar-of-progress": "0.1.2",
+    "@badrap/bar-of-progress": "0.2.1",
     "@headlessui/react": "1.6.1",
     "@heroicons/react": "1.0.6",
     "@hookform/resolvers": "2.8.8",
