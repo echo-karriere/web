@@ -1,3 +1,5 @@
+import { Notification } from "components/common/NotificationNoLink";
+
 import { Container, Layout, RegistrationForm } from "@/components";
 
 export default function Index(): JSX.Element {
@@ -9,6 +11,10 @@ export default function Index(): JSX.Element {
       <meta
         property="og:image"
         content="https://raw.githubusercontent.com/echo-karriere/echo-karriere-static/main/meta_thumbnails/echo_pamelding.png"
+      />
+      <Notification
+        message="Vi har fortsatt noen ledige plasser, så vi utvider fristen som står nevnt i invitasjonen. Det er bare å melde deg på!"
+        url="#"
       />
       <Container>
         <RegistrationForm />
