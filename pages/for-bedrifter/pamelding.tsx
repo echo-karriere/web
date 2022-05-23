@@ -13,7 +13,7 @@ export default function Index(): JSX.Element {
         content="https://raw.githubusercontent.com/echo-karriere/echo-karriere-static/main/meta_thumbnails/echo_pamelding.png"
       />
       <Notification
-        message="Vi har fortsatt noen ledige plasser, så vi utvider fristen som står nevnt i invitasjonen. Det er bare å melde deg på!"
+        message="Vi har fortsatt noen ledige plasser, så vi utvider fristen som står nevnt i invitasjonen. Det er bare å melde seg på!"
         url="#"
       />
       <Container>
