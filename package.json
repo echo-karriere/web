@@ -54,7 +54,7 @@
     "eslint-plugin-simple-import-sort": "7.0.0",
     "eslint-plugin-tsdoc": "0.2.16",
     "husky": "7.0.4",
-    "lint-staged": "12.4.1",
+    "lint-staged": "12.4.2",
     "next-sitemap": "2.5.20",
     "postcss": "8.4.14",
     "prettier": "2.6.2",
