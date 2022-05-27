@@ -4,17 +4,6 @@ import { JOB_LOGOS } from "./jobads";
 
 export const JOBS: Array<JobProps> = [
   {
-    name: "IT Support Engineer",
-    company: "Marin IT AS",
-    link: "https://www.linkedin.com/jobs/view/3040848919",
-    logo: JOB_LOGOS.marinit,
-    description:
-      "As a Support Technician you will contribute to customer satisfaction by assisting end-users in the daily operation of our services. You will be joining a global team, that supports customers in all continents and oceans.",
-    location: "Bergen",
-    type: "full",
-    deadline: new Date(Date.parse("2022-05-13")),
-  },
-  {
     name: "Graduate 2022",
     company: "Tietoevry",
     link: "https://tieto.wd3.myworkdayjobs.com/Tieto_Referral_Site/job/Norway-Fornebu/We-are-looking-for-tech-graduates-to-our-specialist-track-in-Norway--Student-Activities_R97120",
