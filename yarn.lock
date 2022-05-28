@@ -105,10 +105,10 @@
   resolved "https://registry.yarnpkg.com/@fal-works/esbuild-plugin-global-externals/-/esbuild-plugin-global-externals-2.1.2.tgz#c05ed35ad82df8e6ac616c68b92c2282bd083ba4"
   integrity sha512-cEee/Z+I12mZcFJshKcCqC8tuX5hG3s+d+9nZ3LabqKF1vKdF41B92pJVCBggjAGORAeOzyyDDKrZwIkLffeOQ==
 
-"@headlessui/react@1.6.2":
-  version "1.6.2"
-  resolved "https://registry.yarnpkg.com/@headlessui/react/-/react-1.6.2.tgz#0ba779a648e822d7478ac58b9bcb112a08a7565b"
-  integrity sha512-x+kbTjJ+ixgsignqUU9MluoZYBJAlIYMeya4w7dk/Mo13vIdI/mSnzJAVgHhHKzE/hX//+rXylr4jUVThuQq/A==
+"@headlessui/react@1.6.3":
+  version "1.6.3"
+  resolved "https://registry.yarnpkg.com/@headlessui/react/-/react-1.6.3.tgz#6e52477ea3aee7d99f153b98c1b41765ed77db3d"
+  integrity sha512-WNu/ypGzl0JmJ+sD34KtdycEu2n7EZjKFx2rq6fivsszPdoEyOVZ/GYQMJ437dfAJI0/ZxoRYfrOVduZHjlokQ==
 
 "@heroicons/react@1.0.6":
   version "1.0.6"
