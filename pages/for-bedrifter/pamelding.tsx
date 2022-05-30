@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 import { Container, Layout } from "@/components";
 
 export default function Index(): JSX.Element {
@@ -19,7 +17,7 @@ export default function Index(): JSX.Element {
             <div>
               <h2 className="text-center text-3xl font-bold text-gray-900 sm:text-4xl">Påmelding echo karriere 2022</h2>
               <p className="mt-4 text-lg leading-6 text-gray-500">
-                Påmeldingen for echo Karriere 2022 er nå stengt. Ved eventuelle spørsmål, send e-post til{" "}
+                Påmeldingen for echo Karriere 2022 er nå stengt. Ved eventuelle spørsmål, send e-post til
                 <a className="underline" href="mailto:kontakt@echokarriere.no">
                   kontakt@echokarriere.no
                 </a>
