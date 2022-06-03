@@ -1,7 +1,9 @@
+import alexander from "../content/images/styret/alexander.jpg";
 import cecilie from "../content/images/styret/cecilie.jpg";
 import elin from "../content/images/styret/elin.jpg";
 import endre from "../content/images/styret/endre.jpg";
 import mathias from "../content/images/styret/mathias.jpg";
+import mathilde from "../content/images/styret/mathilde.jpg";
 import safiya from "../content/images/styret/safiya.jpg";
 import sebastian from "../content/images/styret/sebastian.jpg";
 import solveig from "../content/images/styret/solveig.jpg";
@@ -28,6 +30,17 @@ export const COMMITTEE_MEMBERS: Array<CommitteeMember> = [
       email: "endre.egge@echokarriere.no",
       github: null,
       linkedin: "endre-borgen-egge-841009126",
+      website: null,
+    },
+  },
+  {
+    name: "Mathilde Bergenheim",
+    position: "Nestleder",
+    headshot: mathilde,
+    socials: {
+      email: "mathilde.bergenheim@echokarriere.no",
+      github: null,
+      linkedin: "mathildebergenheim",
       website: null,
     },
   },
@@ -105,6 +118,17 @@ export const COMMITTEE_MEMBERS: Array<CommitteeMember> = [
       email: "safiya.mahamood@echokarriere.no",
       github: null,
       linkedin: "safiya-mahamood-b70460231",
+      website: null,
+    },
+  },
+  {
+    name: "Alexander R. Doré",
+    position: "Styremedlem",
+    headshot: alexander,
+    socials: {
+      email: "alexander.dore@echokarriere.no",
+      github: null,
+      linkedin: "alexander-r-doré",
       website: null,
     },
   },
