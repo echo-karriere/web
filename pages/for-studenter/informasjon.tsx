@@ -1,21 +1,17 @@
-import Link from "next/link";
-
 import { Attendees, Container, Content, Layout } from "@/components";
-
-import { Notification } from "../../components/common/NotificationNoLink";
 
 export default function Page(): JSX.Element {
   return (
-    <Layout title="echo karriere 2021" description="Hva skjer på echo karriere høsten 2021?">
-      <Notification message="Informasjonen på denne siden gjelder for karrieredagen 2021!" url="#" />
+    <Layout title="echo karriere 2022" description="Hva skjer på echo karriere høsten 2022?">
       <Container>
-        <Content title="echo karriere 2021">
+        <Content title="echo karriere 2022">
           <p>
-            Grunnet smittesituasjonen blir echo karriere 2021 et digital arrangement, 17. september. Karrieredagen vil
-            gå på plattformen <a href="https://www.gather.town/">Gather</a>, hvor det vil bli holdt lynforedrag,
-            workshopper, foredrag og en full digital karrieredag med stands og kaffe. Se også oversikten over ledige og
-            utlyste stillinger <Link href="/for-studenter/jobb/">her</Link> samt{" "}
-            <Link href="/for-studenter/timeplan">timeplanen</Link>.
+            echo karriere er en karrieredag for IT-studenter i Bergensområdet. Karrieredagen arrangeres på Forum Scene
+            den 8. og 9. september. Det vil også avholdes{" "}
+            <a href="https://echokarriere.pameldinger.no" className="text-blue-500">
+              workshops
+            </a>{" "}
+            disse dagene.
           </p>
         </Content>
         <Attendees />

@@ -27,13 +27,13 @@ export function Hero(): JSX.Element {
                   <span className="block text-c10 xl:inline">2022</span>
                 </h1>
                 <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                  echo karriere arrangeres 8. og 9. september 2022.
+                  echo karriere arrangeres på Forum Scene den 8. og 9. september 2022.
                 </p>
                 <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                   <div className="rounded-md shadow">
-                    <Link href="/for-bedrifter/pamelding/">
+                    <Link href="/for-studenter/informasjon/">
                       <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-c5 hover:bg-c6 md:py-4 md:text-lg md:px-10">
-                        Påmelding bedrifter
+                        Informasjon
                       </a>
                     </Link>
                   </div>
