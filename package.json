@@ -6,7 +6,7 @@
     "@badrap/bar-of-progress": "0.2.1",
     "@headlessui/react": "1.6.5",
     "@heroicons/react": "1.0.6",
-    "@hookform/resolvers": "2.9.1",
+    "@hookform/resolvers": "2.9.3",
     "@tailwindcss/aspect-ratio": "0.4.0",
     "axios": "0.27.2",
     "esbuild": "0.14.47",
