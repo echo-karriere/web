@@ -12,6 +12,7 @@ import kantega from "../content/images/logos/kantega.svg";
 import knowit from "../content/images/logos/knowit.svg";
 import kongsberg from "../content/images/logos/kongsberg.svg";
 import marinit from "../content/images/logos/marinit.webp";
+import metzum from "../content/images/logos/metzum.svg";
 import microsoftuniversity from "../content/images/logos/microsoftuniversity.svg";
 import miles from "../content/images/logos/miles.svg";
 import netcompany from "../content/images/logos/netcompany.svg";
@@ -69,7 +70,8 @@ export type ATTENDEE_NAMES =
   | "kongsberg"
   | "deloitte"
   | "sbanken"
-  | "pit";
+  | "pit"
+  | "metzum";
 
 export const ATTENDEE_LOGOS: Record<ATTENDEE_NAMES, StaticImageData> = {
   itera: itera,
@@ -104,6 +106,7 @@ export const ATTENDEE_LOGOS: Record<ATTENDEE_NAMES, StaticImageData> = {
   deloitte: deloitte,
   sbanken: sbanken,
   pit: pit,
+  metzum: metzum,
 };
 
 export const ATTENDEES: Array<Attendee> = [
