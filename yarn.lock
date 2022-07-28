@@ -50,10 +50,10 @@
   resolved "https://registry.yarnpkg.com/@badrap/bar-of-progress/-/bar-of-progress-0.2.1.tgz#68200c7547ecd7f3a3450597c596810a5a06c02c"
   integrity sha512-+vqWaMkHnCcoKDo0dRhMpY40Lt2+Li2/vo0IArrbYWKTLeHatEGLJRX23iUl6quxwxVqrflJPCr8F0Sak+hujg==
 
-"@corex/deepmerge@^2.6.148":
-  version "2.6.148"
-  resolved "https://registry.yarnpkg.com/@corex/deepmerge/-/deepmerge-2.6.148.tgz#8fa825d53ffd1cbcafce1b6a830eefd3dcc09dd5"
-  integrity sha512-6QMz0/2h5C3ua51iAnXMPWFbb1QOU1UvSM4bKBw5mzdT+WtLgjbETBBIQZ+Sh9WvEcGwlAt/DEdRpIC3XlDBMA==
+"@corex/deepmerge@^4.0.29":
+  version "4.0.29"
+  resolved "https://registry.yarnpkg.com/@corex/deepmerge/-/deepmerge-4.0.29.tgz#af9debf07d7f6b0d2a9d04a266abf2c1418ed2f6"
+  integrity sha512-q/yVUnqckA8Do+EvAfpy7RLdumnBy9ZsducMUtZTvpdbJC7azEf1hGtnYYxm0QfphYxjwggv6XtH64prvS1W+A==
 
 "@echo-karriere/clubhouse-lint@0.3.0":
   version "0.3.0"
@@ -3302,12 +3302,12 @@ next-seo@5.5.0:
   resolved "https://registry.yarnpkg.com/next-seo/-/next-seo-5.5.0.tgz#12bdfce60a6ae098f49617357a166c2d44dbc29e"
   integrity sha512-5ouBHFtx8YrSDW44lj0qIEQ+oMcz6stgoITB+SqHUZbhgizoJsyLmq73gJ0lxtEKpcN8vG2QgRIJfdb8OAPChw==
 
-next-sitemap@2.5.28:
-  version "2.5.28"
-  resolved "https://registry.yarnpkg.com/next-sitemap/-/next-sitemap-2.5.28.tgz#c061914edcc74268e43254710dec0a0febae5fa4"
-  integrity sha512-rDMTa7nLE0ikYnu8JDCrwQufIRm4b4Sg8BK11DGdDAmYpXmcmw4Qvm+oVBR8gUL97E6i2ihTM+cRx8mgENDACA==
+next-sitemap@3.1.15:
+  version "3.1.15"
+  resolved "https://registry.yarnpkg.com/next-sitemap/-/next-sitemap-3.1.15.tgz#abb68abeffc5aa5d3a88bd7441092fba0c69c481"
+  integrity sha512-zLLbSRQjArBlwQp3SUG1nt9TDdJGvLzRj/sQaV4ZovIl4VlocKuFxlX5aWbVQ7iLhTxr8uGU7v8cFENiZCGRjA==
   dependencies:
-    "@corex/deepmerge" "^2.6.148"
+    "@corex/deepmerge" "^4.0.29"
     minimist "^1.2.6"
 
 next@12.1.0:
