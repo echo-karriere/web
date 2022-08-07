@@ -205,20 +205,20 @@ export function JobRegistrationForm(): JSX.Element {
                   </div>
                   <div className="sm:col-span-3">
                     <label htmlFor="deadline" className="block text-sm font-medium text-gray-700">
-                      Siste frist
+                      Søknadsfrist
                       {errors.deadline && (
                         <span className="text-red-500 text-xs float-right">{errors.deadline.message}</span>
                       )}
                     </label>
                     <p className="mt-1 text-sm text-gray-500">
-                      Dersom det er en fulltidsstilling kan du ignorere sluttfristen.
+                      Dersom det er en fulltidsstilling kan du ignorere Søknadsfristen.
                     </p>
                     <div className="mt-1">
                       <input
                         type="date"
                         defaultValue={new Date().toISOString().split("T")[0]}
-                        min="2021-08-01"
-                        max="2022-12-12"
+                        min="2022-08-01"
+                        max="2024-12-12"
                         {...register("deadline")}
                         id="title"
                         className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
