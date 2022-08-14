@@ -8,8 +8,8 @@ import { FormError, FormSubmitted, sendFormSubmission } from "./index";
 type FormData = {
   name: string;
   email: string;
-  fieldofstudy: string;
-  cohort: string;
+  studie: string;
+  kull: string;
   application: string;
 };
 
@@ -84,15 +84,15 @@ export function CommitteeApplication(): JSX.Element {
           </div>
 
           <div className="sm:col-span-2">
-            <label className="block text-sm font-medium text-gray-700" htmlFor="cohort_id">
+            <label className="block text-sm font-medium text-gray-700" htmlFor="kull_id">
               Velg årskull
               {errors.name && <span className="text-red-600 text-sm float-right">{errors.name.message}</span>}
             </label>
             <div className="mt-1">
               <select
                 className="py-3 px-4 block w-full shadow-sm focus:ring-c6 focus:border-c6 border-gray-300 rounded-md"
-                id="cohort_id"
-                {...register("cohort", { required: true })}
+                id="kull_id"
+                {...register("kull", { required: true })}
               >
                 <option value="" disabled selected>
                   Velg årskull
@@ -107,15 +107,15 @@ export function CommitteeApplication(): JSX.Element {
           </div>
 
           <div className="sm:col-span-2">
-            <label className="block text-sm font-medium text-gray-700" htmlFor="fieldofstudy_id">
+            <label className="block text-sm font-medium text-gray-700" htmlFor="studie_id">
               Velg studieretning
               {errors.name && <span className="text-red-600 text-sm float-right">{errors.name.message}</span>}
             </label>
             <div className="mt-1">
               <select
                 className="py-3 px-4 block w-full shadow-sm focus:ring-c6 focus:border-c6 border-gray-300 rounded-md"
-                id="fieldofstudy_id"
-                {...register("fieldofstudy", { required: true })}
+                id="studie_id"
+                {...register("studie", { required: true })}
               >
                 <option value="" disabled selected>
                   Velg studieretning
