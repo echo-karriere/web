@@ -204,6 +204,7 @@ export function CommitteeApplication(): JSX.Element {
                 <span className="text-red-600 text-sm float-right">{errors.application.message}</span>
               )}
             </label>
+            <small>Skriv litt om hvem du er, og hvorfor du ønsker å søke til echo Karriere.</small>
             <textarea
               id="application"
               {...register("application", { required: true })}
