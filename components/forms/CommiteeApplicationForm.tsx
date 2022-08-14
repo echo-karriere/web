@@ -8,6 +8,8 @@ import { FormError, FormSubmitted, sendFormSubmission } from "./index";
 type FormData = {
   name: string;
   email: string;
+  fieldofstudy: string;
+  cohort: string;
   application: string;
 };
 
@@ -78,6 +80,120 @@ export function CommitteeApplication(): JSX.Element {
                 autoComplete="email"
                 className="py-3 px-4 block w-full shadow-sm focus:ring-c6 focus:border-c6 border-gray-300 rounded-md"
               />
+            </div>
+          </div>
+
+          <div className="sm:col-span-2">
+            <label className="block text-sm font-medium text-gray-700" htmlFor="cohort_id">
+              Velg årskull
+              {errors.name && <span className="text-red-600 text-sm float-right">{errors.name.message}</span>}
+            </label>
+            <div className="mt-1">
+              <select
+                className="py-3 px-4 block w-full shadow-sm focus:ring-c6 focus:border-c6 border-gray-300 rounded-md"
+                id="cohort_id"
+                {...register("cohort", { required: true })}
+              >
+                <option value="" disabled selected>
+                  Velg årskull
+                </option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+          </div>
+
+          <div className="sm:col-span-2">
+            <label className="block text-sm font-medium text-gray-700" htmlFor="fieldofstudy_id">
+              Velg studieretning
+              {errors.name && <span className="text-red-600 text-sm float-right">{errors.name.message}</span>}
+            </label>
+            <div className="mt-1">
+              <select
+                className="py-3 px-4 block w-full shadow-sm focus:ring-c6 focus:border-c6 border-gray-300 rounded-md"
+                id="fieldofstudy_id"
+                {...register("fieldofstudy", { required: true })}
+              >
+                <option value="" disabled selected>
+                  Velg studieretning
+                </option>
+                <option value="" disabled>
+                  {" "}
+                </option>
+                <option value="" disabled>
+                  Studieretninger ved UiB - Institutt for informatikk:
+                </option>
+                <option value="Informatikk, årsstudium - UiB II">Informatikk, årsstudium</option>
+                <option value="Bioinformatikk - UiB II">Bioinformatikk</option>
+                <option value="Data Science - UiB II">Data Science</option>
+                <option value="Datateknologi - UiB II">Datateknologi</option>
+                <option value="Datasikkerhet - UiB II">Datasikkerhet</option>
+                <option value="IMØ - UiB II">Informatikk-matematikk-økonomi (IMØ)</option>
+                <option value="Felles masterprogram i programutvikling - UiB II">
+                  Felles masterprogram i programutvikling
+                </option>
+                <option value="Informatikk, master, 2 år - UiB II">Informatikk, master, 2 år</option>
+                <option value="" disabled>
+                  {" "}
+                </option>
+                <option value="" disabled>
+                  Studieretninger ved UiB - Institutt for informasjons- og medievitenskap:{" "}
+                </option>
+                <option value="Informasjonsvitenskap, årsstudium - UiB IM">Informasjonsvitenskap, årsstudium</option>
+                <option value="Informasjonsvitskap - UiB IM">Informasjonsvitskap</option>
+                <option value="Kognitiv vitskap - UiB IM">Kognitiv vitskap</option>
+                <option value="Kunstig intelligens - UiB IM">Kunstig intelligens</option>
+                <option value="Medie- og interaksjonsdesign - UiB IM">Medie- og interaksjonsdesign</option>
+                <option value="Informasjonsvitskap, master, 2 år - UiB IM">Informasjonsvitskap, master, 2 år</option>
+                <option value="Medie- og interaksjonsdesign, master, 2 år - UiB IM">
+                  Medie- og interaksjonsdesign, master, 2 år
+                </option>
+                <option value="" disabled>
+                  {" "}
+                </option>
+                <option value="" disabled>
+                  Andre studieretninger ved UiB - Pressiser i Søknadstekst:{" "}
+                </option>
+                <option value="UiB">Universitetet i Bergen</option>
+                <option value="" disabled>
+                  {" "}
+                </option>
+                <option value="" disabled>
+                  Studieretninger ved HVL - Pressiser i Søknadstekst:{" "}
+                </option>
+                <option value="HVL">Høgskolen på Vestlandet - Campus Bergen</option>
+                <option value="" disabled>
+                  {" "}
+                </option>
+                <option value="" disabled>
+                  Studieretninger ved Høyskolen Kristiania - Pressiser i Søknadstekst:{" "}
+                </option>
+                <option value="Høyskolen Kristiania">Høyskolen Kristiania - Campus Bergen</option>
+                <option value="" disabled>
+                  {" "}
+                </option>
+                <option value="" disabled>
+                  Studieretninger ved Noroff - Pressiser i Søknadstekst:{" "}
+                </option>
+                <option value="Noroff">Noroff - Campus Bergen</option>
+                <option value="" disabled>
+                  {" "}
+                </option>
+                <option value="" disabled>
+                  Studieretninger ved Sjøkrigsskolen - Pressiser i Søknadstekst:{" "}
+                </option>
+                <option value="SKSK">Sjøkrigsskolen - Forsvarets Høgskole</option>
+                <option value="" disabled>
+                  {" "}
+                </option>
+                <option value="" disabled>
+                  Annen relevant studieretning - Pressiser i Søknadstekst:{" "}
+                </option>
+                <option value="Annet">Annet</option>
+              </select>
             </div>
           </div>
 
