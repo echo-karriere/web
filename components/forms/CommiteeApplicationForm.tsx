@@ -155,44 +155,75 @@ export function CommitteeApplication(): JSX.Element {
                   {" "}
                 </option>
                 <option value="" disabled>
-                  Andre studieretninger ved UiB - Pressiser i Søknadstekst:{" "}
+                  Andre studieretninger ved UiB:{" "}
                 </option>
-                <option value="UiB">Universitetet i Bergen</option>
+                <option value="Digital kultur - UiB">Digital kultur</option>
+                <option value="Informasjonsteknologi og økonomi (ITØK) - UiB">
+                  Informasjonsteknologi og økonomi (ITØK)
+                </option>
+                <option value="Digital kultur, master 2år - UiB">Digital kultur, master 2år</option>
+                <option value="Annet - UiB">Andre relevante studier ved UiB - Spesifiser i søknadsteksten</option>
                 <option value="" disabled>
                   {" "}
                 </option>
                 <option value="" disabled>
-                  Studieretninger ved HVL - Pressiser i Søknadstekst:{" "}
+                  Studieretninger ved HVL (UVL):{" "}
                 </option>
-                <option value="HVL">Høgskolen på Vestlandet - Campus Bergen</option>
+                <option value="Cyberfysisk nettverksteknologi - HVL">Cyberfysisk nettverksteknologi</option>
+                <option value="Dataingeniør - HVL">Dataingeniør</option>
+                <option value="Informasjonsteknologi | Bergen - HVL">Informasjonsteknologi | Bergen</option>
+                <option value="Programutvikling - HVL">Programutvikling, Master 2 år</option>
+                <option value="Annet - HVL">Annet - Spesifiser i søknadsteksten</option>
                 <option value="" disabled>
                   {" "}
                 </option>
                 <option value="" disabled>
-                  Studieretninger ved Høyskolen Kristiania - Pressiser i Søknadstekst:{" "}
+                  Studieretninger ved Høyskolen Kristiania:{" "}
                 </option>
-                <option value="Høyskolen Kristiania">Høyskolen Kristiania - Campus Bergen</option>
+                <option value="Informasjonsteknologi - Frontend- og mobilutvikling - HK">
+                  Informasjonsteknologi - Frontend- og mobilutvikling
+                </option>
+                <option value="Annet - HK">Annet - Spesifiser i søknadsteksten</option>
                 <option value="" disabled>
                   {" "}
                 </option>
                 <option value="" disabled>
-                  Studieretninger ved Noroff - Pressiser i Søknadstekst:{" "}
+                  Studieretninger ved Noroff:{" "}
                 </option>
-                <option value="Noroff">Noroff - Campus Bergen</option>
+                <option value="Frontend-utvikling - Noroff">Frontend-utvikling</option>
+                <option value="3D design og spillteknologi - Noroff">3D design og spillteknologi</option>
+                <option value="3D design og spillteknologi - Interaktiv - Noroff">
+                  3D design og spillteknologi - Interaktiv
+                </option>
+                <option value="3D design og spillteknologi - Innholdsutvikling - Noroff">
+                  3D design og spillteknologi - Innholdsutvikling
+                </option>
+                <option value="Nettverk og IT-sikkerhet - Noroff">Nettverk og IT-sikkerhet</option>
+                <option value="Nettverks- og systemadministrasjon - Noroff">Nettverks- og systemadministrasjon</option>
+                <option value="Annet - Noroff">Annet - Spesifiser i søknadsteksten</option>
                 <option value="" disabled>
                   {" "}
                 </option>
                 <option value="" disabled>
-                  Studieretninger ved Sjøkrigsskolen - Pressiser i Søknadstekst:{" "}
+                  Studieretninger ved Sjøkrigsskolen:{" "}
                 </option>
-                <option value="SKSK">Sjøkrigsskolen - Forsvarets Høgskole</option>
+                <option value="Bachelor i militære studier - fordypning ledelse og marineingeniør elektro - SKSK">
+                  Bachelor i militære studier - fordypning ledelse og marineingeniør elektro
+                </option>
+                <option value="Bachelor i militære studier - fordypning ledelse og marineingeniør maskin - SKSK">
+                  Bachelor i militære studier - fordypning ledelse og marineingeniør maskin
+                </option>
+                <option value="Bachelor i militære studier - fordypning ledelse og marineingeniør våpen, elektronikk og data - SKSK">
+                  Bachelor i militære studier - fordypning ledelse og marineingeniør våpen, elektronikk og data
+                </option>
+                <option value="Annet - SKSK">Annet</option>
                 <option value="" disabled>
                   {" "}
                 </option>
                 <option value="" disabled>
-                  Annen relevant studieretning - Pressiser i Søknadstekst:{" "}
+                  Annen relevant studieretning:{" "}
                 </option>
-                <option value="Annet">Annet</option>
+                <option value="Annet">Annet - Spesifiser i søknadsteksten</option>
               </select>
             </div>
           </div>
