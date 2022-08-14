@@ -97,11 +97,11 @@ export function CommitteeApplication(): JSX.Element {
                 <option value="" disabled selected>
                   Velg årskull
                 </option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
+                <option value="1. årskull">1</option>
+                <option value="2. årskull">2</option>
+                <option value="3. årskull">3</option>
+                <option value="4. årskull">4</option>
+                <option value="5. årskull">5</option>
               </select>
             </div>
           </div>
