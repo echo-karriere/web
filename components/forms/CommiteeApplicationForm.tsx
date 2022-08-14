@@ -167,7 +167,7 @@ export function CommitteeApplication(): JSX.Element {
                   {" "}
                 </option>
                 <option value="" disabled>
-                  Studieretninger ved HVL (UVL):{" "}
+                  Studieretninger ved HVL:{" "}
                 </option>
                 <option value="Cyberfysisk nettverksteknologi - HVL">Cyberfysisk nettverksteknologi</option>
                 <option value="Dataingeniør - HVL">Dataingeniør</option>
@@ -216,7 +216,7 @@ export function CommitteeApplication(): JSX.Element {
                 <option value="Bachelor i militære studier - fordypning ledelse og marineingeniør våpen, elektronikk og data - SKSK">
                   Bachelor i militære studier - fordypning ledelse og marineingeniør våpen, elektronikk og data
                 </option>
-                <option value="Annet - SKSK">Annet</option>
+                <option value="Annet - SKSK">Annet - Spesifiser i søknadsteksten</option>
                 <option value="" disabled>
                   {" "}
                 </option>
