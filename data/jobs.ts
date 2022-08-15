@@ -4,17 +4,6 @@ import { ATTENDEE_LOGOS } from "./attendees";
 
 export const JOBS: Array<JobProps> = [
   {
-    name: "Graduate",
-    company: "Deloitte Norge",
-    link: "https://deloitte.recman.no/index.php?query=&department%5B1685%5D=1685",
-    logo: ATTENDEE_LOGOS.deloitte,
-    description:
-      "Vi ser etter folk som er like forskjellige som utfordringene vi jobber med å løse. Dette gjør vi fordi vi tror på at ingenting er umulig med de rette folka, eller mer spesifikt, den rette kombinasjonen av folk. Du som nyutdannet er en svært viktig del av denne kombinasjonen. Er du vår nye kollega? Vi søker nyutdannede til forretningsområdene Consulting, Risk Advisory, Financial Advisory, Business Prosess Solutions og Revisjon/Audit & Assurance flere steder i landet. Les mer om de ulike områdene og se hvor du hører hjemme.",
-    location: ["Oslo", "Bergen", "Stavanger"],
-    type: "full",
-    deadline: new Date(Date.parse("2022-08-14")),
-  },
-  {
     name: "Functional Analyst",
     company: "Metzum AS",
     link: "https://metzum.no/no/hiring/er-du-en-problemloser",
@@ -68,6 +57,28 @@ export const JOBS: Array<JobProps> = [
     location: ["Oslo"],
     type: "full",
     deadline: new Date(Date.parse("2022-11-09")),
+  },
+  {
+    name: "Nyutdannet 2023",
+    company: "Computas",
+    link: "https://computas.com/stillinger/nyutdannet-2023/",
+    logo: ATTENDEE_LOGOS.computas,
+    description:
+      "Er du nyutdannet og ønsker en kickstart på karrieren som IT-konsulent i Visma Consulting? Som nyansatt blir du fast ansatt, og en del av traineeprogrammet Nytt Krutt. I over 20 år har nyansatte hos oss fått en lærerik, trygg og spennende overgang inn i arbeidslivet gjennom Nytt Krutt. Hvert år søker vi dyktige nyutdannede utviklere og designere som er engasjerte og nysgjerrige på ny teknologi! Vi i Visma Consulting leverer samfunnskritiske konsulenttjenester i form av IT-rådgivning, systemutvikling og applikasjonsforvaltning til både private og offentlige virksomheter.",
+    location: ["Oslo"],
+    type: "full",
+    deadline: null,
+  },
+  {
+    name: "Sommerjobb 2023",
+    company: "Computas",
+    link: "https://computas.com/stillinger/sommerjobb-2023/",
+    logo: ATTENDEE_LOGOS.computas,
+    description:
+      "Har du et eller to år igjen av studiene? Hvert år tar vi inn mellom 20-30 studenter på et 7 ukers langt sommerprogram.",
+    location: ["Oslo"],
+    type: "summer",
+    deadline: new Date(Date.parse("2022-10-01")),
   },
 ];
 

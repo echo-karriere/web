@@ -4,6 +4,7 @@ import bekk from "../content/images/logos/bekk.svg";
 import bouvet from "../content/images/logos/bouvet.svg";
 import capgemini from "../content/images/logos/capgemini.svg";
 import cgi from "../content/images/logos/cgi.svg";
+import computas from "../content/images/logos/computas.svg";
 import deloitte from "../content/images/logos/deloitte.svg";
 import dfind from "../content/images/logos/dfind.webp";
 import digdir from "../content/images/logos/digdir.svg";
@@ -71,7 +72,8 @@ export type ATTENDEE_NAMES =
   | "deloitte"
   | "sbanken"
   | "pit"
-  | "metzum";
+  | "metzum"
+  | "computas";
 
 export const ATTENDEE_LOGOS: Record<ATTENDEE_NAMES, StaticImageData> = {
   itera: itera,
@@ -107,6 +109,7 @@ export const ATTENDEE_LOGOS: Record<ATTENDEE_NAMES, StaticImageData> = {
   sbanken: sbanken,
   pit: pit,
   metzum: metzum,
+  computas: computas,
 };
 
 export const ATTENDEES: Array<Attendee> = [
