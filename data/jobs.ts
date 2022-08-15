@@ -64,7 +64,7 @@ export const JOBS: Array<JobProps> = [
     link: "https://computas.com/stillinger/nyutdannet-2023/",
     logo: ATTENDEE_LOGOS.computas,
     description:
-      "Er du nyutdannet og ønsker en kickstart på karrieren som IT-konsulent i Visma Consulting? Som nyansatt blir du fast ansatt, og en del av traineeprogrammet Nytt Krutt. I over 20 år har nyansatte hos oss fått en lærerik, trygg og spennende overgang inn i arbeidslivet gjennom Nytt Krutt. Hvert år søker vi dyktige nyutdannede utviklere og designere som er engasjerte og nysgjerrige på ny teknologi! Vi i Visma Consulting leverer samfunnskritiske konsulenttjenester i form av IT-rådgivning, systemutvikling og applikasjonsforvaltning til både private og offentlige virksomheter.",
+      "Som nyutdannet i Computas blir du en del av Computas NXT. Denne avdelingen er skrudd sammen for å gi den oppfølgingen, tryggheten og friheten du trenger for å få en god start.",
     location: ["Oslo"],
     type: "full",
     deadline: null,
