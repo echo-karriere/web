@@ -80,6 +80,38 @@ export const JOBS: Array<JobProps> = [
     type: "summer",
     deadline: new Date(Date.parse("2022-10-01")),
   },
+  {
+    name: "Tech graduate",
+    company: "Tietoevry",
+    link: "https://tieto.wd3.myworkdayjobs.com/no-NO/Tieto_Careers_External_Site/job/Norway-Fornebu/We-are-looking-for-Tech-graduates-to-our-specialist-track-in-Norway-_R105317-1",
+    logo: ATTENDEE_LOGOS.tietoevry,
+    description:
+      "Would you like to kickstart your career in a place where you can impact society, for good? We are now recruiting graduates for the fall of 2023 in Norway! Become a part of our team consisting of 24,000 experts globally, helping businesses and societies meet their full potential – while you are also reaching yours. Who might you be? We are looking for people with a background or competence in tech-related fields. You get to work with a range of different technologies, from Software development (Java, .Net), UX Design, AI/robotics, business intelligence, and so much more. More specifically you: - Have recently graduated, or you are about to graduate from your final year of studies. -Have a minimum of a bachelor’s degree within specific tech-related subjects, For example, programming, data engineering, informatics, and information processing. We are also interested in a wider it-related competencies, such as information systems science.",
+    location: [
+      "Bergen",
+      "Trondheim",
+      "Stavanger",
+      "Fornebu",
+      "Mo i Rana",
+      "Kristiansand",
+      "Haugesund",
+      "Brumunddal",
+      "Ski",
+    ],
+    type: "full",
+    deadline: null,
+  },
+  {
+    name: "Internship 2023",
+    company: "Appfarm",
+    link: "https://hello.appfarm.app/jobs",
+    logo: ATTENDEE_LOGOS.appfarm,
+    description:
+      "kan videreføres som deltidsarbeid med fleksible arbeidsvilkår. Du vil jobbe på interne eller eksterne prosjekter, og får en unik mulighet til å skaffe deg relevant arbeidserfaring hos en tech-startup. I tillegg lover vi at du kommer til å ha det vanvittig gøy. Vi har ikke noe krav om at et Internship må starte som et Summer Internship; du må gjerne ta kontakt om du har mulighet vinter, vår eller høst også! Trykk på annonsen for å se mer informasjon.",
+    location: ["Oslo"],
+    type: "summer",
+    deadline: new Date(Date.parse("2022-10-01")),
+  },
 ];
 
 export const JOB_LOCATIONS: Array<string> = [
