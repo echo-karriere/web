@@ -224,11 +224,6 @@ export const ATTENDEES: Array<Attendee> = [
     logo: norkart,
   },
   {
-    company: "Dfind Consulting",
-    website: "https://www.dfindconsulting.no",
-    logo: dfind,
-  },
-  {
     company: "Marin IT",
     website: "https://www.marinit.no/",
     logo: marinit,
@@ -267,10 +262,5 @@ export const ATTENDEES: Array<Attendee> = [
     company: "Sbanken",
     website: "https://www.sbanken.no/",
     logo: sbanken,
-  },
-  {
-    company: "Politiets IKT-tjenester",
-    website: "https://www.politiet.no/om/organisasjonen/sarorganene/pit/",
-    logo: pit,
   },
 ];
