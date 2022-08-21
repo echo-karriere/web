@@ -112,6 +112,28 @@ export const JOBS: Array<JobProps> = [
     type: "summer",
     deadline: new Date(Date.parse("2022-10-01")),
   },
+  {
+    name: "Lyst til å prøve deg som konsulent?",
+    company: "Bouvet",
+    link: "https://www.poption.com/companies/bouvet/postings/kANfdv",
+    logo: ATTENDEE_LOGOS.bouvet,
+    description:
+      "Vi ønsker å gi deg som student relevant arbeidserfaring i vårt sommerjobb-program. Du får prøve hvordan det er å være konsulent i et tverrfaglig team, arbeide i reelle og innovative prosjekter og ta del i både digitaliseringen og utformingen av fremtidens løsninger sammen med våre kunder. Gjennom hele sommeren får man kursing og tett oppfølging av våre dyktige medarbeidere.",
+    location: ["Bergen"],
+    type: "summer",
+    deadline: new Date(Date.parse("2022-10-01")),
+  },
+  {
+    name: "Nå ser vi etter deg som skal gå fra student til konsulent i 2023.",
+    company: "Bouvet",
+    link: "https://www.poption.com/companies/bouvet/postings/p27fXN",
+    logo: ATTENDEE_LOGOS.bouvet,
+    description:
+      "🤝 Vi vil gjerne være med deg med på reisen og gi deg en god start i arbeidslivet! Som nyutdannet i Bouvet kan du jobbe med blant annet: Systemutvikling innenfor alle moderne plattformer og programmeringsspråk. Vi jobber med .Net, C#, JavaScript, React, Angular, Node.js, Docker, Java og Python. Skyløsninger, være seg Microsoft, Amazon eller Google er stadig viktigere for oss og våre kunder.",
+    location: ["Bergen"],
+    type: "full",
+    deadline: new Date(Date.parse("2022-10-31")),
+  },
 ];
 
 export const JOB_LOCATIONS: Array<string> = [

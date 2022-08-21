@@ -57,7 +57,10 @@ export default function SchedulePage(): JSX.Element {
 
   return (
     <Layout title="Timeplan digital karrieredag 2021" description="Hva er planen for karrieredagen 2021?">
-      <Notification message="Informasjonen på denne siden gjelder for karrieredagen 2021!" url="#" />
+      <Notification
+        message="Informasjonen på denne siden gjelder for karrieredagen 2021! Dette vil bli oppdatert i løpet av denne uken."
+        url="#"
+      />
       <Container>
         <Content title="Timeplan digital karrieredag 2021">
           <p>

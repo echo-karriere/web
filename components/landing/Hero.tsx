@@ -22,7 +22,7 @@ export function Hero(): JSX.Element {
             <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
               <div className="sm:text-center lg:text-left">
                 <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-                  <span className="text-c8 inline">echo karriere</span>
+                  <span className="text-c8 inline">echo Karriere</span>
                   <br />
                   <span className="block text-c10 xl:inline">2022</span>
                 </h1>
@@ -33,7 +33,7 @@ export function Hero(): JSX.Element {
                   <div className="rounded-md shadow">
                     <Link href="/for-studenter/informasjon/">
                       <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-c5 hover:bg-c6 md:py-4 md:text-lg md:px-10">
-                        Informasjon
+                        Karrieredagene 2022
                       </a>
                     </Link>
                   </div>

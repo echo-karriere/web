@@ -1,5 +1,6 @@
 import appear from "../content/images/logos/appear.svg";
 import appfarm from "../content/images/logos/appfarm.svg";
+import avo from "../content/images/logos/avo.png";
 import bekk from "../content/images/logos/bekk.svg";
 import bouvet from "../content/images/logos/bouvet.svg";
 import capgemini from "../content/images/logos/capgemini.svg";
@@ -8,10 +9,14 @@ import computas from "../content/images/logos/computas.svg";
 import deloitte from "../content/images/logos/deloitte.svg";
 import dfind from "../content/images/logos/dfind.webp";
 import digdir from "../content/images/logos/digdir.svg";
+import dnb from "../content/images/logos/dnb.svg";
+import equinor from "../content/images/logos/equinor.svg";
+import frend from "../content/images/logos/frend.jpg";
 import itera from "../content/images/logos/itera.svg";
 import kantega from "../content/images/logos/kantega.svg";
 import knowit from "../content/images/logos/knowit.svg";
 import kongsberg from "../content/images/logos/kongsberg.svg";
+import machina from "../content/images/logos/machina.png";
 import marinit from "../content/images/logos/marinit.webp";
 import metzum from "../content/images/logos/metzum.svg";
 import microsoftuniversity from "../content/images/logos/microsoftuniversity.svg";
@@ -22,6 +27,7 @@ import norkart from "../content/images/logos/norkart.svg";
 import nsm from "../content/images/logos/nsm.svg";
 import pit from "../content/images/logos/pit.svg";
 import sbanken from "../content/images/logos/sbanken.svg";
+import sikt from "../content/images/logos/sikt.jpg";
 import skatteetaten from "../content/images/logos/skatteetaten.svg";
 import soprasteria from "../content/images/logos/soprasteria.svg";
 import spv from "../content/images/logos/spv.webp";
@@ -31,6 +37,7 @@ import traineevest from "../content/images/logos/traineevest.svg";
 import tryg from "../content/images/logos/tryg.svg";
 import tv2 from "../content/images/logos/tv2.svg";
 import variant from "../content/images/logos/variant.svg";
+import vegvesen from "../content/images/logos/vegvesen.svg";
 import visma from "../content/images/logos/visma.svg";
 
 export interface Attendee {
@@ -73,7 +80,14 @@ export type ATTENDEE_NAMES =
   | "sbanken"
   | "pit"
   | "metzum"
-  | "computas";
+  | "computas"
+  | "vegvesen"
+  | "equinor"
+  | "avo"
+  | "machina"
+  | "frend"
+  | "dnb"
+  | "sikt";
 
 export const ATTENDEE_LOGOS: Record<ATTENDEE_NAMES, StaticImageData> = {
   itera: itera,
@@ -110,6 +124,13 @@ export const ATTENDEE_LOGOS: Record<ATTENDEE_NAMES, StaticImageData> = {
   pit: pit,
   metzum: metzum,
   computas: computas,
+  vegvesen: vegvesen,
+  equinor: equinor,
+  avo: avo,
+  machina: machina,
+  frend: frend,
+  dnb: dnb,
+  sikt: sikt,
 };
 
 export const ATTENDEES: Array<Attendee> = [
@@ -262,5 +283,45 @@ export const ATTENDEES: Array<Attendee> = [
     company: "Sbanken",
     website: "https://www.sbanken.no/",
     logo: sbanken,
+  },
+  {
+    company: "Statens Vegvesen",
+    website: "https://www.vegvesen.no/om-oss/jobb/",
+    logo: vegvesen,
+  },
+  {
+    company: "Equinor",
+    website: "https://www.equinor.com/",
+    logo: equinor,
+  },
+  {
+    company: "Computas",
+    website: "https://www.computas.com/",
+    logo: computas,
+  },
+  {
+    company: "Avo Consulting",
+    website: "https://avoconsulting.no/",
+    logo: avo,
+  },
+  {
+    company: "Machina",
+    website: "https://www.machina.no/",
+    logo: machina,
+  },
+  {
+    company: "Frend Digital",
+    website: "https://www.frend.no/",
+    logo: frend,
+  },
+  {
+    company: "DNB",
+    website: "https://www.dnb.no/",
+    logo: dnb,
+  },
+  {
+    company: "Sikt – Kunnskapssektorens tjenesteleverandør",
+    website: "https://www.sikt.no/",
+    logo: sikt,
   },
 ];

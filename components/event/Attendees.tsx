@@ -15,6 +15,7 @@ const Attendee = ({ company, website, logo }: AttendeeProps): JSX.Element => (
     className="relative col-span-1 flex justify-center items-center py-8 px-8 bg-gray-50 hover:bg-gray-200 h-36"
     target="_blank"
     rel="noreferrer noopener"
+    style={{ overflow: "hidden" }}
   >
     <Image src={logo} alt={company} className="unset" />
   </a>
