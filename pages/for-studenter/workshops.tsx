@@ -1,4 +1,4 @@
-import { Attendees, Container, Content, Layout } from "@/components";
+import { Container, Content, Layout } from "@/components";
 
 export default function Page(): JSX.Element {
   return (
