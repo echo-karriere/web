@@ -7,7 +7,6 @@ import capgemini from "../content/images/logos/capgemini.svg";
 import cgi from "../content/images/logos/cgi.svg";
 import computas from "../content/images/logos/computas.svg";
 import deloitte from "../content/images/logos/deloitte.svg";
-import dfind from "../content/images/logos/dfind.webp";
 import digdir from "../content/images/logos/digdir.svg";
 import dnb from "../content/images/logos/dnb.svg";
 import equinor from "../content/images/logos/equinor.svg";
@@ -69,7 +68,6 @@ export type ATTENDEE_NAMES =
   | "tryg"
   | "microsoftuniversity"
   | "norkart"
-  | "dfind"
   | "marinit"
   | "cgi"
   | "netcompany"
@@ -112,7 +110,6 @@ export const ATTENDEE_LOGOS: Record<ATTENDEE_NAMES, StaticImageData> = {
   tryg: tryg,
   microsoftuniversity: microsoftuniversity,
   norkart: norkart,
-  dfind: dfind,
   marinit: marinit,
   cgi: cgi,
   netcompany: netcompany,
