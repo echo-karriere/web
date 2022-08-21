@@ -20,21 +20,27 @@ export default function Page(): JSX.Element {
 
           <div className="sm:grid sm:grid-cols-3 gap-1">
             <Link href="/for-studenter/timeplan/">
-              <p className="shadow cursor-pointer max-w-sm mb-1 flex items-center justify-center px-2 py-3 border border-transparent text-base font-medium rounded-md text-gray-100 bg-c5 hover:bg-c6 md:py-4 ">
-                Timeplan og oversikt
-              </p>
+              <a>
+                <p className="shadow cursor-pointer max-w-sm mb-1 flex items-center justify-center px-2 py-3 border border-transparent text-base font-medium rounded-md text-gray-100 bg-c5 hover:bg-c6 md:py-4 ">
+                  Timeplan og oversikt
+                </p>
+              </a>
             </Link>
 
             <Link href="/for-studenter/workshops/">
-              <p className="shadow cursor-pointer max-w-sm mb-1 flex items-center justify-center px-2 py-3 border border-transparent text-base font-medium rounded-md text-white bg-c5 hover:bg-c6 md:py-4 ">
-                Workshops
-              </p>
+              <a>
+                <p className="shadow cursor-pointer max-w-sm mb-1 flex items-center justify-center px-2 py-3 border border-transparent text-base font-medium rounded-md text-white bg-c5 hover:bg-c6 md:py-4 ">
+                  Workshops
+                </p>
+              </a>
             </Link>
 
             <Link href="/for-studenter/jobb/">
-              <p className="shadow cursor-pointer max-w-sm mb-1 flex items-center justify-center px-2 py-3 border border-transparent text-base font-medium rounded-md text-white bg-c5 hover:bg-c6 md:py-4 ">
-                Stillingsannonser
-              </p>
+              <a>
+                <p className="shadow cursor-pointer max-w-sm mb-1 flex items-center justify-center px-2 py-3 border border-transparent text-base font-medium rounded-md text-white bg-c5 hover:bg-c6 md:py-4 ">
+                  Stillingsannonser
+                </p>
+              </a>
             </Link>
           </div>
         </Content>
