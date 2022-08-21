@@ -1,6 +1,6 @@
 import appear from "../content/images/logos/appear.svg";
 import appfarm from "../content/images/logos/appfarm.svg";
-import avo from "../content/images/logos/avo.png";
+import avo from "../content/images/logos/avoconsult.png";
 import bekk from "../content/images/logos/bekk.svg";
 import bouvet from "../content/images/logos/bouvet.svg";
 import capgemini from "../content/images/logos/capgemini.svg";
