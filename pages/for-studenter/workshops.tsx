@@ -11,14 +11,14 @@ export default function Page(): JSX.Element {
             På echo Karriere sine karrieredager skal vi arrangere workshops som det er mulig å delta på. Nedenfor kan du
             lese mer om de ulike workshopsene. Vær opppmerksom over at Appfarms SuperPowerHour krever påmelding.
           </p>
-          <h2>Workshop med Bouvet</h2>
+          <h2 id="bouvet">Workshop med Bouvet</h2>
           <ul>
             <li>Selskap: Bouvet AS</li>
             <li>Tema: Front-end</li>
             <li>Tid: 8. september 10:00 - 11:30</li>
           </ul>
 
-          <h2>Workshop med CGI Norge</h2>
+          <h2 id="cgi">Workshop med CGI Norge</h2>
           <ul>
             <li>Selskap: CGI Norge AS</li>
             <li>Tema: Teamarbeid som konsulenter</li>
@@ -30,7 +30,7 @@ export default function Page(): JSX.Element {
             skummelt, snarere gøy(!) Dere får litt rask teori og tips før casen.
           </p>
 
-          <h2>Workshop med Knowit</h2>
+          <h2 id="knowit">Workshop med Knowit</h2>
           <ul>
             <li>Selskap: Knowit</li>
             <li>Tema: Er dette fremtidens kunst?</li>
@@ -49,14 +49,14 @@ export default function Page(): JSX.Element {
             Workshopen passer for alle som har interesse for temaet. Ta med laptop med installert Discord-bruker.
           </p>
 
-          <h2>Workshop med Stacc</h2>
+          <h2 id="stacc">Workshop med Stacc</h2>
           <ul>
             <li>Selskap: Stacc AS</li>
             <li>Tema: N/A</li>
             <li>Tid: 9. september 11:30 - 13:00</li>
           </ul>
 
-          <h2>Workshop med Netcompany</h2>
+          <h2 id="netcompany">Workshop med Netcompany</h2>
           <ul>
             <li>Selskap: Netcompany</li>
             <li>Tema: Løsning av realistisk Case</li>
@@ -71,7 +71,7 @@ export default function Page(): JSX.Element {
             jobbsøkingingsprosessen.
           </p>
 
-          <h2>SuperPowerHour</h2>
+          <h2 id="appfarm">SuperPowerHour</h2>
           <ul>
             <li>Selskap: Appfarm AS</li>
             <li>Tema: Apputvikling</li>
@@ -106,7 +106,7 @@ export default function Page(): JSX.Element {
             </a>
           </Link>
 
-          <h2>Workshop med Kantega</h2>
+          <h2 id="kantega">Workshop med Kantega</h2>
           <ul>
             <li>Selskap: Kantega</li>
             <li>Tema: Kunstig intelligens</li>
