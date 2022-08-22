@@ -26,17 +26,6 @@ export const JOBS: Array<JobProps> = [
     deadline: null,
   },
   {
-    name: "Konsulent + Talentprogram 2023",
-    company: "CGI Norge",
-    link: "http://www.cgitalent.no/",
-    logo: ATTENDEE_LOGOS.cgi,
-    description:
-      "Vi søker morgendagens konsulentstjerner til vårt talentprogram 2023! Er du nyutdannet, ønsker en bratt læringskurve og å utforske mulighetene i IT- og konsulentbransjen? Da er talentprogrammet i CGI noe for deg! Hos oss blir du fast ansatt og i løpet av programmets to år gir vi deg forutsetninger for å utvikle deg gjennom spennende utfordringer i prosjekt hos kunder, en solid opplæringspakke og kulturbyggende aktiviteter. Talentprogrammet er omgitt av en sterk kultur, varmt fellesskap og store muligheter til å drive egne initiativ.",
-    location: ["Bergen", "Trondheim"],
-    type: "full",
-    deadline: new Date(Date.parse("2022-08-21")),
-  },
-  {
     name: "Summer Intern",
     company: "Visma Consulting",
     link: "https://vismaconsulting.recman.no/job.php?job_id=287062",
