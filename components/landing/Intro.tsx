@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+import { Notification } from "../../components/common/Notification";
 import aboutUrl from "../assets/about.svg";
 import hiringUrl from "../assets/hiring.svg";
 import studentsUrl from "../assets/students.svg";
@@ -8,6 +9,7 @@ import { Hero } from "./Hero";
 export function Intro(): JSX.Element {
   return (
     <>
+      <Notification message="Vi søker nye medlemmer!" url="https://blimed.echokarriere.no" />
       <Hero />
       <div className="py-16 lg:py-24 bg-gray-50 overflow-hidden">
         <div className="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
