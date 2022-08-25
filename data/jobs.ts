@@ -123,6 +123,50 @@ export const JOBS: Array<JobProps> = [
     type: "full",
     deadline: new Date(Date.parse("2022-10-31")),
   },
+  {
+    name: "Graduate",
+    company: "Finn",
+    link: "https://emp.jobylon.com/jobs/145480-finnno-tech-graduates-2023/",
+    logo: ATTENDEE_LOGOS.finn,
+    description:
+      "Vi søker nå teknologistudenter til våres Graduate-Program høsten 2023! Du vil bli med på en gøy reise og lære deg masse i vår svare teknologimiljø.",
+    location: ["Oslo"],
+    type: "full",
+    deadline: new Date(Date.parse("2022-10-02")),
+  },
+  {
+    name: "Summer Internship 2023 - Netlight (Oslo)",
+    company: "Netlight",
+    link: "https://jobs.lever.co/netlight/52a4dcdd-e46e-49a9-8a0d-37ca1ef98db9",
+    logo: ATTENDEE_LOGOS.netlight,
+    description:
+      "Ønsker du å jobbe med den fremste teknologien sammen med Norges skarpeste og morsomste kollegaer? Da har du kommet til rett sted! Summer Internship 2023 - Netlight (Oslo) Netlight er et internasjonalt IT-konsulentselskap. Vi har hatt kontorer i Oslo siden 2008, og er i dag litt over 150 norske kollegaer. Våre ansatte er blant markedets største konsulenttalenter og våre kunder er markedsledende i sine innovative digitale løsninger. Som organisasjon bygger Netlight på tillit, ansvar og inkludering. Vi fokuserer på personlig utvikling kombinert med vekst av kompetanse og kunnskap. Vi deler kunnskap på kryss og tvers av nettverket og hjelper hverandre til å bli bedre. Som en Netlighter blir du gitt ansvar fra første sekund og du får muligheten til å være med å forme hvilket selskap Netlight skal være i fremtiden. Hva tilbyr vi? - 6-8 ukers internship mellom juni og august. - Et reelt innblikk i konsulentbransjen og hva det innebærer å være konsulent i Netlight. - Arbeidsplass ved våre kontorer på Karl Johan eller hos en av våre Oslo-baserte kunder. - Muligheten til å teste ut nye teknologier i reelle prosjekter, med støtte fra en prosjektmentor. - En sommer fylt av sosiale og faglige aktiviteter! Hvem ser vi etter? - Du er student på tredje eller fjerdeåret innenfor datateknologi, informatikk, kommunikasjonsteknologi, interaksjonsdesign eller nært beslektede fagområder, med sterke akademiske resultater. - Du må ha en genuin interesse for teknologi, forretning og for å lage de aller beste løsningene for våre kunder. - Du verdsetter en kultur der nettverk og samarbeid med andre benyttes for kunnskapsdeling og problemløsning. Legg ved dine karakterer, et motivasjonsbrev og CV. Vi verdsetter høyt at CV-en gir innsikt i praktisk og relevant erfaring og konkrete teknologier. Vi behandler søknadene fortløpende.",
+    location: ["Oslo"],
+    type: "summer",
+    deadline: new Date(Date.parse("2022-10-02")),
+  },
+  {
+    name: "Developer (Graduate 2023)",
+    company: "Avo Consulting",
+    link: "https://karriere.avoconsulting.no/jobs/1975775-developer-graduate-2023?promotion=464312-trackable-share-link-linjeforeninger",
+    logo: ATTENDEE_LOGOS.avo,
+    description:
+      "Som konsulent i våre applikasjonsutviklingsteam vil du være en viktig bidragsyter i våre prosjekter. Sammen med ditt team vil du skape innovative løsninger som er med på å løse de utfordringene våre kunder står overfor. Teamene våre bruker en smidig tilnærming for å etablere og opprettholde det kritiske samarbeidet mellom de tekniske og forretningsorienterte behovene. Du vil også få muligheten for å bidra inn i prosjekter innen dataanalyse, Machine Learning, Conversational AI og Robotic Process Automation.",
+    location: ["Oslo", "Bergen"],
+    type: "full",
+    deadline: new Date(Date.parse("2022-12-15")),
+  },
+  {
+    name: "Consultant  (Graduate 2023)",
+    company: "Avo Consulting",
+    link: "https://karriere.avoconsulting.no/jobs/1975366-consultant-graduate-2023?promotion=464565-trackable-share-link-linjeforeninger",
+    logo: ATTENDEE_LOGOS.avo,
+    description:
+      "Vi lever for å løse problemer og i møte med oss merker du nok at vi blir gira – veldig enkelt. Muligheten til å kartlegge og løse problemer innen brukeropplevelser, forretningsutvikling, endringsarbeid, prosessforbedring, kulturbygging og teknologi er noe vi aldri klarer å takke nei til. Vi er problemløsere som sammen elsker å hjelpe virksomheter med å lukke teknologigapet. Vi er lekne av natur, og vi feirer både store og små seire på veien!",
+    location: ["Oslo", "Bergen"],
+    type: "full",
+    deadline: new Date(Date.parse("2022-12-15")),
+  },
 ];
 
 export const JOB_LOCATIONS: Array<string> = [
