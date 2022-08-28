@@ -2,27 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
-import { Container, Content, Layout, Schedule } from "@/components";
+import { Container, Content, Layout } from "@/components";
 
-import { Notification } from "../../components/common/NotificationNoLink";
-import stands from "../../public/images/standrom.jpg";
-
-// interface Workshop {
-//   company: string;
-//   description: string | null;
-//   title: string;
-//   time: string;
-//   participants: number;
-//   practical: string | null;
-//   practicals: string[] | null;
-// }
-
-// interface Talk {
-//   company: string;
-//   description: string | null;
-//   title: string;
-//   time: string;
-// }
+import standsFredagBib from "../../static/kart_biblioteket.png";
+import standsTorsdag from "../../static/kart_torget_torsdag.png";
+import timeplanFredag from "../../static/ProgramFredag.png";
+import timeplanTorsdag from "../../static/ProgramTorsdag.png";
 
 function classNames(...classes: string[]): string {
   return classes.filter(Boolean).join(" ");
@@ -56,17 +41,14 @@ export default function SchedulePage(): JSX.Element {
   };
 
   return (
-    <Layout title="Timeplan digital karrieredag 2021" description="Hva er planen for karrieredagen 2021?">
-      <Notification
-        message="Informasjonen på denne siden gjelder for karrieredagen 2021! Dette vil bli oppdatert i løpet av denne uken."
-        url="#"
-      />
+    <Layout title="Timeplan echo Karriere 2022" description="Timeplanen for hva som skjer på echo Karriere 2022">
       <Container>
-        <Content title="Timeplan digital karrieredag 2021">
+        <Content title="Timeplan echo Karriere 2022">
           <p>
-            Vil du vite hva som skjer hvor og når? Se en oversikt over timeplanen og standoversikten her, og klikk deg
-            inn på det som skjer! Husk også å se på <Link href="/for-studenter/jobb/">jobbene</Link> og{" "}
-            <Link href="/for-studenter/informasjon/">bedriftene som deltar.</Link>
+            Vil du vite hva som skjer hvor og når? Se en oversikt over timeplanen og standoversikten på denne siden.
+            Ønsker du å få mere informasjon om årets karrieredag, med blant annet hvilke workshops du kan delta på,
+            liste over bedrifter som deltar, eller en oversikt over ledige stillinger? Da kan du{" "}
+            <Link href="/for-studenter/informasjon/">klikke her</Link>
           </p>
         </Content>
         <div className="sm:block md:pl-10 max-w-4xl">
@@ -92,15 +74,27 @@ export default function SchedulePage(): JSX.Element {
         </div>
         {tabs[0].current && (
           <div className="relative py-4 bg-white overflow-hidden">
-            <div className="relative md:px-4 sm:px-6 lg:px-8">
-              <Schedule />
+            <div className="relative md:px-4 sm:px-6 lg:px-8 max-w-2xl">
+              <h2 className="text-2xl font-bold mt-4 mb-4">Timeplan for Torsdagen</h2>
+              <Image src={timeplanTorsdag} alt="Bilde over timeplan for torsdag" />
+              <h2 className="text-2xl font-bold mt-4 mb-4">Timeplan for Fredagen</h2>
+              <Image src={timeplanFredag} alt="Bilde over timeplan for fredag" />
             </div>
           </div>
         )}
         {tabs[1].current && (
           <div className="relative py-4 bg-white overflow-hidden">
-            <div className="relative md:px-4 sm:px-6 lg:px-8">
-              <Image src={stands} alt="Oversikt over stands" className="max-w-3xl" />
+            <div className="relative md:px-4 sm:px-6 lg:px-6 max-w-2xl">
+              <h2 className="text-2xl font-bold mt-4">Standkart Torget</h2>
+              <p className="mb-4">
+                Disse bedriftene deltar både <b>torsdag</b> og <b>fredag</b>
+              </p>
+              <Image src={standsTorsdag} alt="Oversikt over stands torget" />
+              <h2 className="text-2xl font-bold mt-4">Standkart Biblioteket</h2>
+              <p className="mb-4">
+                Disse bedriftene deltar kun på <b>fredag</b>
+              </p>
+              <Image src={standsFredagBib} alt="Oversikt over stands biblioteket" />
             </div>
           </div>
         )}

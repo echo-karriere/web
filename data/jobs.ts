@@ -157,7 +157,7 @@ export const JOBS: Array<JobProps> = [
     deadline: new Date(Date.parse("2022-12-15")),
   },
   {
-    name: "Consultant  (Graduate 2023)",
+    name: "Consultant (Graduate 2023)",
     company: "Avo Consulting",
     link: "https://karriere.avoconsulting.no/jobs/1975366-consultant-graduate-2023?promotion=464565-trackable-share-link-linjeforeninger",
     logo: ATTENDEE_LOGOS.avo,
@@ -166,6 +166,17 @@ export const JOBS: Array<JobProps> = [
     location: ["Oslo", "Bergen"],
     type: "full",
     deadline: new Date(Date.parse("2022-12-15")),
+  },
+  {
+    name: "Graduate - Solution Engineer",
+    company: "Appfarm",
+    link: "https://hello.appfarm.app/jobs",
+    logo: ATTENDEE_LOGOS.appfarm,
+    description:
+      "Har du lyst til å jobbe med no-code teknologi i et spennende scale-up miljø? Vi i Appfarm søker flere ambisiøse kollegaer som ønsker å jobbe med innovativ teknologi i et arbeidsmiljø som er preget av samarbeid, flat struktur og mye moro. Hos hos vil du få være med å bygge gode digitale løsninger raskt og effektivt, samt bidra til å skape et ledende ekspertmiljø på no-code utvikling fra idé til leveranse sammen med våre kunder og samarbeidspartnere. Trykk på annonsen for å lese mer.",
+    location: ["Oslo"],
+    type: "full",
+    deadline: new Date(Date.parse("2022-10-01")),
   },
 ];
 

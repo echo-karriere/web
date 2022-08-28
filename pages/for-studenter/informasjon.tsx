@@ -20,26 +20,39 @@ export default function Page(): JSX.Element {
 
           <div className="sm:grid sm:grid-cols-3 gap-1">
             <Link href="/for-studenter/timeplan/">
-              <a>
-                <p className="shadow cursor-pointer max-w-sm mb-1 flex items-center justify-center px-2 py-3 border border-transparent text-base font-medium rounded-md text-gray-100 bg-c5 hover:bg-c6 md:py-4 ">
-                  Timeplan og oversikt
-                </p>
+              <a
+                className="shadow cursor-pointer max-w-sm mb-1 flex items-center justify-center px-2 py-3 border border-transparent text-base rounded-md bg-c5 hover:bg-c6"
+                style={{
+                  color: "white",
+                  textDecoration: "none",
+                }}
+              >
+                {" "}
+                Timeplan og oversikt
               </a>
             </Link>
 
             <Link href="/for-studenter/workshops/">
-              <a>
-                <p className="shadow cursor-pointer max-w-sm mb-1 flex items-center justify-center px-2 py-3 border border-transparent text-base font-medium rounded-md text-white bg-c5 hover:bg-c6 md:py-4 ">
-                  Workshops
-                </p>
+              <a
+                className="shadow cursor-pointer max-w-sm mb-1 flex items-center justify-center px-2 py-3 border border-transparent text-base rounded-md bg-c5 hover:bg-c6"
+                style={{
+                  color: "white",
+                  textDecoration: "none",
+                }}
+              >
+                Workshops
               </a>
             </Link>
 
             <Link href="/for-studenter/jobb/">
-              <a>
-                <p className="shadow cursor-pointer max-w-sm mb-1 flex items-center justify-center px-2 py-3 border border-transparent text-base font-medium rounded-md text-white bg-c5 hover:bg-c6 md:py-4 ">
-                  Stillingsannonser
-                </p>
+              <a
+                className="shadow cursor-pointer max-w-sm mb-1 flex items-center justify-center px-2 py-3 border border-transparent text-base rounded-md bg-c5 hover:bg-c6"
+                style={{
+                  color: "white",
+                  textDecoration: "none",
+                }}
+              >
+                Stillingsannonser
               </a>
             </Link>
           </div>
