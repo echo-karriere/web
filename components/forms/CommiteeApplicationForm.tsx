@@ -1,4 +1,5 @@
 import { yupResolver } from "@hookform/resolvers/yup";
+import Link from "next/link";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
@@ -48,7 +49,12 @@ export function CommitteeApplication(): JSX.Element {
   return (
     <div className="py-16 px-4 overflow-hidden sm:bx-6 lg:px-8 lg:py24 lg:max-w-xl">
       <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">Bli styremedlem</h2>
-      <p>Send inn din søknad her, så hører du fra oss så fort som mulig.</p>
+      <p>
+        Send inn din søknad her, så hører du fra oss så fort som mulig. Ønsker du å lese om hva vi søker etter?{" "}
+        <Link href="/nyheter/2022/bli-styremedlem-2022/">
+          <a className="text-blue-500">Klikk her</a>
+        </Link>
+      </p>
       <div className="mt-12">
         <form className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8" onSubmit={handleSubmit(submitForm)}>
           <div className="sm:col-span-2">
