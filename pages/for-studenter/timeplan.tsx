@@ -4,10 +4,10 @@ import { useState } from "react";
 
 import { Container, Content, Layout } from "@/components";
 
-import standsFredagBib from "../../static/kart_biblioteket.png";
-import standsTorsdag from "../../static/kart_torget_torsdag.png";
+import standsFredagBib from "../../static/biblioteket.png";
 import timeplanFredag from "../../static/ProgramFredag.png";
 import timeplanTorsdag from "../../static/ProgramTorsdag.png";
+import standsTorsdag from "../../static/torget_torsdag.png";
 
 function classNames(...classes: string[]): string {
   return classes.filter(Boolean).join(" ");
