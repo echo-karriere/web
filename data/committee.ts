@@ -84,7 +84,7 @@ export const COMMITTEE_MEMBERS: Array<CommitteeMember> = [
     socials: {
       email: "elin.veila@echokarriere.no",
       github: null,
-      linkedin: null,
+      linkedin: "elin-veila-a5a744249",
       website: null,
     },
   },
