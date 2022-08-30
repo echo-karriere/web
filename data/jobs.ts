@@ -178,6 +178,17 @@ export const JOBS: Array<JobProps> = [
     type: "full",
     deadline: new Date(Date.parse("2022-10-01")),
   },
+  {
+    name: "Graduate 2023",
+    company: "Sopra Steria",
+    link: "https://www.soprasteria.no/bli-en-av-oss/graduate-programmet",
+    logo: ATTENDEE_LOGOS.soprasteria,
+    description:
+      "Vil du være med å løse fremtidens samfunnsutfordringer? Hos oss får du en rakettstart på arbeidslivet hos Norges beste arbeidsplass! Vi har i dag kontorer i Oslo, Stavanger, Trondheim, Drammen, Kristiansand, Fredrikstad, Hamar og Tromsø , og ønsker nyutdannede ved alle kontorer. Synes du de fleste graduate-programmer fremstår som nesten helt like? For å gjøre det litt enklere for deg å velge, vil vi fortelle om de to tingene som skiller oss ut fra de aller fleste, ja - kanskje alle: Muligheter og kunnskapsdeling.",
+    location: ["Bergen", "Oslo", "Drammen", "Fredrikstad", "Hamar", "Kristiansand", "Tromsø", "Trondheim", "Stavanger"],
+    type: "full",
+    deadline: new Date(Date.parse("2022-10-01")),
+  },
 ];
 
 export const JOB_LOCATIONS: Array<string> = [
