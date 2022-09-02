@@ -11,11 +11,16 @@ export default function Page(): JSX.Element {
             På echo Karriere sine karrieredager skal vi arrangere workshops som det er mulig å delta på. Nedenfor kan du
             lese mer om de ulike workshopsene.
           </p>
-          <h2 id="bouvet">Frontend</h2>
+          <h2 id="bouvet">React for dummies</h2>
           <ul>
             <li>Selskap: Bouvet AS</li>
             <li>Tid: 8. september 10:00 - 11:30</li>
           </ul>
+          <p>
+            Christian og Troy tar dere med på en guidet tur gjennom oppsett av en grunnleggende React applikasjon. På
+            veien vil vi ta en titt på ulik funksjonalitet i moderne React, og i tillegg få et innblikk i Kanye West
+            sine tanker.
+          </p>
 
           <h2 id="cgi">Teamarbeid som konsulenter</h2>
           <ul>

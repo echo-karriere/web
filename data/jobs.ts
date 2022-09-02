@@ -189,6 +189,61 @@ export const JOBS: Array<JobProps> = [
     type: "full",
     deadline: new Date(Date.parse("2022-10-01")),
   },
+  {
+    name: "Graduate - 2023",
+    company: "Capgemini",
+    link: "https://www.capgemini.com/no-no/careers/job-search/?search_term=graduate",
+    logo: ATTENDEE_LOGOS.capgemini,
+    description:
+      "Ignite er et skreddersydd utviklingsløp for nyutdannede. Her vil du få en kick-start på karrieren med god oppfølging, mulighet til å delta på en rekke relevante kurs og ta ettertraktede sertifiseringer. Graduate-programmet løper parallelt med arbeid på kundeprosjekt og gir deg reell konsulenterfaring og en bred forståelse av kultur, arbeidsmetodikk, rollen som konsulent og karriereveier i Capgemini. Hos oss får du jobbe som konsulent i prosjekter som virkelig utgjør en forskjell for samfunnet. Vi omstiller blant annet oljeindustrien til grønn energi, effektiviserer helsevesenet og sørger for at ny teknologi gjør det trygt å ferdes på veien. På disse digitaliseringsreisene får du stor mulighet til å påvirke og finne gode løsninger sammen med dyktige kollegaer. Du kan få spesialisere deg innen: • Java, .NET og Frontend • Cloud • Cyber Security • Customer Relationship Management • Robotic Process Automation, Intelligent Automation • Prosjektledelse og agil metodikk",
+    location: ["Bergen", "Oslo", "Fredrikstad", "Trondheim", "Stavanger"],
+    type: "full",
+    deadline: new Date(Date.parse("2022-09-11")),
+  },
+  {
+    name: "Ferske utviklere, UX-designere og forretningsutviklere",
+    company: "Stacc AS",
+    link: "https://jobs.stacc.com/jobs/1395739-bli-var-kollega",
+    logo: ATTENDEE_LOGOS.stacc,
+    description:
+      "Stacc AS er et konsern i sterk vekst. Vi har kontorer i Bergen og Oslo og tar inn studenter og ferdigutdannede teknologer, designere og forretningsutviklere løpende gjennom året.",
+    location: ["Bergen", "Oslo"],
+    type: "full",
+    deadline: null,
+  },
+  {
+    name: "Talentprogram + konsulent",
+    company: "CGI Norge",
+    link: "http://www.cgitalent.no/",
+    logo: ATTENDEE_LOGOS.cgi,
+    description:
+      "Er du nyutdannet, ønsker en bratt læringskurve og utforske mulighetene i IT- og konsulentbransjen? Vi søker deg som ønsker å kick-starte din karriere hos oss høsten 2023! Du blir fast ansatt som konsulent i CGI fra dag èn. I løpet av programmets to år gir vi deg forutsetninger for å utvikle deg gjennom spennende utfordringer i prosjekt hos kunder, en solid opplæringspakke og kulturbyggende aktiviteter. Talentprogrammet er omgitt av en sterk kultur, varmt fellesskap og store muligheter til å drive egne initiativ. I løpet av to år bygger du kompetanse på ulike verktøy, metoder, teknologier, utviklingsmetodikker, prosjektledelse, samt forretningsvirksomhet. Etter endt program vil du ha anskaffet deg bred kompetanse, relevant prosjekterfaring, ett uvurderlig nettverk og mange gode karrieremuligheter i CGI.",
+    location: ["Oslo", "Trondheim"],
+    type: "full",
+    deadline: new Date(Date.parse("2022-09-18")),
+  },
+  {
+    name: "Nyutdannet teknolog 2023",
+    company: "Frend Digital AS",
+    link: "https://www.frend.no/karriere/cloud/nyutdannet-teknolog",
+    logo: ATTENDEE_LOGOS.frend,
+    description:
+      "Studerer du IT, økonomi, organisasjonspsykologi, endringsledelse, teknologi eller utvikling, og er ferdig i 2023? Er du en god problemløser, engasjert og sosial? Da vil en graduate-stilling eller sommerjobb hos oss passe for deg! Som graduate vil du bli fast ansatt fra dag én, og inngå i vårt graduate-program. Programmet går ved siden av jobben din som konsulent, og du vil lære hvordan vi jobber og tenker i Frend.",
+    location: ["Oslo"],
+    type: "full",
+    deadline: null,
+  },
+  {
+    name: "Nyutdannet utvikler 2023",
+    company: "Frend Digital AS",
+    link: "https://www.frend.no/karriere/dev/nyutdannet-utvikler",
+    logo: ATTENDEE_LOGOS.frend,
+    description:
+      "Er du student og ferdig i 2023? Er du en god problemløser, engasjert og sosial? Da vil en graduate-stilling eller sommerjobb hos oss passe for deg! Som graduate vil du bli fast ansatt fra dag én, og inngå i vårt graduate-program. Programmet går ved siden av jobben din som konsulent, og du vil lære hvordan vi jobber og tenker i Frend.",
+    location: ["Oslo"],
+    type: "full",
+    deadline: null,
+  },
 ];
 
 export const JOB_LOCATIONS: Array<string> = [
