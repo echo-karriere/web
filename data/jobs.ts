@@ -96,7 +96,7 @@ export const JOBS: Array<JobProps> = [
     link: "https://hello.appfarm.app/jobs",
     logo: ATTENDEE_LOGOS.appfarm,
     description:
-      "kan videreføres som deltidsarbeid med fleksible arbeidsvilkår. Du vil jobbe på interne eller eksterne prosjekter, og får en unik mulighet til å skaffe deg relevant arbeidserfaring hos en tech-startup. I tillegg lover vi at du kommer til å ha det vanvittig gøy. Vi har ikke noe krav om at et Internship må starte som et Summer Internship; du må gjerne ta kontakt om du har mulighet vinter, vår eller høst også! Trykk på annonsen for å se mer informasjon.",
+      "Vi vil engasjere unge talenter i flere roller hos oss gjennom Summer Internships, som også kan videreføres som deltidsarbeid med fleksible arbeidsvilkår. Du vil jobbe på interne eller eksterne prosjekter, og får en unik mulighet til å skaffe deg relevant arbeidserfaring hos en tech-startup. I tillegg lover vi at du kommer til å ha det vanvittig gøy. Vi har ikke noe krav om at et Internship må starte som et Summer Internship; du må gjerne ta kontakt om du har mulighet vinter, vår eller høst også! Trykk på annonsen for å se mer informasjon.",
     location: ["Oslo"],
     type: "summer",
     deadline: new Date(Date.parse("2022-10-01")),
