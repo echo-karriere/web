@@ -5,7 +5,7 @@ import { useState } from "react";
 import { Container, Content, Layout } from "@/components";
 
 import standsFredagBib from "../../static/biblioteket.png";
-import timeplanFredag from "../../static/fre.png";
+import timeplanFredag from "../../static/fredag_timeplan.png";
 import standsTorsdag from "../../static/torget_torsdag.png";
 import timeplanTorsdag from "../../static/tors.png";
 

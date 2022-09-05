@@ -244,6 +244,28 @@ export const JOBS: Array<JobProps> = [
     type: "full",
     deadline: null,
   },
+  {
+    name: "Sommerjobb som utvikler eller designer i tverrfaglig team",
+    company: "Kantega AS",
+    link: "https://jobb.kantega.no/sommerjobb",
+    logo: ATTENDEE_LOGOS.kantega,
+    description:
+      "Velkommen til en relevant, artig og lærerik opplevelse. Med gode jobbmuligheter etterpå! 6 uker i et studentteam som skal løse et oppdrag for en av våre kunder. Dere styrer showet, vi stiller med veiledere og faglige faddere. Konkurransedyktig lønn, selvsagt!",
+    location: ["Oslo", "Bergen", "Trondheim"],
+    type: "summer",
+    deadline: new Date(Date.parse("2022-10-02")),
+  },
+  {
+    name: "Graduate",
+    company: "Equinor",
+    link: "https://careers.peopleclick.eu.com/careerscp/client_statoil/external/en_US/jobDetails.do?functionName=getJobDetail&jobPostId=38481&localeCode=en-us",
+    logo: ATTENDEE_LOGOS.equinor,
+    description:
+      "As a graduate at Equinor, you’ll be joining 20,000 colleagues delivering oil, gas, wind and solar power to 170 million people worldwide. By 2050, we aim to become a net-zero company and deliver the energy the world needs without contributing to global warming. It’s one of the defining challenges of our time and attracting and developing the brightest minds will be critical to our success. The programme lasts for 2-years and includes rotations of 3-12 months across functions, business areas or locations. Head over to our careers site for a more detailed overview of what you can expect if you join us: https://www.equinor.com/careers/graduates",
+    location: ["Oslo", "Bergen", "Trondheim", "Stavanger"],
+    type: "full",
+    deadline: null,
+  },
 ];
 
 export const JOB_LOCATIONS: Array<string> = [
