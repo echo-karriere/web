@@ -266,6 +266,28 @@ export const JOBS: Array<JobProps> = [
     type: "full",
     deadline: null,
   },
+  {
+    name: "Nyutdannet utvikler 2023",
+    company: "Variant",
+    link: "https://www.variant.no/jobs/nyutdannet-utvikler-2023",
+    logo: ATTENDEE_LOGOS.variant,
+    description:
+      "Vi søker nyutdannede utviklere som engasjerer og motiverer. Hvilke verktøy eller språk du bruker er ikke det viktigste. Det er langt viktigere at du bryr deg. Bryr deg om koden du skriver og bryr deg om kunden du leverer til. Vi er opptatt av at alle i Variant skal få utvikle seg og vokse, både faglig og som menneske. Variant er et selskap av og for de ansatte, hvor alle får påvirke, og hvor læreglede står i sentrum.",
+    location: ["Bergen", "Trondheim"],
+    type: "full",
+    deadline: new Date(Date.parse("2022-10-02")),
+  },
+  {
+    name: "Sommerjobb for utviklerstudenter i 2023",
+    company: "Variant",
+    link: "https://www.variant.no/jobs/sommerjobb-utvikler-2023",
+    logo: ATTENDEE_LOGOS.variant,
+    description:
+      "En sommerjobb i Variant er en fin mulighet til å anvende det du har lært på skolen i praksis. Det forventes ikke at du er utlært, men at du ønsker å lære mer. Det viktigste er at du bryr deg. Bryr deg om koden du skriver, bryr deg om kunden du leverer til og bryr deg om dine medstudenter og kollegaer. Vi er opptatt av at alle i Variant skal få utvikle seg og vokse, både faglig og som menneske. Variant er et selskap av og for de ansatte, der læreglede står i sentrum. Dere jobbe på et av våre spennende oppdrag — Selvfølgelig med god støtte, oppfølging og tilrettelegging fra erfarne konsulenter som ønsker at du lykkes. Årets sommervarianter fikk blant annet bryne seg på bookingtjeneste for Inatur, oppfølging av fiskehelse for Piscada og digital støtte av trafikksikkerhetsinspeksjoner i Statens vegvesen.",
+    location: ["Oslo", "Bergen", "Trondheim"],
+    type: "summer",
+    deadline: new Date(Date.parse("2022-10-02")),
+  },
 ];
 
 export const JOB_LOCATIONS: Array<string> = [

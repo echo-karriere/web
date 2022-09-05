@@ -7,7 +7,7 @@ import { Container, Content, Layout } from "@/components";
 import standsFredagBib from "../../static/biblioteket.png";
 import timeplanFredag from "../../static/fredag_timeplan.png";
 import standsTorsdag from "../../static/torget_torsdag.png";
-import timeplanTorsdag from "../../static/tors.png";
+import timeplanTorsdag from "../../static/torsdag_timeplan.png";
 
 function classNames(...classes: string[]): string {
   return classes.filter(Boolean).join(" ");
