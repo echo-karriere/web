@@ -15,7 +15,11 @@ export default function Page(): JSX.Element {
             dørene litt før klokken 09:00 den 8. september, og håper vi ser deg der. <br />
             <br />
             Under vil du finne lenker til mer informasjon om karrieredagene 2022, samt en oversikt over bedrifter som
-            deltar.
+            deltar. Vi har også samlet noen spørsmål og svar som vi har mottat.{" "}
+            <Link href="/nyheter/2022/faq-2022/">
+              <a>Klikk her for å gå til FAQ.</a>
+            </Link>
+            .
           </p>
 
           <div className="sm:grid sm:grid-cols-3 gap-1">
