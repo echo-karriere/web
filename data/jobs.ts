@@ -288,6 +288,28 @@ export const JOBS: Array<JobProps> = [
     type: "summer",
     deadline: new Date(Date.parse("2022-10-02")),
   },
+  {
+    name: "Nyutdannet IT-konsulent 2023",
+    company: "Netcompany AS",
+    link: "https://jobs.smartrecruiters.com/Netcompany1/743999841740011-nyutdannet-it-konsulent-2023",
+    logo: ATTENDEE_LOGOS.netcompany,
+    description:
+      "Netcompany søker etter nyutdannede IT-entusiaster som har lyst til å utvikle samfunnsnyttige og forretningskritiske løsninger for spennende kunder som Oslo kommune, Møller Mobility Group, Barnevernet og OBOS! Som nyutdannet hos Netcompany vil du jobbe på prosjekter side om side med resten av teamet. Du vil få utviklet ferdighetene dine og tatt i bruk din teknologikunnskap i virkelige prosjekter med potensial for positiv sosial innvirkning både for bedrifter og mennesker.",
+    location: ["Oslo", "Trondheim"],
+    type: "full",
+    deadline: null,
+  },
+  {
+    name: "Summer internship 2023",
+    company: "Netcompany AS",
+    link: "https://jobs.smartrecruiters.com/Netcompany1/743999843208293-summer-internship-2023",
+    logo: ATTENDEE_LOGOS.netcompany,
+    description:
+      "Ønsker du en smakebit på hvordan det er å være med på å levere morgendagens løsninger i det digitale landskapet? Som summer intern i Netcompany får du mulighet til nettopp dette! Du vil jobbe på et reelt prosjekt for en av våre kunder i team sammen med andre sommerstudenter og konsulenter fra Netcompany. Du vil få en prosjektleder som passer på at du får den oppfølgingen og støtten du måtte trenge. I tillegg er vi genuint opptatt av at å jobbe hos oss skal være morsomt og sosialt. Derfor inviterer vi på flere morsomme aktiviteter underveis.",
+    location: ["Oslo"],
+    type: "summer",
+    deadline: new Date(Date.parse("2022-10-01")),
+  },
 ];
 
 export const JOB_LOCATIONS: Array<string> = [
