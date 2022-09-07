@@ -1,4 +1,4 @@
-import { Dialog, Disclosure, Menu, Popover, Transition } from "@headlessui/react";
+import { Dialog, Disclosure, Menu, Transition } from "@headlessui/react";
 import { XIcon } from "@heroicons/react/outline";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import { Dispatch, Fragment, SetStateAction, useState } from "react";
