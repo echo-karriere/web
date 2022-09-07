@@ -310,6 +310,28 @@ export const JOBS: Array<JobProps> = [
     type: "summer",
     deadline: new Date(Date.parse("2022-10-01")),
   },
+  {
+    name: "Systemutvikler",
+    company: "Sparebanken Vest",
+    link: "https://www.finn.no/job/fulltime/ad.html?finnkode=272028224",
+    logo: ATTENDEE_LOGOS.spv,
+    description:
+      "Vi søker deg som er ferdig utdannet i 2023, og er på utkikk etter din første jobb som utvikler. Det er mange muligheter i miljøet vårt, og vi ser etter fullstack, frontend, backend, datavarehus og UX.",
+    location: ["Bergen"],
+    type: "full",
+    deadline: new Date(Date.parse("2022-12-31")),
+  },
+  {
+    name: "Sommerjobb som utvikler",
+    company: "Sparebanken Vest",
+    link: "https://www.finn.no/job/fulltime/ad.html?finnkode=272027719",
+    logo: ATTENDEE_LOGOS.spv,
+    description:
+      "Vi utvider et av utviklingsteamene våre for sommeren med en gjeng engasjerte dyktige IT-studenter som har lyst å bygge opp relevant praktisk erfaring med programmering. Her får du være med å jobbe med ekte kundeutfordringer, og skrive kode som vil gjøre hverdagen til kundene våre bedre gjennom vår mobil- og nettbank.",
+    location: ["Bergen"],
+    type: "summer",
+    deadline: new Date(Date.parse("2022-11-30")),
+  },
 ];
 
 export const JOB_LOCATIONS: Array<string> = [
