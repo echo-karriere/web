@@ -11,7 +11,7 @@ import digdir from "../content/images/logos/digdir.svg";
 import dnb from "../content/images/logos/dnb.svg";
 import equinor from "../content/images/logos/equinor.svg";
 import finn from "../content/images/logos/finn.png";
-import frend from "../content/images/logos/frend.jpg";
+import frend from "../content/images/logos/frend.png";
 import innofactor from "../content/images/logos/innofactor.webp";
 import itera from "../content/images/logos/itera.svg";
 import kantega from "../content/images/logos/kantega.svg";
