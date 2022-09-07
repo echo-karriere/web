@@ -343,6 +343,28 @@ export const JOBS: Array<JobProps> = [
     type: "full",
     deadline: new Date(Date.parse("2022-10-31")),
   },
+  {
+    name: "Software Engineer",
+    company: "Xledger",
+    link: "https://xledger.no/jobb",
+    logo: ATTENDEE_LOGOS.xledger,
+    description:
+      "Er du nyutdannet utvikler i 2022/2023? Synes du det virker spennende å kode funksjonalitet som hjelper ansatte å spare tid på rutineoppgaver? Da ønsker vi å komme i kontakt med deg! Vi vil gi deg opplæring og hjelpe deg godt i gang, slik at du kan hjelpe oss med å forbedre vårt produkt for brukere i mer enn 50 land. Du vil bli en del av et dyktig utviklingsteam der du vil utvikle og designe ERP-systemet. Vi ser etter deg som ønsker å være med å videreutvikle et ERP-system som er 100% skybasert. Du kan velge om du vil jobbe med front-end, back-end eller full-stack. I utviklingsteamet jobber vi med MS SQL Server, .NET/C#, F#, React, Clojure, JavaScript samt verktøyene Azure DevOps server, Visual Studio og GitHub.",
+    location: ["Oslo"],
+    type: "full",
+    deadline: new Date(Date.parse("2022-10-02")),
+  },
+  {
+    name: "Graduate 2023",
+    company: "Itera",
+    link: "https://careers-iterano.icims.com/jobs/search?ss=1&searchKeyword=Graduate&mobile=false&width=977&height=500&bga=true&needsRedirect=false&jan1offset=60&jun1offset=120",
+    logo: ATTENDEE_LOGOS.itera,
+    description:
+      "Er du nyutdannet i 2023? Kickstart karrieren din som utvikler, designer eller tester i ett av Norges mest innovative selskaper! Hos oss blir du en del av solide fagmiljøer bestående av 90 dyktige, lidenskapelige og engasjerte teknologer og 50 designere som legger stor vekt på deling og god kultur, og som hver dag jobber for å skape verdens beste kundeopplevelser. I Itera vil du jobbe med meningsfulle, utfordrende og varierte prosjekter basert på fremtidsrettet teknologi. Vi gjennomfører oppdrag innen digitalisering for norske, nordiske og internasjonale virksomheter. Du vil jobbe kreativt i tverrfaglige team med designere, forretningsrådgivere og andre teknologer, og utvikle løsninger som bidrar til bærekraft innen sektorer som energi, industri, bank, forsikring, helse og offentlig sektor. Deg i Itera Vi har lang tradisjon for å ansette nyutdannede i Itera, og er opptatt av at hver enkelt skal få en fin start på sin karriere. Som «graduate» hos oss får du et skreddersydd program vi kaller «Boost», som sørger for at du kommer godt i gang både faglig og sosialt. Boost er spesielt utviklet for deg som er ny i arbeidslivet. Gjennom Boost følger vi deg gjennom det første arbeidsåret, slik at du har gode rammer for å bli trygg i rollen din, bli kjent med hvordan det er å jobbe i kundeprosjekter, og bygge gode relasjoner med kolleger - ja, rett og slett få en «boost» på det som er starten på din karriere.",
+    location: ["Oslo", "Bergen", "Fredrikstad"],
+    type: "full",
+    deadline: new Date(Date.parse("2022-10-01")),
+  },
 ];
 
 export const JOB_LOCATIONS: Array<string> = [

@@ -40,6 +40,7 @@ import tv2 from "../content/images/logos/tv2.svg";
 import variant from "../content/images/logos/variant.svg";
 import vegvesen from "../content/images/logos/vegvesen.svg";
 import visma from "../content/images/logos/visma.svg";
+import xledger from "../content/images/logos/xledger.png";
 
 export interface Attendee {
   company: string;
@@ -89,7 +90,8 @@ export type ATTENDEE_NAMES =
   | "dnb"
   | "sikt"
   | "finn"
-  | "innofactor";
+  | "innofactor"
+  | "xledger";
 
 export const ATTENDEE_LOGOS: Record<ATTENDEE_NAMES, StaticImageData> = {
   itera: itera,
@@ -134,6 +136,7 @@ export const ATTENDEE_LOGOS: Record<ATTENDEE_NAMES, StaticImageData> = {
   sikt: sikt,
   finn: finn,
   innofactor: innofactor,
+  xledger: xledger,
 };
 
 export const ATTENDEES: Array<Attendee> = [
