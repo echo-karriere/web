@@ -28,11 +28,6 @@ export const Selects = ({
 }: Props): JSX.Element => {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const filterActive = (type: Filter): boolean => activeFilters.some((it) => it.type === type);
-  const filterCount = (type: Filter): number => {
-    return activeFilters.filter((it) => it.type === type).length;
-  };
-
   const onFilterSelect = (type: Filter, value: string) => {
     const newFilters = [...filters];
     for (const filter of newFilters) {
