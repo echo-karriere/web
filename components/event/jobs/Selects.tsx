@@ -65,7 +65,7 @@ export const Selects = ({
     <div className="bg-white pb-4">
       {/* Mobile filter dialog */}
       <Transition.Root show={menuOpen} as={Fragment}>
-        <Dialog as="div" className="fixed inset-0 flex z-40 sm:hidden" onClose={setMenuOpen}>
+        <Dialog as="div" className="fixed inset-0 flex z-40" onClose={setMenuOpen}>
           <Transition.Child
             as={Fragment}
             enter="transition-opacity ease-linear duration-300"
@@ -206,13 +206,13 @@ export const Selects = ({
 
             <button
               type="button"
-              className="inline-block text-sm font-medium text-gray-700 hover:text-gray-900 sm:hidden"
+              className="inline-block text-sm font-medium text-gray-700 hover:text-gray-900"
               onClick={() => setMenuOpen(true)}
             >
               Filtre
             </button>
 
-            <div className="hidden sm:block">
+            {/* <div className="hidden sm:block">
               <div className="flow-root">
                 <Popover.Group className="-mx-4 flex items-center divide-x divide-gray-200">
                   {filters.map((filter) => (
@@ -267,7 +267,7 @@ export const Selects = ({
                   ))}
                 </Popover.Group>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 

@@ -13,8 +13,8 @@ export interface SortOption {
 }
 
 export const jobSortOptions: Array<SortOption> = [
-  { name: "Ingen", type: "none", current: true },
-  { name: "Frist", type: "date", current: false },
+  { name: "Frist", type: "date", current: true },
+  { name: "Tilfeldig rekkefølge", type: "none", current: false },
 ];
 
 export interface JobFilterOption {
