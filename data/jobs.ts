@@ -332,6 +332,17 @@ export const JOBS: Array<JobProps> = [
     type: "summer",
     deadline: new Date(Date.parse("2022-11-30")),
   },
+  {
+    name: "Junior Konsulenter",
+    company: "Innofactor AS",
+    link: "https://careers-no.innofactor.com/jobs/2040722-junior-konsulenter",
+    logo: ATTENDEE_LOGOS.innofactor,
+    description:
+      "I Innofactor er vi rundt 50 fagspesialister på Microsoft-teknologi spesielt, og sikkerhet og samhandling generelt. De neste årene skal vi bli tre eller fire ganger så mange. Vi tilbyr de rette studentene en mulighet til å delta i vårt DigiStar program som blant annet består i Microsoft University som vi da dekker. Trykk på annonsen for mere informasjon.",
+    location: ["Oslo", "Bergen", "Trondheim", "Stavanger"],
+    type: "full",
+    deadline: new Date(Date.parse("2022-10-31")),
+  },
 ];
 
 export const JOB_LOCATIONS: Array<string> = [
