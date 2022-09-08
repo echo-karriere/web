@@ -9,10 +9,9 @@ export default function Page(): JSX.Element {
         <Content title="echo Karriere 2022">
           <p>
             Velkommen til echo Karriere 2022, en karrieredag for IT studenter i Bergensområdet. I år arrangeres
-            karrieredagene 8. og 9. september ved Forum Scene like ved Danmarksplass. Det vil avholdes lynpresentasjoner
-            av bedrifter, workshops og en karrieremesse hvor studenter kan treffe bedrifter på stands. Enkelte av
-            bedriftene har også mulighet til å invitere noen av dere med på en bankett, som avholdes fredagen. Vi åpner
-            dørene litt før klokken 09:00 den 8. september, og håper vi ser deg der. <br />
+            karrieredagene 8. og 9. september. Karrieredagene blir avholdt på Forum Scene i{" "}
+            <Link href="https://goo.gl/maps/MTwjyphYCp6pyYvm8">Fjøsangerveien 28, 5054 Bergen</Link>, rett ved
+            Danmarksplass. <br />
             <br />
             Under vil du finne lenker til mer informasjon om karrieredagene 2022, samt en oversikt over bedrifter som
             deltar. Vi har også samlet noen spørsmål og svar som vi har mottat.{" "}
