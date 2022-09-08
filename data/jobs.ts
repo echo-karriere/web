@@ -376,6 +376,28 @@ export const JOBS: Array<JobProps> = [
     type: "part",
     deadline: new Date(Date.parse("2022-09-30")),
   },
+  {
+    name: "Utvikler",
+    company: "Xledger",
+    link: "https://xledger.no/jobb",
+    logo: ATTENDEE_LOGOS.xledger,
+    description:
+      "Motivert for å gjøre en forskjell i sommer? Evner du å raskt sette deg inn i nye problemstillinger? Da ønsker vi å komme i kontakt med deg! Her får du muligheten til å hjelpe oss med å videreutvikle vårt produkt for brukere i mer enn 50 land. Xledger er et alt-i-ett system for økonomistyring, regnskap, time- og prosjektstyring, fakturering og innkjøp, lønn og reiseregning. Vi hjelper tusenvis av organisasjoner med å digitalisere, effektivisere og automatisere sine økonomiprosesser. Du vil bidra med videreutvikling av Xledger, og jobbe som en del av et team. Dette kan inkludere bruk av MS SQL Server, .NET/C#, F#, React, Clojure, JavaScript, samt verktøyene Azure DevOps server, Visual Studio og GitHub.",
+    location: ["Oslo"],
+    type: "summer",
+    deadline: new Date(Date.parse("2022-10-02")),
+  },
+  {
+    name: "Internship sommerstudenter 2023",
+    company: "Sikt",
+    link: "https://www.jobbnorge.no/ledige-stillinger/stilling/228563/internship-sommerstudenter-2023",
+    logo: ATTENDEE_LOGOS.sikt,
+    description:
+      "Ønsker du en sommerjobb hvor det du gjør skaper verdi for sluttbrukerne? Eller er du nysgjerrig på hvordan det er å jobbe innovativt i en teknologibedrift? Da kan det være at nettopp du er en av de vi ser etter! Sikt er kunnskapssektorens tjenesteleverandør, og vi utvikler og leverer mange av de tjenestene du til daglig bruker som student, både bevisst og ubevisst, som for eksempel Feide, Samordna Opptak, eduroam, Vitnemålsportalen og Studentweb. ",
+    location: ["Oslo", "Bergen", "Trondheim"],
+    type: "summer",
+    deadline: new Date(Date.parse("2022-10-03")),
+  },
 ];
 
 export const JOB_LOCATIONS: Array<string> = [
