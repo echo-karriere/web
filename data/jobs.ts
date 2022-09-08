@@ -377,17 +377,6 @@ export const JOBS: Array<JobProps> = [
     deadline: new Date(Date.parse("2022-09-30")),
   },
   {
-    name: "Internship sommerstudenter 2023",
-    company: "Sikt",
-    link: "https://www.jobbnorge.no/ledige-stillinger/stilling/228563/internship-sommerstudenter-2023",
-    logo: ATTENDEE_LOGOS.sikt,
-    description:
-      "Ønsker du en sommerjobb hvor det du gjør skaper verdi for sluttbrukerne? Eller er du nysgjerrig på hvordan det er å jobbe innovativt i en teknologibedrift? Da kan det være at nettopp du er en av de vi ser etter! Sikt er kunnskapssektorens tjenesteleverandør, og vi utvikler og leverer mange av de tjenestene du til daglig bruker som student, både bevisst og ubevisst, som for eksempel Feide, Samordna Opptak, eduroam, Vitnemålsportalen og Studentweb.",
-    location: ["Oslo", "Bergen", "Trondheim"],
-    type: "summer",
-    deadline: new Date(Date.parse("2022-10-03")),
-  },
-  {
     name: "Utvikler",
     company: "Xledger",
     link: "https://xledger.no/jobb",
@@ -397,6 +386,17 @@ export const JOBS: Array<JobProps> = [
     location: ["Oslo"],
     type: "summer",
     deadline: new Date(Date.parse("2022-10-02")),
+  },
+  {
+    name: "Internship sommerstudenter 2023",
+    company: "Sikt",
+    link: "https://www.jobbnorge.no/ledige-stillinger/stilling/228563/internship-sommerstudenter-2023",
+    logo: ATTENDEE_LOGOS.sikt,
+    description:
+      "Ønsker du en sommerjobb hvor det du gjør skaper verdi for sluttbrukerne? Eller er du nysgjerrig på hvordan det er å jobbe innovativt i en teknologibedrift? Da kan det være at nettopp du er en av de vi ser etter! Sikt er kunnskapssektorens tjenesteleverandør, og vi utvikler og leverer mange av de tjenestene du til daglig bruker som student, både bevisst og ubevisst, som for eksempel Feide, Samordna Opptak, eduroam, Vitnemålsportalen og Studentweb. ",
+    location: ["Oslo", "Bergen", "Trondheim"],
+    type: "summer",
+    deadline: new Date(Date.parse("2022-10-03")),
   },
 ];
 
