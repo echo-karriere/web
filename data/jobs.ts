@@ -365,6 +365,17 @@ export const JOBS: Array<JobProps> = [
     type: "full",
     deadline: new Date(Date.parse("2022-10-01")),
   },
+  {
+    name: "Sikkerhetsanalytiker",
+    company: "Nasjonal sikkerhetsmyndighet",
+    link: "https://www.finn.no/job/fulltime/ad.html?finnkode=271463316",
+    logo: ATTENDEE_LOGOS.nsm,
+    description:
+      "NSM ser etter deg som brenner for IT-sikkerhet og som ønsker å bidra til å sikre samfunnsverdier. Som sikkerhetsanalytiker vil du ta imot og svare på henvendelser, følge med på det nasjonale og globale situasjonsbildet, utarbeide varsler om alvorlige sårbarheter og analysere alarmer fra NSM NCSC sitt sensornettverk.",
+    location: ["Oslo"],
+    type: "part",
+    deadline: new Date(Date.parse("2022-09-30")),
+  },
 ];
 
 export const JOB_LOCATIONS: Array<string> = [
