@@ -9,7 +9,7 @@ import { Hero } from "./Hero";
 export function Intro(): JSX.Element {
   return (
     <>
-      <Notification message="Gjør deg klar for echo karriere 2022." url="/for-studenter/informasjon/" />
+      <Notification message="echo karriere 2022 pågår nå!" url="/for-studenter/informasjon/" />
       <Hero />
       <div className="py-16 lg:py-24 bg-gray-50 overflow-hidden">
         <div className="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
