@@ -409,6 +409,17 @@ export const JOBS: Array<JobProps> = [
     type: "full",
     deadline: new Date(Date.parse("2022-10-09")),
   },
+  {
+    name: "Join Schibsted Connect - our student mentor program!",
+    company: "Schibsted",
+    link: "https://emp.jobylon.com/jobs/145243-schibsted-join-schibsted-connect-our-student-mentor-program/",
+    logo: ATTENDEE_LOGOS.schibsted,
+    description:
+      "Hi there, you brilliant student! Just thinking out loud; what if we had a door that opens up the knowledge, competence and the smart brains of a company that has 183 years of experience? What would you even do with that opportunity? Maybe invent something, or climb onto the next big stage of your career?",
+    location: ["Norge", "Sverige", "Danmark", "Finland", "Polen"],
+    type: "full",
+    deadline: new Date(Date.parse("2022-09-30")),
+  },
 ];
 
 export const JOB_LOCATIONS: Array<string> = [

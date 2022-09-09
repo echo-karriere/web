@@ -28,6 +28,7 @@ import norkart from "../content/images/logos/norkart.svg";
 import nsm from "../content/images/logos/nsm.svg";
 import pit from "../content/images/logos/pit.svg";
 import sbanken from "../content/images/logos/sbanken.svg";
+import schibsted from "../content/images/logos/schibsted.png";
 import sikt from "../content/images/logos/sikt.jpg";
 import skatteetaten from "../content/images/logos/skatteetaten.svg";
 import soprasteria from "../content/images/logos/soprasteria.svg";
@@ -91,7 +92,8 @@ export type ATTENDEE_NAMES =
   | "sikt"
   | "finn"
   | "innofactor"
-  | "xledger";
+  | "xledger"
+  | "schibsted";
 
 export const ATTENDEE_LOGOS: Record<ATTENDEE_NAMES, StaticImageData> = {
   itera: itera,
@@ -137,6 +139,7 @@ export const ATTENDEE_LOGOS: Record<ATTENDEE_NAMES, StaticImageData> = {
   finn: finn,
   innofactor: innofactor,
   xledger: xledger,
+  schibsted: schibsted,
 };
 
 export const ATTENDEES: Array<Attendee> = [
