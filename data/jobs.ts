@@ -398,6 +398,17 @@ export const JOBS: Array<JobProps> = [
     type: "summer",
     deadline: new Date(Date.parse("2022-10-02")),
   },
+  {
+    name: "Tech Graduate",
+    company: "Skatteetaten",
+    link: "https://www.skatteetaten.no/itjobb/student-eller-nyutdannet/",
+    logo: ATTENDEE_LOGOS.skatteetaten,
+    description:
+      "Snart klar for å bruke det du har lært på studiene inn i arbeidslivet? Trigges du av spennende problemstillinger og muligheten til å utvikle deg og din kompetanse hos en attraktiv virksomhet med et spennende samfunnsoppdrag? Bli tech graduates hos en av Norges mest innovative virksomheter! Som graduate hos oss går du rett inn i en fast stilling, samtidig som du vil være en del av et større nettverk og får knytte kontakter på tvers av organisasjonen. Vi ønsker å gi deg en mykere overgang fra skolebenken til arbeidslivet ved å bistå med faglig oppfølgning, trygghet og morsomme sosiale aktiviteter gjennom hele året. Vi lover utfordrende og meningsfylte arbeidsoppgaver, og muligheten til å jobbe med noen av Norges største og viktigste systemer. Du får bruke kompetansen din samtidig som du tilegner deg ny kunnskap sammen med noen av de beste på ditt fagfelt. Nå rekrutterer vi neste års Tech Graduates innen MANGE spennende områder: alt innen utvikling, data engineering, sikkerhet, sky, interaksjonsdesign/UX +++",
+    location: ["Oslo", "Grimstad", "Trondheim"],
+    type: "full",
+    deadline: new Date(Date.parse("2022-10-09")),
+  },
 ];
 
 export const JOB_LOCATIONS: Array<string> = [
