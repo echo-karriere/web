@@ -377,17 +377,6 @@ export const JOBS: Array<JobProps> = [
     deadline: new Date(Date.parse("2022-09-30")),
   },
   {
-    name: "Internship sommerstudenter 2023",
-    company: "Sikt",
-    link: "https://www.jobbnorge.no/ledige-stillinger/stilling/228563/internship-sommerstudenter-2023",
-    logo: ATTENDEE_LOGOS.sikt,
-    description:
-      "Ønsker du en sommerjobb hvor det du gjør skaper verdi for sluttbrukerne? Eller er du nysgjerrig på hvordan det er å jobbe innovativt i en teknologibedrift? Da kan det være at nettopp du er en av de vi ser etter! Sikt er kunnskapssektorens tjenesteleverandør, og vi utvikler og leverer mange av de tjenestene du til daglig bruker som student, både bevisst og ubevisst, som for eksempel Feide, Samordna Opptak, eduroam, Vitnemålsportalen og Studentweb.",
-    location: ["Oslo", "Bergen", "Trondheim"],
-    type: "summer",
-    deadline: new Date(Date.parse("2022-10-03")),
-  },
-  {
     name: "Utvikler",
     company: "Xledger",
     link: "https://xledger.no/jobb",
@@ -399,15 +388,15 @@ export const JOBS: Array<JobProps> = [
     deadline: new Date(Date.parse("2022-10-02")),
   },
   {
-    name: "Tech Graduate",
-    company: "Skatteetaten",
-    link: "https://www.skatteetaten.no/itjobb/student-eller-nyutdannet/",
-    logo: ATTENDEE_LOGOS.skatteetaten,
+    name: "Internship sommerstudenter 2023",
+    company: "Sikt",
+    link: "https://www.jobbnorge.no/ledige-stillinger/stilling/228563/internship-sommerstudenter-2023",
+    logo: ATTENDEE_LOGOS.sikt,
     description:
-      "Snart klar for å bruke det du har lært på studiene inn i arbeidslivet? Trigges du av spennende problemstillinger og muligheten til å utvikle deg og din kompetanse hos en attraktiv virksomhet med et spennende samfunnsoppdrag? Bli tech graduates hos en av Norges mest innovative virksomheter! Som graduate hos oss går du rett inn i en fast stilling, samtidig som du vil være en del av et større nettverk og får knytte kontakter på tvers av organisasjonen. Vi ønsker å gi deg en mykere overgang fra skolebenken til arbeidslivet ved å bistå med faglig oppfølgning, trygghet og morsomme sosiale aktiviteter gjennom hele året. Vi lover utfordrende og meningsfylte arbeidsoppgaver, og muligheten til å jobbe med noen av Norges største og viktigste systemer. Du får bruke kompetansen din samtidig som du tilegner deg ny kunnskap sammen med noen av de beste på ditt fagfelt. Nå rekrutterer vi neste års Tech Graduates innen MANGE spennende områder: alt innen utvikling, data engineering, sikkerhet, sky, interaksjonsdesign/UX +++",
-    location: ["Oslo", "Grimstad", "Trondheim"],
-    type: "full",
-    deadline: new Date(Date.parse("2022-10-09")),
+      "Ønsker du en sommerjobb hvor det du gjør skaper verdi for sluttbrukerne? Eller er du nysgjerrig på hvordan det er å jobbe innovativt i en teknologibedrift? Da kan det være at nettopp du er en av de vi ser etter! Sikt er kunnskapssektorens tjenesteleverandør, og vi utvikler og leverer mange av de tjenestene du til daglig bruker som student, både bevisst og ubevisst, som for eksempel Feide, Samordna Opptak, eduroam, Vitnemålsportalen og Studentweb. ",
+    location: ["Oslo", "Bergen", "Trondheim"],
+    type: "summer",
+    deadline: new Date(Date.parse("2022-10-03")),
   },
 ];
 
