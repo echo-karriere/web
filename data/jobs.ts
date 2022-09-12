@@ -196,9 +196,9 @@ export const JOBS: Array<JobProps> = [
     logo: ATTENDEE_LOGOS.capgemini,
     description:
       "Ignite er et skreddersydd utviklingsløp for nyutdannede. Her vil du få en kick-start på karrieren med god oppfølging, mulighet til å delta på en rekke relevante kurs og ta ettertraktede sertifiseringer. Graduate-programmet løper parallelt med arbeid på kundeprosjekt og gir deg reell konsulenterfaring og en bred forståelse av kultur, arbeidsmetodikk, rollen som konsulent og karriereveier i Capgemini. Hos oss får du jobbe som konsulent i prosjekter som virkelig utgjør en forskjell for samfunnet. Vi omstiller blant annet oljeindustrien til grønn energi, effektiviserer helsevesenet og sørger for at ny teknologi gjør det trygt å ferdes på veien. På disse digitaliseringsreisene får du stor mulighet til å påvirke og finne gode løsninger sammen med dyktige kollegaer. Du kan få spesialisere deg innen: • Java, .NET og Frontend • Cloud • Cyber Security • Customer Relationship Management • Robotic Process Automation, Intelligent Automation • Prosjektledelse og agil metodikk",
-    location: ["Bergen", "Oslo", "Fredrikstad", "Trondheim", "Stavanger"],
+    location: ["Bergen", "Oslo", "Fredrikstad", "Trondheim", "Stavanger", "Kristiansand", "Sandefjord"],
     type: "full",
-    deadline: new Date(Date.parse("2022-09-11")),
+    deadline: null,
   },
   {
     name: "Ferske utviklere, UX-designere og forretningsutviklere",
