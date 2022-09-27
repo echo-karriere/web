@@ -212,17 +212,6 @@ export const JOBS: Array<JobProps> = [
     deadline: null,
   },
   {
-    name: "Talentprogram + konsulent",
-    company: "CGI Norge",
-    link: "http://www.cgitalent.no/",
-    logo: ATTENDEE_LOGOS.cgi,
-    description:
-      "Er du nyutdannet, ønsker en bratt læringskurve og utforske mulighetene i IT- og konsulentbransjen? Vi søker deg som ønsker å kick-starte din karriere hos oss høsten 2023! Du blir fast ansatt som konsulent i CGI fra dag èn. I løpet av programmets to år gir vi deg forutsetninger for å utvikle deg gjennom spennende utfordringer i prosjekt hos kunder, en solid opplæringspakke og kulturbyggende aktiviteter. Talentprogrammet er omgitt av en sterk kultur, varmt fellesskap og store muligheter til å drive egne initiativ. I løpet av to år bygger du kompetanse på ulike verktøy, metoder, teknologier, utviklingsmetodikker, prosjektledelse, samt forretningsvirksomhet. Etter endt program vil du ha anskaffet deg bred kompetanse, relevant prosjekterfaring, ett uvurderlig nettverk og mange gode karrieremuligheter i CGI.",
-    location: ["Oslo", "Trondheim"],
-    type: "full",
-    deadline: new Date(Date.parse("2022-09-18")),
-  },
-  {
     name: "Nyutdannet teknolog 2023",
     company: "Frend Digital AS",
     link: "https://www.frend.no/karriere/cloud/nyutdannet-teknolog",
@@ -419,6 +408,17 @@ export const JOBS: Array<JobProps> = [
     location: ["Norge"],
     type: "other",
     deadline: new Date(Date.parse("2022-09-30")),
+  },
+  {
+    name: "Sommerjobb som utvikler",
+    company: "FINN",
+    link: "https://www.finn.no/job/parttime/ad.html?finnkode=271897953",
+    logo: ATTENDEE_LOGOS.finn,
+    description:
+      "FINN fortsetter suksessen fra tidligere år og gjør oss klare for å ta imot teknologistudenter som vil delta i vårt sommerprosjekt 2023. Hos oss vil du jobbe i et team med 5 andre studenter og få støtte fra våre erfarne utviklere. Du vil få erfaring i å samarbeide med alt fra tekniske team til vårt kundesenter. Dette vil gi deg en unik arbeidserfaring som du vil ha nytte av videre i karrieren. I tillegg vil du få en reell opplevelse av hvordan vi jobber i FINN og siden vi samarbeider tett med andre av Schibsteds markedsplasser i Norden vil du også få innblikk i hvordan vi jobber på tvers.",
+    location: ["Oslo"],
+    type: "summer",
+    deadline: new Date(Date.parse("2022-10-02")),
   },
 ];
 
