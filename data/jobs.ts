@@ -411,7 +411,7 @@ export const JOBS: Array<JobProps> = [
   },
   {
     name: "Sommerjobb som utvikler",
-    company: "FINN",
+    company: "Finn",
     link: "https://www.finn.no/job/parttime/ad.html?finnkode=271897953",
     logo: ATTENDEE_LOGOS.finn,
     description:
