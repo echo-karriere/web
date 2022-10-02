@@ -26,17 +26,6 @@ export const JOBS: Array<JobProps> = [
     deadline: null,
   },
   {
-    name: "Summer Intern",
-    company: "Visma Consulting",
-    link: "https://vismaconsulting.recman.no/job.php?job_id=287062",
-    logo: ATTENDEE_LOGOS.visma,
-    description:
-      "Er du student og nysgjerrig på IT-bransjen? Bli en del av Visma Consulting for en sommer og prøv deg som konsulent! Som Summer Intern i Visma Consulting får du et innblikk i livet som IT-konsulent. Du får prøve deg som utvikler på et reelt programmeringsprosjekt. Vårt summer internship varer i 6-7 uker, fra midten av juni til slutten av juli. Vi har også et stort fokus på at du skal bli kjent med de andre sommerstudentene, og de faste ansatte hos oss. Derfor arrangeres det masse sosialt og moro hele sommeren. Det blir arrangert alt fra hyttetur, til badstue, til karaoke og mye mer.",
-    location: ["Oslo"],
-    type: "summer",
-    deadline: new Date(Date.parse("2022-10-01")),
-  },
-  {
     name: "IT-konsulent i traineeprogrammet Nytt Krutt",
     company: "Visma Consulting",
     link: "https://vismaconsulting.recman.no/job.php?job_id=287054",
@@ -59,17 +48,6 @@ export const JOBS: Array<JobProps> = [
     deadline: null,
   },
   {
-    name: "Sommerjobb 2023",
-    company: "Computas",
-    link: "https://computas.com/stillinger/sommerjobb-2023/",
-    logo: ATTENDEE_LOGOS.computas,
-    description:
-      "Har du et eller to år igjen av studiene? Hvert år tar vi inn mellom 20-30 studenter på et 7 ukers langt sommerprogram.",
-    location: ["Oslo"],
-    type: "summer",
-    deadline: new Date(Date.parse("2022-10-01")),
-  },
-  {
     name: "Tech graduate",
     company: "Tietoevry",
     link: "https://tieto.wd3.myworkdayjobs.com/no-NO/Tieto_Careers_External_Site/job/Norway-Fornebu/We-are-looking-for-Tech-graduates-to-our-specialist-track-in-Norway-_R105317-1",
@@ -89,17 +67,6 @@ export const JOBS: Array<JobProps> = [
     ],
     type: "full",
     deadline: null,
-  },
-  {
-    name: "Internship 2023",
-    company: "Appfarm",
-    link: "https://hello.appfarm.app/jobs",
-    logo: ATTENDEE_LOGOS.appfarm,
-    description:
-      "Vi vil engasjere unge talenter i flere roller hos oss gjennom Summer Internships, som også kan videreføres som deltidsarbeid med fleksible arbeidsvilkår. Du vil jobbe på interne eller eksterne prosjekter, og får en unik mulighet til å skaffe deg relevant arbeidserfaring hos en tech-startup. I tillegg lover vi at du kommer til å ha det vanvittig gøy. Vi har ikke noe krav om at et Internship må starte som et Summer Internship; du må gjerne ta kontakt om du har mulighet vinter, vår eller høst også! Trykk på annonsen for å se mer informasjon.",
-    location: ["Oslo"],
-    type: "summer",
-    deadline: new Date(Date.parse("2022-10-01")),
   },
   {
     name: "Lyst til å prøve deg som konsulent?",
@@ -166,28 +133,6 @@ export const JOBS: Array<JobProps> = [
     location: ["Oslo", "Bergen"],
     type: "full",
     deadline: new Date(Date.parse("2022-12-15")),
-  },
-  {
-    name: "Graduate - Solution Engineer",
-    company: "Appfarm",
-    link: "https://hello.appfarm.app/jobs",
-    logo: ATTENDEE_LOGOS.appfarm,
-    description:
-      "Har du lyst til å jobbe med no-code teknologi i et spennende scale-up miljø? Vi i Appfarm søker flere ambisiøse kollegaer som ønsker å jobbe med innovativ teknologi i et arbeidsmiljø som er preget av samarbeid, flat struktur og mye moro. Hos hos vil du få være med å bygge gode digitale løsninger raskt og effektivt, samt bidra til å skape et ledende ekspertmiljø på no-code utvikling fra idé til leveranse sammen med våre kunder og samarbeidspartnere. Trykk på annonsen for å lese mer.",
-    location: ["Oslo"],
-    type: "full",
-    deadline: new Date(Date.parse("2022-10-01")),
-  },
-  {
-    name: "Graduate 2023",
-    company: "Sopra Steria",
-    link: "https://www.soprasteria.no/bli-en-av-oss/graduate-programmet",
-    logo: ATTENDEE_LOGOS.soprasteria,
-    description:
-      "Vil du være med å løse fremtidens samfunnsutfordringer? Hos oss får du en rakettstart på arbeidslivet hos Norges beste arbeidsplass! Vi har i dag kontorer i Oslo, Stavanger, Trondheim, Drammen, Kristiansand, Fredrikstad, Hamar og Tromsø , og ønsker nyutdannede ved alle kontorer. Synes du de fleste graduate-programmer fremstår som nesten helt like? For å gjøre det litt enklere for deg å velge, vil vi fortelle om de to tingene som skiller oss ut fra de aller fleste, ja - kanskje alle: Muligheter og kunnskapsdeling.",
-    location: ["Bergen", "Oslo", "Drammen", "Fredrikstad", "Hamar", "Kristiansand", "Tromsø", "Trondheim", "Stavanger"],
-    type: "full",
-    deadline: new Date(Date.parse("2022-10-01")),
   },
   {
     name: "Graduate - 2023",
@@ -289,17 +234,6 @@ export const JOBS: Array<JobProps> = [
     deadline: null,
   },
   {
-    name: "Summer internship 2023",
-    company: "Netcompany AS",
-    link: "https://jobs.smartrecruiters.com/Netcompany1/743999843208293-summer-internship-2023",
-    logo: ATTENDEE_LOGOS.netcompany,
-    description:
-      "Ønsker du en smakebit på hvordan det er å være med på å levere morgendagens løsninger i det digitale landskapet? Som summer intern i Netcompany får du mulighet til nettopp dette! Du vil jobbe på et reelt prosjekt for en av våre kunder i team sammen med andre sommerstudenter og konsulenter fra Netcompany. Du vil få en prosjektleder som passer på at du får den oppfølgingen og støtten du måtte trenge. I tillegg er vi genuint opptatt av at å jobbe hos oss skal være morsomt og sosialt. Derfor inviterer vi på flere morsomme aktiviteter underveis.",
-    location: ["Oslo"],
-    type: "summer",
-    deadline: new Date(Date.parse("2022-10-01")),
-  },
-  {
     name: "Systemutvikler",
     company: "Sparebanken Vest",
     link: "https://www.finn.no/job/fulltime/ad.html?finnkode=272028224",
@@ -343,28 +277,7 @@ export const JOBS: Array<JobProps> = [
     type: "full",
     deadline: new Date(Date.parse("2022-10-02")),
   },
-  {
-    name: "Graduate 2023",
-    company: "Itera",
-    link: "https://careers-iterano.icims.com/jobs/search?ss=1&searchKeyword=Graduate&mobile=false&width=977&height=500&bga=true&needsRedirect=false&jan1offset=60&jun1offset=120",
-    logo: ATTENDEE_LOGOS.itera,
-    description:
-      "Er du nyutdannet i 2023? Kickstart karrieren din som utvikler, designer eller tester i ett av Norges mest innovative selskaper! Hos oss blir du en del av solide fagmiljøer bestående av 90 dyktige, lidenskapelige og engasjerte teknologer og 50 designere som legger stor vekt på deling og god kultur, og som hver dag jobber for å skape verdens beste kundeopplevelser. I Itera vil du jobbe med meningsfulle, utfordrende og varierte prosjekter basert på fremtidsrettet teknologi. Vi gjennomfører oppdrag innen digitalisering for norske, nordiske og internasjonale virksomheter. Du vil jobbe kreativt i tverrfaglige team med designere, forretningsrådgivere og andre teknologer, og utvikle løsninger som bidrar til bærekraft innen sektorer som energi, industri, bank, forsikring, helse og offentlig sektor. Deg i Itera Vi har lang tradisjon for å ansette nyutdannede i Itera, og er opptatt av at hver enkelt skal få en fin start på sin karriere. Som «graduate» hos oss får du et skreddersydd program vi kaller «Boost», som sørger for at du kommer godt i gang både faglig og sosialt. Boost er spesielt utviklet for deg som er ny i arbeidslivet. Gjennom Boost følger vi deg gjennom det første arbeidsåret, slik at du har gode rammer for å bli trygg i rollen din, bli kjent med hvordan det er å jobbe i kundeprosjekter, og bygge gode relasjoner med kolleger - ja, rett og slett få en «boost» på det som er starten på din karriere.",
-    location: ["Oslo", "Bergen", "Fredrikstad"],
-    type: "full",
-    deadline: new Date(Date.parse("2022-10-01")),
-  },
-  {
-    name: "Sikkerhetsanalytiker",
-    company: "Nasjonal sikkerhetsmyndighet",
-    link: "https://www.finn.no/job/fulltime/ad.html?finnkode=271463316",
-    logo: ATTENDEE_LOGOS.nsm,
-    description:
-      "NSM ser etter deg som brenner for IT-sikkerhet og som ønsker å bidra til å sikre samfunnsverdier. Som sikkerhetsanalytiker vil du ta imot og svare på henvendelser, følge med på det nasjonale og globale situasjonsbildet, utarbeide varsler om alvorlige sårbarheter og analysere alarmer fra NSM NCSC sitt sensornettverk.",
-    location: ["Oslo"],
-    type: "part",
-    deadline: new Date(Date.parse("2022-09-30")),
-  },
+
   {
     name: "Utvikler",
     company: "Xledger",
@@ -397,17 +310,6 @@ export const JOBS: Array<JobProps> = [
     location: ["Oslo", "Grimstad", "Trondheim"],
     type: "full",
     deadline: new Date(Date.parse("2022-10-09")),
-  },
-  {
-    name: "Schibsted Connect - mentor program",
-    company: "Schibsted",
-    link: "https://emp.jobylon.com/jobs/145243-schibsted-join-schibsted-connect-our-student-mentor-program/",
-    logo: ATTENDEE_LOGOS.schibsted,
-    description:
-      "This is not a traineeship or an internship. Schibsted Connect is an informal way of establishing connections and initiating conversations between people. We mentor you, and you mentor us. We share knowledge and grow together!",
-    location: ["Norge"],
-    type: "other",
-    deadline: new Date(Date.parse("2022-09-30")),
   },
   {
     name: "Sommerjobb som utvikler",
