@@ -2,7 +2,6 @@ import alexander from "../content/images/styret/alexander.jpg";
 import cecilie from "../content/images/styret/cecilie.jpg";
 import elin from "../content/images/styret/elin.jpg";
 import endre from "../content/images/styret/endre.jpg";
-import mathias from "../content/images/styret/mathias.jpg";
 import mathilde from "../content/images/styret/mathilde.jpg";
 import safiya from "../content/images/styret/safiya.jpg";
 import sebastian from "../content/images/styret/sebastian.jpg";
