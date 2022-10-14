@@ -100,17 +100,6 @@ export const COMMITTEE_MEMBERS: Array<CommitteeMember> = [
     },
   },
   {
-    name: "Mathias Skauge Larsen",
-    position: "Frivilligansvarlig",
-    headshot: mathias,
-    socials: {
-      email: "mathias.larsen@echokarriere.no",
-      github: null,
-      linkedin: null,
-      website: null,
-    },
-  },
-  {
     name: "Safiya Adan Mahamood",
     position: "Styremedlem",
     headshot: safiya,
