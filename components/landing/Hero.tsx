@@ -24,10 +24,10 @@ export function Hero(): JSX.Element {
                 <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
                   <span className="text-c8 inline">echo Karriere</span>
                   <br />
-                  <span className="block text-c10 xl:inline">2022</span>
+                  <span className="block text-c10 xl:inline">2023</span>
                 </h1>
                 <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                  echo karriere arrangeres på Forum Scene den 8. og 9. september 2022.
+                  Neste karrieredagene arrangeres 14. og 15. september 2023. Mer info kommer!
                 </p>
                 <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                   <div className="rounded-md shadow">
