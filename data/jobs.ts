@@ -48,27 +48,6 @@ export const JOBS: Array<JobProps> = [
     deadline: null,
   },
   {
-    name: "Tech graduate",
-    company: "Tietoevry",
-    link: "https://tieto.wd3.myworkdayjobs.com/no-NO/Tieto_Careers_External_Site/job/Norway-Fornebu/We-are-looking-for-Tech-graduates-to-our-specialist-track-in-Norway-_R105317-1",
-    logo: ATTENDEE_LOGOS.tietoevry,
-    description:
-      "Would you like to kickstart your career in a place where you can impact society, for good? We are now recruiting graduates for the fall of 2023 in Norway! Become a part of our team consisting of 24,000 experts globally, helping businesses and societies meet their full potential – while you are also reaching yours. Who might you be? We are looking for people with a background or competence in tech-related fields. You get to work with a range of different technologies, from Software development (Java, .Net), UX Design, AI/robotics, business intelligence, and so much more. More specifically you: - Have recently graduated, or you are about to graduate from your final year of studies. -Have a minimum of a bachelor’s degree within specific tech-related subjects, For example, programming, data engineering, informatics, and information processing. We are also interested in a wider it-related competencies, such as information systems science.",
-    location: [
-      "Bergen",
-      "Trondheim",
-      "Stavanger",
-      "Fornebu",
-      "Mo i Rana",
-      "Kristiansand",
-      "Haugesund",
-      "Brumunddal",
-      "Ski",
-    ],
-    type: "full",
-    deadline: null,
-  },
-  {
     name: "Nå ser vi etter deg som skal gå fra student til konsulent i 2023.",
     company: "Bouvet",
     link: "https://www.poption.com/companies/bouvet/postings/p27fXN",
@@ -113,17 +92,6 @@ export const JOBS: Array<JobProps> = [
     deadline: null,
   },
   {
-    name: "Ferske utviklere, UX-designere og forretningsutviklere",
-    company: "Stacc AS",
-    link: "https://jobs.stacc.com/jobs/1395739-bli-var-kollega",
-    logo: ATTENDEE_LOGOS.stacc,
-    description:
-      "Stacc AS er et konsern i sterk vekst. Vi har kontorer i Bergen og Oslo og tar inn studenter og ferdigutdannede teknologer, designere og forretningsutviklere løpende gjennom året.",
-    location: ["Bergen", "Oslo"],
-    type: "full",
-    deadline: null,
-  },
-  {
     name: "Nyutdannet teknolog 2023",
     company: "Frend Digital AS",
     link: "https://www.frend.no/karriere/cloud/nyutdannet-teknolog",
@@ -144,50 +112,6 @@ export const JOBS: Array<JobProps> = [
     location: ["Oslo"],
     type: "full",
     deadline: null,
-  },
-  {
-    name: "Graduate",
-    company: "Equinor",
-    link: "https://careers.peopleclick.eu.com/careerscp/client_statoil/external/en_US/jobDetails.do?functionName=getJobDetail&jobPostId=38481&localeCode=en-us",
-    logo: ATTENDEE_LOGOS.equinor,
-    description:
-      "As a graduate at Equinor, you’ll be joining 20,000 colleagues delivering oil, gas, wind and solar power to 170 million people worldwide. By 2050, we aim to become a net-zero company and deliver the energy the world needs without contributing to global warming. It’s one of the defining challenges of our time and attracting and developing the brightest minds will be critical to our success. The programme lasts for 2-years and includes rotations of 3-12 months across functions, business areas or locations. Head over to our careers site for a more detailed overview of what you can expect if you join us: https://www.equinor.com/careers/graduates",
-    location: ["Oslo", "Bergen", "Trondheim", "Stavanger"],
-    type: "full",
-    deadline: null,
-  },
-  {
-    name: "Nyutdannet IT-konsulent 2023",
-    company: "Netcompany AS",
-    link: "https://jobs.smartrecruiters.com/Netcompany1/743999841740011-nyutdannet-it-konsulent-2023",
-    logo: ATTENDEE_LOGOS.netcompany,
-    description:
-      "Netcompany søker etter nyutdannede IT-entusiaster som har lyst til å utvikle samfunnsnyttige og forretningskritiske løsninger for spennende kunder som Oslo kommune, Møller Mobility Group, Barnevernet og OBOS! Som nyutdannet hos Netcompany vil du jobbe på prosjekter side om side med resten av teamet. Du vil få utviklet ferdighetene dine og tatt i bruk din teknologikunnskap i virkelige prosjekter med potensial for positiv sosial innvirkning både for bedrifter og mennesker.",
-    location: ["Oslo", "Trondheim"],
-    type: "full",
-    deadline: null,
-  },
-  {
-    name: "Systemutvikler",
-    company: "Sparebanken Vest",
-    link: "https://www.finn.no/job/fulltime/ad.html?finnkode=272028224",
-    logo: ATTENDEE_LOGOS.spv,
-    description:
-      "Vi søker deg som er ferdig utdannet i 2023, og er på utkikk etter din første jobb som utvikler. Det er mange muligheter i miljøet vårt, og vi ser etter fullstack, frontend, backend, datavarehus og UX.",
-    location: ["Bergen"],
-    type: "full",
-    deadline: new Date(Date.parse("2022-12-31")),
-  },
-  {
-    name: "Sommerjobb som utvikler",
-    company: "Sparebanken Vest",
-    link: "https://www.finn.no/job/fulltime/ad.html?finnkode=272027719",
-    logo: ATTENDEE_LOGOS.spv,
-    description:
-      "Vi utvider et av utviklingsteamene våre for sommeren med en gjeng engasjerte dyktige IT-studenter som har lyst å bygge opp relevant praktisk erfaring med programmering. Her får du være med å jobbe med ekte kundeutfordringer, og skrive kode som vil gjøre hverdagen til kundene våre bedre gjennom vår mobil- og nettbank.",
-    location: ["Bergen"],
-    type: "summer",
-    deadline: new Date(Date.parse("2022-11-30")),
   },
   {
     name: "Junior Konsulenter",
@@ -243,6 +167,18 @@ export const JOBS: Array<JobProps> = [
     location: ["Trondheim"],
     type: "full",
     deadline: new Date(Date.parse("2022-10-30")),
+  },
+
+  {
+    name: "Fremtidens digitale vei- trainee laserdata",
+    company: "Statens vegvesen",
+    link: "https://jobb.vegvesen.no/job/Moss-Fremtidens-digitale-vei-trainee-laserdata-1530/865553701/",
+    logo: ATTENDEE_LOGOS.vegvesen,
+    description:
+      "Bearbeiding og videreutvikling av laserdata samlet inn av spor- og jevnhetsbilene i Statens vegvesen.",
+    location: ["Moss", "Lillehammer", "Bergen"],
+    type: "full",
+    deadline: new Date(Date.parse("2022-12-08")),
   },
 ];
 
