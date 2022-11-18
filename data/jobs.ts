@@ -183,7 +183,7 @@ export const JOBS: Array<JobProps> = [
   {
     name: "DNB IT Summer Internship 2023",
     company: "DNB",
-    link: "https://www.finn.no/job/fulltime/ad.html?finnkode=280967843",
+    link: "https://jobb.dnb.no/job/Oslo-DNB-IT-Summer-Internship-2023-0191/869653201/",
     logo: ATTENDEE_LOGOS.dnb,
     description:
       "DNB IT Summer Internship offers you an opportunity to be a part of the bank that really puts culture, learning, diversity, and growth opportunities at the forefront. Through about 8 weeks this summer, you will be able to work as a developer on our IT solutions supported by other experienced developers. We are flexible with regards to start date and duration of the internship.",
