@@ -191,6 +191,17 @@ export const JOBS: Array<JobProps> = [
     type: "summer",
     deadline: new Date(Date.parse("2023-01-31")),
   },
+  {
+    name: "Graduate 2023 Utvikling - Ignite",
+    company: "Capgemini",
+    link: "https://emp.jobylon.com/jobs/145572-capgemini-norge-as-graduate-2023-custom-cloud-applications-ignite/",
+    logo: ATTENDEE_LOGOS.capgemini,
+    description:
+      "Nå søker vi nyutdannede til Ignite-programmet innenfor Java, .NET og JavaScript Hos oss får du jobbe som utvikler i prosjekter som virkelig utgjør en forskjell for samfunnet. Vi omstiller blant annet oljeindustrien til grønn energi, effektiviserer helsevesenet og sørger for at ny teknologi gjør det trygt å ferdes på veien. På disse digitaliseringsreisene får du stor mulighet til å påvirke og finne gode løsninger sammen med dyktige kollegaer. Hvem ser vi etter? Capgemini er alltid på utkikk etter engasjerte konsulenter. Vi ser etter personer med følgende kvalifikasjoner: Bachelor/mastergrad utdannelse innen IT Motivasjon, entusiasme og interesse for teknologi Fleksibel og liker å jobbe i team Gode kommunikasjonsevner (norsk og engelsk)",
+    location: ["Oslo", "Stavanger", "Bergen"],
+    type: "full",
+    deadline: new Date(Date.parse("2022-11-30")),
+  },
 ];
 
 export const JOB_LOCATIONS: Array<string> = [
