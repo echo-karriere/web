@@ -1,12 +1,11 @@
-import alexander from "../content/images/styret/alexander.jpg";
 import cecilie from "../content/images/styret/cecilie.jpg";
 import elin from "../content/images/styret/elin.jpg";
-import endre from "../content/images/styret/endre.jpg";
+import fredric from "../content/images/styret/fredric.jpg";
+import maella from "../content/images/styret/maella.jpg";
+import malvika from "../content/images/styret/malvika.jpg";
 import mathilde from "../content/images/styret/mathilde.jpg";
 import safiya from "../content/images/styret/safiya.jpg";
 import sebastian from "../content/images/styret/sebastian.jpg";
-import solveig from "../content/images/styret/solveig.jpg";
-import victoria from "../content/images/styret/victoria.jpg";
 
 export interface CommitteeMember {
   name: string;
@@ -22,19 +21,8 @@ export interface CommitteeMember {
 
 export const COMMITTEE_MEMBERS: Array<CommitteeMember> = [
   {
-    name: "Endre Borgen Egge",
-    position: "Leder",
-    headshot: endre,
-    socials: {
-      email: "endre.egge@echokarriere.no",
-      github: null,
-      linkedin: "endre-borgen-egge-841009126",
-      website: null,
-    },
-  },
-  {
     name: "Mathilde Bergenheim",
-    position: "Nestleder",
+    position: "Leder",
     headshot: mathilde,
     socials: {
       email: "mathilde.bergenheim@echokarriere.no",
@@ -44,19 +32,19 @@ export const COMMITTEE_MEMBERS: Array<CommitteeMember> = [
     },
   },
   {
-    name: "Victoria Valner",
-    position: "Økonomiansvarlig",
-    headshot: victoria,
+    name: "Elin Veila",
+    position: "Nestleder",
+    headshot: elin,
     socials: {
-      email: "victoria.valner@echokarriere.no",
+      email: "elin.veila@echokarriere.no",
       github: null,
-      linkedin: "victoria-valner-63b3a2194",
+      linkedin: "elin-veila-a5a744249",
       website: null,
     },
   },
   {
     name: "Cecilie Danbolt Tveter",
-    position: "Nestøkonomiansvarlig",
+    position: "Økonomiansvarlig",
     headshot: cecilie,
     socials: {
       email: "cecilie.tveter@echokarriere.no",
@@ -77,28 +65,6 @@ export const COMMITTEE_MEMBERS: Array<CommitteeMember> = [
     },
   },
   {
-    name: "Elin Veila",
-    position: "Bedriftsansvarlig",
-    headshot: elin,
-    socials: {
-      email: "elin.veila@echokarriere.no",
-      github: null,
-      linkedin: "elin-veila-a5a744249",
-      website: null,
-    },
-  },
-  {
-    name: "Solveig Ødegaard Notø",
-    position: "PR-ansvarlig",
-    headshot: solveig,
-    socials: {
-      email: "solveig.noto@echokarriere.no",
-      github: null,
-      linkedin: "solveig-ødegaard-notø-793b56210",
-      website: null,
-    },
-  },
-  {
     name: "Safiya Adan Mahamood",
     position: "Styremedlem",
     headshot: safiya,
@@ -110,13 +76,35 @@ export const COMMITTEE_MEMBERS: Array<CommitteeMember> = [
     },
   },
   {
-    name: "Alexander R. Doré",
+    name: "Maella Irebe Muganga",
     position: "Styremedlem",
-    headshot: alexander,
+    headshot: maella,
     socials: {
-      email: "alexander.dore@echokarriere.no",
+      email: "maella.muganga@echokarriere.no",
       github: null,
-      linkedin: "alexander-r-doré",
+      linkedin: "maella-muganga-a19160204",
+      website: null,
+    },
+  },
+  {
+    name: "Fredric Hegland",
+    position: "Styremedlem",
+    headshot: fredric,
+    socials: {
+      email: "fredric.hegland@echokarriere.no",
+      github: null,
+      linkedin: "fredric-hegland-8a8972206",
+      website: null,
+    },
+  },
+  {
+    name: "Malvika Singh",
+    position: "Styremedlem",
+    headshot: malvika,
+    socials: {
+      email: "malvika.singh@echokarriere.no",
+      github: null,
+      linkedin: "malvika-singh-uib",
       website: null,
     },
   },
