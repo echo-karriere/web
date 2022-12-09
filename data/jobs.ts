@@ -202,6 +202,72 @@ export const JOBS: Array<JobProps> = [
     type: "full",
     deadline: new Date(Date.parse("2022-11-30")),
   },
+  {
+    name: "Greenhouse Graduate 2023",
+    company: "DNB",
+    link: "https://jobb.dnb.no/job/Oslo-DNB-Greenhouse-Graduate-2023-0191/849816901/",
+    logo: ATTENDEE_LOGOS.dnb,
+    description:
+      "DNB Greenhouse is an attractive, intensive and rewarding practical-theoretical programme. We’re looking for young tech talents who haven’t yet started their careers, or are graduating in the spring of 2023, who want to work and acquire more practical-theoretical expertise in the areas of development, architecture or security. We’d like you to be both interested in and proficient at programming, data or security, because we want to cultivate your talent. The programme offers perhaps the best chance you’ll get to work as an internal consultant with all the perks of belonging to one company and being in a friendly environment with us. You’ll be working in a part of the bank that puts culture, learning, diversity and growth opportunities at the forefront.",
+    location: ["Oslo"],
+    type: "full",
+    deadline: new Date(Date.parse("2023-02-01")),
+  },
+  {
+    name: "Data engineer - Team Data Foundations - Summer internship",
+    company: "Schibsted",
+    link: "https://emp.jobylon.com/jobs/160237-schibsted-data-engineer-summer-internship/",
+    logo: ATTENDEE_LOGOS.schibsted,
+    description:
+      "Are you an aspiring Data Engineer willing to work on real products and develop your skills with support from experienced developers? If your answer is yes, we invite you to apply for the summer internship program at Schibsted! This year we are opening our doors to students who want to gain hands-on experience and practise their skills! Based on your performance we might offer you a part-time employment for the time of your studying after the internship. Take the chance! You will join us for 2 months (June-July) on a full time basis - the internship is paid You will be given your own tasks and senior mentors who will support you through the whole eight weeks of your training You will be able to use technologies you know in real-life projects and you will also play with technologies which are new for you You will work together with experienced developers as well as get to know more about Big Data and Data Engineering and Distributed Computing At the end of the internship period, the candidate will present a summary of what he/she has done, learned, and potential ideas for further development and findings Discover more summer internship positions here: https://schibsted.com/career/summer-intern-schibsted/",
+    location: ["Oslo"],
+    type: "summer",
+    deadline: new Date(Date.parse("2023-01-01")),
+  },
+  {
+    name: "Creative Coder & Designer - Summer Internship",
+    company: "Schibsted",
+    link: "https://emp.jobylon.com/jobs/159942-schibsted-creative-coder-designer-for-summer-internship-at-schibsted-futures-lab/",
+    logo: ATTENDEE_LOGOS.schibsted,
+    description:
+      "Are you a creative coder or designer passionate about computer graphics, extended reality, artificial intelligence, or the future of the internet? If your answer is yes, apply for the Summer Internship 2023 at Schibsted Futures Lab! Join us this summer and gain hands-on experience building prototypes using emerging technology. In this internship You will work with the team to create and iterate on prototypes that can be tested. You will help extract and communicate learnings from these prototypes, ensuring that opportunities and threats impacting Schibsted are considered within the organisation. You will have your own project and experiments to drive, following each step through exploration, research and prototyping. You will receive guidance from a senior mentor who will support you throughout the internship. At the end of the internship, you will present a summary of the project, what was learned, potential next steps, and key findings. You will join us full-time for 8 weeks (6 weeks + 2 weeks vacation) from mid-June to mid-August. You will be working mostly at our office in Grensen in downtown Oslo (we do not support relocations) Discover more summer internship positions here: https://schibsted.com/career/summer-intern-schibsted/",
+    location: ["Oslo"],
+    type: "summer",
+    deadline: new Date(Date.parse("2023-01-01")),
+  },
+  {
+    name: "Data Engineer - Pulse - Summer Internship",
+    company: "Schibsted",
+    link: "https://emp.jobylon.com/jobs/160236-schibsted-data-engineer-summer-internship/",
+    logo: ATTENDEE_LOGOS.schibsted,
+    description:
+      "Are you an aspiring programmer willing to work on real production-ready projects and develop your skills with support from experienced developers? If your answer is yes, we invite you to apply for the summer internship program at Schibsted! We are opening our doors to students who want to gain hands-on experience and practice their skills! Based on your performance we might offer you part-time employment for the time of your studies after the internship. Take the chance! What will you do You will join us for 2 months (June-July) on a full-time basis – the internship is paid You will join our team as a full team member, participating in our ongoing projects and tasks. You will either get your own tasks or pair up with a senior team member so you can deliver code to production, contributing to the team’s goals and objectives You will get assigned an intern buddy who will support you through the whole eight weeks of your internship You will be able to use technologies you know in real-life projects and you will also play with exciting technology which may be new to you You will work together with experienced developers, your intern buddy, as well as get to know more about the agile product development cycle At the end of the internship period, you will share a summary of what you have done and learned, and also potential improvements and findings Discover more summer internship positions here: https://schibsted.com/career/summer-intern-schibsted/",
+    location: ["Oslo"],
+    type: "summer",
+    deadline: new Date(Date.parse("2023-01-01")),
+  },
+  {
+    name: "Software Engineer - Aftenposten",
+    company: "Schibsted",
+    link: "https://emp.jobylon.com/jobs/159653-schibsted-internship-2023-software-engineer-aftenposten/",
+    logo: ATTENDEE_LOGOS.schibsted,
+    description:
+      "Experience what it’s like to work as developer at one of the largest newspapers in Norway! Aftenposten is looking for a young, motivated developer to join Schibsted Media’s Summer Internship Program. This summer we are opening our doors to students who want to gain hands-on experience and practice their skills. If that’s you, we invite you to apply for this summer’s internship program! About the internship You'll join us for 2 months (June-July 2023) on a full time basis. The internship is paid. You'll be given your own tasks and guidance from senior developers. You'll be able to use technologies you know on in-production, user-facing products. You'll work closely with the product and UX part of the team and gain experience being part of a larger team. At the end of the internship period, you'll present a summary of your time with us (learnings, ideas and findings). Discover more summer internship positions here: https://schibsted.com/career/summer-intern-schibsted/",
+    location: ["Oslo"],
+    type: "summer",
+    deadline: new Date(Date.parse("2022-12-30")),
+  },
+  {
+    name: "Internal Communications - Summer Internship - Collaboration Services",
+    company: "Schibsted",
+    link: "https://emp.jobylon.com/jobs/160655-schibsted-internal-communications-summer-internship-collaboration-services/",
+    logo: ATTENDEE_LOGOS.schibsted,
+    description:
+      "Collaboration Summer Internship Collaboration & Productivity manage all of the Collaboration and productivity tools used in Schibsted, spanning from email and chat, to project planning as well as code repositories. Our services allow everyone from our CEO to coders, HR and Finance to drive innovation in Schibsted and its many brands. Our tools are used by every Schibsted employee and our aim is to empower our users to work from anywhere at any time About the role We are looking for an Internal communications Intern to help improve and perhaps even completely rethink how we communicate our tools and services to our end users. As a Internal communications Intern, you’ll work closely with the whole team and get the opportunity to help shape how an employee in Schibsted gets onboarded to our tools. And where we make information available during the employment lifecycle. With the diverse workforce and multitude of well known brands in Schibsted, you will participate in and help build out our communications platforms that reach over 6000 employees every day Discover more summer internship positions here: https://schibsted.com/career/summer-intern-schibsted/",
+    location: ["Oslo"],
+    type: "summer",
+    deadline: new Date(Date.parse("2023-01-02")),
+  },
 ];
 
 export const JOB_LOCATIONS: Array<string> = [
