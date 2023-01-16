@@ -17,7 +17,17 @@ export default function Index(): JSX.Element {
             <div>
               <h2 className="text-center text-3xl font-bold text-gray-900 sm:text-4xl">Påmelding echo karriere 2023</h2>
               <p className="mt-4 text-lg leading-6 text-gray-500">
-                Ønsker du og din bedrift å delta på echo karriere i september? Påmeldingen er nå åpen!
+                Ønsker du og din bedrift å delta på echo karriere i september? Påmeldingen er nå åpen! Du kan lese mer
+                om arrangementet i{" "}
+                <a
+                  href="/files/invitation.pdf"
+                  className="
+                text-blue-600 hover:text-blue-900 underline
+                "
+                >
+                  invitasjonen her
+                </a>
+                .<br />
                 <br />
                 <br />
                 <br />
