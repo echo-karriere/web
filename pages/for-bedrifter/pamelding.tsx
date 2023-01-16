@@ -15,11 +15,18 @@ export default function Index(): JSX.Element {
         <div className="bg-white py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24">
           <div className="relative max-w-xl mx-auto">
             <div>
-              <h2 className="text-center text-3xl font-bold text-gray-900 sm:text-4xl">Påmelding echo karriere 2022</h2>
+              <h2 className="text-center text-3xl font-bold text-gray-900 sm:text-4xl">Påmelding echo karriere 2023</h2>
               <p className="mt-4 text-lg leading-6 text-gray-500">
-                Påmeldingen for bedrifter til echo Karriere 2022 er nå stengt. Ved eventuelle spørsmål, send e-post til{" "}
-                <a className="underline" href="mailto:kontakt@echokarriere.no">
-                  kontakt@echokarriere.no
+                Ønsker du og din bedrift å delta på echo karriere i september? Påmeldingen er nå åpen!
+                <br />
+                <br />
+                <br />
+                <a
+                  href="https://forms.echokarriere.no/karrieredagene2023"
+                  className="bg-blue-400 hover:bg-blue-600 text-white p-4  rounded"
+                >
+                  {" "}
+                  Her kan du melde deg på
                 </a>
               </p>
             </div>

@@ -26,9 +26,9 @@ export const navigation: Array<MenuItem> = [
     title: "For studenter",
     items: [
       {
-        title: "Karrieredagen 2022",
+        title: "Karrieredagen 2023",
         to: "/for-studenter/informasjon/",
-        description: "Hvem, hva og hvor for echo karriere 2022",
+        description: "Hvem, hva og hvor for echo karriere 2023",
         Icon: LightBulbIcon,
         mainMobile: true,
       },
@@ -67,9 +67,9 @@ export const navigation: Array<MenuItem> = [
         mainMobile: true,
       },
       {
-        title: "Påmelding 2022",
+        title: "Påmelding 2023",
         to: "/for-bedrifter/pamelding/",
-        description: "Meld bedriften på echo karriere 2022",
+        description: "Meld bedriften på echo karriere 2023",
         Icon: InboxInIcon,
         mainMobile: true,
       },
