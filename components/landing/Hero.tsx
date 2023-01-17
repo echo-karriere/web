@@ -27,7 +27,8 @@ export function Hero(): JSX.Element {
                   <span className="block text-c10 xl:inline">2023</span>
                 </h1>
                 <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                  Neste karrieredagene arrangeres 14. og 15. september 2023. Mer info kommer!
+                  Neste karrieredagene arrangeres 14. og 15. september 2023 i Grieghallen. Påmeldingen for bedrifter er
+                  nå åpen!
                 </p>
                 <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                   <div className="rounded-md shadow">
