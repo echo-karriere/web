@@ -6,6 +6,7 @@ import malvika from "../content/images/styret/malvika.jpg";
 import mathilde from "../content/images/styret/mathilde.jpg";
 import safiya from "../content/images/styret/safiya.jpg";
 import sebastian from "../content/images/styret/sebastian.jpg";
+import thone from "../content/images/styret/thone.jpg";
 
 export interface CommitteeMember {
   name: string;
@@ -105,6 +106,17 @@ export const COMMITTEE_MEMBERS: Array<CommitteeMember> = [
       email: "malvika.singh@echokarriere.no",
       github: null,
       linkedin: "malvika-singh-uib",
+      website: null,
+    },
+  },
+  {
+    name: "Thone Anlaug Stordal Støa",
+    position: "Styremedlem",
+    headshot: thone,
+    socials: {
+      email: null,
+      github: null,
+      linkedin: "thone-anlaug-stordal-støa-131b54251",
       website: null,
     },
   },

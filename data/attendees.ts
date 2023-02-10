@@ -2,6 +2,7 @@ import appear from "../content/images/logos/appear.svg";
 import appfarm from "../content/images/logos/appfarm.svg";
 import avo from "../content/images/logos/avoconsult.png";
 import bekk from "../content/images/logos/bekk.svg";
+import bkk from "../content/images/logos/bkk.jpg";
 import bouvet from "../content/images/logos/bouvet.svg";
 import capgemini from "../content/images/logos/capgemini.svg";
 import cgi from "../content/images/logos/cgi.svg";
@@ -93,7 +94,8 @@ export type ATTENDEE_NAMES =
   | "finn"
   | "innofactor"
   | "xledger"
-  | "schibsted";
+  | "schibsted"
+  | "bkk";
 
 export const ATTENDEE_LOGOS: Record<ATTENDEE_NAMES, StaticImageData> = {
   itera: itera,
@@ -140,6 +142,7 @@ export const ATTENDEE_LOGOS: Record<ATTENDEE_NAMES, StaticImageData> = {
   innofactor: innofactor,
   xledger: xledger,
   schibsted: schibsted,
+  bkk: bkk,
 };
 
 export const ATTENDEES: Array<Attendee> = [
