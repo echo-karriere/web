@@ -21,7 +21,7 @@
     "sharp": "0.31.2",
     "typeface-bitter": "1.1.13",
     "typeface-cambo": "1.1.13",
-    "yup": "0.32.11"
+    "yup": "1.0.0"
   },
   "scripts": {
     "dev": "next dev",
