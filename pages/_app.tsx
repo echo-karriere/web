@@ -4,6 +4,7 @@ import "typeface-cambo";
 import "../public/styles.css";
 
 import ProgressBar from "@badrap/bar-of-progress";
+import { Analytics } from "@vercel/analytics";
 import { AppProps } from "next/app";
 import Head from "next/head";
 import { useRouter } from "next/router";
@@ -42,6 +43,7 @@ const App = ({ Component, pageProps }: AppProps): JSX.Element => {
       </Head>
       <DefaultSeo {...defaultSEOConfig} />
       <Component {...pageProps} />
+      <Analytics />
     </>
   );
 };
