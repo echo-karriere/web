@@ -56,7 +56,7 @@
     "eslint-plugin-tsdoc": "0.2.17",
     "husky": "7.0.4",
     "lint-staged": "12.5.0",
-    "next-sitemap": "2.5.28",
+    "next-sitemap": "4.2.3",
     "postcss": "8.4.18",
     "prettier": "2.7.1",
     "prettier-eslint": "14.1.0",
