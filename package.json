@@ -46,7 +46,7 @@
     "@types/yup": "0.29.14",
     "@typescript-eslint/eslint-plugin": "5.42.1",
     "@typescript-eslint/parser": "5.42.1",
-    "autoprefixer": "10.4.13",
+    "autoprefixer": "10.4.17",
     "eslint": "7.32.0",
     "eslint-config-next": "12.1.0",
     "eslint-config-prettier": "8.5.0",
